@@ -141,7 +141,7 @@ section{
     border-radius: 4px;
     background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
 }
-.login .close:after{
+.login .close:before{
     content: 'X';
     display: block;
     position: absolute;
@@ -153,7 +153,7 @@ section{
     text-shadow: none;
     text-align: center;
     font-weight: bold;
-    background: #000;
+    background: red;
     color: #fff;
     border: 3px solid #fff;
     -moz-border-radius: 20px;
