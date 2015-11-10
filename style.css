@@ -10,7 +10,6 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 body{
     font-size: 16px;
 }
-
 /*Header*/
 header .logo{
     float:left;
@@ -65,7 +64,6 @@ header .basket-img:before, .authorization-img:before{
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .tab-content .imgCPU:before{
     background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
 }
@@ -91,7 +89,6 @@ header .basket-img:before, .authorization-img:before{
 .tab-content-layout, .productLayout{
     width: 90%;
     margin: 0 auto;
-    
 }
 .tab-content .layoutCategories{
     display: inline-block;
@@ -128,7 +125,6 @@ footer {
 section{
     min-height: 200px;
 }
-
 .Categories:hover{
     border:none;
     font-size: 25px;
@@ -273,18 +269,35 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
 }
 
 /*Product description*/
-
+.productDescription{
+    padding-top: 10px;
+    box-sizing: border-box;
+    width:70%;
+    margin: 0 auto;
+}
+.productDescription:after{
+    display: block;
+    clear: both;
+    content: '';
+}
 .productDescription .breadcrumb, .breadcrumb>li{
     display: inline-block;
     list-style-type: none;
     font-size: 13px;
 }
+.slider-img {
+    float: left;
+    width:31%;
+    height: 25%;
+}
 .slider-img .bigImg{
-    width:150px;
-    height: 150px;
+    margin-top:10px;
+    width:70%;
+    min-height: 200px;
     background-image: url('img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: right -38px bottom 0px;
 }
 
 /*Pages items*/
@@ -293,28 +306,3 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     margin-right: 20px;
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
