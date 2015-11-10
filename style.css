@@ -55,10 +55,10 @@ header .basket-img:before, .authorization-img:before{
     background-position: center;
 }
 /*Content*/
-.tab-content .imgCooling{
+.tab-content .imgCooling:before{
     background-image: url('img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg');
 }
-.tab-content .imgCooling, .imgCPU:before, .imgHDD:before, .imgMotherboard:before, .imgPowerSource:before, .imgRAM:before, .imgvideoAdapter:before{
+.tab-content .imgCooling:before, .imgCPU:before, .imgHDD:before, .imgMotherboard:before, .imgPowerSource:before, .imgRAM:before, .imgvideoAdapter:before{
     content: "";
     display:block;
     background-size: contain;
