@@ -10,9 +10,7 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 body{
     font-size: 20px;
 }
-*, :after, :before {
-    box-sizing: border-box;
-}
+
 /*Header*/
 header .logo{
     float:left;
@@ -57,18 +55,18 @@ header .basket-img:before, .authorization-img:before{
     background-position: center;
 }
 /*Content*/
-.tab-content .imgCooling:before, .imgCPU:before, .imgHDD:before, .imgMotherboard:before, .imgPowerSource:before, .imgProcessor:before, .imgRAM:before, .imgvideoAdapter:before{
+.tab-content .imgCooling{
+    background-image: url('img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg');
+}
+.tab-content .imgCooling, .imgCPU:before, .imgHDD:before, .imgMotherboard:before, .imgPowerSource:before, .imgRAM:before, .imgvideoAdapter:before{
     content: "";
     display:block;
     background-size: contain;
-    width: 200px;
     height:200px;
     background-repeat: no-repeat;
     background-position: center;
 }
-.tab-content .imgCooling:before{
-    background-image: url('img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg');
-}
+
 .tab-content .imgCPU:before{
     background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
 }
@@ -81,9 +79,6 @@ header .basket-img:before, .authorization-img:before{
 .tab-content .imgPowerSource:before{
     background-image: url('img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg');
 }
-.tab-content .imgProcessor:before{
-    background-image: url('img/');
-}
 .tab-content .imgRAM:before{
     background-image: url('img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg');
 }
@@ -92,21 +87,23 @@ header .basket-img:before, .authorization-img:before{
 }
 .tab-content{
     text-align:center;
-    line-height: normal;
     padding:30px 50px 30px 50px;
 }
-.tab-content-layout{
+.tab-content-layout, .productLayout{
     width: 90%;
     margin: 0 auto;
+    
 }
-.layoutCategories{
+.tab-content .layoutCategories{
     display: inline-block;
     list-style: none;
     vertical-align: top;
 }
-.Categories{
+
+.tab-content .Categories{
+    box-sizing: border-box;
     display: inline-block;
-    width:202px;
+    width:200px;
     height:250px;
     border:1px solid black;
     margin-left: 70px;
@@ -114,7 +111,7 @@ header .basket-img:before, .authorization-img:before{
     margin-top: 30px;
     margin-bottom: 30px;
 }
-header:after{
+header:after, .tab-content:after{
     display: block;
     content: '';
     clear: both;
@@ -126,6 +123,14 @@ header, section, footer{
 }
 section{
     min-height: 200px;
+}
+
+.Categories:hover{
+    border:none;
+    font-size: 25px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 /*Login*/
 .login{
@@ -141,20 +146,18 @@ section{
     border-radius: 4px;
     background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
 }
-.login .close:before{
-    content: 'X';
-    display: block;
+.login .close{
     position: absolute;
     right: -10px; 
     top: -10px; 
-    width: 1.5em;
+    width: 1.1em;
     padding: 1px 1px 1px 2px;
     text-decoration: none;
     text-shadow: none;
     text-align: center;
-    font-weight: bold;
+    font-weight: normal;
     background: red;
-    color: #fff;
+    color: black;
     border: 3px solid #fff;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -205,4 +208,18 @@ input:last-of-type{
 
 .navbar a:hover {
     color: orange;
+}
+/*Product description*/
+
+.productDescription .breadcrumb, .breadcrumb>li{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 13px;
+}
+.slider-img .bigImg{
+    width:150px;
+    height: 150px;
+    background-image: url('img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
