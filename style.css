@@ -206,3 +206,7 @@ input:last-of-type{
 .navbar a:hover {
     color: orange;
 }
+
+.navbar a:active {
+    color: red;
+}
