@@ -57,6 +57,39 @@ header .basket-img:before, .authorization-img:before{
     background-position: center;
 }
 /*Content*/
+.tab-content .imgCooling:before, .imgCPU:before, .imgHDD:before, .imgMotherboard:before, .imgPowerSource:before, .imgProcessor:before, .imgRAM:before, .imgvideoAdapter:before{
+    content: "";
+    display:block;
+    background-size: contain;
+    width: 200px;
+    height:200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tab-content .imgCooling:before{
+    background-image: url('img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg');
+}
+.tab-content .imgCPU:before{
+    background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
+}
+.tab-content .imgHDD:before{
+    background-image: url('img/HDD/Hitachi/Hitachi%20Deskstar%20H3IKNAS30003272SE%203%20%D0%A2%D0%B1.jpg');
+}
+.tab-content .imgMotherboard:before{
+    background-image: url('img/motherboard/Asus/ASUS%20H61M-K.jpg');
+}
+.tab-content .imgPowerSource:before{
+    background-image: url('img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg');
+}
+.tab-content .imgProcessor:before{
+    background-image: url('img/');
+}
+.tab-content .imgRAM:before{
+    background-image: url('img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg');
+}
+.tab-content .imgvideoAdapter:before{
+    background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
+}
 .tab-content{
     text-align:center;
     line-height: normal;
@@ -73,7 +106,7 @@ header .basket-img:before, .authorization-img:before{
 }
 .Categories{
     display: inline-block;
-    width:200px;
+    width:202px;
     height:250px;
     border:1px solid black;
     margin-left: 70px;
