@@ -299,6 +299,51 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     background-repeat: no-repeat;
     background-position: right -38px bottom 0px;
 }
+<<<<<<< .mine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+.slider-img .minImg img{
+    width: 15%;
+
+}
+.layoutDescription{
+    margin-top:50px;
+    float: right;
+    width: 50%;
+}
+.description{
+    padding-top:10px;
+    width:80%;
+}
+.imgStar{
+    margin-left: 50px;
+    display: inline-block;
+    background: url('img/Symbol/rating.png')repeat-x;
+    width:80px;
+    height: 14px;
+}
+.raiting{
+>>>>>>> .theirs
 
 /*Pages items*/
 .viewList {
