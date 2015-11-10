@@ -10,23 +10,76 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 body{
     font-size: 20px;
 }
+*, :after, :before {
+    box-sizing: border-box;
+}
+/*Header*/
+header .logo{
+    float:left;
+}
+.search, .basket, .authorization{
+    float:right;
+}
+.logo, .search, .basket, .authorization{
+    display: inline-block;
+    margin:  10px 15px 10px 15px;
+}
+header .logo{
+    background: url('img/');
+}
+header .basket, .authorization{
+    border:1px solid;
+    border-radius: 4px;
+    padding:10px;
+    text-decoration: none;
+    line-height: 0.9;
+}
+header .basket:hover, .authorization:hover{
+    color: blueviolet;
+}
+header .basket-img:before{
+    background-image: url('img/shopping-cart.gif');
+}
+header .basket-img, .authorization-img {
+    padding-left:5px;
+}
+header .authorization-img:before{
+    background-image: url('img/logo-login.png');
+}
+header .basket-img:before, .authorization-img:before{
+    content: "";
+    display:block;
+    background-size: contain;
+    width: 20px;
+    height:20px;
+    float:left;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*Content*/
 .tab-content{
-    vertical-align: top;
     text-align:center;
     line-height: normal;
-    margin-right: -40px;
+    padding:30px 50px 30px 50px;
+}
+.tab-content-layout{
+    width: 90%;
+    margin: 0 auto;
 }
 .layoutCategories{
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+}
+.Categories{
     display: inline-block;
     width:200px;
     height:250px;
     border:1px solid black;
-    margin-right:40px;
+    margin-left: 70px;
+    margin-right:70px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-.Categories{
-
 }
 header:after{
     display: block;
@@ -41,16 +94,7 @@ header, section, footer{
 section{
     min-height: 200px;
 }
-.logo, .search, .basket, .authorization{
-    display: inline-block;
-    margin-left: 15px;
-}
-header .logo{
-    float:left;
-}
-.search, .basket, .authorization{
-    float:right;
-}
+/*Login*/
 .login{
     box-sizing: border-box;
     position: absolute;
@@ -85,7 +129,6 @@ header .logo{
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-
 .login input{
     box-sizing: border-box;
     padding: 3px;
@@ -97,14 +140,12 @@ header .logo{
 input:last-of-type{
     margin-top:10px;
 }
-
 .login .view {
     margin-top: 42px;
 }
 .login input[type="checkbox"]{
     width:15px;
 }
-
 .register{
     float:right;
 }
