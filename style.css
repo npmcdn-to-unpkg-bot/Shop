@@ -112,3 +112,23 @@ input:last-of-type{
     text-align: center;
     padding-bottom: 2px;
 }
+
+.navbar {       
+    list-style-type: none;
+}
+
+.navbar a {
+    background-color: 
+}
+
+.navbar a:link {
+    color: black;
+}
+
+.navbar a:visited {
+    color: blue;
+}
+
+.navbar a:hover {
+    color: orange;
+}
