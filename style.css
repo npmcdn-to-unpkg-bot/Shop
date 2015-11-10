@@ -8,7 +8,7 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 	vertical-align: baseline;
 }
 body{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /*Header*/
@@ -98,7 +98,6 @@ header .basket-img:before, .authorization-img:before{
     list-style: none;
     vertical-align: top;
 }
-
 .tab-content .Categories{
     box-sizing: border-box;
     display: inline-block;
@@ -196,6 +195,13 @@ input:last-of-type{
 }
 
 /*Menu*/
+menu {
+    float: left;
+    padding: 20px 10px 10px 5px;    
+    border: 2px outset black;
+    border-left: none;
+    border-top: none;
+}
 
 .navbar {       
     list-style-type: none;    
@@ -281,6 +287,12 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     background-repeat: no-repeat;
 }
 
+/*Pages items*/
+.viewList {
+    text-align: end;
+    margin-right: 20px;
+    margin-top: 10px;
+}
 
 
 
@@ -306,6 +318,3 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
 
 
 
-
-
->>>>>>> .theirs
