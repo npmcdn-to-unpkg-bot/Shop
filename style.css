@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
 b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -9,30 +9,41 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 }
 body{
     font-size: 16px;
-    font: Helvetica, arial;
 }
+
 /*Header*/
+header, footer{
+    font-size: 20px;
+    background: rgba(122,122,122,1);
+    color: white;
+    box-sizing: border-box;
+}
 header .logo{
     float:left;
     background: url('img/');
+}
+.logo, .search, .basket, .authorization, .imgStar, .description h1, .addCart {
+    display: inline-block;
+    box-sizing: border-box;
 }
 .search, .basket, .authorization{
     float:right;
 }
 .logo, .search, .basket, .authorization{
-    display: inline-block;
+    color:white;
     margin:  10px 15px 10px 15px;
 }
 
 header .basket, .authorization{
-    border:1px solid;
+    border: 1px solid black;
     border-radius: 4px;
-    padding:10px;
+    padding: 10px;
     text-decoration: none;
-    line-height: 0.9;
+
 }
 header .basket:hover, .authorization:hover{
-    color: blueviolet;
+    color: #b8b8b8;
+    border: 1px solid #b8b8b8;
 }
 header .basket-img{
     background-image: url('img/Symbol/shopping-cart.gif');
@@ -49,36 +60,34 @@ header .basket-img, .authorization-img{
     height:20px;
     float:left;
     background-repeat: no-repeat;
-    background-position: center;
 }
 /*Content*/
-.tab-content .imgCooling:before{
+.tab-content .imgCooling{
     background-image: url('img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg');
 }
-.tab-content .imgCooling:before, .imgCPU:before, .imgHDD:before, .imgMotherboard:before, .imgPowerSource:before, .imgRAM:before, .imgvideoAdapter:before{
+.tab-content .imgCooling, .imgCPU, .imgHDD, .imgMotherboard, .imgPowerSource, .imgRAM, .imgvideoAdapter{
     content: "";
-    display:block;
     background-size: contain;
     height:200px;
     background-repeat: no-repeat;
     background-position: center;
 }
-.tab-content .imgCPU:before{
+.tab-content .imgCPU{
     background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
 }
-.tab-content .imgHDD:before{
+.tab-content .imgHDD{
     background-image: url('img/HDD/Hitachi/Hitachi%20Deskstar%20H3IKNAS30003272SE%203%20%D0%A2%D0%B1.jpg');
 }
-.tab-content .imgMotherboard:before{
+.tab-content .imgMotherboard{
     background-image: url('img/motherboard/Asus/ASUS%20H61M-K.jpg');
 }
-.tab-content .imgPowerSource:before{
+.tab-content .imgPowerSource{
     background-image: url('img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg');
 }
-.tab-content .imgRAM:before{
+.tab-content .imgRAM{
     background-image: url('img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg');
 }
-.tab-content .imgvideoAdapter:before{
+.tab-content .imgvideoAdapter{
     background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
 }
 .tab-content{
@@ -89,14 +98,12 @@ header .basket-img, .authorization-img{
     width: 90%;
     margin: 0 auto;
 }
-.tab-content .layoutCategories{
+.tab-content .layoutCategories, .Categories{
+    box-sizing: border-box;
     display: inline-block;
-    list-style: none;
     vertical-align: top;
 }
 .tab-content .Categories{
-    box-sizing: border-box;
-    display: inline-block;
     width:200px;
     height:250px;
     border:1px solid black;
@@ -105,12 +112,12 @@ header .basket-img, .authorization-img{
     margin-top: 30px;
     margin-bottom: 30px;
 }
-header:after, .tab-content:after{
+header:after, .tab-content:after, footer, productDescription:after, productLayout:after{
     display: block;
     content: '';
     clear: both;
 }
-header, section, footer{
+header, footer{
     width:100%;
     border:1px solid black;
     min-height: 50px;
@@ -172,7 +179,7 @@ section{
     border-radius:4px;
     border:2px solid darkblue;
 }
-input:last-of-type{
+input[placeholder="Search"]{
     margin-top:10px;
 }
 .login .view {
@@ -269,9 +276,10 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
 
 /*Product description*/
 .productDescription{
+    position: relative;
     padding-top: 10px;
     box-sizing: border-box;
-    width:70%;
+    width:80%;
     margin: 0 auto;
 }
 .productDescription:after{
@@ -284,44 +292,99 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     list-style-type: none;
     font-size: 13px;
 }
+
+.sliderLayout{
+    position: relative;
+    margin-top:20px;
+}
+
 .slider-img {
     float: left;
     width:31%;
     height: 25%;
+    min-width: 200px;
 }
-.slider-img .bigImg{
-    margin-top:10px;
-    width:70%;
-    min-height: 200px;
-    background-image: url('img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right -38px bottom 0px;
+.slider-img .bigImgPositioner{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    min-width: 200px;
+
+}
+.slider-img .bigImgPositioner img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 70%;
 }
 .slider-img .minImg img{
-    width: 15%;
+    vertical-align: middle;
+    display: inline-block;
+    width: 10%;
+    min-width: 28px;
+}
+.minImg{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.arrowLeft, .arrowRight{
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    width:0;
+    height: 0;
+    border: 15px solid transparent ;
+}
+.arrowLeft{    
+    border-right-color: lightskyblue; 
+    border-left: 0;
+}
+.arrowRight{
+    border-left-color: lightskyblue;  
+    border-right: 0;
 }
 .layoutDescription{
-    margin-top:50px;
+    margin-top:10px;
     float: right;
-    width: 50%;
+    width: 60%;
 }
 .description{
     padding-top:10px;
     width:80%;
 }
 .imgStar{
-    margin-left: 50px;
-    display: inline-block;
     background: url('img/Symbol/rating.png')repeat-x;
     width:80px;
     height: 14px;
+    margin-left: 10px;
 }
 .raiting{
-    display: inline-block;
     background: url('img/Symbol/rating-fill.png')repeat-x;
-    width: 72px;
+    width: 55px;
     height: 14px;
+}
+
+.layoutDescription input{
+    margin-top:40px;
+    float:left;
+}
+.addCartLoyout{
+    float: right;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+.description .addCart{
+    margin-top:20px;
+    padding: 10px 16px;
+    border: 1px solid #70b61f;;
+    border-radius: 5px;
+    background: #7dcc23;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 /*Pages items*/
@@ -330,3 +393,56 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     margin-right: 20px;
     margin-top: 10px;
 }
+
+/*Order form*/
+.orderFormLayout{
+    position: relative;
+    width: 390px;
+    margin:auto;
+    padding:40px 0px;
+}
+.orderForm{
+    background-image: url(img/Symbol/card-form.png);
+    width: 390px;
+    height: 204px;
+}
+.orderForm .line1{
+    position: relative;
+    top: 45px;
+    left: 17px;
+    width: 270px;
+}
+.lineValid{
+    font-size: 12px;
+    position: relative;
+    top: 45px;
+    left: 99px;
+    margin-right: 31px;
+}
+.orderForm .line2{
+    position: relative;
+    top: 50px;
+    left: 88px;
+}
+.line1 input,.line4 input, .line2 select{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+}
+.orderForm .line3{
+    position: relative;
+    top: 60px;
+    left: 26px;
+}
+.orderForm .line3 input{
+    width: 250px;
+    height: 20px;
+    text-align: center;
+}
+.orderForm .line4{
+    position: relative;
+    top: -15px;
+    left: 308.5px;
+}
+
+
