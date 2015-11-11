@@ -112,7 +112,7 @@ header .basket-img, .authorization-img{
     margin-top: 30px;
     margin-bottom: 30px;
 }
-header:after, .tab-content:after, footer, productDescription:after, productLayout:after{
+header:after, .tab-content:after, footer{
     display: block;
     content: '';
     clear: both;
