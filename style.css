@@ -9,6 +9,7 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 }
 body{
     font-size: 16px;
+    font: Helvetica, arial;
 }
 /*Header*/
 header .logo{
@@ -33,18 +34,16 @@ header .basket, .authorization{
 header .basket:hover, .authorization:hover{
     color: blueviolet;
 }
-header .basket-img:before{
+header .basket-img{
     background-image: url('img/Symbol/shopping-cart.gif');
 }
 header .basket-img, .authorization-img {
     padding-left:5px;
 }
-header .authorization-img:before{
+header .authorization-img{
     background-image: url('img/Symbol/logo-login.png');
 }
-header .basket-img:before, .authorization-img:before{
-    content: "";
-    display:block;
+header .basket-img, .authorization-img{
     background-size: contain;
     width: 20px;
     height:20px;
@@ -299,32 +298,8 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     background-repeat: no-repeat;
     background-position: right -38px bottom 0px;
 }
-<<<<<<< .mine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 .slider-img .minImg img{
     width: 15%;
-
 }
 .layoutDescription{
     margin-top:50px;
@@ -343,7 +318,11 @@ menu .menumother-img:before, .menucpu-img:before, .menuram-img:before, .menuvide
     height: 14px;
 }
 .raiting{
->>>>>>> .theirs
+    display: inline-block;
+    background: url('img/Symbol/rating-fill.png')repeat-x;
+    width: 72px;
+    height: 14px;
+}
 
 /*Pages items*/
 .viewList {
