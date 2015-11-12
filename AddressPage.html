@@ -22,7 +22,8 @@
     </header>
     <section>
         <div class="address">
-            <div class="squareAdd shipping_address">
+            <form>
+            <div class="squareAdd">
                 <h1>Shipping address</h1>
                 <div class="addressInfo">
                     <div class="addressTextInfo">Country</div>
@@ -31,14 +32,48 @@
                 </div>  
                 <div class="addressInfo">
                     <div class="addressTextInfo">City</div>
-                    <input></input>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Address</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">ZIP</div>
+                    <input>
                 </div>
             </div>
-            <div class="squareAdd billing_address">
+            <div class="squareAdd">
                 <h1>Billing address</h1>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Country</div>
+                    <select class="changeCountry">
+                    </select>
+                </div>  
+                <div class="addressInfo">
+                    <div class="addressTextInfo">City</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Address</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">ZIP</div>
+                    <input>
+                </div>
+                <p class="addCheck">
+                    <input type="checkbox" name="save">
+                    My billing addres is the same
+                </p>
             </div>
+            
+            <div class="line5">
+                <input type="submit" value="Continue">
+            </div>
+            </form>
         </div>
     </section>
-    <footer>footer </footer>
+    <footer>footer</footer>
 </body>
 </html>

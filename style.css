@@ -687,13 +687,13 @@ menu, .itemsContent {
     top: -15px;
     left: 308.5px;
 }
-.orderForm .line5{
+.line5{
     width: 100px;
     position: relative;
     top: 70px;
     margin: auto;
 }
-.orderForm .line5 input{
+.line5 input{
     border: none;
     border-radius: 20px;
     width: 100px;
@@ -705,12 +705,14 @@ menu, .itemsContent {
 
 /*Address page*/
 .address {
-    width: 450px;    
+    width: 500px;    
     margin: auto;
 }
 .squareAdd {
     float: left;
     margin-top: 10%;
+    margin-right: 25px;
+    margin-bottom: -40px;
     min-height: 150px;
     text-align: center;
     position: relative;    
@@ -739,4 +741,13 @@ menu, .itemsContent {
     height: 13px;
 }
 
+.addCheck {
+    font-size: 14px;
+}
+.addCheck input {
+    float: left;
+}
 
+.address .line5 {
+    margin-top: 25px;
+}
