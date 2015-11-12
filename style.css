@@ -510,14 +510,14 @@ menu, .itemsContent {
 }
 
 .inform {
+    text-align: left;
     display: inline-block;
     padding-top: 15px;
     width: 350px;
 }
 
 .linkProperties {
-    display: inline;
-    margin-left: -141px;
+    display: inline;   
 }
 
 .listPrice {
@@ -531,7 +531,8 @@ menu, .itemsContent {
     overflow: hidden;
 }
 
-.addCartItem {
+.addCartItem {    
+    text-align: center;
     border: 1px solid #70b61f;;
     border-radius: 15px;
     background: #7dcc23;
