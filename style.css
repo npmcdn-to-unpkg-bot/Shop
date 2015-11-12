@@ -400,7 +400,7 @@ menu .menucooling-img {
     font-size: 25px;
 }
 
-/*Pages items*/
+/*Pages Category items*/
 
 .itemsContent {    
     position: relative; 
@@ -411,32 +411,6 @@ menu .menucooling-img {
     text-align: right;
     margin-right: 20px;
     margin-top: 10px;    
-}
-
-menu, .itemsContent {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.itemsContent a {    
-    text-decoration: none;
-    padding-left: 5px;
-}
-
-.itemsContent a:link {
-    color: black;
-}
-
-.itemsContent a:visited {
-    color: blue;
-}
-
-.itemsContent a:hover {
-    color: orange;
-}
-
-.itemsContent a:active {
-    color: red;
 }
 
 .square {  
@@ -601,6 +575,35 @@ menu, .itemsContent {
     background-image: url('img/Video adapter/Gigabyte/GIGABYTE GeForce GTX 750 Ti BLACK EDITION GV-N75TWF2BK-2GI.jpg')
 }
 
+/*Menu*/
+
+menu, .itemsContent {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itemsContent a {    
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.itemsContent a:link {
+    color: black;
+}
+
+.itemsContent a:visited {
+    color: blue;
+}
+
+.itemsContent a:hover {
+    color: orange;
+}
+
+.itemsContent a:active {
+    color: red;
+}
+
+
 /*Order form*/
 .orderFormLayout{
     position: relative;
@@ -658,7 +661,49 @@ menu, .itemsContent {
     margin: auto;
 }
 .orderForm .line5 input{
+    border: none;
+    border-radius: 20px;
     width: 100px;
     height: 50px;
     text-align: center;
 }
+
+/*Cart page*/
+
+/*Address page*/
+.address {
+    width: 450px;    
+    margin: auto;
+}
+.squareAdd {
+    float: left;
+    margin-top: 10%;
+    min-height: 150px;
+    text-align: center;
+    position: relative;    
+    display: inline-block;
+    width: 200px;
+}
+
+.addressInfo {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.addressTextInfo {
+    display: inline-block;    
+}
+
+.changeCountry {
+    width: 110px;
+    float: right;
+}
+
+.addressInfo input {
+    vertical-align: middle;
+    float: right;
+    width: 106px;
+    height: 13px;
+}
+
+
