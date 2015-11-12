@@ -418,22 +418,95 @@ menu, .itemsContent {
     vertical-align: top;
 }
 
+.itemsContent a {    
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.itemsContent a:link {
+    color: black;
+}
+
+.itemsContent a:visited {
+    color: blue;
+}
+
+.itemsContent a:hover {
+    color: orange;
+}
+
+.itemsContent a:active {
+    color: red;
+}
+
 .square {  
     vertical-align: top;
     width: 10%;
     display: inline-block;
     height: 100px;
     text-align: center;
-    margin-top: 10px;
-    margin-right: 20px;
+    margin: 10px 15px 15px 5px;    
     font-size: 12px;
+    float: left;
+}
+
+.squareList {
+    vertical-align: top;
+    width: 500px;    
+    height: 150px;
+    text-align: center;
+    margin: auto;    
+    font-size: 12px;
+    
 }
 
 .imgItem {    
     height: 60px;    
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;        
+    background-position: center;   
+}
+
+.imgItemList {    
+    height: 150px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;  
+    float: left;
+}
+
+.inform {
+    display: inline-block;
+    padding-top: 15px;
+    width: 350px;
+}
+
+.linkProperties {
+    display: inline;
+    margin-left: -141px;
+}
+
+.listPrice {
+    display: inline-block;
+    padding-right: 15px;
+    float: right;
+}
+.itemsInfo {
+    height: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.addCartItem {
+    border: 1px solid #70b61f;;
+    border-radius: 15px;
+    background: #7dcc23;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+    width: 140px;
 }
 
 .motherImg1 {
@@ -495,8 +568,38 @@ menu, .itemsContent {
     background-image: url('img/HDD/Western%20Digital/WD%20Caviar%20Red%20IntelliPower%20WD10EFRX%201%20%D0%A2%D0%B1.jpg');
 }
 .powerImg1{
-    background-image: url('');
+    background-image: url('img/Power source/Be Quiet/Be Quiet PURE POWER L8 700W [BN225].jpg');
 }
+.powerImg2{
+    background-image: url('img/Power source/Chieftec/Chieftec A-135 Series 650W [APS-650SB].jpg');
+}
+.powerImg3{
+    background-image: url('img/Power source/Thermaltake/Thermaltake TR2 600W [TR-600P].jpg');
+}
+.powerImg4{
+    background-image: url('img/Power source/Zalman/Zalman GVM 850W [ZM850-GVM].jpg');
+}
+
+.ramImg1 {
+    background-image: url('img/RAM/AMD%20Radeon/AMD%20Radeon%20Entertainment%20Series%20%5BR538G1601U2S-UOUGO%5D%208%20%D0%93%D0%B1.jpg');
+}
+.ramImg2 {
+    background-image:url(img/RAM/Crucial/Crucial%20Ballistix%20Tactical%20%5BBLT4G3D1869DT1TX0CEU%5D%204%20%D0%93%D0%B1.jpg);
+}
+.ramImg3 {
+    background-image: url(img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX316C10FRK216%5D%2016%20%D0%93%D0%B1.jpg);
+}
+
+.videoImg1 {
+    background-image: url('img/Video adapter/ASUS/Asus GeForce GT 730 [GT730-4GD3].jpg')
+}
+.videoImg2 {
+    background-image: url('img/Video adapter/MSI/MSI AMD Radeon R7 370 Gaming 4G.jpg')
+}
+.videoImg3 {
+    background-image: url('img/Video adapter/Gigabyte/GIGABYTE GeForce GTX 750 Ti BLACK EDITION GV-N75TWF2BK-2GI.jpg')
+}
+
 /*Order form*/
 .orderFormLayout{
     position: relative;
