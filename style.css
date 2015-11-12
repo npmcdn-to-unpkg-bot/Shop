@@ -114,7 +114,7 @@ header .basket-img, .authorization-img{
     margin-top: 30px;
     margin-bottom: 30px;
 }
-header:after, .tab-content:after, footer{
+header:after, .tab-content:after, footer, .itemsContent:after{
     display: block;
     content: '';
     clear: both;
@@ -133,9 +133,6 @@ footer {
     text-align: center;    
 }
 
-section{
-    min-height: 500px;
-}
 .Categories:hover{
     border:none;
     font-size: 25px;
@@ -145,12 +142,10 @@ section{
 }
 /*Login*/
 .login{
+    margin:50px auto;
     box-sizing: border-box;
-    position: absolute;
-    top:50%;
-    left:50%;
-    padding: 20px 40px 20px 40px;
-    margin: -130px 0 0 -150px;
+    position: relative;
+    padding: 20px 40px 35px 40px;
     width: 300px;
     min-height: 200px;
     border: 1px solid black;
@@ -164,16 +159,11 @@ section{
     width: 1.1em;
     padding: 1px 1px 1px 2px;
     text-decoration: none;
-    text-shadow: none;
     text-align: center;
-    font-weight: normal;
     background: red;
     color: black;
     border: 3px solid #fff;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 .login input{
@@ -231,7 +221,7 @@ menu {
     width: 100%;
     display: inline-block;
     border-bottom: 1px solid rebeccapurple;
-    padding: 15px;
+    padding: 5px;
     text-decoration: none;
     padding-left: 5px;
 }
@@ -245,8 +235,17 @@ menu {
 }
 
 .navbar a:hover {
-    color: orange;
+    color: white;
+    background: rebeccapurple;
 }
+.navbar li:last-of-type a:hover {
+    border-bottom-right-radius: 8px;
+}
+.navbar li:first-child a:hover {
+    border-top-right-radius: 8px;
+}
+
+
 
 .navbar a:active {
     color: red;
@@ -286,7 +285,8 @@ menu .menucooling-img {
     height:25px;
     float: left;
     background-repeat: no-repeat;
-    background-position: left;    
+    background-position: left;   
+    padding-right: 8px;
 }
 
 /*Product description*/
@@ -437,7 +437,7 @@ menu .menucooling-img {
     margin: auto;
     position: relative; 
     padding-bottom: 40px;    
-    width: 75%;
+    width: 80%;
 }
 .viewList {    
     text-align: right;
@@ -480,7 +480,7 @@ menu, .itemsContent {
     display: inline-block;
     height: 100px;
     text-align: center;
-    margin: 10px 15px 15px 5px;    
+    margin: 10px 15px 15px 15px;  
     font-size: 12px;
     float: left;
 }
