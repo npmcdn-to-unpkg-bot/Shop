@@ -139,9 +139,9 @@ section{
 .Categories:hover{
     border:none;
     font-size: 25px;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0px 50px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 0px 50px rgba(0,0,0,0.5);
 }
 /*Login*/
 .login{
@@ -295,6 +295,15 @@ menu .menucooling-img {
     display: inline-block;
     list-style-type: none;
     font-size: 13px;
+}
+.breadcrumb li:after{
+    padding: 0px 5px;
+    content: "/";
+    display: inline-block;
+}
+.breadcrumb li:last-child:after{
+    content: "";
+    display: inline-block;
 }
 
 .sliderLayout{
