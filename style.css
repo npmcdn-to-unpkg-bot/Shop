@@ -376,16 +376,20 @@ menu .menucooling-img {
     width: 55px;
     height: 14px;
 }
+.layoutDescription label{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 7px;
 
+}
 .layoutDescription input{
-    margin-top:40px;
     float:left;
+    margin-top: 5px;
 }
 .addCartLoyout{
     float: right;
     font-size: 30px;
     margin-bottom: 20px;
-
 }
 .addCart{
     margin-top:20px;
