@@ -208,13 +208,6 @@ menu {
     position: fixed;
 }
 
-/*
-.navbar li {   
-    border-bottom: 1px solid black;
-    padding: 15px;
-}
-*/
-
 .navbar a {
     z-index: 100;
     box-sizing: border-box;
@@ -244,8 +237,6 @@ menu {
 .navbar li:first-child a:hover {
     border-top-right-radius: 8px;
 }
-
-
 
 .navbar a:active {
     color: red;
@@ -446,7 +437,7 @@ menu .menucooling-img {
 }
 
 
-/*Menu*/
+/*Main path*/
 
 menu, .itemsContent {
 /*    display: inline-block;*/
@@ -701,12 +692,11 @@ menu, .itemsContent {
     text-align: center;
 }
 
-/*Cart page*/
-
 /*Address page*/
 .address {
     width: 500px;    
     margin: auto;
+    height: 400px;
 }
 .squareAdd {
     float: left;
@@ -750,4 +740,171 @@ menu, .itemsContent {
 
 .address .line5 {
     margin-top: 25px;
+}
+
+/*Cart page*/
+
+    /*Table*/
+.cartPage {
+    display: inline-block;
+    float: right;
+    min-height: 250px;
+    width: 75%;
+}
+
+.cartTable {
+    display: inline-block;
+    float: left;
+    width: 100%;    
+    margin-top: 25px;
+}
+
+.itemsCart {
+    float: right;
+    margin-right: 15px;
+    width: 95%;    
+}
+
+.itemsCart tr {
+    height: 80px;
+}
+
+.cellView {
+    border: 2px solid black;
+}
+
+.descriptionItem {
+    display: inline-block;
+    width: 90%;
+    font-size: 30px;
+}
+
+.imgItemTable {
+    float: left;
+    display: inline-block;    
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;    
+    background-position: center;
+}
+
+.img1 {
+    background-image: url('img/CPU/AMD/AMD%20A8-7600%20OEM.jpg');
+}
+
+.img2 {
+    background-image: url('img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX313C9FR4%5D%204%20%D0%93%D0%B1.jpg');
+}
+
+.linkProperties {    
+    display: inline-block;
+    float: left;
+    margin-top: 7px;
+    margin-left: 5px;
+    height: 30px;
+}
+
+.linkCart {    
+    max-height: 17px;
+    max-width: 400px;
+    font-size: 22px;
+    vertical-align: top;    
+}
+
+.countCart {
+    float: right;    
+    display: inline-block;
+    padding-top: 5px;    
+}
+
+.countCart p {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;   
+}
+
+.cartInput {
+    display: inline-block;
+    vertical-align: middle;    
+}
+
+.cartInput input {
+    width: 30px;
+    height: 30px;    
+    font-size: 20px;
+}
+
+.cartPriceView {
+    vertical-align: middle;
+    margin-left: 10px;    
+    display: inline-block;
+}
+
+.itemsRemove {
+    padding-top: 4px;
+    height: 30px;
+    font-size: 20px;
+    text-align: right;
+}
+    
+    /*Total Table*/
+.totalPriceTable {    
+    text-align: right;    
+    margin-right: 15px; 
+    font-size: 30px;
+}
+
+.payTable {
+    display: inline-block;
+    float: right;
+    width: 300px;
+    height: 50px;
+}
+
+.cartPage .toCheckout {
+    float: right;
+}
+
+    /*Total*/
+
+.totalBar {
+    margin-top: 25px;
+    min-height: 150px;
+    width: 20%;
+    display: inline-block;
+    float: right; 
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.totalBar h2{
+    font-size: 40px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.totalBar p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.totalBar hr {    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.totalBar h1 {
+    font-size: 45px;
+}
+
+.toCheckout {
+    display: inline-block;    
+    padding: 10px 16px;
+    border: 1px solid #70b61f;;
+    border-radius: 5px;
+    background: #7dcc23;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
 }
