@@ -263,6 +263,10 @@ menu {
     color: red;
 }
 
+.activeTitle {
+    background-color: aqua;
+}
+
 menu .menumother-img {      
     background-image: url('img/Symbol/Motherboard.jpg');    
 }
@@ -535,16 +539,18 @@ menu, .itemsContent {
     width: 350px;
 }
 
-.linkProperties {
-    display: inline;   
+.squareList .linkProperties {
+   margin-left: 0;   
 }
 
 .listPrice {
+    margin-top: 7px;
     display: inline-block;
     padding-right: 15px;
     float: right;
 }
 .itemsInfo {
+    display: inline-block;
     height: 30px;
     margin-top: 5px;
     overflow: hidden;
