@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Address</title>
+	<link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <div ><a class="logo" href="index.html"></a></div>
+        <div ><a class="authorization" href="#openModal"><span class="authorization-img"></span>Личный кабинет</a></div>
+        <div ><a class="basket " href="CartPage.html"><span class="basket-img"></span>Корзина</a></div>
+        <div class="search"><input type="search" placeholder="Search"/></div>
+    </header>
+        <div id="openModal" class="modalDialog">
+            <div class="login">
+                <a class="close" href="">X</a>
+                <p>Please Sign In</p>
+            <form>
+                Email
+                <input type="email" placeholder="Email address" /><br>
+                Password
+                <input type="password" placeholder="***********"/><br>
+                <input type="checkbox" value="remember"/> Remember me<br>
+                <input type="submit" value="Sign In" /><br>
+            </form>
+                <a class="register" href="register.html">Register</a>
+            </div>
+        </div>
+    <section>
+        <div class="address">
+            <form>
+            <div class="squareAdd">
+                <h1>Shipping address</h1>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Country</div>
+                    <select class="changeCountry">
+                    </select>
+                </div>  
+                <div class="addressInfo">
+                    <div class="addressTextInfo">City</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Address</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">ZIP</div>
+                    <input>
+                </div>
+            </div>
+            <div class="squareAdd">
+                <h1>Billing address</h1>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Country</div>
+                    <select class="changeCountry">
+                    </select>
+                </div>  
+                <div class="addressInfo">
+                    <div class="addressTextInfo">City</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">Address</div>
+                    <input>
+                </div>
+                <div class="addressInfo">
+                    <div class="addressTextInfo">ZIP</div>
+                    <input>
+                </div>
+                <p class="addCheck">
+                    <input type="checkbox" name="save">
+                    My billing addres is the same
+                </p>
+            </div>
+            
+            <div class="line5">
+                <a href="orderForm.html"><input type="submit" value="Continue"/></a> 
+            </div>
+            </form>
+        </div>
+    </section>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>

@@ -41,8 +41,12 @@ header, footer{
     box-sizing: border-box;
 }
 header .logo{
+    width: 67px;
+    height: 50px;
+    background: url('img/Symbol/4.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
     float:left;
-    background: url('img/');
 }
 .logo, .search, .basket, .authorization, .imgStar, .layoutDescription h1, .addCart {
     display: inline-block;
@@ -120,7 +124,7 @@ header .basket-img, .authorization-img{
 }
 .tab-content-layout, .productLayout{
     width: 90%;
-    margin: 0 auto;
+    margin: 2% auto;
 }
 .tab-content .layoutCategories, .Categories{
     box-sizing: border-box;
@@ -163,9 +167,10 @@ footer {
 }
 /*Login*/
 .login{
-    margin:50px auto;
+    margin:10% auto;
     box-sizing: border-box;
     position: relative;
+
     padding: 20px 40px 35px 40px;
     width: 300px;
     min-height: 200px;
@@ -350,7 +355,23 @@ menu .menucooling-img {
     text-align: center;
     width: 100%;
     min-width: 200px;
-
+}
+.slider-img .modalBigImg{
+    display: none;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    width:100px;
+    height: 100px;
+    background: url(img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.slider-img .modalBigImg:target{
+    display:block;
+    
 }
 .slider-img .bigImgPositioner img {
     vertical-align: middle;
@@ -943,3 +964,21 @@ menu, .itemsContent {
     font-weight: bold;
     font-size: 25px;
 }
+
+.modalDialog {
+    display: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 99999;
+    pointer-events: none;
+    background: rgba(0,0,0,0.8);
+}
+.modalDialog:target{
+    display:block;
+    pointer-events: auto;
+}
+
+
