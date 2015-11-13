@@ -163,9 +163,10 @@ footer {
 }
 /*Login*/
 .login{
-    margin:50px auto;
+    margin:10% auto;
     box-sizing: border-box;
     position: relative;
+
     padding: 20px 40px 35px 40px;
     width: 300px;
     min-height: 200px;
@@ -942,4 +943,20 @@ menu, .itemsContent {
     color:white;
     font-weight: bold;
     font-size: 25px;
+}
+
+.modalDialog {
+    display: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 99999;
+    pointer-events: none;
+    background: rgba(0,0,0,0.8);
+}
+.modalDialog:target{
+    display:block;
+    pointer-events: auto;
 }
