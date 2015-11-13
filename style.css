@@ -7,11 +7,33 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 	font: inherit;
 	vertical-align: baseline;
 }
-body{
+html, body{
+
+    height: 100%;
     font-size: 16px;
 }
 
 /*Header*/
+header, footer{
+
+
+}
+ footer{
+     margin-top: -50px;
+    height: 50px;
+}
+header{
+    height: 70px;
+
+}
+.wrapper{
+    overflow: hidden;
+    min-height: 100%;
+}
+section{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
 header, footer{
     font-size: 20px;
     background: rgba(122,122,122,1);
@@ -94,7 +116,7 @@ header .basket-img, .authorization-img{
     width: 90%;
     text-align: center;
     margin: auto;
-    padding: 30px 50px 30px 50px;
+
 }
 .tab-content-layout, .productLayout{
     width: 90%;
@@ -125,7 +147,6 @@ header, footer{
     border:1px solid black;
     border-left: none;
     border-right: none;
-    min-height: 50px;
 }
 
 footer {     
@@ -689,12 +710,14 @@ menu, .itemsContent {
     left: 308.5px;
 }
 .line5{
+    z-index: 1;
     width: 100px;
     position: relative;
     top: 70px;
     margin: auto;
 }
 .line5 input{
+    z-index: 1;
     border: none;
     border-radius: 20px;
     width: 100px;
@@ -747,7 +770,9 @@ menu, .itemsContent {
 .addCheck input {
     float: left;
 }
-
+.address a{
+    z-index: 20;
+}
 .address .line5 {
     margin-top: 25px;
 }
