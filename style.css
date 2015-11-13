@@ -178,15 +178,15 @@ footer {
     border-radius: 4px;
     background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
 }
-.login .close{
+.login .close, .modalBigImg .close{
     position: absolute;
-    right: -10px; 
-    top: -10px; 
-    width: 1.1em;
+    right: -10px;
+    top: -10px;
+    width: 1.3em;
     padding: 1px 1px 1px 2px;
     text-decoration: none;
     text-align: center;
-    background: red;
+    background: burlywood;
     color: black;
     border: 3px solid #fff;
     border-radius: 50%;
@@ -357,21 +357,28 @@ menu .menucooling-img {
     min-width: 200px;
 }
 .slider-img .modalBigImg{
+    border: 1px solid black;
+    margin: auto;
     display: none;
-    position: absolute;
-    top:0;
-    right:0;
+    position: fixed;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    width:100px;
-    height: 100px;
+    width: 22%;
+    height: 322px;
     background: url(img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }
 .slider-img .modalBigImg:target{
     display:block;
-    
+}
+.modalBigImg .close {
+    position: absolute;
+    right: -17px;
+    top: -14px;
+
 }
 .slider-img .bigImgPositioner img {
     vertical-align: middle;
