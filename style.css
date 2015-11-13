@@ -14,17 +14,19 @@ html, body{
 }
 
 /*Header*/
-header, footer{
 
-
+.freeBlock {
+    width: 100%;
+    height: 70px;
 }
- footer{
+footer{
      margin-top: -50px;
     height: 50px;
 }
 header{
+    z-index: 10;
     height: 70px;
-
+    position: fixed;
 }
 .wrapper{
     overflow: hidden;
