@@ -178,15 +178,15 @@ footer {
     border-radius: 4px;
     background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
 }
-.login .close{
+.login .close, .modalBigImg .close{
     position: absolute;
-    right: -10px; 
-    top: -10px; 
-    width: 1.1em;
+    right: -10px;
+    top: -10px;
+    width: 1.3em;
     padding: 1px 1px 1px 2px;
     text-decoration: none;
     text-align: center;
-    background: red;
+    background: burlywood;
     color: black;
     border: 3px solid #fff;
     border-radius: 50%;
@@ -378,15 +378,7 @@ menu .menucooling-img {
     position: absolute;
     right: -17px;
     top: -14px;
-    width: 1.3em;
-    padding: 1px 1px 1px 1px;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    background: burlywood;
+
 }
 .slider-img .bigImgPositioner img {
     vertical-align: middle;
