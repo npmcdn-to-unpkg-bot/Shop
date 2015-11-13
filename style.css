@@ -753,6 +753,7 @@ menu, .itemsContent {
     height: 400px;
 }
 .squareAdd {
+    z-index: 2;
     float: left;
     margin-top: 10%;
     margin-right: 25px;
@@ -794,7 +795,7 @@ menu, .itemsContent {
 .address a{
     z-index: 20;
 }
-.address .line5 {
+.address .line5 {    
     margin-top: 25px;
 }
 
