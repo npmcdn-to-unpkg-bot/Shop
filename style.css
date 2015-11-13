@@ -357,21 +357,36 @@ menu .menucooling-img {
     min-width: 200px;
 }
 .slider-img .modalBigImg{
+    border: 1px solid black;
+    margin: auto;
     display: none;
-    position: absolute;
-    top:0;
-    right:0;
+    position: fixed;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    width:100px;
-    height: 100px;
+    width: 22%;
+    height: 322px;
     background: url(img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }
 .slider-img .modalBigImg:target{
     display:block;
-    
+}
+.modalBigImg .close {
+    position: absolute;
+    right: -17px;
+    top: -14px;
+    width: 1.3em;
+    padding: 1px 1px 1px 1px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    background: burlywood;
 }
 .slider-img .bigImgPositioner img {
     vertical-align: middle;
