@@ -8,23 +8,18 @@ b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, c
 	vertical-align: baseline;
 }
 html, body{
-
     height: 100%;
     font-size: 16px;
 }
-
 /*Header*/
-header, footer{
-
-
-}
- footer{
-     margin-top: -50px;
+footer{
+    margin-top: -50px;
     height: 50px;
+    padding-top: 12px;
+    text-align: center;    
 }
 header{
     height: 70px;
-
 }
 .wrapper{
     overflow: hidden;
@@ -60,14 +55,14 @@ header .logo{
     margin:  10px 15px 10px 15px;
 }
 
-header .basket, .authorization{
+header .basket,header .authorization{
     border: 1px solid black;
     border-radius: 4px;
     padding: 10px;
     text-decoration: none;
 
 }
-header .basket:hover, .authorization:hover{
+header .basket:hover,header .authorization:hover{
     color: #b8b8b8;
     border: 1px solid #b8b8b8;
 }
@@ -144,18 +139,6 @@ header:after, .tab-content:after, footer, .itemsContent:after{
     display: block;
     content: '';
     clear: both;
-}
-header, footer{
-    box-sizing: border-box;
-    width:100%;
-    border:1px solid black;
-    border-left: none;
-    border-right: none;
-}
-
-footer {     
-    padding-top: 12px;
-    text-align: center;    
 }
 
 .Categories:hover{
@@ -357,22 +340,18 @@ menu .menucooling-img {
     min-width: 200px;
 }
 .slider-img .modalBigImg{
+    position: relative;
     border: 1px solid black;
-    margin: auto;
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 22%;
-    height: 322px;
+    margin: 10% auto;
+    width: 34%;
+    height: 490px;
     background: url(img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }
-.slider-img .modalBigImg:target{
+.slider-img .backgroundModal:target{
     display:block;
+    pointer-events: auto;
 }
 .modalBigImg .close {
     position: absolute;
@@ -989,3 +968,15 @@ menu, .itemsContent {
 }
 
 
+
+.backgroundModal {
+    display: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 99999;
+    pointer-events: none;
+    background: rgba(0,0,0,0.8);
+}
