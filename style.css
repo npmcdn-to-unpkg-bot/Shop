@@ -78,9 +78,7 @@ header .basket:hover,header .authorization:hover{
 header .basket-img{
     background-image: url('img/Symbol/shopping-cart.gif');
 }
-header .basket-img, .authorization-img {
-    padding-left:5px;
-}
+
 header .authorization-img{
     background-image: url('img/Symbol/logo-login.png');
 }
@@ -90,6 +88,7 @@ header .basket-img, .authorization-img{
     height:20px;
     float:left;
     background-repeat: no-repeat;
+    padding-left:5px;
 }
 /*Content*/
 .tab-content .imgCooling{
@@ -121,7 +120,7 @@ header .basket-img, .authorization-img{
     background-image: url('img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg');
 }
 .tab-content{
-    width: 90%;
+    width: 98%;
     text-align: center;
     margin: auto;
 
@@ -135,6 +134,7 @@ header .basket-img, .authorization-img{
     display: inline-block;
     vertical-align: top;
 }
+
 .tab-content .Categories{
     width:200px;
     height:250px;
@@ -143,6 +143,8 @@ header .basket-img, .authorization-img{
     margin-right:70px;
     margin-top: 30px;
     margin-bottom: 30px;
+
+
 }
 header:after, .tab-content:after, footer, .itemsContent:after{
     display: block;
@@ -150,13 +152,26 @@ header:after, .tab-content:after, footer, .itemsContent:after{
     clear: both;
 }
 
+
 .Categories:hover{
-    border:none;
-    font-size: 25px;
+    -webkit-animation: movie 2s infinite;
+        border:none;
+}
+
+@-webkit-keyframes movie{
+    
+    50% {  
+        font-size: 25px;
     -webkit-box-shadow: 0 0px 50px rgba(0,0,0,0.5);
     -moz-box-shadow: 0 0px 50px rgba(0,0,0,0.5);
-    box-shadow: 0 0px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 0px 50px rgba(0,0,0,0.5);}
+    100% {   
+        font-size: 18px;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+    -moz-box-shadow: 0 0px 0px rgba(0,0,0,0);
+    box-shadow: 0 0px 0px rgba(0,0,0,0); }
 }
+
 /*Login*/
 .login{
     margin:10% auto;
@@ -348,20 +363,8 @@ menu .menucooling-img {
     width: 100%;
     min-width: 200px;
 }
-.slider-img .modalBigImg{
-    position: relative;
-    border: 1px solid black;
-    margin: 10% auto;
-    width: 34%;
-    height: 490px;
-    background: url(img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.slider-img .backgroundModal:target{
-    display:block;
-    pointer-events: auto;
-}
+
+
 .modalBigImg .close {
     position: absolute;
     right: -17px;
@@ -978,15 +981,67 @@ menu, .itemsContent {
 }
 
 
-
-.backgroundModal {
-    display: none;
-    position: fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index: 99999;
-    pointer-events: none;
-    background: rgba(0,0,0,0.8);
+/*@media screen*/
+@media screen and  (max-width: 1100px){
+    .tab-content .Categories{
+    width: 260px;
+    height: 300px;
+    margin-left: -5px;
+    margin-right:0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.0s;
+    font-size: 18px; 
+    }
+    .tab-content-layout, .productLayout{
+        width:98%;
+    }
+    .Categories:hover{
+    border: 2px solid blue;
+    font-size: 25px;
+     -webkit-box-shadow: none; 
+    -moz-box-shadow: none;
+     box-shadow: none; 
+    }
+    
+    .slider-img {
+    float: left;
+    width:100%;
+    height: 25%;
+    min-width: 200px;
+    }
+    .layoutDescription {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    }
+    .lineSocial {
+    text-align: center;
+    margin: 20% auto;
+    width: 100%;
+    clear: both;
+    }
+    header{
+    width: 100%;
+    z-index: 10;
+    height: 100px;
+    position: static;
+    }
+    header .textHidden{
+        display:none;
+    }
+    header .basket-img, .authorization-img{
+    width: 40px;
+    height:40px;
+    }
+    .logo, .search, .basket, .authorization, header input[type="search"] {
+margin-top:19px;
+    }
+    .login {
+        font-size:18px;
+    }
+    .login input {
+        padding:10px;
+    }
 }
