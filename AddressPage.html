@@ -9,9 +9,19 @@
     <div class="wrapper">
     <header>
         <div ><a class="logo" href="index.html"></a></div>
-        <div ><a class="authorization" href="#openModal"><span class="authorization-img"></span>Profile</a></div>
-        <div ><a class="basket " href="CartPage.html"><span class="basket-img"></span>Cart</a></div>
-        <div class="search"><input type="search" placeholder="Search"/></div>
+        <div >
+            <a class="authorization" href="#openModal">
+            <span class="authorization-img"></span>Profile
+            </a>
+        </div>
+        <div >
+            <a class="basket " href="CartPage.html">
+                <span class="basket-img"></span>Cart
+            </a>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Search"/>
+        </div>
     </header>
         <div id="openModal" class="modalDialog">
             <div class="login">
@@ -28,59 +38,65 @@
                 <a class="register" href="register.html">Register</a>
             </div>
         </div>
-    <section>
-        <div class="freeBlock"></div>
-        <div class="address">
-            <form>
+<section>
+    <div class="freeBlock"></div>
+    <div class="address">
+        <form class="formAdd">
             <div class="squareAdd">
                 <h1>Shipping address</h1>
                 <div class="addressInfo">
                     <div class="addressTextInfo">Country</div>
-                    <select class="changeCountry">
-                    </select>
+                    <input list="countryAdd"/>
+                    <datalist id="countryAdd">
+                        <option value="Australia"/>
+                        <option value="Chaina"/>
+                        <option value="England"/>
+                        <option value="France"/>
+                        <option value="Russia"/>
+                        <option value="Spain"/>
+                        <option value="USA"/>
+                    </datalist>
                 </div>  
                 <div class="addressInfo">
                     <div class="addressTextInfo">City</div>
-                    <input>
+                    <input type="text"/>
                 </div>
                 <div class="addressInfo">
                     <div class="addressTextInfo">Address</div>
-                    <input>
+                    <input type="text"/>
                 </div>
                 <div class="addressInfo">
                     <div class="addressTextInfo">ZIP</div>
-                    <input>
+                    <input type="text"/>
                 </div>
             </div>
             <div class="squareAdd">
                 <h1>Billing address</h1>
                 <div class="addressInfo">
                     <div class="addressTextInfo">Country</div>
-                    <select class="changeCountry">
-                    </select>
+                    <input list="countryAdd"/>
                 </div>  
                 <div class="addressInfo">
                     <div class="addressTextInfo">City</div>
-                    <input>
+                    <input type="text"/>
                 </div>
                 <div class="addressInfo">
                     <div class="addressTextInfo">Address</div>
-                    <input>
+                    <input type="text"/>
                 </div>
                 <div class="addressInfo">
                     <div class="addressTextInfo">ZIP</div>
-                    <input>
+                    <input type="text"/>
                 </div>
                 <p class="addCheck">
-                    <input type="checkbox" name="save">
+                    <input type="checkbox" name="save"/>
                     My billing addres is the same
                 </p>
             </div>
-            
-            <div class="line5">
-                <a href="orderForm.html"><input type="submit" value="To pay"/></a> 
+            <div class="buttonAdd">                
+                <input type="submit" value="To pay"/>                
             </div>
-            </form>
+        </form>
         </div>
     </section>
     </div>
