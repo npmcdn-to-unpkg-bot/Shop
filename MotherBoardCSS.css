@@ -15,7 +15,7 @@ html, body{
 
 /*Header*/
 
-header{
+.header{
     width: 100%;
     z-index: 10;
     height: 70px;
@@ -26,13 +26,13 @@ header{
     min-height: 100%;
 }
 
-header, footer{
+.header--style, .footer{
     font-size: 20px;
     background: -webkit-radial-gradient(center, circle farthest-side, #000, rgba(122,122,122,1) 80%);
     color: white;
     box-sizing: border-box;
 }
-header .logo{
+.header__elements--logo{
     width: 67px;
     height: 50px;
     background: url('img/Symbol/4.gif');
@@ -40,37 +40,33 @@ header .logo{
     background-size: contain;
     float:left;
 }
-.logo, .search, .basket, .authorization, .imgStar, .layoutDescription h1, .addCart {
+.header__elements {
     display: inline-block;
     box-sizing: border-box;
+    margin-left: 15px;
+    color:white;
+    margin: 10px 15px 10px 15px;
 }
-.search, .basket, .authorization{
+.header__elements--search, .header__elements--basket, .header__elements--authorization{
     float:right;
 }
-.logo, .search, .basket, .authorization{
-    color:white;
-    margin:  10px 15px 10px 15px;
-}
-
-header .basket,header .authorization{
+.header__elements--basket, .header__elements--authorization{
     border: 1px solid black;
     border-radius: 4px;
     padding: 10px;
     text-decoration: none;
-
 }
-header .basket:hover,header .authorization:hover{
+.header__elements--basket:hover,.header__elements--authorization:hover{
     color: #b8b8b8;
     border: 1px solid #b8b8b8;
 }
-header .basket-img{
+.header__basket-img{
     background-image: url('img/Symbol/shopping-cart.gif');
 }
-
-header .authorization-img{
+.header__authorization-img{
     background-image: url('img/Symbol/logo-login.png');
 }
-header .basket-img, .authorization-img{
+.header__basket-img, .header__authorization-img{
     background-size: contain;
     width: 20px;
     height:20px;
@@ -78,14 +74,73 @@ header .basket-img, .authorization-img{
     background-repeat: no-repeat;
     padding-left:5px;
 }
-
-                        /*Footer*/
-
-footer{
+.product-section, .content-layout{
+    padding-top:70px;    
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 2% auto;
+}
+.footer{
     margin-top: -50px;
     height: 50px;
     padding-top: 12px;
     text-align: center;    
+}
+
+                        /*Login*/
+
+.login-form{
+    margin:10% auto;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    min-height: 200px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.login-form--full{
+        padding: 20px 40px 35px 40px;
+        background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
+}
+
+.login-form__close, .modalBigImg .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 1.3em;
+    padding: 1px 1px 1px 2px;
+    text-decoration: none;
+    text-align: center;
+    background: burlywood;
+    color: black;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.login-form__input{
+    box-sizing: border-box;
+    padding: 3px;
+    width:217px;
+    margin-bottom: 7px;
+    border-radius:4px;
+    border:2px solid darkblue;
+}
+input[placeholder="Search"]{
+    margin-top:10px;
+}
+.login .view {
+    margin-top: 42px;
+}
+.login-form__remember-me{
+    width:15px;
+}
+.login-form__register{
+    float:right;
+}
+.login-form__header{
+    text-align: center;
+    padding-bottom: 2px;
 }
 
                         /*Content*/
@@ -183,6 +238,7 @@ footer{
     background-position: center;   
 }
 
+/*
 .motherLinkProperties {
     display: inline-block;
     white-space: nowrap;
@@ -197,6 +253,7 @@ footer{
     padding-right: 15px;
     float: right;
 }
+*/
 
 .elementspagelink__img--img1 {    
     background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg');    

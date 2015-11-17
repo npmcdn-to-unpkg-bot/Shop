@@ -1,91 +1,80 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=false">
+    <link rel="icon" href="img/Symbol/4.gif">
     <title>MotherboardList</title>
 	<link rel="stylesheet"  href="style.css">
 </head>
 <body>
     
 <!--Header(All pages)-->
-    
-    <header>
-        <div><a class="logo" href="index.html"></a></div>
-        <div>
-            <a class="authorization" href="#openModal">
-                <span class="authorization-img"></span>
-                <span class="textHidden">Profile</span>
-            </a>
-        </div>
-        <div>
-            <a class="basket " href="CartPage.html">
-                <span class="basket-img"></span>
-                <span class="textHidden">Cart</span>
-            </a>
-        </div>
-        <div class="search"><input type="search" placeholder="Search"/></div>
+<div class="wrapper">
+    <header class="header header--style">
+        <a class="header__elements header__elements--logo" href="index.html"></a>
+        <a class="header__elements header__elements--authorization" href="#openModal">
+            <span class="header__authorization-img"></span>
+            <span class="header__text-hidden">Profile</span>
+        </a>
+        <a class="header__elements header__elements--basket" href="CartPage.html">
+            <span class="header__basket-img"></span>
+            <span class="header__text-hidden">Cart</span>
+        </a>
+        <input class="header__elements header__elements--search" type="search" placeholder="Search"/>
     </header>
-        <div id="openModal" class="modalDialog">
-            <div class="login">
-                <a class="close" href="">X</a>
-                <p>Please Sign In</p>
-            <form>
+        <div id="openModal" class="modal-dialog">
+            <form class="login-form login-form--full">
+                <a class="login-form__close" href="">X</a>
+                <p class="login-form__header">Please Sign In</p>
                 Email
-                <input type="email" placeholder="Email address" /><br>
+                <input class="login-form__email login-form__input" type="email" placeholder="Email address" /><br>
                 Password
-                <input type="password" placeholder="***********"/><br>
-                <input type="checkbox" value="remember"/> Remember me<br>
-                <input type="submit" value="Sign In" /><br>
+                <input class="login-form__password login-form__input" type="password" placeholder="***********"/><br>
+                <input class="login-form__remember-me login-form__input" type="checkbox" value="remember"/> Remember me<br>
+                <input class="login-form__sign-in login-form__input" type="submit" value="Sign In" /><br>
+                <a class="login-form__register" href="register.html">Register</a>
             </form>
-                <a class="register" href="register.html">Register</a>
-            </div>
         </div>   
 
 <!--Menu-->
     
-<nav class="navbar">       
-    <li>        
-        <a class="menumother activeTitle" href="Motherboard.html">
-            <div class="menumother-img"></div>Motherboard
-        </a>        
-    </li>
+<nav class="navbar navbar--desktop">       
+
+        <a class="navbar__link navbar__link--active" href="Motherboard.html">
+            <div class="navbar__img navbar__img--mother"></div>Motherboard
+        </a> 
     
-    <li>   
-        <a class="menucpu" href="CPU.html">
-             <div class="menucpu-img"></div>CPU
-        </a>      
-    </li>
-    <li>
-        <a class="menuram" href="RAM.html">
-            <div class="menuram-img"></div>RAM
-        </a>        
-    </li>		
-    <li>
-        <a class="menuvideo" href="videoAAdapter.html">
-            <div class="menuvideo-img"></div>Video adapter
-        </a>        
-    </li>
-    <li>
-        <a class="menuhdd" href="HDD.html">
-            <div class="menuhdd-img"></div>HDD
+        <a class="navbar__link" href="CPU.html">
+             <div class="navbar__img navbar__img--cpu"></div>CPU
+        </a> 
+    
+        <a class="navbar__link" href="RAM.html">
+            <div class="navbar__img navbar__img--ram"></div>RAM
+        </a> 
+    
+        <a class="navbar__link" href="videoAAdapter.html">
+            <div class="navbar__img navbar__img--video"></div>Video adapter
+        </a> 
+    
+        <a class="navbar__link" href="HDD.html">
+            <div class="navbar__img navbar__img--hdd"></div>HDD
         </a>
-    </li>
-    <li>
-        <a class="menupower" href="powerSource.html">
-             <div class="menupower-img"></div>Power source
-        </a>        
-    </li>
-    <li>
-        <a class="menucooling" href="cooling.html">
-            <div class="menucooling-img"></div>Cooling
+    
+        <a class="navbar__link" href="powerSource.html">
+             <div class="navbar__img navbar__img--power"></div>Power source
+        </a> 
+    
+        <a class="navbar__link" href="cooling.html">
+            <div class="navbar__img navbar__img--cooling"></div>Cooling
         </a>
-    </li>    
+    
 </nav>
 
  <!--Main path-->
     
 <section class="elementsPage">
-<div class="freeBlock"></div>
 <div class="itemsContent">
     <div class="viewList"><a href="Motherboard.html">Grid View</a></div>
     
@@ -306,7 +295,8 @@
     
 
 </div>
-        </section>
-<footer>© 2015 Powered by Footerist</footer>
+    </section>
+</div>
+<footer class="footer">© 2015 Powered by Footerist</footer>
 </body>
 </html>

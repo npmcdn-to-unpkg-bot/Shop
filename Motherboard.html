@@ -2,30 +2,41 @@
 <html>
 <head>
 	<meta charset="utf-8" >
+    <link rel="icon" href="img/Symbol/4.gif">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=false">
     <title>Motherboard</title>
-	<link rel="stylesheet"  href="MotherBoardCSS.css">
+	<link rel="stylesheet"  href="style.css">
 </head>
 <body>
     
 <!--Header(All pages)-->
 <div class="wrapper">
-    <header>
-        <div><a class="logo" href="index.html"></a></div>
-        <div>
-            <a class="authorization" href="#openModal">
-                <span class="authorization-img"></span>
-                <span class="textHidden">Profile</span>
-            </a>
+    <header class="header header--style">
+        <a class="header__elements header__elements--logo" href="index.html"></a>
+        <a class="header__elements header__elements--authorization" href="#openModal">
+            <span class="header__authorization-img"></span>
+            <span class="header__text-hidden">Profile</span>
+        </a>
+        <a class="header__elements header__elements--basket" href="CartPage.html">
+            <span class="header__basket-img"></span>
+            <span class="header__text-hidden">Cart</span>
+        </a>
+        <input class="header__elements header__elements--search" type="search" placeholder="Search"/>
+    </header>
+        <div id="openModal" class="modal-dialog">
+            <form class="login-form login-form--full">
+                <a class="login-form__close" href="">X</a>
+                <p class="login-form__header">Please Sign In</p>
+                Email
+                <input class="login-form__email login-form__input" type="email" placeholder="Email address" /><br>
+                Password
+                <input class="login-form__password login-form__input" type="password" placeholder="***********"/><br>
+                <input class="login-form__remember-me login-form__input" type="checkbox" value="remember"/> Remember me<br>
+                <input class="login-form__sign-in login-form__input" type="submit" value="Sign In" /><br>
+                <a class="login-form__register" href="register.html">Register</a>
+            </form>
         </div>
-        <div>
-            <a class="basket " href="CartPage.html">
-                <span class="basket-img"></span>
-                <span class="textHidden">Cart</span>
-            </a>
-        </div>
-        <div class="search"><input type="search" placeholder="Search"/></div>
-    </header>        
     
 <!--Menu(All pages)-->
         
@@ -245,6 +256,6 @@
 </div>
 </section>
 </div>
-<footer>© 2015 Powered by Footerist</footer>
+    <footer class="footer">© 2015 Powered by Footerist</footer>
 </body>
 </html>
