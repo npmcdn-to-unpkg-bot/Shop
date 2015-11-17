@@ -40,7 +40,7 @@ section{
 }
 header, footer{
     font-size: 20px;
-    background: rgba(122,122,122,1);
+    background: -webkit-radial-gradient(center, circle farthest-side, #000, rgba(122,122,122,1) 80%);
     color: white;
     box-sizing: border-box;
 }
@@ -1028,31 +1028,31 @@ nav, .itemsContent {
 /*@media screen*/
 @media screen and  (max-width: 1100px){
     .tab-content .Categories{
-    width: 260px;
-    height: 300px;
-    margin-left: -5px;
-    margin-right:0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: all 0.0s;
-    font-size: 18px; 
+        width: 260px;
+        height: 300px;
+        margin-left: -5px;
+        margin-right:0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: all 0.0s;
+        font-size: 18px; 
     }
     .tab-content-layout, .productLayout{
         width:98%;
     }
     .Categories:hover{
-    border: 2px solid blue;
-    font-size: 25px;
-     -webkit-box-shadow: none; 
-    -moz-box-shadow: none;
-     box-shadow: none; 
+       -webkit-animation: none;
+        border:1px solid black;
+        -webkit-box-shadow: none; 
+        -moz-box-shadow: none;
+        box-shadow: none; 
     }
     
     .slider-img {
-    float: left;
-    width:100%;
-    height: 25%;
-    min-width: 200px;
+        float: left;
+        width:100%;
+        height: 25%;
+        min-width: 200px;
     }
     .layoutDescription {
     margin-top: 10px;
@@ -1088,7 +1088,63 @@ margin-top:19px;
     .login input {
         padding:10px;
     }
+    .freeBlock {
+    display: none;
+}   .orderFormLayout {
+    position: relative;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    padding: 100px 0px;
+    }   
+    .orderForm {
+    width: 100%;
+    height: 92%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .orderForm .line1 {
+    top: 113px;
+    left: 17px;
+    width: 632px;
+    }
+    .line1 input, .line4 input, .line2 select {
+    width: 150px;
+    height: 70px;
+    }
+    .orderForm .line2 {
+    top: 120px;
+    left: 184px;
+    }
+    .orderForm .line3 {
+    top: 160px;
+    left: 26px;
+    }
+    .orderForm .line4 {
+    top: -6px;
+    left: 692.5px;
+    }
+    .line5 {
+    top: 230px;
+    }
+    .orderForm .line3 input {
+    width: 350px;
+    height: 55px;
+    }
+    .orderForm form input,.orderForm form option, .orderForm form select{
+    font-size: 30px;
+    }
+    .lineValid {
+    font-size: 14px;
+    top: 115px;
+    left: 238px;
+    margin-right: 110px;
+    }
+    .line5 input {
+    width: 150px;
+    height: 75px;
+    }
     
-/*Menu Mobile Versi0n*/
+Menu Mobile Versi0n
     
 }
