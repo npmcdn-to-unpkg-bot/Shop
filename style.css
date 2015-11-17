@@ -509,15 +509,7 @@ nav, .itemsContent {
     clear: both;
 }
 
-.squareList {
-    vertical-align: top;
-    width: 500px;    
-    height: 150px;
-    text-align: center;
-    margin: auto;    
-    font-size: 12px;
-    
-}
+
 
 .imgItem {    
     height: 150px;    
@@ -589,7 +581,7 @@ nav, .itemsContent {
 
 /*-----------------------------------------START!--------------------------------*/
 
-
+/*----------------------------------------Grid View------------------------------*/
 .elementspage {
     width: 90%;
     float: right;    
@@ -665,15 +657,6 @@ nav, .itemsContent {
     clear: both;
 }
 
-.squareList {
-    vertical-align: top;
-    width: 500px;    
-    height: 150px;
-    text-align: center;
-    margin: auto;    
-    font-size: 12px;    
-}
-
 .elementspagelink__img {    
     height: 150px;    
     background-size: contain;
@@ -710,6 +693,20 @@ nav, .itemsContent {
 }
 .elementspagelink__img--img10 {
     background-image: url('img/motherboard/ASRock/ASRock%20Socket-AM1%20AM1B-MDH.jpg');
+}
+
+/*----------------------------------------List View-------------------------------*/
+
+.elementspagelist {    
+    width: 500px;    
+    height: 150px;    
+    margin: auto;    
+}
+
+.elementspagelist--style {
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
 }
 
 /*-----------------------------------------FINISH!-------------------------------*/
