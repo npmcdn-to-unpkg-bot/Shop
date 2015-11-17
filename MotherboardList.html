@@ -9,21 +9,17 @@
     
 <!--Header(All pages)-->
     
-    <header>
-        <div><a class="logo" href="index.html"></a></div>
-        <div>
-            <a class="authorization" href="#openModal">
-                <span class="authorization-img"></span>
-                <span class="textHidden">Profile</span>
-            </a>
-        </div>
-        <div>
-            <a class="basket " href="CartPage.html">
-                <span class="basket-img"></span>
-                <span class="textHidden">Cart</span>
-            </a>
-        </div>
-        <div class="search"><input type="search" placeholder="Search"/></div>
+    <header class="header header--style">
+        <a class="header__elements header__elements--logo" href="index.html"></a>
+        <a class="header__elements header__elements--authorization" href="#openModal">
+            <span class="header__authorization-img"></span>
+            <span class="header__text-hidden">Profile</span>
+        </a>
+        <a class="header__elements header__elements--basket" href="CartPage.html">
+            <span class="header__basket-img"></span>
+            <span class="header__text-hidden">Cart</span>
+        </a>
+        <input class="header__elements header__elements--search" type="search" placeholder="Search"/>
     </header>
         <div id="openModal" class="modalDialog">
             <div class="login">
@@ -307,6 +303,6 @@
 
 </div>
         </section>
-<footer>© 2015 Powered by Footerist</footer>
+    <footer class="footer">© 2015 Powered by Footerist</footer>
 </body>
 </html>

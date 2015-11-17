@@ -1,5 +1,4 @@
-html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
-b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -11,20 +10,7 @@ html, body{
     height: 100%;
     font-size: 16px;
 }
-/*Header*/
-
-.freeBlock {
-    width: 100%;
-    height: 70px;
-}
-
-footer{
-    margin-top: -50px;
-    height: 50px;
-    padding-top: 12px;
-    text-align: center;    
-}
-header{
+.header{
     width: 100%;
     z-index: 10;
     height: 70px;
@@ -34,17 +20,13 @@ header{
     overflow: hidden;
     min-height: 100%;
 }
-section{    
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-header, footer{
+.header--style, .footer{
     font-size: 20px;
     background: -webkit-radial-gradient(center, circle farthest-side, #000, rgba(122,122,122,1) 80%);
     color: white;
     box-sizing: border-box;
 }
-header .logo{
+.header__elements--logo{
     width: 67px;
     height: 50px;
     background: url('img/Symbol/4.gif');
@@ -52,43 +34,52 @@ header .logo{
     background-size: contain;
     float:left;
 }
-.logo, .search, .basket, .authorization, .imgStar, .layoutDescription h1, .addCart {
+.header__elements {
     display: inline-block;
     box-sizing: border-box;
+    margin-left: 15px;
+    color:white;
+    margin: 10px 15px 10px 15px;
 }
-.search, .basket, .authorization{
+.header__elements--search, .header__elements--basket, .header__elements--authorization{
     float:right;
 }
-.logo, .search, .basket, .authorization{
-    color:white;
-    margin:  10px 15px 10px 15px;
-}
-
-header .basket,header .authorization{
+.header__elements--basket, .header__elements--authorization{
     border: 1px solid black;
     border-radius: 4px;
     padding: 10px;
     text-decoration: none;
-
 }
-header .basket:hover,header .authorization:hover{
+.header__elements--basket:hover,.header__elements--authorization:hover{
     color: #b8b8b8;
     border: 1px solid #b8b8b8;
 }
-header .basket-img{
+.header__basket-img{
     background-image: url('img/Symbol/shopping-cart.gif');
 }
-
-header .authorization-img{
+.header__authorization-img{
     background-image: url('img/Symbol/logo-login.png');
 }
-header .basket-img, .authorization-img{
+.header__basket-img, .header__authorization-img{
     background-size: contain;
     width: 20px;
     height:20px;
     float:left;
     background-repeat: no-repeat;
     padding-left:5px;
+}
+.product-section, .content-layout{
+    padding-top:70px;    
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 2% auto;
+}
+.footer{
+    margin-top: -50px;
+    height: 50px;
+    padding-top: 12px;
+    text-align: center;    
 }
 /*Content*/
 .tab-content .imgCooling{
@@ -123,18 +114,12 @@ header .basket-img, .authorization-img{
     width: 98%;
     text-align: center;
     margin: auto;
-
-}
-.tab-content-layout, .productLayout{
-    width: 90%;
-    margin: 2% auto;
 }
 .tab-content .layoutCategories, .Categories{
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
 }
-
 .tab-content .Categories{
     width:200px;
     height:250px;
@@ -143,21 +128,16 @@ header .basket-img, .authorization-img{
     margin-right:70px;
     margin-top: 30px;
     margin-bottom: 30px;
-
-
 }
-header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .productDescription:after, description:after, .square:after, .squareElementsInclude:after {
+.header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .product-description:after, description:after, .square:after, .squareElementsInclude:after {
     display: block;
     content: '';
     clear: both;
 }
-
-
 .Categories:hover{
     -webkit-animation: movie 2s infinite;
         border:none;
 }
-
 @-webkit-keyframes movie{
     
     50% {  
@@ -171,21 +151,22 @@ header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .
     -moz-box-shadow: 0 0px 0px rgba(0,0,0,0);
     box-shadow: 0 0px 0px rgba(0,0,0,0); }
 }
-
 /*Login*/
-.login{
+.login-form{
     margin:10% auto;
     box-sizing: border-box;
     position: relative;
-
-    padding: 20px 40px 35px 40px;
     width: 300px;
     min-height: 200px;
     border: 1px solid black;
     border-radius: 4px;
-    background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
 }
-.login .close, .modalBigImg .close{
+.login-form--full{
+        padding: 20px 40px 35px 40px;
+        background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, rgb(230, 230, 230)), to(rgb(255, 255, 255)));
+}
+
+.login-form__close, .modalBigImg .close {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -199,7 +180,7 @@ header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-.login input{
+.login-form__input{
     box-sizing: border-box;
     padding: 3px;
     width:217px;
@@ -213,13 +194,13 @@ input[placeholder="Search"]{
 .login .view {
     margin-top: 42px;
 }
-.login input[type="checkbox"]{
+.login-form__remember-me{
     width:15px;
 }
-.register{
+.login-form__register{
     float:right;
 }
-.login p{
+.login-form__header{
     text-align: center;
     padding-bottom: 2px;
 }
@@ -315,15 +296,13 @@ nav .menucooling-img {
 }
 
 /*Product description*/
-.productDescription{
+.product-description{
     position: relative;
-    padding-top: 10px;
     box-sizing: border-box;
     width:80%;
     margin: 0 auto;
 }
-
-.productDescription .breadcrumb, .breadcrumb>li{
+.product-description .breadcrumb, .breadcrumb__list{
     display: inline-block;
     list-style-type: none;
     font-size: 13px;
@@ -337,51 +316,42 @@ nav .menucooling-img {
     content: "";
     display: inline-block;
 }
-
-.sliderLayout{
+.slider-img {
     position: relative;
     margin-top:20px;
-}
-
-.slider-img {
     float: left;
     width:31%;
     height: 25%;
     min-width: 200px;
 }
-.slider-img .bigImgPositioner{
-    display: inline-block;
+.big-img{
     position: relative;
     text-align: center;
     width: 100%;
     min-width: 200px;
 }
-
-
 .modalBigImg .close {
     position: absolute;
     right: -17px;
     top: -14px;
 
 }
-.slider-img .bigImgPositioner img {
+.big-img__positioner {
     vertical-align: middle;
-    display: inline-block;
     width: 70%;
 }
-.slider-img .minImg img{
+.min-img--style{
     vertical-align: middle;
     display: inline-block;
     width: 10%;
     min-width: 28px;
 }
-.minImg{
+.min-img{
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
 }
-
-.arrowLeft, .arrowRight{
+.min-img__arrow, .min-img__arrow{
     top: 10px;
     position: relative;
     display: inline-block;
@@ -389,46 +359,48 @@ nav .menucooling-img {
     height: 0;
     border: 15px solid transparent ;
 }
-.arrowLeft{    
+.min-img__arrow-left{    
     border-right-color: lightskyblue; 
     border-left: 0;
 }
-.arrowRight{
+.min-img__arrow-right{
     border-left-color: lightskyblue;  
     border-right: 0;
 }
-.layoutDescription{
+.layout-description{
     margin-top: 10px;
     float: left;
     width: 60%;
 }
-.imgStar{
+.layout-description__header, .img-star{
+    display: inline-block;
+}
+.img-star{
     background: url('img/Symbol/rating.png')repeat-x;
     width:80px;
     height: 14px;
     margin-left: 10px;
 }
-.raiting{
+.img-star__raiting{
     background: url('img/Symbol/rating-fill.png')repeat-x;
     width: 55px;
     height: 14px;
 }
-.layoutDescription label{
-    display: inline-block;
+.layout-description__label{
     margin-top: 30px;
     margin-left: 7px;
 
 }
-.layoutDescription input{
-    float:left;
-    margin-top: 5px;
+.layout-description__quantiti{
+    float: left;
+    margin-top:5px;
 }
-.addCartLoyout{
+.add-cart{
     float: right;
     font-size: 30px;
     margin-bottom: 20px;
 }
-.addCart{
+.add-cart__btn{
     margin-top:20px;
     padding: 10px 16px;
     border: 1px solid #70b61f;;
@@ -443,23 +415,23 @@ nav .menucooling-img {
     width:100%;
     clear: both;
 }
-.twitter, .vkontakte, .facebook, .instagram{
+.lineSocial__twitter, .lineSocial__vkontakte, .lineSocial__facebook, .lineSocial__instagram{
     display: inline-block;
     background-image: url('img/Symbol/icosocial.png');
     background-repeat: repeat-x;
     width: 52px;
     height: 52px;
 }
-.twitter{
+.lineSocial__twitter{
     background-position: 3%;
 }
-.vkontakte{
+.lineSocial__vkontakte{
     background-position: 14.6%;
 }
-.facebook{
+.lineSocial__facebook{
     background-position: 26.4%;
 }
-.instagram{
+.lineSocial__instagram{
     background-position: 38.2%;
 }
 
@@ -1008,7 +980,7 @@ nav, .itemsContent {
     font-size: 25px;
 }
 
-.modalDialog {
+.modal-dialog {
     display: none;
     position: fixed;
     top:0;
@@ -1019,132 +991,10 @@ nav, .itemsContent {
     pointer-events: none;
     background: rgba(0,0,0,0.8);
 }
-.modalDialog:target{
+.modal-dialog:target{
     display:block;
     pointer-events: auto;
 }
 
 
-/*@media screen*/
-@media screen and  (max-width: 1100px){
-    .tab-content .Categories{
-        width: 260px;
-        height: 300px;
-        margin-left: -5px;
-        margin-right:0px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        transition: all 0.0s;
-        font-size: 18px; 
-    }
-    .tab-content-layout, .productLayout{
-        width:98%;
-    }
-    .Categories:hover{
-       -webkit-animation: none;
-        border:1px solid black;
-        -webkit-box-shadow: none; 
-        -moz-box-shadow: none;
-        box-shadow: none; 
-    }
-    
-    .slider-img {
-        float: left;
-        width:100%;
-        height: 25%;
-        min-width: 200px;
-    }
-    .layoutDescription {
-    margin-top: 10px;
-    float: left;
-    width: 100%;
-    font-size: 18px;
-    }
-    .lineSocial {
-    text-align: center;
-    margin: 20% auto;
-    width: 100%;
-    clear: both;
-    }
-    header{
-    width: 100%;
-    z-index: 10;
-    height: 100px;
-    position: static;
-    }
-    header .textHidden{
-        display:none;
-    }
-    header .basket-img, .authorization-img{
-    width: 40px;
-    height:40px;
-    }
-    .logo, .search, .basket, .authorization, header input[type="search"] {
-margin-top:19px;
-    }
-    .login {
-        font-size:18px;
-    }
-    .login input {
-        padding:10px;
-    }
-    .freeBlock {
-    display: none;
-}   .orderFormLayout {
-    position: relative;
-    width: 90%;
-    height: 500px;
-    margin: auto;
-    padding: 100px 0px;
-    }   
-    .orderForm {
-    width: 100%;
-    height: 92%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-    .orderForm .line1 {
-    top: 113px;
-    left: 17px;
-    width: 632px;
-    }
-    .line1 input, .line4 input, .line2 select {
-    width: 150px;
-    height: 70px;
-    }
-    .orderForm .line2 {
-    top: 120px;
-    left: 184px;
-    }
-    .orderForm .line3 {
-    top: 160px;
-    left: 26px;
-    }
-    .orderForm .line4 {
-    top: -6px;
-    left: 692.5px;
-    }
-    .line5 {
-    top: 230px;
-    }
-    .orderForm .line3 input {
-    width: 350px;
-    height: 55px;
-    }
-    .orderForm form input,.orderForm form option, .orderForm form select{
-    font-size: 30px;
-    }
-    .lineValid {
-    font-size: 14px;
-    top: 115px;
-    left: 238px;
-    margin-right: 110px;
-    }
-    .line5 input {
-    width: 150px;
-    height: 75px;
-    }
-    
-Menu Mobile Versi0n
-    
-}
+
