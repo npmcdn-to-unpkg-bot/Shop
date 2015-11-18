@@ -14,13 +14,21 @@ html, body{
     overflow: hidden;
     min-height: 100%;
 }
+
+
+
+/*Header*/
+
 .wrapper__header{
+
     width: 100%;
     z-index: 10;
     height: 70px;
     position: fixed;
 }
+
 .header, .footer{
+
     font-size: 20px;
     background: -webkit-radial-gradient(center, circle farthest-side, #000, rgba(122,122,122,1) 80%);
     color: white;
@@ -209,17 +217,20 @@ input[placeholder="Search"]{
 
 .navbar {
     width: 10%;    
-    margin-top: 120px;
-    list-style-type: none;
-    position: fixed;
+    margin-top: 120px;    
     box-sizing: border-box;    
+}
+
+.navbar--desktop {
+    position: fixed;
+    list-style-type: none;
     border: 5px solid rebeccapurple;
     border-left: none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-.navbar a {
+.navbar__link {
     z-index: 100;
     box-sizing: border-box;
     width: 100%;
@@ -228,63 +239,59 @@ input[placeholder="Search"]{
     padding: 5px;
     text-decoration: none;
     padding-left: 5px;
-}
-
-.navbar a:link {
-    color: black;
-}
-
-.navbar a:visited {
-    color: blue;
-}
-
-.navbar a:hover {
-    color: white;
-    background: rebeccapurple;
-}
-.navbar li:last-of-type a:hover {
     border-bottom-right-radius: 8px;
-}
-.navbar li:first-child a:hover {
     border-top-right-radius: 8px;
 }
 
-.navbar a:active {
+.navbar__link:link {
+    color: black;
+}
+
+.navbar__link:visited {
+    color: blue;
+}
+
+.navbar__link:hover {
+    color: white;
+    background: rebeccapurple;
+}
+
+.navbar__link:active {
     color: red;
 }
 
-.activeTitle {
+.navbar__link--active {
     background-color: aqua;
 }
 
-nav .menumother-img {      
+.navbar__img--mother {      
     background-image: url('img/Symbol/Motherboard.jpg');    
 }
 
-nav .menucpu-img {
+.navbar__img--cpu {
     background-image: url('img/Symbol/CPU.jpg');
 }
 
-nav .menuram-img {
+.navbar__img--ram {
     background-image: url('img/Symbol/RAM.jpg');
 }
 
-nav .menuvideo-img {
+.navbar__img--video {
     background-image: url('img/Symbol/Video%20adapter.jpg');
 }
 
-nav .menuhdd-img {
+.navbar__img--hdd {
     background-image: url('img/Symbol/HDD.jpg');
 }
 
-nav .menupower-img {
+.navbar__img--power {
     background-image: url('img/Symbol/Power%20source.jpg');
 }
 
-nav .menucooling-img {
+.navbar__img--cooling {
     background-image: url('img/Symbol/Cooling.jpg');
 }
-.menumother-img, .menucpu-img, .menuram-img, .menuvideo-img, .menuhdd-img, .menupower-img, .menucooling-img {    
+.navbar__img {    
     display:block;
     background-size: contain;
     width: 30px;
@@ -294,6 +301,7 @@ nav .menucooling-img {
     background-position: left;   
     padding-right: 8px;
 }
+
 
 /*Product description*/
 .product-section__product-description{
@@ -406,6 +414,7 @@ nav .menucooling-img {
     font-weight: bold;
     font-size: 25px;
 }
+
 .wrapper__modal-dialog {
     display: none;
     position: fixed;
@@ -439,7 +448,7 @@ nav .menucooling-img {
     width:100%;
     clear: both;
 }
-.lineSocial__twitter, .lineSocial__vkontakte, .lineSocial__facebook, .lineSocial__instagram{
+.lineSocial__line-social{
     display: inline-block;
     background-image: url('img/Symbol/icosocial.png');
     background-repeat: repeat-x;
@@ -458,14 +467,11 @@ nav .menucooling-img {
 .lineSocial__instagram{
     background-position: 38.2%;
 }
-
 /*Pages Category items*/
-
 .elementsPage {
     width: 90%;
     float: right;
 }
-
 .itemsContent { 
     margin: auto;
     position: relative; 
@@ -478,11 +484,9 @@ nav .menucooling-img {
     margin-top: 10px;    
 }
 
-
 /*Main path*/
 
 nav, .itemsContent {
-/*    display: inline-block;*/
     vertical-align: top;
 }
 
@@ -528,15 +532,7 @@ nav, .itemsContent {
     clear: both;
 }
 
-.squareList {
-    vertical-align: top;
-    width: 500px;    
-    height: 150px;
-    text-align: center;
-    margin: auto;    
-    font-size: 12px;
-    
-}
+
 
 .imgItem {    
     height: 150px;    
@@ -603,37 +599,142 @@ nav, .itemsContent {
     width: 140px;
 }
 
-.motherImg1 {    
-    background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg');    
+
+                                        /*BEM format*/
+
+/*-----------------------------------------START!--------------------------------*/
+
+/*----------------------------------------Grid View------------------------------*/
+.elementspage {
+    width: 90%;
+    float: right;    
+    box-sizing: border-box;
+    margin-bottom: 70px;
 }
 
-.motherImg2 {
+.elementspage--style {
+    padding-top: 70px;
+}
+
+.elementspage__content { 
+    margin: auto;
+    position: relative; 
+    width: 80%;    
+}
+
+.elementspage__content:after, .elementspagesquare:after, .elementspagesquare__include:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.viewmode {    
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px;    
+}
+                        /*Items*/
+
+.elementspagelink {    
+    text-decoration: none;    
+}
+
+.elementspagelink:link {
+    color: black;
+}
+
+.elementspagelink--style {
+    width: 80%;
+    display: inline-block;
+    clear: both;
+}
+
+.elementspagelink:visited {
+    color: blue;
+}
+
+.elementspagelink:hover {
+    color: orange;
+}
+
+.elementspagelink:active {
+    color: red;
+}
+
+.elementspagesquare {    
+    width: 25%;    
+    height: 200px;    
+}
+
+.elementspagesquare--style {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+}
+
+.elementspagesquare__include {
+    width: 100%;
+    height: 180px;
+    clear: both;
+}
+
+.elementspagelink__img {    
+    height: 150px;    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+
+.elementspagelink__img--img1 {    
+    background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg');    
+}
+.elementspagelink__img--img2 {
     background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-990FXA-UD5.jpg');
 }
-.motherImg3 {
+.elementspagelink__img--img3 {
     background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-B85-HD3.jpg');
 }
-.motherImg4 {
+.elementspagelink__img--img4 {
     background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-B85M-D3H%20(rev.%202.0).jpg');
 }
-.motherImg5 {
+.elementspagelink__img--img5 {
     background-image: url('img/motherboard/Gigabyte/GIGABYTE%20GA-H81M-S2PV.jpg');
 }
-.motherImg6 {
+.elementspagelink__img--img6 {
     background-image: url('img/motherboard/ASRock/ASRock%20970%20Pro3.jpg');
 }
-.motherImg7 {
+.elementspagelink__img--img7 {
     background-image: url('img/motherboard/ASRock/ASRock%20H61M-VG4.jpg');
 }
-.motherImg8 {
+.elementspagelink__img--img8 {
     background-image: url('img/motherboard/ASRock/ASRock%20H81M-DG4.jpg');
 }
-.motherImg9 {
+.elementspagelink__img--img9 {
     background-image: url('img/motherboard/ASRock/ASRock%20H97M%20Pro4.jpg');
 }
-.motherImg10 {
+.elementspagelink__img--img10 {
     background-image: url('img/motherboard/ASRock/ASRock%20Socket-AM1%20AM1B-MDH.jpg');
 }
+
+/*----------------------------------------List View-------------------------------*/
+
+.elementspagelist {    
+    width: 500px;    
+    height: 150px;    
+    margin: auto;    
+}
+
+.elementspagelist--style {
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+}
+
+/*-----------------------------------------FINISH!-------------------------------*/
+
+
 .cpuImg1{
     background-image: url('img/CPU/AMD/AMD%20A10-7870K%20OEM.jpg');
 }
@@ -1002,4 +1103,19 @@ nav, .itemsContent {
     color:white;
     font-weight: bold;
     font-size: 25px;
+}
+.modal-dialog {
+    display: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 99999;
+    pointer-events: none;
+    background: rgba(0,0,0,0.8);
+}
+.modal-dialog:target{
+    display:block;
+    pointer-events: auto;
 }
