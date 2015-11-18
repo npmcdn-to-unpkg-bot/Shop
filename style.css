@@ -469,6 +469,7 @@ input[placeholder="Search"]{
 }
 /*Pages Category items*/
 .elementsPage {
+    padding-top: 70px;
     width: 90%;
     float: right;
 }
@@ -1060,6 +1061,11 @@ nav, .itemsContent {
 
 .cartPage .toCheckout {
     float: right;
+}
+
+.freeBlock {
+    width: 100%;
+    height: 70px;
 }
 
     /*Total*/
