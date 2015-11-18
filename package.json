@@ -1,7 +1,6 @@
 {
   "name": "123",
   "version": "1.0.0",
-  "description": "",
   "main": "canvas.js",
   "dependencies": {
     "npm": "^3.3.12"
@@ -31,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/TeamWorkEpam/Shop/issues"
   },
-  "homepage": "https://github.com/TeamWorkEpam/Shop#readme"
+  "homepage": "https://github.com/TeamWorkEpam/Shop#readme",
+  "description": ""
 }
