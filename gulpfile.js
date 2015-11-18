@@ -36,13 +36,5 @@ gulp.task('html', function() {
     gulp.src('*.html')
         .pipe(gulp.dest('build/'));
 });
-/*Copy files in src folder*/
-/*gulp.task('copyinsrc', function () {
-    gulp.src('*.html')
-    .pipe(gulp.dest('src/'));
-    gulp.src('*.scss')
-    .pipe(gulp.dest('src/stylus/'));
-    gulp.src('*.js')
-    .pipe(gulp.dest('src/js/'));    
-});*/
-gulp.task('default', ['sass', 'images' , 'cssminify', 'html', /*'copyinsrc'*/]);
+
+gulp.task('default', ['sass', 'images' , 'cssminify', 'html']);

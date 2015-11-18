@@ -16,3 +16,4 @@ npm.cmd
 .sass-cache/
 src
 gulpfile.js
+test
