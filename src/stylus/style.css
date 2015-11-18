@@ -30,7 +30,7 @@ html, body {
 .header__elements--logo {
   width: 67px;
   height: 50px;
-  background: url("img/Symbol/4.gif");
+  background: url("../img/Symbol/4.gif");
   background-repeat: no-repeat;
   background-size: contain;
   float: left; }
@@ -56,10 +56,10 @@ html, body {
   border: 1px solid #b8b8b8; }
 
 .header-elements__basket--img {
-  background-image: url("img/Symbol/shopping-cart.gif"); }
+  background-image: url("../img/Symbol/shopping-cart.gif"); }
 
 .header-elements__authorization--img {
-  background-image: url("img/Symbol/logo-login.png"); }
+  background-image: url("../img/Symbol/logo-login.png"); }
 
 .header-elements__authorization--img, .header-elements__basket--img {
   background-size: contain;
@@ -84,7 +84,7 @@ html, body {
   margin: 2% auto; }
 
 .tab-content .imgCooling {
-  background-image: url("img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg"); }
+  background-image: url("../img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg"); }
 
 .tab-content .imgCooling, .imgCPU, .imgHDD, .imgMotherboard, .imgPowerSource, .imgRAM, .imgvideoAdapter {
   content: "";
@@ -94,22 +94,22 @@ html, body {
   background-position: center; }
 
 .tab-content .imgCPU {
-  background-image: url("img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
+  background-image: url("../img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
 
 .tab-content .imgHDD {
-  background-image: url("img/HDD/Hitachi/Hitachi%20Deskstar%20H3IKNAS30003272SE%203%20%D0%A2%D0%B1.jpg"); }
+  background-image: url("../img/HDD/Hitachi/Hitachi%20Deskstar%20H3IKNAS30003272SE%203%20%D0%A2%D0%B1.jpg"); }
 
 .tab-content .imgMotherboard {
-  background-image: url("img/motherboard/Asus/ASUS%20H61M-K.jpg"); }
+  background-image: url("../img/motherboard/Asus/ASUS%20H61M-K.jpg"); }
 
 .tab-content .imgPowerSource {
-  background-image: url("img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg"); }
+  background-image: url("../img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg"); }
 
 .tab-content .imgRAM {
-  background-image: url("img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg"); }
+  background-image: url("../img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg"); }
 
 .tab-content .imgvideoAdapter {
-  background-image: url("img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
+  background-image: url("../img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
 
 .product-section__tab-content {
   width: 98%;
@@ -245,25 +245,25 @@ html, body {
   background-color: aqua; }
 
 .navbar__img--mother {
-  background-image: url("img/Symbol/Motherboard.jpg"); }
+  background-image: url("../img/Symbol/Motherboard.jpg"); }
 
 .navbar__img--cpu {
-  background-image: url("img/Symbol/CPU.jpg"); }
+  background-image: url("../img/Symbol/CPU.jpg"); }
 
 .navbar__img--ram {
-  background-image: url("img/Symbol/RAM.jpg"); }
+  background-image: url("../img/Symbol/RAM.jpg"); }
 
 .navbar__img--video {
-  background-image: url("img/Symbol/Video%20adapter.jpg"); }
+  background-image: url("../img/Symbol/Video%20adapter.jpg"); }
 
 .navbar__img--hdd {
-  background-image: url("img/Symbol/HDD.jpg"); }
+  background-image: url("../img/Symbol/HDD.jpg"); }
 
 .navbar__img--power {
-  background-image: url("img/Symbol/Power%20source.jpg"); }
+  background-image: url("../img/Symbol/Power%20source.jpg"); }
 
 .navbar__img--cooling {
-  background-image: url("img/Symbol/Cooling.jpg"); }
+  background-image: url("../img/Symbol/Cooling.jpg"); }
 
 .navbar__img {
   display: block;
@@ -351,13 +351,13 @@ html, body {
   display: inline-block; }
 
 .img-star {
-  background: url("img/Symbol/rating.png") repeat-x;
+  background: url("../img/Symbol/rating.png") repeat-x;
   width: 80px;
   height: 14px;
   margin-left: 10px; }
 
 .img-star__raiting {
-  background: url("img/Symbol/rating-fill.png") repeat-x;
+  background: url("../img/Symbol/rating-fill.png") repeat-x;
   width: 55px;
   height: 14px; }
 
@@ -418,7 +418,7 @@ html, body {
 
 .lineSocial__line-social {
   display: inline-block;
-  background-image: url("img/Symbol/icosocial.png");
+  background-image: url("../img/Symbol/icosocial.png");
   background-repeat: repeat-x;
   width: 52px;
   height: 52px; }
@@ -617,34 +617,34 @@ nav, .itemsContent {
   background-position: center; }
 
 .elementspagelink__img--img1 {
-  background-image: url("img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg"); }
+  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg"); }
 
 .elementspagelink__img--img2 {
-  background-image: url("img/motherboard/Gigabyte/GIGABYTE%20GA-990FXA-UD5.jpg"); }
+  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-990FXA-UD5.jpg"); }
 
 .elementspagelink__img--img3 {
-  background-image: url("img/motherboard/Gigabyte/GIGABYTE%20GA-B85-HD3.jpg"); }
+  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-B85-HD3.jpg"); }
 
 .elementspagelink__img--img4 {
-  background-image: url("img/motherboard/Gigabyte/GIGABYTE%20GA-B85M-D3H%20(rev.%202.0).jpg"); }
+  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-B85M-D3H%20(rev.%202.0).jpg"); }
 
 .elementspagelink__img--img5 {
-  background-image: url("img/motherboard/Gigabyte/GIGABYTE%20GA-H81M-S2PV.jpg"); }
+  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-H81M-S2PV.jpg"); }
 
 .elementspagelink__img--img6 {
-  background-image: url("img/motherboard/ASRock/ASRock%20970%20Pro3.jpg"); }
+  background-image: url("../img/motherboard/ASRock/ASRock%20970%20Pro3.jpg"); }
 
 .elementspagelink__img--img7 {
-  background-image: url("img/motherboard/ASRock/ASRock%20H61M-VG4.jpg"); }
+  background-image: url("../img/motherboard/ASRock/ASRock%20H61M-VG4.jpg"); }
 
 .elementspagelink__img--img8 {
-  background-image: url("img/motherboard/ASRock/ASRock%20H81M-DG4.jpg"); }
+  background-image: url("../img/motherboard/ASRock/ASRock%20H81M-DG4.jpg"); }
 
 .elementspagelink__img--img9 {
-  background-image: url("img/motherboard/ASRock/ASRock%20H97M%20Pro4.jpg"); }
+  background-image: url("../img/motherboard/ASRock/ASRock%20H97M%20Pro4.jpg"); }
 
 .elementspagelink__img--img10 {
-  background-image: url("img/motherboard/ASRock/ASRock%20Socket-AM1%20AM1B-MDH.jpg"); }
+  background-image: url("../img/motherboard/ASRock/ASRock%20Socket-AM1%20AM1B-MDH.jpg"); }
 
 /*----------------------------------------List View-------------------------------*/
 .elementspagelist {
@@ -659,61 +659,61 @@ nav, .itemsContent {
 
 /*-----------------------------------------FINISH!-------------------------------*/
 .cpuImg1 {
-  background-image: url("img/CPU/AMD/AMD%20A10-7870K%20OEM.jpg"); }
+  background-image: url("../img/CPU/AMD/AMD%20A10-7870K%20OEM.jpg"); }
 
 .cpuImg2 {
-  background-image: url("img/CPU/AMD/AMD%20FX-8300%20OEM.jpg"); }
+  background-image: url("../img/CPU/AMD/AMD%20FX-8300%20OEM.jpg"); }
 
 .cpuImg3 {
-  background-image: url("img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg"); }
+  background-image: url("../img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg"); }
 
 .coolImg1 {
-  background-image: url("img/Cooling/DEEPCOOL/DEEPCOOL%20Ice%20Blade%20PRO%20V2.jpg"); }
+  background-image: url("../img/Cooling/DEEPCOOL/DEEPCOOL%20Ice%20Blade%20PRO%20V2.jpg"); }
 
 .coolImg2 {
-  background-image: url("img/Cooling/Thermaltake/Thermaltake%20NiC%20L31.jpg"); }
+  background-image: url("../img/Cooling/Thermaltake/Thermaltake%20NiC%20L31.jpg"); }
 
 .coolImg3 {
-  background-image: url("img/Cooling/Zalman/Zalman%20CNPS7X.jpg"); }
+  background-image: url("../img/Cooling/Zalman/Zalman%20CNPS7X.jpg"); }
 
 .hddImg1 {
-  background-image: url("img/HDD/Seagate/Seagate%20Barracuda%207200.14%20ST2000DM001%202%20%D0%A2%D0%B1.jpg"); }
+  background-image: url("../img/HDD/Seagate/Seagate%20Barracuda%207200.14%20ST2000DM001%202%20%D0%A2%D0%B1.jpg"); }
 
 .hddImg2 {
-  background-image: url("img/HDD/Toshiba/Toshiba%20DT%2001ACA200%202%20%D0%A2%D0%B1.jpg"); }
+  background-image: url("../img/HDD/Toshiba/Toshiba%20DT%2001ACA200%202%20%D0%A2%D0%B1.jpg"); }
 
 .hddImg3 {
-  background-image: url("img/HDD/Western%20Digital/WD%20Caviar%20Red%20IntelliPower%20WD10EFRX%201%20%D0%A2%D0%B1.jpg"); }
+  background-image: url("../img/HDD/Western%20Digital/WD%20Caviar%20Red%20IntelliPower%20WD10EFRX%201%20%D0%A2%D0%B1.jpg"); }
 
 .powerImg1 {
-  background-image: url("img/Power source/Be Quiet/Be Quiet PURE POWER L8 700W [BN225].jpg"); }
+  background-image: url("../img/Power source/Be Quiet/Be Quiet PURE POWER L8 700W [BN225].jpg"); }
 
 .powerImg2 {
-  background-image: url("img/Power source/Chieftec/Chieftec A-135 Series 650W [APS-650SB].jpg"); }
+  background-image: url("../img/Power source/Chieftec/Chieftec A-135 Series 650W [APS-650SB].jpg"); }
 
 .powerImg3 {
-  background-image: url("img/Power source/Thermaltake/Thermaltake TR2 600W [TR-600P].jpg"); }
+  background-image: url("../img/Power source/Thermaltake/Thermaltake TR2 600W [TR-600P].jpg"); }
 
 .powerImg4 {
   background-image: url("img/Power source/Zalman/Zalman GVM 850W [ZM850-GVM].jpg"); }
 
 .ramImg1 {
-  background-image: url("img/RAM/AMD%20Radeon/AMD%20Radeon%20Entertainment%20Series%20%5BR538G1601U2S-UOUGO%5D%208%20%D0%93%D0%B1.jpg"); }
+  background-image: url("../img/RAM/AMD%20Radeon/AMD%20Radeon%20Entertainment%20Series%20%5BR538G1601U2S-UOUGO%5D%208%20%D0%93%D0%B1.jpg"); }
 
 .ramImg2 {
-  background-image: url(img/RAM/Crucial/Crucial%20Ballistix%20Tactical%20%5BBLT4G3D1869DT1TX0CEU%5D%204%20%D0%93%D0%B1.jpg); }
+  background-image: url("../img/RAM/Crucial/Crucial%20Ballistix%20Tactical%20%5BBLT4G3D1869DT1TX0CEU%5D%204%20%D0%93%D0%B1.jpg"); }
 
 .ramImg3 {
-  background-image: url(img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX316C10FRK216%5D%2016%20%D0%93%D0%B1.jpg); }
+  background-image: url("../img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX316C10FRK216%5D%2016%20%D0%93%D0%B1.jpg"); }
 
 .videoImg1 {
-  background-image: url("img/Video adapter/ASUS/Asus GeForce GT 730 [GT730-4GD3].jpg"); }
+  background-image: url("../img/Video adapter/ASUS/Asus GeForce GT 730 [GT730-4GD3].jpg"); }
 
 .videoImg2 {
-  background-image: url("img/Video adapter/MSI/MSI AMD Radeon R7 370 Gaming 4G.jpg"); }
+  background-image: url("../img/Video adapter/MSI/MSI AMD Radeon R7 370 Gaming 4G.jpg"); }
 
 .videoImg3 {
-  background-image: url("img/Video adapter/Gigabyte/GIGABYTE GeForce GTX 750 Ti BLACK EDITION GV-N75TWF2BK-2GI.jpg"); }
+  background-image: url("../img/Video adapter/Gigabyte/GIGABYTE GeForce GTX 750 Ti BLACK EDITION GV-N75TWF2BK-2GI.jpg"); }
 
 /*Order form*/
 .orderFormLayout {
@@ -721,7 +721,7 @@ nav, .itemsContent {
   width: 390px; }
 
 .orderForm {
-  background-image: url(img/Symbol/card-form.png);
+  background-image: url("../img/Symbol/card-form.png");
   width: 390px;
   height: 204px; }
 
@@ -885,10 +885,10 @@ nav, .itemsContent {
   background-position: center; }
 
 .img1 {
-  background-image: url("img/CPU/AMD/AMD%20A8-7600%20OEM.jpg"); }
+  background-image: url("../img/CPU/AMD/AMD%20A8-7600%20OEM.jpg"); }
 
 .img2 {
-  background-image: url("img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX313C9FR4%5D%204%20%D0%93%D0%B1.jpg"); }
+  background-image: url("../img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX313C9FR4%5D%204%20%D0%93%D0%B1.jpg"); }
 
 .linkProperties {
   display: inline-block;
