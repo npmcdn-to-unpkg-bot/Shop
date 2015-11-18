@@ -14,3 +14,5 @@ nodevars.bat
 npm
 npm.cmd
 .sass-cache/
+src
+gulpfile.js

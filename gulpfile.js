@@ -1,28 +1,30 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-var  gulp = require('gulp');
-var  jade = require('gulp-jade');
-var   stylus = require('gulp-stylus');
-var   livereload = require('gulp-livereload');
-var   myth = require('gulp-myth');
-var   csso = require('gulp-csso');
-var   imagemin = require('gulp-imagemin');
-var   uglify = require('gulp-uglify');
-var   concat = require('gulp-concat');
-var   connect = require('connect');
+var sass = require('gulp-sass');
+var gulp = require('gulp');
+var jade = require('gulp-jade');
+var stylus = require('gulp-stylus');
+var livereload = require('gulp-livereload');
+var myth = require('gulp-myth');
+var csso = require('gulp-csso');
+var imagemin = require('gulp-imagemin');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var connect = require('connect');
 /* Min CSS*/
 gulp.task('cssminify', function(){
 	 gulp.src('build/*.css')
      .on('error', console.log)
-	.pipe(csso())
+	 .pipe(csso())
      .on('error', console.log)
-	.pipe(gulp.dest('build/'));
+	 .pipe(gulp.dest('build/'));
 });
 /*SASS*/
 gulp.task('sass', function () {
-  return sass('style.scss')
-    .on('error', sass.logError)
-    .pipe(gulp.dest('build'));
+    return gulp.src('./style.scss')
+      .pipe(sass().on('error', sass.logError))  
+//    return sass('style.scss')
+//    .on('error', sass.logError)
+      .pipe(gulp.dest('build'));
 });
 /*Images*/
 gulp.task('images', function() {
@@ -34,4 +36,13 @@ gulp.task('html', function() {
     gulp.src('*.html')
         .pipe(gulp.dest('build/'));
 });
-gulp.task('default', ['sass', 'images' , 'cssminify', 'html']);
+/*Copy files in src folder*/
+/*gulp.task('copyinsrc', function () {
+    gulp.src('*.html')
+    .pipe(gulp.dest('src/'));
+    gulp.src('*.scss')
+    .pipe(gulp.dest('src/stylus/'));
+    gulp.src('*.js')
+    .pipe(gulp.dest('src/js/'));    
+});*/
+gulp.task('default', ['sass', 'images' , 'cssminify', 'html', /*'copyinsrc'*/]);
