@@ -55,17 +55,17 @@ html, body{
     padding: 10px;
     text-decoration: none;
 }
-.header__elements--basket:hover,.header__elements--authorization:hover{
+.header-elements__basket:hover,.header__elements--authorization:hover{
     color: #b8b8b8;
     border: 1px solid #b8b8b8;
 }
-.header__basket-img{
+.header-elements__basket--img{
     background-image: url('img/Symbol/shopping-cart.gif');
 }
 .header-elements__authorization--img{
     background-image: url('img/Symbol/logo-login.png');
 }
-.header-elements__authorization--img, .header-elements__authorization--img{
+.header-elements__authorization--img, .header-elements__basket--img{
     background-size: contain;
     width: 20px;
     height:20px;
@@ -196,9 +196,7 @@ html, body{
     border-radius:4px;
     border:2px solid darkblue;
 }
-input[placeholder="Search"]{
-    margin-top:10px;
-}
+
 .login .view {
     margin-top: 42px;
 }
@@ -1117,4 +1115,38 @@ nav, .itemsContent {
 .modal-dialog:target{
     display:block;
     pointer-events: auto;
+}
+
+
+@media screen and (max-width:720px){
+    .header__elements--logo {
+        width: 53px;
+        height: 40px;
+    }
+    .header__elements {
+        margin: 17px 5px 5px 5px;
+    }
+    .header__elements--search{
+        margin-top: 22px;
+        width:100px;
+    }
+    .header-elements__authorization--img, .header-elements__basket--img {
+        padding-left: 0px;
+    }
+    .header__elements--basket, .header-elements__authorization {
+        padding: 5px;
+    }
+    .header-elements__text--hidden{
+        display:none;
+    }
+    .breadcrumb{
+        margin-left: 20%;
+    }
+    .product-description__slider-img {
+        margin: 10px auto;
+        float: none;
+        width: 40%;
+        height: 40%;
+        min-width: 250px;
+    }
 }
