@@ -5,3 +5,10 @@ sketches
 *.pdf
 *.xls
 *.docx
+Ruby22-x64
+node.exe
+node_etw_provider.man
+node_perfctr_provider.man
+nodevars.bat
+npm
+npm.cmd
