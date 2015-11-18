@@ -806,50 +806,52 @@ nav, .itemsContent {
     width: 390px;
     height: 204px;
 }
-.orderForm .line1{
-    position: relative;
-    top: 45px;
-    left: 17px;
-    width: 270px;
-}
-.lineValid{
-    font-size: 12px;
-    position: relative;
-    top: 45px;
-    left: 99px;
-    margin-right: 31px;
-}
-.orderForm .line2{
-    position: relative;
-    top: 50px;
-    left: 88px;
+.orderForm {
+    .line1{
+        position: relative;
+        top: 45px;
+        left: 17px;
+        width: 270px;
+    }
+    .line2{
+        position: relative;
+        top: 50px;
+        left: 88px;
+    }
+    .line3{
+        position: relative;
+        top: 60px;
+        left: 26px;
+    }
+    .line4{
+        position: relative;
+        top: -15px;
+        left: 308.5px;
+    }
+    .line5{
+        z-index: 1;
+        width: 100px;
+        position: relative;
+        top: 70px;
+        margin: auto;
+    }
+    .lineValid{
+        font-size: 12px;
+        position: relative;
+        top: 45px;
+        left: 99px;
+        margin-right: 31px;
+    }
 }
 .line1 input,.line4 input, .line2 select{
     width: 60px;
     height: 30px;
     text-align: center;
 }
-.orderForm .line3{
-    position: relative;
-    top: 60px;
-    left: 26px;
-}
-.orderForm .line3 input{
+ .line3 input{
     width: 250px;
     height: 20px;
     text-align: center;
-}
-.orderForm .line4{
-    position: relative;
-    top: -15px;
-    left: 308.5px;
-}
-.line5{
-    z-index: 1;
-    width: 100px;
-    position: relative;
-    top: 70px;
-    margin: auto;
 }
 .line5 input{
     z-index: 1;
@@ -911,7 +913,6 @@ nav, .itemsContent {
     width: 50%;
     height: 33px;
 }
-
 .addCheck {
     font-size: 25px;
 }

@@ -12,3 +12,4 @@ node_perfctr_provider.man
 nodevars.bat
 npm
 npm.cmd
+.sass-cache/
