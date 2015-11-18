@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Product description</title>
+	<link rel="stylesheet"  href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+    <div class="wrapper">
+    <header class="wrapper__header header">
+        <a class="header__elements header__elements--logo" href="index.html"></a>
+        <a class="header__elements header__elements--authorization header-elements__authorization" href="#openModal">
+            <span class="header-elements__authorization--img"></span>
+            <span class="header-elements__text--hidden">Profile</span>
+        </a>
+        <a class="header__elements header__elements--basket header-elements__basket" href="CartPage.html">
+            <span class="header-elements__basket--img"></span>
+            <span class="header-elements__text--hidden">Cart</span>
+        </a>
+        <input class="header__elements header__elements--search" type="search" placeholder="Search"/>
+    </header>
+        <div id="openModal" class="wrapper__modal-dialog modal-dialog modal-dialog--target">
+            <form class="modal-dialog__login-form login-form">
+                <a class="login-form__close" href="">X</a>
+                <p class="login-form__header">Please Sign In</p>
+                Email
+                <input class="login-form__email login-form__input" type="email" placeholder="Email address" /><br>
+                Password
+                <input class="login-form__password login-form__input" type="password" placeholder="***********"/><br>
+                <input class="login-form__remember-me login-form__input" type="checkbox" value="remember"/> Remember me<br>
+                <input class="login-form__sign-in login-form__input" type="submit" value="Sign In" /><br>
+                <a class="login-form__register" href="register.html">Register</a>
+            </form>
+        </div>
+    <section class="wrapper__product-section product-section">
+            <div class="product-section__product-description product-description">
+                <ol class="product-description__breadcrumb breadcrumb">
+                    <li class="breadcrumb__list"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb__list"><a href="Motherboard.html">Категория</a></li>
+                    <li class="breadcrumb__list">Товар</li>
+                </ol>
+                <div class="product-description__slider-img slider-img">
+                    <div class="slider-img__big-img big-img">
+                        <img class="big-img__positioner" src="img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg "/>
+                    </div>
+                    <div class="slider-img__min-img min-img">
+                        <div class="min-img__arrow min-img__arrow-left"></div>
+                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"/>
+                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg"/>
+                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg"/>
+                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg"/> 
+                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg"/>
+                       <div class="min-img__arrow min-img__arrow-right"></div>
+                    </div>
+                </div>
+                <div class="product-description__layout-description layout-description"> 
+                    <h1 class="layout-description__header"> Товар </h1>
+                    <div class="layout-description__img-star img-star">
+                    <div class="img-star__raiting"></div>
+                    </div>
+                    <p>Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.</p>
+                    <p class="layout-description__label"><label for="quantiti">Quantity</label></p>
+                    <input class="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" value="1"> 
+                    <div class="layout-description__add-cart add-cart">
+                        <div class="add-cart__price">Price: $555</div>
+                        <a class="add-cart__btn" href="CartPage.html">
+                            Add to cart
+                        </a>
+                    </div>
+                    <div class="layout-description__lineSocial lineSocial">
+                        <a class="lineSocial__twitter lineSocial__line-social" href=""></a>
+                        <a class="lineSocial__vkontakte lineSocial__line-social" href=""></a>
+                        <a class="lineSocial__facebook lineSocial__line-social" href=""></a>
+                        <a class="lineSocial__instagram lineSocial__line-social" href=""></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    </div>
+    <footer class="footer">© 2015 Powered by Footerist</footer>
+
+</body>
+</html>
