@@ -11,20 +11,20 @@
 </head>
 <body>
     <div class="wrapper">
-    <header class="header header--style">
+    <header class="wrapper__header header">
         <a class="header__elements header__elements--logo" href="index.html"></a>
-        <a class="header__elements header__elements--authorization" href="#openModal">
-            <span class="header__authorization-img"></span>
-            <span class="header__text-hidden">Profile</span>
+        <a class="header__elements header__elements--authorization header-elements__authorization" href="#openModal">
+            <span class="header-elements__authorization--img"></span>
+            <span class="header-elements__authorization--hidden">Profile</span>
         </a>
-        <a class="header__elements header__elements--basket" href="CartPage.html">
+        <a class="header__elements header__elements--basket header-elements__basket" href="CartPage.html">
             <span class="header__basket-img"></span>
             <span class="header__text-hidden">Cart</span>
         </a>
         <input class="header__elements header__elements--search" type="search" placeholder="Search"/>
     </header>
-        <div id="openModal" class="modal-dialog">
-            <form class="login-form login-form--full">
+        <div id="openModal" class="wrapper__modal-dialog modal-dialog modal-dialog--target">
+            <form class="modal-dialog__login-form login-form">
                 <a class="login-form__close" href="">X</a>
                 <p class="login-form__header">Please Sign In</p>
                 Email

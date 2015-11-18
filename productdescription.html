@@ -8,20 +8,20 @@
 </head>
 <body>
     <div class="wrapper">
-    <header class="header header--style">
+    <header class="wrapper__header header">
         <a class="header__elements header__elements--logo" href="index.html"></a>
-        <a class="header__elements header__elements--authorization" href="#openModal">
-            <span class="header__authorization-img"></span>
-            <span class="header__text-hidden">Profile</span>
+        <a class="header__elements header__elements--authorization header-elements__authorization" href="#openModal">
+            <span class="header-elements__authorization--img"></span>
+            <span class="header-elements__authorization--hidden">Profile</span>
         </a>
-        <a class="header__elements header__elements--basket" href="CartPage.html">
+        <a class="header__elements header__elements--basket header-elements__basket" href="CartPage.html">
             <span class="header__basket-img"></span>
             <span class="header__text-hidden">Cart</span>
         </a>
         <input class="header__elements header__elements--search" type="search" placeholder="Search"/>
     </header>
-        <div id="openModal" class="modal-dialog">
-            <form class="login-form login-form--full">
+        <div id="openModal" class="wrapper__modal-dialog modal-dialog modal-dialog--target">
+            <form class="modal-dialog__login-form login-form">
                 <a class="login-form__close" href="">X</a>
                 <p class="login-form__header">Please Sign In</p>
                 Email
@@ -33,18 +33,18 @@
                 <a class="login-form__register" href="register.html">Register</a>
             </form>
         </div>
-    <section class="product-section">
-            <div class="product-description">
-                <ol class="breadcrumb">
+    <section class="wrapper__product-section product-section">
+            <div class="product-section__product-description product-description">
+                <ol class="product-description__breadcrumb breadcrumb">
                     <li class="breadcrumb__list"><a href="index.html">Главная</a></li>
                     <li class="breadcrumb__list"><a href="Motherboard.html">Категория</a></li>
                     <li class="breadcrumb__list">Товар</li>
                 </ol>
-                <div class="slider-img">
-                    <div class="big-img">
+                <div class="product-description__slider-img slider-img">
+                    <div class="slider-img__big-img big-img">
                         <img class="big-img__positioner" src="img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg "/>
                     </div>
-                    <div class="min-img">
+                    <div class="slider-img__min-img min-img">
                         <div class="min-img__arrow min-img__arrow-left"></div>
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"/>
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg"/>
@@ -54,21 +54,21 @@
                        <div class="min-img__arrow min-img__arrow-right"></div>
                     </div>
                 </div>
-                <div class="layout-description"> 
+                <div class="product-description__layout-description layout-description"> 
                     <h1 class="layout-description__header"> Товар </h1>
-                    <div class="img-star">
+                    <div class="layout-description__img-star img-star">
                     <div class="img-star__raiting"></div>
                     </div>
                     <p>Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.</p>
-                    <p class="layout-description__label" ><label for="quantiti">Quantity</label></p>
+                    <p class="layout-description__label"><label for="quantiti">Quantity</label></p>
                     <input class="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" value="1"> 
-                    <div class="add-cart">
+                    <div class="layout-description__add-cart add-cart">
                         <div class="add-cart__price">Price: $555</div>
                         <a class="add-cart__btn" href="CartPage.html">
                             Add to cart
                         </a>
                     </div>
-                    <div class="lineSocial">
+                    <div class="layout-description__lineSocial lineSocial">
                         <a class="lineSocial__twitter" href=""></a>
                         <a class="lineSocial__vkontakte" href=""></a>
                         <a class="lineSocial__facebook" href=""></a>
