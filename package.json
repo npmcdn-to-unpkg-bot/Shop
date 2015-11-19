@@ -3,20 +3,27 @@
   "version": "1.0.0",
   "main": "canvas.js",
   "dependencies": {
-    "npm": "^3.3.12"
+    "imagemin-pngquant": "^4.2.0",
+    "npm": "^3.3.12",
+    "rimraf": "^2.4.3"
   },
   "devDependencies": {
+    "browser-sync": "^2.10.0",
     "connect": "^3.4.0",
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^1.0.1",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-myth": "^1.1.0",
+    "gulp-rigger": "^0.5.8",
     "gulp-ruby-sass": "^2.0.5",
     "gulp-stylus": "^2.1.0",
-    "gulp-uglify": "^1.5.1"
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5",
+    "rimraf": "^2.4.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
