@@ -14,19 +14,19 @@ var path = {
         html: 'build/',
         js: 'build/js/',
         style: 'build/stylus/',
-        img: 'build/img/',
+        img: 'build/img/'
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/main.js',
         style: 'src/stylus/*.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/img/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/stylus/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/img/**/*.*'
     },
     clean: './build'
 };

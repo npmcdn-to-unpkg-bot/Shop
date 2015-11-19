@@ -5,28 +5,24 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; }
-
 html, body {
   height: 100%;
   font-size: 16px; }
-
 .wrapper {
   overflow: hidden;
   min-height: 100%; }
-
 /*Header*/
+
 .wrapper__header {
   width: 100%;
   z-index: 10;
   height: 70px;
   position: fixed; }
-
 .header, .footer {
   font-size: 20px;
   background: -webkit-radial-gradient(center, circle farthest-side, #000, #7a7a7a 80%);
   color: white;
   box-sizing: border-box; }
-
 .header__elements--logo {
   width: 67px;
   height: 50px;
@@ -34,33 +30,29 @@ html, body {
   background-repeat: no-repeat;
   background-size: contain;
   float: left; }
-
 .header__elements {
   display: inline-block;
   box-sizing: border-box;
   margin-left: 15px;
   color: white;
   margin: 10px 15px 10px 15px; }
-
 .header__elements--search, .header__elements--basket, .header__elements--authorization {
   float: right; }
-
 .header__elements--basket, .header-elements__authorization {
   border: 1px solid black;
   border-radius: 4px;
   padding: 10px;
   text-decoration: none; }
-
+.header__elements--search {
+    margin-top: 22px;
+}
 .header-elements__basket:hover, .header__elements--authorization:hover {
   color: #b8b8b8;
   border: 1px solid #b8b8b8; }
-
 .header-elements__basket--img {
   background-image: url("../img/Symbol/shopping-cart.gif"); }
-
 .header-elements__authorization--img {
   background-image: url("../img/Symbol/logo-login.png"); }
-
 .header-elements__authorization--img, .header-elements__basket--img {
   background-size: contain;
   width: 20px;
@@ -68,79 +60,64 @@ html, body {
   float: left;
   background-repeat: no-repeat;
   padding-left: 5px; }
-
 .footer {
   margin-top: -50px;
   height: 50px;
   padding-top: 12px;
   text-align: center; }
-
 /*Content*/
 .product-section {
-  padding-top: 70px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  width: 90%;
-  margin: 2% auto; }
-
+    padding-top: 70px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 2% auto; }
 .tab-content .imgCooling {
   background-image: url("../img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg"); }
-
 .tab-content .imgCooling, .imgCPU, .imgHDD, .imgMotherboard, .imgPowerSource, .imgRAM, .imgvideoAdapter {
   content: "";
   background-size: contain;
   height: 200px;
   background-repeat: no-repeat;
   background-position: center; }
-
 .tab-content .imgCPU {
   background-image: url("../img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
-
 .tab-content .imgHDD {
   background-image: url("../img/HDD/Hitachi/Hitachi%20Deskstar%20H3IKNAS30003272SE%203%20%D0%A2%D0%B1.jpg"); }
-
 .tab-content .imgMotherboard {
   background-image: url("../img/motherboard/Asus/ASUS%20H61M-K.jpg"); }
-
 .tab-content .imgPowerSource {
   background-image: url("../img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg"); }
-
 .tab-content .imgRAM {
   background-image: url("../img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg"); }
-
 .tab-content .imgvideoAdapter {
   background-image: url("../img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
-
 .product-section__tab-content {
-  width: 98%;
-  margin: auto; }
-
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+}
 .tab-content__layoutCategories, .Categories {
   box-sizing: border-box;
   display: inline-block;
-  vertical-align: top; }
-
+    flex-basis: 283px;
+}
 .tab-content .Categories {
-  width: 200px;
-  height: 250px;
-  border: 1px solid black;
-  margin-left: 70px;
-  margin-right: 70px;
-  margin-top: 30px;
-  margin-bottom: 30px; }
-
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    margin:20px }
 .header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .product-description:after, description:after, .square:after, .squareElementsInclude:after {
   display: block;
   content: '';
   clear: both; }
-
 .tab-content {
   text-align: center; }
-
 .Categories:hover {
   -webkit-animation: movie 2s infinite;
-  border: none; }
-
+    border: none;
+    font-size: 18px;}
 @-webkit-keyframes movie {
   50% {
     font-size: 25px;
@@ -152,7 +129,6 @@ html, body {
     -webkit-box-shadow: 0 0px 0px transparent;
     -moz-box-shadow: 0 0px 0px transparent;
     box-shadow: 0 0px 0px transparent; } }
-
 /*Login*/
 .modal-dialog__login-form {
   margin: 10% auto;
@@ -162,11 +138,9 @@ html, body {
   min-height: 200px;
   border: 1px solid black;
   border-radius: 4px; }
-
 .login-form {
   padding: 20px 40px 35px 40px;
   background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, #e6e6e6), to(white)); }
-
 .login-form__close, .modalBigImg .close {
   position: absolute;
   right: -10px;
@@ -180,7 +154,6 @@ html, body {
   border: 3px solid #fff;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
-
 .login-form__input {
   box-sizing: border-box;
   padding: 3px;
@@ -188,20 +161,15 @@ html, body {
   margin-bottom: 7px;
   border-radius: 4px;
   border: 2px solid darkblue; }
-
 .login .view {
   margin-top: 42px; }
-
 .login-form__remember-me {
   width: 15px; }
-
 .login-form__register {
   float: right; }
-
 .login-form__header {
   text-align: center;
   padding-bottom: 2px; }
-
 /*Menu*/
 .navbar {
   width: 10%;
@@ -274,58 +242,37 @@ html, body {
   background-repeat: no-repeat;
   background-position: left;
   padding-right: 8px; }
-
 /*Product description*/
 .product-section__product-description {
-  position: relative;
   box-sizing: border-box;
   width: 80%;
   margin: 0 auto; }
-
-.product-description__breadcrumb, .breadcrumb__list {
+ .breadcrumb__list {
   display: inline-block; }
-
 .breadcrumb li:after {
   padding: 0px 5px;
   content: "/";
   display: inline-block; }
-
-.breadcrumb li:last-child:after {
-  content: "";
-  display: inline-block; }
-
 .product-description__slider-img {
-  position: relative;
   margin-top: 20px;
   float: left;
   width: 31%;
   height: 25%;
   min-width: 200px; }
-
 .slider-img__big-img {
-  position: relative;
   width: 100%;
   min-width: 200px; }
-
-.modalBigImg .close {
-  position: absolute;
-  right: -17px;
-  top: -14px; }
-
 .big-img__positioner {
   vertical-align: middle;
   width: 70%; }
-
 .min-img--style {
   vertical-align: middle;
   display: inline-block;
   width: 10%;
   min-width: 28px; }
-
 .slider-img__min-img {
   width: 100%;
   margin-bottom: 10px; }
-
 .min-img__arrow, .min-img__arrow {
   top: 10px;
   position: relative;
@@ -333,47 +280,38 @@ html, body {
   width: 0;
   height: 0;
   border: 15px solid transparent; }
-
 .min-img__arrow-left {
   border-right-color: lightskyblue;
   border-left: 0; }
-
 .min-img__arrow-right {
   border-left-color: lightskyblue;
   border-right: 0; }
-
 .product-description__layout-description {
   margin-top: 10px;
   float: left;
   width: 60%; }
-
 .layout-description__header, .layout-description__img-star {
   display: inline-block; }
-
 .img-star {
   background: url("../img/Symbol/rating.png") repeat-x;
   width: 80px;
   height: 14px;
   margin-left: 10px; }
-
 .img-star__raiting {
   background: url("../img/Symbol/rating-fill.png") repeat-x;
   width: 55px;
   height: 14px; }
-
 .layout-description__label {
   margin-top: 30px;
   margin-left: 7px; }
-
 .layout-description__quantiti {
   float: left;
   margin-top: 5px; }
-
 .layout-description__add-cart {
   float: right;
   margin-bottom: 20px; }
-
 .add-cart__btn {
+    text-decoration: none;
   margin-top: 20px;
   padding: 10px 16px;
   border: 1px solid #70b61f;
@@ -382,7 +320,6 @@ html, body {
   color: white;
   font-weight: bold;
   font-size: 25px; }
-
 .wrapper__modal-dialog {
   display: none;
   position: fixed;
@@ -393,45 +330,34 @@ html, body {
   z-index: 99999;
   pointer-events: none;
   background: rgba(0, 0, 0, 0.8); }
-
 .modal-dialog--target:target {
   display: block;
   pointer-events: auto; }
-
 .breadcrumb {
   list-style-type: none;
   font-size: 13px; }
-
 .big-img {
   text-align: center; }
-
 .min-img {
   text-align: center; }
-
 .add-cart {
   font-size: 30px; }
-
 /*Social*/
 .layout-description__lineSocial {
   width: 100%;
   clear: both; }
-
 .lineSocial__line-social {
   display: inline-block;
   background-image: url("../img/Symbol/icosocial.png");
   background-repeat: repeat-x;
   width: 52px;
   height: 52px; }
-
 .lineSocial__twitter {
   background-position: 3%; }
-
 .lineSocial__vkontakte {
   background-position: 14.6%; }
-
 .lineSocial__facebook {
   background-position: 26.4%; }
-
 .lineSocial__instagram {
   background-position: 38.2%; }
 
@@ -999,7 +925,7 @@ nav, .itemsContent {
   display: block;
   pointer-events: auto; }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 666px) {
     .header__elements--logo {
         width: 53px;
         height: 40px; }
@@ -1026,7 +952,7 @@ nav, .itemsContent {
     }
     .product-section{
         width:99%;
-        margin: 6px 0px 16% auto;
+        margin: 6px 0px 16% 0px;
     }
     .add-cart__btn {
         padding: 7px 21px;
@@ -1039,8 +965,47 @@ nav, .itemsContent {
         font-size: 24px;
     }
     .layout-description__lineSocial {
-        width: 87%;
+        width: 220px;
         margin: auto;
     }
-
+    .tab-content .Categories {
+        margin: 2px;
+    }
 }
+@media screen and (min-width: 666px) and (max-width: 800px) {
+    .product-section__product-description {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .product-description__layout-description {
+        margin-top: -10px;
+        float: right;
+        width: 60%;
+    }
+    .product-section{
+        width:95%;
+        margin: 6px 6px 16% auto;
+    }
+    .add-cart__btn {
+        padding: 7px 21px;
+        font-size: 17px;
+    }
+    .layout-description__add-cart {
+        margin-top: -35px;
+    }
+    .add-cart {
+        font-size: 24px;
+    }
+    .layout-description__lineSocial {
+        width: 220px;
+        margin: auto;
+    }
+    .tab-content .Categories {
+        margin: 0px;
+    }
+    .tab-content__layoutCategories, .Categories {
+        flex-basis: auto;
+}
+    
+}
+
