@@ -431,12 +431,15 @@ nav, .itemsContent {
   margin: auto;
   float: left; }
 
-.inform {
-  text-align: left;
-  display: inline-block;
-  padding-top: 7px;
-  width: 350px;
-  height: 23px; }
+.elementspagelink__inform {    
+    display: inline-block;  
+    width: 70%;
+}
+
+.elementspagelink__inform--style {
+    text-align: left;
+    padding-top: 7px;
+}
 
 .squareList .motherLinkProperties {
   margin-left: 0; }
@@ -449,29 +452,40 @@ nav, .itemsContent {
   text-overflow: ellipsis;
   width: 150px; }
 
-.listPrice {
-  display: inline-block;
-  padding-right: 15px;
-  float: right; }
+.listprice {
+  display: inline-block;  
+}
 
-.itemsInfo {
-  display: block;
-  font-size: 15px;
+.listprice--style {
+    float: right;
+    font-size: 16px;
+}
+
+.itemsinfo {  
   height: 30px;
-  margin-top: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  margin-top: 5px;}
 
-.addCartItem {
-  text-align: center;
-  border: 1px solid #70b61f;
-  border-radius: 15px;
-  background: #7dcc23;
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-  width: 140px; }
+.itemsinfo--syle {
+  font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+}
+
+.elementspagelink__addcartitem {
+  
+  width: 80%; }
+
+.elementspagelink__addcartitem--style {
+    text-align: center;
+    border: 1px solid #70b61f;
+    border-radius: 15px;
+    background: #7dcc23;
+    color: white;
+    font-weight: bold;
+    font-size: 25px; 
+    margin-left: 60px;
+}
 
 /*BEM format*/
 /*-----------------------------------------START!--------------------------------*/
@@ -490,7 +504,9 @@ nav, .itemsContent {
   position: relative;
   width: 80%; }
 
-.elementspage__content:after, .elementspagesquare:after, .elementspagesquare__include:after {
+.elementspage__content:after, .elementspagesquare:after,
+.elementspagelist:after, .elementspagesquare__include:after,
+.elementspagelink__inform:after {
   display: block;
   content: '';
   clear: both; }
@@ -502,13 +518,14 @@ nav, .itemsContent {
 
 /*Items*/
 .elementspagelink {
-  text-decoration: none; }
+  text-decoration: none;
+    width: 80%;    
+}
 
 .elementspagelink:link {
   color: black; }
 
-.elementspagelink--style {
-  width: 80%;
+.elementspagelink--style {  
   display: inline-block;
   clear: both; }
 
@@ -575,14 +592,33 @@ nav, .itemsContent {
 
 /*----------------------------------------List View-------------------------------*/
 .elementspagelist {
-  width: 500px;
-  height: 150px;
-  margin: auto; }
+  width: 500px;  
+  margin: auto; 
+}
 
 .elementspagelist--style {
   vertical-align: top;
   text-align: center;
   font-size: 12px; }
+
+.linkproperties {
+    display: inline-block;
+    width: 70%;  
+    font-size: 16px;
+}
+
+.elementspagelink__imglist {
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;   
+    background-position: center;
+}
+
+.elementspagelist__list {
+    text-decoration: none;
+    width: 30%;
+    float: left;
+}
 
 /*-----------------------------------------FINISH!-------------------------------*/
 .cpuImg1 {
@@ -1010,3 +1046,7 @@ nav, .itemsContent {
     
 }
 
+.freeBlock {
+    height: 70px;
+    width: 100%;
+}
