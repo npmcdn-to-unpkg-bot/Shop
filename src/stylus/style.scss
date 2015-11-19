@@ -954,10 +954,12 @@ margin-bottom: 20px;}
         width: 192px;
         height:18px;}
 /*-------------------------------MOTHER RESPONSIVE-----------------------*/
-    .wrapper__responsive {
-        display: flex;
-        flex-flow: row wrap;
-    }
+//    .wrapper__responsive {
+//        overflow: hidden;
+//        min-height: 100%;
+//        display: flex;
+//        flex-flow: row wrap;
+//    }
     .header, .nav, .footer, .section {
         flex: 1 auto;
     }
