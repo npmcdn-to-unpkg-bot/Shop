@@ -442,7 +442,7 @@ nav, .itemsContent {
 
 .listprice--style {
     float: right;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .itemsinfo {  
@@ -523,18 +523,18 @@ nav, .itemsContent {
 
 .elementspagesquare {
   width: 25%;
-  height: 200px; }
+  height: 200px;
+margin-bottom: 20px;}
 
 .elementspagesquare--style {
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
   float: left; }
 
 .elementspagesquare__include {
   width: 100%;
-  height: 180px;
   clear: both; }
 
 .elementspagelink__img {
@@ -546,32 +546,9 @@ nav, .itemsContent {
 .elementspagelink__img--img1 {
   background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg"); }
 
-.elementspagelink__img--img2 {
-  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-990FXA-UD5.jpg"); }
-
-.elementspagelink__img--img3 {
-  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-B85-HD3.jpg"); }
-
-.elementspagelink__img--img4 {
-  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-B85M-D3H%20(rev.%202.0).jpg"); }
-
-.elementspagelink__img--img5 {
-  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-H81M-S2PV.jpg"); }
-
-.elementspagelink__img--img6 {
-  background-image: url("../img/motherboard/ASRock/ASRock%20970%20Pro3.jpg"); }
-
-.elementspagelink__img--img7 {
-  background-image: url("../img/motherboard/ASRock/ASRock%20H61M-VG4.jpg"); }
-
-.elementspagelink__img--img8 {
-  background-image: url("../img/motherboard/ASRock/ASRock%20H81M-DG4.jpg"); }
-
-.elementspagelink__img--img9 {
-  background-image: url("../img/motherboard/ASRock/ASRock%20H97M%20Pro4.jpg"); }
-
-.elementspagelink__img--img10 {
-  background-image: url("../img/motherboard/ASRock/ASRock%20Socket-AM1%20AM1B-MDH.jpg"); }
+.elementspagesquare__price {
+    font-size: 25px;
+}
 
 /*----------------------------------------List View-------------------------------*/
 .elementspagelist {
@@ -587,7 +564,8 @@ nav, .itemsContent {
 .linkproperties {
     display: inline-block;
     width: 70%;  
-    font-size: 16px;
+    font-size: 18px;
+    white-space: nowrap;
 }
 
 .elementspagelink__imglist {
