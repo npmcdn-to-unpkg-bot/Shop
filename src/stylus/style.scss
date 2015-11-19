@@ -107,6 +107,7 @@ html, body {
     width: 200px;
     height: 250px;
     border: 1px solid black;
+    border-radius: 15px;
     margin:20px }
 .header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .product-description:after, description:after, .square:after, .squareElementsInclude:after {
   display: block;
