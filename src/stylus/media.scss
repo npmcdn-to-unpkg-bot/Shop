@@ -14,7 +14,8 @@
         margin: 17px 5px 5px 5px; }
     .header__elements--search {
         margin-top: 22px;
-        width: 100px; }
+        width: 150px;
+        background-position-x: 126px;}
     .header-elements__authorization--img, .header-elements__basket--img {
         padding-left: 0px; }
     .header__elements--basket, .header-elements__authorization {
@@ -27,6 +28,15 @@
         width: 40%;
         height: 40%;
         min-width: 250px; } 
+    .min-img{
+        display: none;
+    }
+    .Categories:hover {
+    -webkit-animation: none;
+    border: 1px solid #000;
+    font-size: 16px;
+}
+
     .product-description__layout-description{
         width:100%;
         margin-top: 0px;}
@@ -73,10 +83,6 @@
         height:18px;}
 
 
-.freeBlock {
-    height: 70px;
-    width: 100%;
-}
     .header, .nav, .footer, .section {
         flex: 1 auto;
     }
@@ -142,6 +148,7 @@
         width: 94%;
         height: 100%;
     }
+
 }
     
 ///*---------------------------FINISH MOTHER RESPONSIVE--------------------*/    
@@ -187,4 +194,9 @@
     .orderForm {
         margin-bottom: 80px;
     }
+        .Categories:hover {
+    -webkit-animation: none;
+    border: 1px solid #000;
+    font-size: 16px;
+}
 }
