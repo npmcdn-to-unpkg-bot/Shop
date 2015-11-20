@@ -1,0 +1,190 @@
+// media.scss
+
+//    .wrapper__responsive {
+//        overflow: hidden;
+//        min-height: 100%;
+//        display: flex;
+//        flex-flow: row wrap;
+//    }
+@media screen and (max-width: 666px) {
+    .header__elements--logo {
+        width: 53px;
+        height: 40px; }
+    .header__elements {
+        margin: 17px 5px 5px 5px; }
+    .header__elements--search {
+        margin-top: 22px;
+        width: 100px; }
+    .header-elements__authorization--img, .header-elements__basket--img {
+        padding-left: 0px; }
+    .header__elements--basket, .header-elements__authorization {
+        padding: 5px; }
+    .header-elements__text--hidden {
+        display: none; }
+    .product-description__slider-img {
+        margin: 4px auto;
+        float: none;
+        width: 40%;
+        height: 40%;
+        min-width: 250px; } 
+    .product-description__layout-description{
+        width:100%;
+        margin-top: 0px;}
+    .product-section{
+        width: 332px;
+        margin: 20px auto 40px auto;}
+    .add-cart__btn {
+        padding: 7px 21px;
+        font-size: 17px;}
+    .layout-description__add-cart {
+        margin-top: -35px;}
+    .add-cart {
+        font-size: 24px;}
+    .layout-description__lineSocial {
+        width: 220px;
+        margin: auto;}
+    .tab-content .Categories {
+        margin: 2px;}
+    .orderForm {
+       }
+    .line1 input, .line4 input, .line2 select {
+        width: 45px;
+        height: 22px;}
+    .orderForm{
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 315px;
+        height: 168px;
+        margin-bottom: 50px;
+            .line2 {
+            left: 74px;
+            top: 45px;}
+            .line3 {
+            top: 52px;
+            left: 26px;}
+            .line4 {
+            left: 249.5px;}
+            .lineValid {
+            left: 81px;
+            margin-right: 20px;}
+    } 
+    .line3 input {
+        width: 192px;
+        height:18px;}
+
+
+.freeBlock {
+    height: 70px;
+    width: 100%;
+}
+    .header, .nav, .footer, .section {
+        flex: 1 auto;
+    }
+    .navbar {  
+        display: block;
+        width: 100%;
+        margin-top: 65px;
+        border-radius: 0px;        
+    }
+    .navbar--desktop { 
+        position: static;
+        list-style-type: none;
+        border: 5px solid rebeccapurple;        
+    }
+    .navbar__link {
+        border-radius: 0px;
+        text-align: center;
+    }
+    .navbar__img {        
+        height: 0px;
+    }    
+    
+    .elementspage {
+        width: 100%;        
+        margin-bottom: 70px; 
+    }
+    
+    .elementspage--style {
+        overflow: hidden;
+        padding-top: 0px;
+    }
+    
+    .viewmode {
+        height: 0;
+        text-align: right;
+        margin-right: 0;
+        margin-top: 0;
+        overflow: hidden;
+    } 
+    
+    .elementspagesquare {
+        width: 100%;        
+    }
+    
+    .elementspagesquare--style {
+        vertical-align: top;
+        padding-top: 20px;
+        display: block;
+        text-align: center;
+        font-size: 18px;        
+        float: none;
+    } 
+    
+    .elementspagelink {        
+        width: 100%;    
+    }
+    .login-form__input {
+        padding: 8px;
+        width: 100%;
+    }
+    .login-form {
+        padding: 20px 40px 35px;
+        width: 94%;
+        height: 100%;
+    }
+}
+    
+///*---------------------------FINISH MOTHER RESPONSIVE--------------------*/    
+
+@media screen and (min-width: 666px) and (max-width: 800px) {
+    .product-section__product-description {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .product-description__layout-description {
+        margin-top: -10px;
+        float: right;
+        width: 60%;
+    }
+    .product-section{
+        width:95%;
+        margin: 6px auto 20px;
+    }
+    .add-cart__btn {
+        padding: 7px 21px;
+        font-size: 17px;
+    }
+    .layout-description__add-cart {
+        margin-top: -35px;
+    }
+    .add-cart {
+        font-size: 24px;
+    }
+    .layout-description__lineSocial {
+        width: 220px;
+        margin: auto;
+    }
+    .tab-content .Categories {
+        margin: 0px;
+    }
+    .tab-content__layoutCategories, .Categories {
+        flex-basis: auto;
+    }
+    .orderFormLayout{
+        width:393px;
+        margin:auto;
+    }
+    .orderForm {
+        margin-bottom: 80px;
+    }
+}
