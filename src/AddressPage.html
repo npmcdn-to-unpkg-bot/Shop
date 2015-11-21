@@ -34,67 +34,74 @@
                 <a class="login-form__register" href="register.html">Register</a>
             </form>
         </div>
-<section>    
-    <div class="address">
-        <form class="formAdd">
-            <div class="squareAdd">
-                <h1>Shipping address</h1>
-                <div class="addressInfo">
-                    <div class="addressTextInfo">Country</div>
-                    <input list="countryAdd"/>
-                    <datalist id="countryAdd">
-                        <option value="Australia"/>
-                        <option value="Chaina"/>
-                        <option value="England"/>
-                        <option value="France"/>
-                        <option value="Russia"/>
-                        <option value="Spain"/>
-                        <option value="USA"/>
-                    </datalist>
-                </div>  
-                <div class="addressInfo">
-                    <div class="addressTextInfo">City</div>
-                    <input type="text"/>
-                </div>
-                <div class="addressInfo">
-                    <div class="addressTextInfo">Address</div>
-                    <input type="text"/>
-                </div>
-                <div class="addressInfo">
-                    <div class="addressTextInfo">ZIP</div>
-                    <input type="text"/>
-                </div>
+<article class="product-section">   
+    <ul class="product-section__add tab-content">
+        <li class="tab-content__layoutadd">
+            <h1 class="titleadd--style">Shipping address</h1>
+            <div class="addressinfo">
+                <div class="addressinfo__text">Country</div>
+                <input list="addressinfo__add"/>
+                <datalist id="addressinfo__add">
+                    <option value="Australia"/>
+                    <option value="Chaina"/>
+                    <option value="England"/>
+                    <option value="France"/>
+                    <option value="Russia"/>
+                    <option value="Spain"/>
+                    <option value="USA"/>
+                </datalist>
+            </div>  
+            <div class="addressinfo">
+                <div class="addressinfo__text">City</div>
+                <input type="text"/>
             </div>
-            <div class="squareAdd">
-                <h1>Billing address</h1>
-                <div class="addressInfo">
-                    <div class="addressTextInfo">Country</div>
-                    <input list="countryAdd"/>
-                </div>  
-                <div class="addressInfo">
-                    <div class="addressTextInfo">City</div>
-                    <input type="text"/>
-                </div>
-                <div class="addressInfo">
-                    <div class="addressTextInfo">Address</div>
-                    <input type="text"/>
-                </div>
-                <div class="addressInfo">
-                    <div class="addressTextInfo">ZIP</div>
-                    <input type="text"/>
-                </div>
-                <p class="addCheck">
-                    <input type="checkbox" name="save"/>
-                    My billing addres is the same
-                </p>
+            <div class="addressinfo">
+                <div class="addressinfo__text">Address</div>
+                <input type="text"/>
             </div>
-            <div class="buttonAdd">                
-                <input type="submit" value="To pay"/>                
+            <div class="addressinfo">
+                <div class="addressinfo__text">ZIP</div>
+                <input type="text"/>
             </div>
-        </form>
-        </div>
-    </section>
+        </li>
+        <li class="tab-content__layoutadd">
+            <h1 class="titleadd--style">Billing address</h1>
+            <div class="addressinfo">
+                <div class="addressinfo__text">Country</div>
+                <input list="addressinfo__add"/>
+                <datalist id="addressinfo__add">
+                    <option value="Australia"/>
+                    <option value="Chaina"/>
+                    <option value="England"/>
+                    <option value="France"/>
+                    <option value="Russia"/>
+                    <option value="Spain"/>
+                    <option value="USA"/>
+                </datalist>
+            </div>  
+            <div class="addressinfo">
+                <div class="addressinfo__text">City</div>
+                <input type="text"/>
+            </div>
+            <div class="addressinfo">
+                <div class="addressinfo__text">Address</div>
+                <input type="text"/>
+            </div>
+            <div class="addressinfo">
+                <div class="addressinfo__text">ZIP</div>
+                <input type="text"/>
+            </div>
+            <p class="addcheck">
+                <input type="checkbox" name="save"/>
+                My billing addres is the same
+            </p>           
+        </li>
+    </ul>
+    <div class="buttonAdd">
+            <a class="finish-btn" href="orderForm.html">To pay</a>
     </div>
-    <footer class="footer">© 2015 Powered by Footerist</footer>
+</article>
+</div>
+<footer class="footer">© 2015 Powered by Footerist</footer>
 </body>
 </html>

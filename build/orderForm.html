@@ -33,7 +33,7 @@
                 <a class="login-form__register" href="register.html">Register</a>
             </form>
         </div>
-    <section class="product-section orderFormLayout">
+    <article class="product-section orderFormLayout">
                 <form class="orderForm">
                 <div class="line1">
                     <input type="text" autofocus="on" maxlength="4" tabindex="1">
@@ -42,8 +42,8 @@
                     <input type="text" autofocus="off" maxlength="4" tabindex="4">
                 </div>    
                 <span class="lineValid">Month</span><span class="lineValid">Year</span>
-                <div class="line2">
-                    <select class="month">
+                <div class="line2" >
+                    <select class="month" tabindex="5">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -57,7 +57,7 @@
                         <option>11</option>
                         <option>12</option>
                     </select>
-                    <select class="year">
+                    <select class="year" tabindex="6">
                         <option>2000</option>
                         <option>2001</option>
                         <option>2002</option>
@@ -93,16 +93,16 @@
                     </select>
                 </div>
                 <div class="line3">
-                        <input type="text" autofocus="off" maxlength="22" placeholder="Name">
+                        <input type="text" autofocus="off" maxlength="22" placeholder="Name" tabindex="7">
                 </div>
                 <div class="line4">
-                        <input type="text" autofocus="off" maxlength="3" placeholder="CVC">
+                        <input type="text" autofocus="off" maxlength="3" placeholder="CVC" tabindex="8">
                 </div>
                 <div class="line5">
-                        <input type="submit" value="Pay">
+                        <a class="finish-btn" href="finishPage.html">Pay</a>
                 </div>
                     </form>
-    </section>
+    </article>
     </div>
     <footer class="footer">© 2015 Powered by Footerist</footer>
 </body>
