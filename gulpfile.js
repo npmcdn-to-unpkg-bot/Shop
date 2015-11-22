@@ -38,7 +38,7 @@ var config = {
     },
     tunnel: true,
     host: 'localhost',
-    port: 8090,
+    port: 8000,
     logPrefix: "Global-task"
 };
 
