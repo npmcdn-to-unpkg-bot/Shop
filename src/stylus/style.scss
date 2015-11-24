@@ -126,7 +126,7 @@ html, body {
     border: 1px solid black;
     border-radius: 15px;
     margin:20px }
-.header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .product-description:after, .description:after, .square:after, .squareElementsInclude:after, .itemscart__cellview:after, .descriptionitemlink:after, .descriptionitem__count:after {
+.header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .product-description:after, .description:after, .square:after, .squareElementsInclude:after, .itemscart__cellview:after, .descriptionitemlink:after, .descriptionitem__count:after, .paytable:after {
   display: block;
   content: '';
   clear: both; }
@@ -518,7 +518,7 @@ nav, .itemsContent {
 
 .elementspage__content:after, .elementspagesquare:after,
 .elementspagelist:after, .elementspagesquare__include:after,
-.elementspagelink__inform:after {
+.elementspagelink__inform:after, .cartpage__carttotal:after {
   display: block;
   content: '';
   clear: both; }
@@ -780,13 +780,19 @@ margin-bottom: 20px;}
 .cartpage {    
   width: 100%;  
   margin-bottom: 70px;
-    &__cart {
+    &__section {
         display: inline-block;
         float: left;
+        padding-top: 20px;
         width: 75%;
+        padding-bottom: 30px;
+    }
+    &__cart {        
+        width: 100%;
         margin-bottom: 20px
     }
     &__totalbar {
+        align-self: flex-start;
         width: 25%;
         padding-top: 30px;
     }
@@ -936,19 +942,22 @@ margin-bottom: 20px;}
 }
 
 /*Total Table*/
-.totalPriceTable {
-  text-align: right;
-  margin-right: 15px;
+.totalpricetable {
+  width: 80%;
+  margin: auto;
+  text-align: right;  
   font-size: 30px; }
 
-.payTable {
-  display: inline-block;
-  float: right;
-  width: 300px;
-  height: 50px; }
+.paytable {
+    display: inline-block;
+    float: right;
+    margin:0 10px;
+}
 
-.cartPage .toCheckout {
-  float: right; }
+.cartpage__carttotal {
+    width: 80%;
+    margin: auto;
+}
 
 .freeBlock {
     height: 70px;

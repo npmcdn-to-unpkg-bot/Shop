@@ -128,8 +128,8 @@
     } 
     .cartpage__totalbar {order: 1;
     margin-bottom: 30px;}
-    .cartpage__cart {order: 2;}
-    .cartpage__totalbar, .cartpage__cart {
+    .cartpage__section {order: 2;}
+    .cartpage__totalbar, .cartpage__section {
         width: 100%;
     }
     
@@ -185,6 +185,16 @@
 
     .itemsremove {  
       font-size: 12px;
+    }
+    
+    .paytable {
+        padding: 5px; 
+        float: none;
+        display: block;
+        margin: auto;
+        .tocheckout {
+            margin: auto;
+        }
     }
 
 }    
