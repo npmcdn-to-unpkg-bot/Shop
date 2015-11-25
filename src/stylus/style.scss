@@ -135,13 +135,24 @@ html, body {
 .Categories:hover {
   -webkit-animation: movie 2s infinite;
     border: none;
-    font-size: 18px;}
+    font-size: 18px;
+    
+}
+/*.pages__items {
+    font-size: 14px;
+    border: none;
+}*/
+.elementspage__figcaption {
+    font-size: 14px;
+}
 .pages__items:hover {
     animation: none;
     border: 1px solid #000;
     color: orange;
     font-size: 14px;
 }
+
+
 @-webkit-keyframes movie {
   50% {
     font-size: 25px;
@@ -275,8 +286,7 @@ html, body {
     background: #7dcc23;
     color: white;
     font-weight: bold;
-    font-size: 25px; 
-    /*min-width: 125px;*/
+    font-size: 25px;    
     max-width: 224px;
 }
 .product-section__product-description {
@@ -511,14 +521,7 @@ nav, .itemsContent {
 .elementspage--style, .cartpage--style {
   padding-top: 70px; }
 
-.elementspage__content {
-  margin: auto;
-  position: relative;
-  width: 80%; }
-
-.elementspage__content:after, .elementspagesquare:after,
-.elementspagelist:after, .elementspagesquare__include:after,
-.elementspagelink__inform:after, .cartpage__carttotal:after {
+.elementspagelist:after, .elementspagelink__inform:after, .cartpage__carttotal:after {
   display: block;
   content: '';
   clear: both; }
@@ -550,21 +553,6 @@ nav, .itemsContent {
 .elementspagelink:active {
   color: red; }
 
-.elementspagesquare {
-  width: 25%;  
-margin-bottom: 20px;}
-
-.elementspagesquare--style {
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  font-size: 18px;
-  float: left; }
-
-.elementspagesquare__include {
-  width: 100%;
-  clear: both; }
-
 .elementspagelink__img {
   content: "";
   height: 200px;
@@ -575,8 +563,14 @@ margin-bottom: 20px;}
 .elementspagelink__img--img1 {
   background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg"); }
 
-.elementspagesquare__price {
-    font-size: 25px;
+.elementspagelink__img--img2 {
+    background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-990FXA-UD5.jpg");
+}
+.elementspagelink__img--img3 {
+    background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-B85-HD3.jpg");
+}
+.elementspagelink__img--img4 {
+    background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-H81M-S2PV.jpg");
 }
 
 /*----------------------------------------List View-------------------------------*/
@@ -959,8 +953,8 @@ margin-bottom: 20px;}
     margin: auto;
 }
 
-.freeBlock {
+/*.freeBlock {
     height: 70px;
     width: 100%;
-}
+}*/
 @import 'media.scss';
