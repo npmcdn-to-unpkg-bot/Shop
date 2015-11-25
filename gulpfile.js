@@ -87,6 +87,9 @@ gulp.task('watch', function(){
     watch([path.watch.img], function(event, cb) {
         gulp.start('images');
     });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('js');
+    });
 });
 
 gulp.task('default', ['style-build', 'images', 'html', 'webserver', 'watch', 'js']);
