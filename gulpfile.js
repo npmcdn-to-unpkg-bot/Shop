@@ -18,8 +18,7 @@ var path = {
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/main.js',
-
+        js: 'src/js/*.js',
         style: 'src/stylus/*.scss',
         img: 'src/img/**/*.*'
     },
@@ -67,6 +66,12 @@ gulp.task('html', function() {
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
+/*Copy js*/
+gulp.task('js', function() {
+    gulp.src(path.src.js)
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
+});
 /*webserver*/
 gulp.task('webserver', function () {
     browserSync(config);
@@ -84,4 +89,4 @@ gulp.task('watch', function(){
     });
 });
 
-gulp.task('default', ['style-build', 'images', 'html', 'webserver', 'watch']);
+gulp.task('default', ['style-build', 'images', 'html', 'webserver', 'watch', 'js']);
