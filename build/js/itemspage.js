@@ -9,26 +9,20 @@ function addElementPageitem (arr) {
         var img = i % 4 + 1; 
 		
         var li = document.createElement('li');
-        li.setAttribute("class", "tab-content__layoutitems");
-		newElement.appendChild(li);
+        li.setAttribute("class", "tab-content__layoutitems");		
 		
         var a = document.createElement('a');
         a.setAttribute("class", "Categories pages__items");
-        a.setAttribute("href", "productdescription.html");
-		li.appendChild(a);
+        a.setAttribute("href", "productdescription.html");		
 		
         var figure = document.createElement('figure');
-        figure.setAttribute  ("class", "elementspagefigure");
-		a.appendChild(figure);
-		
+        figure.setAttribute  ("class", "elementspagefigure");		
 		
         var div = document.createElement('div');         
-        div.setAttribute("class", "elementspagelink__img elementspagelink__img--img" + img);	
-		figure.appendChild(div);
+        div.setAttribute("class", "elementspagelink__img elementspagelink__img--img" + img);		
 		
         var figcaption = document.createElement('figcaption');
-        figcaption.setAttribute("class", "elementspage__figcaption");
-		figure.appendChild(figcaption);
+        figcaption.setAttribute("class", "elementspage__figcaption");		
 		
         var textName = arr[i%4].name;
 		
@@ -38,7 +32,12 @@ function addElementPageitem (arr) {
 		
 		figcaption.appendChild(document.createTextNode(textName));
 		figcaption.appendChild(br);
-		figcaption.appendChild(document.createTextNode(textPrice));       
+		figcaption.appendChild(document.createTextNode(textPrice));
+		figure.appendChild(div);
+		figure.appendChild(figcaption);		
+		a.appendChild(figure);
+		li.appendChild(a);
+		newElement.appendChild(li);
     }
 }
 
