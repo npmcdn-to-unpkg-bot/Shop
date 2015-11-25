@@ -41,18 +41,18 @@
                     <li class="breadcrumb__list"><a href="Motherboard.html">Категория</a></li>
                     <li class="breadcrumb__list">Товар</li>
                 </ol>
-                <div class="product-description__slider-img slider-img">
+                <div class="product-description__slider-img slider-img" id="slider">
                     <div class="slider-img__big-img big-img">
-                        <img class="big-img__positioner" src="img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg "/>
+                        <img class="big-img__positioner" src="img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg" id="slider-big-img"/>
                     </div>
-                    <div class="slider-img__min-img min-img">
-                        <div class="min-img__arrow min-img__arrow-left"></div>
+                    <div class="slider-img__min-img min-img" id="slider-min-img">
+                        <div class="min-img__arrow min-img__arrow-left" onclick="sliderObj.leftSlide();"></div>
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"/>
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg"/>
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg"/>
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg"/> 
                         <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg"/>
-                       <div class="min-img__arrow min-img__arrow-right"></div>
+                       <div class="min-img__arrow min-img__arrow-right" onclick="sliderObj.rightSlide();"></div>
                     </div>
                 </div>
                 <div class="product-description__layout-description layout-description"> 
@@ -80,6 +80,6 @@
     </article>
     </div>
     <footer class="footer">© 2015 Powered by Footerist</footer>
-
+    <script src="js/slider.js"></script>
 </body>
 </html>
