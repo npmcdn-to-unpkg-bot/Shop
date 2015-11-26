@@ -31,6 +31,4 @@ function addCategories(){
         newElement.appendChild(newLi);
     }
 }
-
-
 addCategories(homePageElement);

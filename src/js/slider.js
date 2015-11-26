@@ -13,13 +13,11 @@ leftSlide: function(){
     this.hit--;
         if (this.hit<0) this.hit=this.srcMin.length-1;
         this.setSlide(this.srcMin[this.hit]);
-        console.log(this.hit);
 },
 rightSlide: function(){
     this.hit++;
         if(this.hit==this.srcMin.length) this.hit=0;
         this.setSlide(this.srcMin[this.hit]);
-    console.log(this.hit);
 }
 };
 
