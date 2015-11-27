@@ -7,7 +7,9 @@ csso = require('gulp-csso'),
 imagemin = require('gulp-imagemin'),
 uglify = require('gulp-uglify'),
 browserSync = require("browser-sync"),
-reload = browserSync.reload; 
+react = require('gulp-react'),
+reload = browserSync.reload;
+ 
 
 var path = {
     build: {
@@ -19,12 +21,13 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/*.js',
+        jsx: 'src/js/*.jsx',
         style: 'src/stylus/*.scss',
         img: 'src/img/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
-        js: 'src/js/**/*.js',
+        js: 'src/js/**/*.*',
         style: 'src/stylus/**/*.scss',
         img: 'src/img/**/*.*'
     },
@@ -40,7 +43,12 @@ var config = {
     port: 8000,
     logPrefix: "Global-task"
 };
-
+/* JSX-build*/
+gulp.task('react', function () {
+     gulp.src(path.src.jsx)
+        .pipe(react())
+        .pipe(gulp.dest(path.build.js));
+});
 /* CSS-build*/
 gulp.task('style-build', function(){
     gulp.src(path.src.style)
@@ -92,4 +100,4 @@ gulp.task('watch', function(){
     });
 });
 
-gulp.task('default', ['style-build', 'images', 'html', 'webserver', 'watch', 'js']);
+gulp.task('default', ['react', 'style-build', 'images', 'html', 'webserver', 'watch', 'js' ]);

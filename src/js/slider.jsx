@@ -4,7 +4,8 @@ srcMin:
 ['img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg',
 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg',
 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg',
-'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg'], 
+'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', 
+ 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg'], 
 hit: 0,
 setSlide: function (src){
     document.getElementById('slider-big-img').src=""+src+""
@@ -20,9 +21,5 @@ rightSlide: function(){
         this.setSlide(this.srcMin[this.hit]);
 }
 };
-
-
-
-
 addCategories(homePageElement);
 
