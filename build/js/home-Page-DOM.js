@@ -10,11 +10,14 @@
 //* find root DOM node to place model data (by ID)
 //* iterate throw data model array and build child DOM nodes
 //* insert builded nodes to root childs
-
+(function(){
 var homePageElement=[
-    {name: 'Motherboard'}, {name: 'CPU'}, {name: 'RAM'},{name: 'VideoAdapter'},{name: 'HDD'},{name: 'PowerSource'},{name: 'Cooling'}],
-        k=homePageElement.length;
-function addCategories(){
+    {name: 'Motherboard'}, {name: 'CPU'},
+    {name: 'RAM'},{name: 'VideoAdapter'},
+    {name: 'HDD'},{name: 'PowerSource'},
+    {name: 'Cooling'}];
+function addCategories(arr){
+      var  k=homePageElement.length;
     for (var i=0; i<k; i++){
         var name = homePageElement[i].name,
         img = homePageElement[i].img;
@@ -31,6 +34,7 @@ function addCategories(){
         newElement.appendChild(newLi);
     }
 }
-
-
 addCategories(homePageElement);
+addCategories(homePageElement);
+addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);
+})();  
