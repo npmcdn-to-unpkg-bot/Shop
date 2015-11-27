@@ -6,6 +6,7 @@
 	<link rel="stylesheet"  href="stylus/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/Symbol/4.gif">
+    <script src="http://fb.me/react-with-addons-0.10.0.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -34,53 +35,11 @@
                 <a class="login-form__register" href="register.html">Register</a>
             </form>
         </div>
-    <article class="wrapper__product-section product-section">
-            <div class="product-section__product-description product-description">
-                <ol class="product-description__breadcrumb breadcrumb">
-                    <li class="breadcrumb__list"><a href="index.html">Главная</a></li>
-                    <li class="breadcrumb__list"><a href="Motherboard.html">Категория</a></li>
-                    <li class="breadcrumb__list">Товар</li>
-                </ol>
-                <div class="product-description__slider-img slider-img" id="slider">
-                    <div class="slider-img__big-img big-img">
-                        <img class="big-img__positioner" src="img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg" id="slider-big-img"/>
-                    </div>
-                    <div class="slider-img__min-img min-img" id="slider-min-img">
-                        <div class="min-img__arrow min-img__arrow-left" onclick="sliderObj.leftSlide();"></div>
-                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"/>
-                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg"/>
-                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg"/>
-                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg"/> 
-                        <img class="min-img--style" src="img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg"/>
-                       <div class="min-img__arrow min-img__arrow-right" onclick="sliderObj.rightSlide();"></div>
-                    </div>
-                </div>
-                <div class="product-description__layout-description layout-description"> 
-                    <h1 class="layout-description__header"> Товар </h1>
-                    <div class="layout-description__img-star img-star">
-                    <div class="img-star__raiting"></div>
-                    </div>
-                    <p>Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.</p>
-                    <p class="layout-description__label"><label for="quantiti">Quantity</label></p>
-                    <input class="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" value="1"> 
-                    <div class="layout-description__add-cart add-cart">
-                        <div class="add-cart__price">Price: $555</div>
-                        <a class="add-cart__btn" href="CartPage.html">
-                            Add to cart
-                        </a>
-                    </div>
-                    <div class="layout-description__lineSocial lineSocial">
-                        <a class="lineSocial__twitter lineSocial__line-social" href=""></a>
-                        <a class="lineSocial__vkontakte lineSocial__line-social" href=""></a>
-                        <a class="lineSocial__facebook lineSocial__line-social" href=""></a>
-                        <a class="lineSocial__instagram lineSocial__line-social" href=""></a>
-                    </div>
-                </div>
-            </div>
+    <article class="wrapper__product-section product-section" id="createProductDescription">
+            
     </article>
     </div>
     <footer class="footer">© 2015 Powered by Footerist</footer>
-    <script src="js/slider.js"></script>
-    <script src="js/productdescriptions.js"></script>
+    <script src="js/test.js"></script>
 </body>
 </html>
