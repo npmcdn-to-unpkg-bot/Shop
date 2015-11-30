@@ -1,6 +1,7 @@
 /*Описание товара*/
 var DescriptionList = React.createClass({
   render: function () {    
+      var self = this;
     var description = this.props.description.map(function(category, key) {
       return (
           <div className="product-description" key={key}>
@@ -15,11 +16,13 @@ var DescriptionList = React.createClass({
                 </div>
                     <div className="slider-img__min-img min-img" id="slider-min-img">
                         <div className="min-img__arrow min-img__arrow-left" onclick="sliderObj.leftSlide();"></div>
+
                             <img className="min-img--style" src={category.minImg1}/>
                             <img className="min-img--style" src={category.minImg2}/>
                             <img className="min-img--style" src={category.minImg3}/>
                             <img className="min-img--style" src={category.minImg4}/> 
                             <img className="min-img--style" src={category.minImg5}/>
+
                         <div className="min-img__arrow min-img__arrow-right" onclick="sliderObj.rightSlide();"></div>
                     </div>
                 </div>
@@ -47,6 +50,7 @@ var DescriptionList = React.createClass({
           </div>
       );
     });
+
     return (
       <div className="category-list">
         {description}
