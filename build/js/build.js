@@ -1,12 +1,15 @@
 window.addEventListener("DOMContentLoaded", function () {
 	ReactDOM.render(React.createElement(CategoryPage), document.getElementById('productDescription'));
-}, function () {
-	ReactDOM.render(React.createElement(headerPage), document.getElementById('React'));
 });
 
-/*Вставка шапки*/
+/*Header*/
 window.addEventListener("DOMContentLoaded", function () {
 	ReactDOM.render(React.createElement(headerPage), document.getElementById('header'));
+});
+
+/*Footer*/
+window.addEventListener("DOMContentLoaded", function () {
+	ReactDOM.render(React.createElement(footerPage), document.getElementById('footer'));
 });
 var CategoryList = React.createClass({
   displayName: "CategoryList",
@@ -53,6 +56,17 @@ var CategoryPage = React.createClass({
       )
     );
   }
+});
+var footerPage = React.createClass({
+	displayName: "footerPage",
+
+	render: function () {
+		return React.createElement(
+			"footer",
+			{ className: "footer" },
+			"© 2015 Powered by Footerist"
+		);
+	}
 });
 var headerPage = React.createClass({
     displayName: "headerPage",
