@@ -1,11 +1,8 @@
-
-<<<<<<< HEAD
+                /*Рендер страницы Description*/
 window.addEventListener("DOMContentLoaded", function() {
     ReactDOM.render(React.createElement(DescriptionPage), 
     document.getElementById('productDescription'));
-          });
-=======
-					/*Рендер страницы*/
+          });				/*Рендер страницы*/
 window.addEventListener("DOMContentLoaded", function() {
 	ReactDOM.render(
 		React.createElement(CategoryPage), 									document.getElementById('page'));
@@ -18,4 +15,3 @@ window.addEventListener("DOMContentLoaded",	function() {
  	  React.createElement(Footer), 										  document.getElementById('footer'));
 	}
 )
->>>>>>> ef272e2f24b6817917bd807447b9a695f2dfb9df
