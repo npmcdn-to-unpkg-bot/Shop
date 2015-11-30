@@ -1,3 +1,7 @@
+/*Рендер страницы Description*/
+window.addEventListener("DOMContentLoaded", function () {
+                ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
+});
 /*Описание товара*/
 var DescriptionList = React.createClass({
     displayName: "DescriptionList",
@@ -107,7 +111,6 @@ var DescriptionList = React.createClass({
                 )
             );
         });
-
         return React.createElement(
             "div",
             { className: "category-list" },
@@ -128,101 +131,6 @@ var DescriptionPage = React.createClass({
       'div',
       { className: 'product-section__product-description' },
       React.createElement(DescriptionList, { description: this.props.description })
-    );
-  }
-});
-var Footer = React.createClass({
-	displayName: "Footer",
-
-	render: function () {
-		return React.createElement(
-			"footer",
-			{ className: "footer" },
-			"© 2015 Powered by Footerist"
-		);
-	}
-});
-var Header = React.createClass({
-    displayName: "Header",
-
-    render: function () {
-        return React.createElement(
-            "header",
-            { className: "wrapper__header header" },
-            React.createElement("a", { className: "header__elements header__elements--logo", href: "index.html" }),
-            React.createElement(
-                "a",
-                { className: "header__elements header__elements--authorization header-elements__authorization", href: "#openModal" },
-                React.createElement("span", { className: "header-elements__authorization--img" }),
-                React.createElement(
-                    "span",
-                    { className: "header-elements__text--hidden" },
-                    "Profile"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "header__elements header__elements--basket header-elements__basket", href: "CartPage.html" },
-                React.createElement("span", { className: "header-elements__basket--img" }),
-                React.createElement(
-                    "span",
-                    { className: "header-elements__text--hidden" },
-                    "Cart"
-                )
-            ),
-            React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
-        );
-    }
-});
-var Navigation = React.createClass({
-  displayName: "Navigation",
-
-  render: function () {
-    return React.createElement(
-      "nav",
-      { className: "navbar navbar--desktop" },
-      React.createElement(
-        "a",
-        { className: "navbar__link navbar__link--active", href: "Motherboard.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--mother" }),
-        "Motherboard"
-      ),
-      React.createElement(
-        "a",
-        { className: "navbar__link", href: "CPU.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--cpu" }),
-        "CPU"
-      ),
-      React.createElement(
-        "a",
-        { className: "navbar__link", href: "RAM.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--ram" }),
-        "RAM"
-      ),
-      React.createElement(
-        "a",
-        { className: "navbar__link", href: "videoAdapter.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--video" }),
-        "Video adapter"
-      ),
-      React.createElement(
-        "a",
-        { className: "navbar__link", href: "HDD.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--hdd" }),
-        "HDD"
-      ),
-      React.createElement(
-        "a",
-        { className: "navbar__link", href: "powerSource.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--power" }),
-        "Power source"
-      ),
-      React.createElement(
-        "a",
-        { className: "navbar__link", href: "cooling.html" },
-        React.createElement("div", { className: "navbar__img navbar__img--cooling" }),
-        "Cooling"
-      )
     );
   }
 });

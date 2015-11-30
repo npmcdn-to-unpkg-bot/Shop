@@ -49,7 +49,6 @@ var DescriptionList = React.createClass({
           </div>
       );
     });
-
     return (
       <div className="category-list">
         {description}
