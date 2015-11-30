@@ -12,6 +12,41 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
 	ReactDOM.render(React.createElement(Footer), document.getElementById('footer'));
 });
+//Make an object model for pages (at least one)
+//* categories
+//* wares
+//* cart
+//
+//Place initial data to js as an array of objects
+//
+//Add js script on page load, which shoud:
+//* take initial data model
+//* find root DOM node to place model data (by ID)
+//* iterate throw data model array and build child DOM nodes
+//* insert builded nodes to root childs
+(function () {
+    var homePageElement = [{ name: 'Motherboard' }, { name: 'CPU' }, { name: 'RAM' }, { name: 'VideoAdapter' }, { name: 'HDD' }, { name: 'PowerSource' }, { name: 'Cooling' }];
+    function addCategories(arr) {
+        var k = homePageElement.length;
+        for (var i = 0; i < k; i++) {
+            var name = homePageElement[i].name,
+                img = homePageElement[i].img;
+            var newElement = document.getElementById('tab-content');
+            var newLi = document.createElement('li');
+            newLi.className = "tab-content__layoutCategories";
+            newLi.innerHTML = '<a class="Categories ' + name + '" href="' + name + '.html">\
+        <figure>\
+            <div class="img' + name + '"></div>\
+            <figcaption>' + name + '</figcaption>\
+        </figure>\
+        </a>';
+            newElement.appendChild(newLi);
+        }
+    }
+    addCategories(homePageElement);
+    addCategories(homePageElement);
+    addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);
+})();
 /*var CategoryPage = React.createClass({
   getDefaultProps: function () {
     return {
@@ -230,41 +265,6 @@ var Header = React.createClass({
         );
     }
 });
-//Make an object model for pages (at least one)
-//* categories
-//* wares
-//* cart
-//
-//Place initial data to js as an array of objects
-//
-//Add js script on page load, which shoud:
-//* take initial data model
-//* find root DOM node to place model data (by ID)
-//* iterate throw data model array and build child DOM nodes
-//* insert builded nodes to root childs
-(function () {
-    var homePageElement = [{ name: 'Motherboard' }, { name: 'CPU' }, { name: 'RAM' }, { name: 'VideoAdapter' }, { name: 'HDD' }, { name: 'PowerSource' }, { name: 'Cooling' }];
-    function addCategories(arr) {
-        var k = homePageElement.length;
-        for (var i = 0; i < k; i++) {
-            var name = homePageElement[i].name,
-                img = homePageElement[i].img;
-            var newElement = document.getElementById('tab-content');
-            var newLi = document.createElement('li');
-            newLi.className = "tab-content__layoutCategories";
-            newLi.innerHTML = '<a class="Categories ' + name + '" href="' + name + '.html">\
-        <figure>\
-            <div class="img' + name + '"></div>\
-            <figcaption>' + name + '</figcaption>\
-        </figure>\
-        </a>';
-            newElement.appendChild(newLi);
-        }
-    }
-    addCategories(homePageElement);
-    addCategories(homePageElement);
-    addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);
-})();
 var Navigation = React.createClass({
   displayName: "Navigation",
 
@@ -317,14 +317,4 @@ var Navigation = React.createClass({
     );
   }
 });
-(function () {
-    var motherboardPageElement = ['Motherboard', 'Motherboard', { href: 'GIGABYTE-GA-78LMT-S2', name: 'GIGABYTE GA-78LMT-S2', price: '$ 555', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.' }, { name: 'GIGABYTE GA-990FXA-UD5', price: '$ 655' }, { name: 'GIGABYTE GA-B85-HD3', price: '$ 700' }, { name: 'GIGABYTE GA-H81M-S2PV', price: '$ 900' }];
-
-    var homePageElement = [{ name: 'Motherboard' }, { name: 'CPU' }, { name: 'RAM' }, { name: 'VideoAdapter' }, { name: 'HDD' }, { name: 'PowerSource' }, { name: 'Cooling' }];
-    function addCategories(arr) {
-        var k = homePageElement.length;
-        for (var i = 0; i < k; i++) {}
-    }
-})();
-
 //# sourceMappingURL=build.js.map

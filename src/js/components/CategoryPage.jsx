@@ -37,7 +37,7 @@ var CategoryPage = React.createClass ({
   render: function () {
 	return (
 	  <div className="wrapper">
-    	<Header />
+    	<Header />		
 		<Navigation />
 	  </div>	  
 	);	  
