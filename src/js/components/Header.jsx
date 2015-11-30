@@ -1,4 +1,4 @@
-var headerPage = React.createClass ({
+var Header = React.createClass ({
 	render: function () {
 		return (
 			<header className="wrapper__header header">

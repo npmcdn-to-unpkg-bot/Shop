@@ -2,6 +2,32 @@
 window.addEventListener("DOMContentLoaded", function () {
     ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+    ReactDOM.render(React.createElement(CategoryPage), document.getElementById('page'));
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+    ReactDOM.render(React.createElement(Footer), document.getElementById('downPage'));
+});
+var CategoryPage = React.createClass({
+  displayName: 'CategoryPage',
+
+  getDefaultProps: function () {
+    return {
+      categories: [{ name: 'Food', img: 'http://fakeimg.pl/350x200/?text=food', description: 'Food goods' }, { name: 'Computers', img: 'http://fakeimg.pl/350x200/?text=computer', description: 'Computers and peripherial' }]
+    };
+  },
+
+  render: function () {
+    return React.createElement(
+      'div',
+      { className: 'wrapper' },
+      React.createElement(Header, null),
+      React.createElement(Navigation, null)
+    );
+  }
+});
 /*Описание товара*/
 var DescriptionList = React.createClass({
     displayName: "DescriptionList",
@@ -135,9 +161,19 @@ var DescriptionPage = React.createClass({
     );
   }
 });
+var Footer = React.createClass({
+	displayName: "Footer",
 
-var headerPage = React.createClass({
-    displayName: "headerPage",
+	render: function () {
+		return React.createElement(
+			"footer",
+			{ className: "footer" },
+			"© 2015 Powered by Footerist"
+		);
+	}
+});
+var Header = React.createClass({
+    displayName: "Header",
 
     render: function () {
         return React.createElement(
@@ -165,6 +201,58 @@ var headerPage = React.createClass({
                 )
             ),
             React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
+        );
+    }
+});
+var Navigation = React.createClass({
+    displayName: "Navigation",
+
+    render: function () {
+        return React.createElement(
+            "nav",
+            { className: "navbar navbar--desktop" },
+            React.createElement(
+                "a",
+                { className: "navbar__link navbar__link--active", href: "Motherboard.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--mother" }),
+                "Motherboard"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "CPU.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--cpu" }),
+                "CPU"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "RAM.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--ram" }),
+                "RAM"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "videoAdapter.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--video" }),
+                "Video adapter"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "HDD.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--hdd" }),
+                "HDD"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "powerSource.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--power" }),
+                "Power source"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "cooling.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--cooling" }),
+                "Cooling"
+            )
         );
     }
 });
