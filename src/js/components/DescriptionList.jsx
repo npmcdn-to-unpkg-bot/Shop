@@ -1,9 +1,9 @@
 /*Описание товара*/
 var DescriptionList = React.createClass({
   render: function () {    
-    var Description = this.props.description.map(function(category) {
+    var description = this.props.description.map(function(category, key) {
       return (
-          <div className="product-description">
+          <div className="product-description" key={key}>
                 <ol className="product-description__breadcrumb breadcrumb">
                     <li className="breadcrumb__list"><a href="index.html">Главная</a></li>
                     <li className="breadcrumb__list"><a href="Motherboard.html">Категория</a></li>
@@ -52,7 +52,7 @@ var DescriptionList = React.createClass({
 
     return (
       <div className="category-list">
-        {Description}
+        {description}
       </div>
     );
   }
