@@ -1,5 +1,12 @@
 window.addEventListener("DOMContentLoaded", function () {
-    ReactDOM.render(React.createElement(CategoryPage), document.getElementById('productDescription'));
+	ReactDOM.render(React.createElement(CategoryPage), document.getElementById('productDescription'));
+}, function () {
+	ReactDOM.render(React.createElement(headerPage), document.getElementById('React'));
+});
+
+/*Вставка шапки*/
+window.addEventListener("DOMContentLoaded", function () {
+	ReactDOM.render(React.createElement(headerPage), document.getElementById('React'));
 });
 var CategoryList = React.createClass({
   displayName: "CategoryList",
@@ -46,5 +53,37 @@ var CategoryPage = React.createClass({
       )
     );
   }
+});
+var headerPage = React.createClass({
+    displayName: "headerPage",
+
+    render: function () {
+        return React.createElement(
+            "header",
+            { className: "wrapper__header header" },
+            React.createElement("a", { className: "header__elements header__elements--logo", href: "index.html" }),
+            React.createElement(
+                "a",
+                { className: "header__elements header__elements--authorization header-elements__authorization", href: "#openModal" },
+                React.createElement("span", { className: "header-elements__authorization--img" }),
+                React.createElement(
+                    "span",
+                    { className: "header-elements__text--hidden" },
+                    "Profile"
+                )
+            ),
+            React.createElement(
+                "a",
+                { className: "header__elements header__elements--basket header-elements__basket", href: "CartPage.html" },
+                React.createElement("span", { className: "header-elements__basket--img" }),
+                React.createElement(
+                    "span",
+                    { className: "header-elements__text--hidden" },
+                    "Cart"
+                )
+            ),
+            React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
+        );
+    }
 });
 //# sourceMappingURL=build.js.map
