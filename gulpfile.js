@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 sass = require('gulp-sass'),
 watch = require('gulp-watch'),
+babel = require('gulp-babel'),
+concat = require('gulp-concat'),
 prefixer = require('gulp-autoprefixer'),
 sourcemaps = require('gulp-sourcemaps'),
 csso = require('gulp-csso'),
@@ -18,6 +20,10 @@ var path = {
         style: 'build/stylus/',
         img: 'build/img/'
     },
+    libs: [
+      'bower_components/react/react.js',
+      'bower_components/react/react-dom.js',
+    ],
     src: {
         html: 'src/*.html',
         js: 'src/js/*.js',
@@ -32,6 +38,7 @@ var path = {
         img: 'src/img/**/*.*'
     },
     clean: './build'
+    
 };
 
 var config = {
@@ -43,10 +50,23 @@ var config = {
     port: 8000,
     logPrefix: "Global-task"
 };
+/* Libs*/
+gulp.task('libs', function() {
+  return gulp.src(path.libs)
+    .pipe(sourcemaps.init())
+    .pipe(concat('libs.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(path.build.js))
+})
 /* JSX-build*/
 gulp.task('react', function () {
-     gulp.src(path.src.jsx)
-        .pipe(react())
+    return gulp.src(path.src.jsx)
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['react']
+        }))
+        .pipe(concat('build.js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.build.js));
 });
 /* CSS-build*/
@@ -74,12 +94,7 @@ gulp.task('html', function() {
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
-/*Copy js*/
-gulp.task('js', function() {
-    gulp.src(path.src.js)
-        .pipe(gulp.dest(path.build.js))
-        .pipe(reload({stream: true}));
-});
+
 /*webserver*/
 gulp.task('webserver', function () {
     browserSync(config);
@@ -100,4 +115,6 @@ gulp.task('watch', function(){
     });
 });
 
-gulp.task('default', ['react', 'style-build', 'images', 'html', 'webserver', 'watch', 'js' ]);
+gulp.task('build', ['react', 'style-build', 'images', 'html', 'libs']);
+gulp.task('server', ['webserver', 'watch']);
+gulp.task('default', ['build', 'server']);

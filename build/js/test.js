@@ -1,29 +1,23 @@
-var HelloWorld = React.createClass({
-  displayName: 'HelloWorld',
-
-
-  getInitialState: function() {
-    return {message: 'Hello World!'};
+var CategoryPage = React.createClass({
+  getDefaultProps: function () {
+    return {
+      categories: [
+        {name:'Food', img:'http://fakeimg.pl/350x200/?text=food', description:'Food goods'},
+        {name:'Computers', img:'http://fakeimg.pl/350x200/?text=computer', description:'Computers and peripherial'},
+      ],
+    }
   },
 
-
-hi: function(event) {
-    this.setState({message: 'hi.'});
-  },
-goodbye: function(event) {
-    this.setState({message: 'goodbye.'});
-  },
-
-
-  render: function() {
+  render: function () {
     return (
-      React.DOM.h1({onClick:this.hi}, this.state.message),                ({onClick:this.goodbye}, this.state.message)
-        
+      <div className="page">
+        <div className="page__header">
+          <Header />
+        </div>
+        <div className="page__content">
+          <CategoryList categories={this.props.categories}/>
+        </div>
+      </div>
     );
   }
-});
-
-React.renderComponent(
-  HelloWorld(null),
-  document.getElementById('createProductDescription')
-);
+})
