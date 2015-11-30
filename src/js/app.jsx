@@ -2,10 +2,12 @@
 window.addEventListener("DOMContentLoaded", function() {
     ReactDOM.render(React.createElement(DescriptionPage), 
     document.getElementById('productDescription'));
-          });				/*Рендер страницы*/
+          });				
+
+					/*Рендер страницы категорий*/
 window.addEventListener("DOMContentLoaded", function() {
 	ReactDOM.render(
-		React.createElement(CategoryPage), 									document.getElementById('page'));
+	  React.createElement(CategoryPage), 								  document.getElementById('page'));
 	}
 )
 
