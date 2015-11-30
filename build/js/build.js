@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 /*Вставка шапки*/
 window.addEventListener("DOMContentLoaded", function () {
-	ReactDOM.render(React.createElement(headerPage), document.getElementById('React'));
+	ReactDOM.render(React.createElement(headerPage), document.getElementById('header'));
 });
 var CategoryList = React.createClass({
   displayName: "CategoryList",
