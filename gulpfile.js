@@ -27,7 +27,7 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/*.js',
-        jsx: 'src/js/*.jsx',
+        jsx: 'src/js/**/*.jsx',
         style: 'src/stylus/*.scss',
         img: 'src/img/**/*.*'
     },
@@ -111,7 +111,7 @@ gulp.task('watch', function(){
         gulp.start('images');
     });
     watch([path.watch.js], function(event, cb) {
-        gulp.start('js');
+        gulp.start('react');
     });
 });
 
