@@ -1,7 +1,3 @@
-/*Рендер страницы Description*/
-window.addEventListener("DOMContentLoaded", function () {
-                ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
-});
 /*Описание товара*/
 var DescriptionList = React.createClass({
     displayName: "DescriptionList",
@@ -124,7 +120,7 @@ var DescriptionPage = React.createClass({
 
   getDefaultProps: function () {
     return {
-      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }]
+      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.' }]
     };
   },
   render: function () {
@@ -135,42 +131,4 @@ var DescriptionPage = React.createClass({
     );
   }
 });
-//Make an object model for pages (at least one)
-//* categories
-//* wares
-//* cart
-//
-//Place initial data to js as an array of objects
-//
-//Add js script on page load, which shoud:
-//* take initial data model
-//* find root DOM node to place model data (by ID)
-//* iterate throw data model array and build child DOM nodes
-//* insert builded nodes to root childs
-(function () {
-    var homePageElement = [{ name: 'Motherboard' }, { name: 'CPU' }, { name: 'RAM' }, { name: 'VideoAdapter' }, { name: 'HDD' }, { name: 'PowerSource' }, { name: 'Cooling' }];
-    function addCategories(arr) {
-        var k = homePageElement.length;
-        for (var i = 0; i < k; i++) {
-            var name = homePageElement[i].name,
-                img = homePageElement[i].img;
-            var newElement = document.getElementById('tab-content');
-            var newLi = document.createElement('li');
-            newLi.className = "tab-content__layoutCategories";
-            newLi.innerHTML = '<a class="Categories ' + name + '" href="' + name + '.html">\
-        <figure>\
-            <div class="img' + name + '"></div>\
-            <figcaption>' + name + '</figcaption>\
-        </figure>\
-        </a>';
-            newElement.appendChild(newLi);
-        }
-    }
-    addCategories(homePageElement);
-    addCategories(homePageElement);
-    addCategories(homePageElement);
-    addCategories(homePageElement);
-    addCategories(homePageElement);
-    addCategories(homePageElement);
-})();
 //# sourceMappingURL=build.js.map
