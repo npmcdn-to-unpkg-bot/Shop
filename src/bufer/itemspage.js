@@ -42,12 +42,11 @@ function addElementPageitem (arr) {
 		newElement.appendChild(li);
     }
 }
-
-/*function render(mass){
-    var valueRender = 1;
+function render(mass){
+    var valueRender = 10;
     for (var k=0; k<valueRender; k++){
         addElementPageitem(mass);
     }
-}*/
+}
 
 render(motherboardPageElement);
