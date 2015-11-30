@@ -128,47 +128,47 @@ var Navigation = React.createClass({
   render: function () {
     return React.createElement(
       "nav",
-      { "class": "navbar navbar--desktop" },
+      { className: "navbar navbar--desktop" },
       React.createElement(
         "a",
-        { "class": "navbar__link navbar__link--active", href: "Motherboard.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--mother" }),
+        { className: "navbar__link navbar__link--active", href: "Motherboard.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--mother" }),
         "Motherboard"
       ),
       React.createElement(
         "a",
-        { "class": "navbar__link", href: "CPU.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--cpu" }),
+        { className: "navbar__link", href: "CPU.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--cpu" }),
         "CPU"
       ),
       React.createElement(
         "a",
-        { "class": "navbar__link", href: "RAM.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--ram" }),
+        { className: "navbar__link", href: "RAM.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--ram" }),
         "RAM"
       ),
       React.createElement(
         "a",
-        { "class": "navbar__link", href: "videoAdapter.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--video" }),
+        { className: "navbar__link", href: "videoAdapter.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--video" }),
         "Video adapter"
       ),
       React.createElement(
         "a",
-        { "class": "navbar__link", href: "HDD.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--hdd" }),
+        { className: "navbar__link", href: "HDD.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--hdd" }),
         "HDD"
       ),
       React.createElement(
         "a",
-        { "class": "navbar__link", href: "powerSource.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--power" }),
+        { className: "navbar__link", href: "powerSource.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--power" }),
         "Power source"
       ),
       React.createElement(
         "a",
-        { "class": "navbar__link", href: "cooling.html" },
-        React.createElement("div", { "class": "navbar__img navbar__img--cooling" }),
+        { className: "navbar__link", href: "cooling.html" },
+        React.createElement("div", { className: "navbar__img navbar__img--cooling" }),
         "Cooling"
       )
     );
