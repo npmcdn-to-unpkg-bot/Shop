@@ -1,13 +1,12 @@
-/*Рендер страницы Description*/
+
 window.addEventListener("DOMContentLoaded", function () {
-                ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
+    ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
 });
 /*Описание товара*/
 var DescriptionList = React.createClass({
     displayName: "DescriptionList",
 
     render: function () {
-        var self = this;
         var description = this.props.description.map(function (category, key) {
             return React.createElement(
                 "div",
@@ -125,7 +124,7 @@ var DescriptionPage = React.createClass({
 
   getDefaultProps: function () {
     return {
-      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.' }]
+      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }]
     };
   },
   render: function () {
@@ -136,4 +135,47 @@ var DescriptionPage = React.createClass({
     );
   }
 });
+
+var headerPage = React.createClass({
+    displayName: "headerPage",
+
+    render: function () {
+        return React.createElement(
+            "header",
+            { className: "wrapper__header header" },
+            React.createElement("a", { className: "header__elements header__elements--logo", href: "index.html" }),
+            React.createElement(
+                "a",
+                { className: "header__elements header__elements--authorization header-elements__authorization", href: "#openModal" },
+                React.createElement("span", { className: "header-elements__authorization--img" }),
+                React.createElement(
+                    "span",
+                    { className: "header-elements__text--hidden" },
+                    "Profile"
+                )
+            ),
+            React.createElement(
+                "a",
+                { className: "header__elements header__elements--basket header-elements__basket", href: "CartPage.html" },
+                React.createElement("span", { className: "header-elements__basket--img" }),
+                React.createElement(
+                    "span",
+                    { className: "header-elements__text--hidden" },
+                    "Cart"
+                )
+            ),
+            React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
+        );
+    }
+});
+(function () {
+    var motherboardPageElement = ['Motherboard', 'Motherboard', { href: 'GIGABYTE-GA-78LMT-S2', name: 'GIGABYTE GA-78LMT-S2', price: '$ 555', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.' }, { name: 'GIGABYTE GA-990FXA-UD5', price: '$ 655' }, { name: 'GIGABYTE GA-B85-HD3', price: '$ 700' }, { name: 'GIGABYTE GA-H81M-S2PV', price: '$ 900' }];
+
+    var homePageElement = [{ name: 'Motherboard' }, { name: 'CPU' }, { name: 'RAM' }, { name: 'VideoAdapter' }, { name: 'HDD' }, { name: 'PowerSource' }, { name: 'Cooling' }];
+    function addCategories(arr) {
+        var k = homePageElement.length;
+        for (var i = 0; i < k; i++) {}
+    }
+})();
+
 //# sourceMappingURL=build.js.map

@@ -1,7 +1,6 @@
 /*Описание товара*/
 var DescriptionList = React.createClass({
   render: function () {    
-      var self = this;
     var description = this.props.description.map(function(category, key) {
       return (
           <div className="product-description" key={key}>
