@@ -6,14 +6,11 @@ var DescriptionPage = React.createClass({
         {name:'GIGABYTE-GA-78LMT-S3', img:'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.'},
       ],
     }
-   
   },
 render: function () {
     return (
         <div className="product-section__product-description">
           <DescriptionList description={this.props.description}/>
-
-
         </div>
     );
   }

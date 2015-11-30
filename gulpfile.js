@@ -27,8 +27,8 @@ var path = {
     ],
     src: {
         html: 'src/*.html',
-        js: 'src/js/*.js',
-        jsx: 'src/js/**/*.jsx',
+        js: 'src/js/**/*.js',
+        jsx: 'src/js/components/*.jsx',
         style: 'src/stylus/*.scss',
         img: 'src/img/**/*.*'
     },
@@ -95,6 +95,12 @@ gulp.task('html', function() {
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
+/*Copy JS*/
+gulp.task('JS', function() {
+    gulp.src(path.src.js)
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
+});
 
 /*webserver*/
 gulp.task('webserver', function () {
@@ -114,8 +120,11 @@ gulp.task('watch', function(){
     watch([path.watch.js], function(event, cb) {
         gulp.start('react');
     });
+        watch([path.watch.js], function(event, cb) {
+        gulp.start('JS');
+    });
 });
 
-gulp.task('build', ['react', 'style-build', 'images', 'html', 'libs']);
+gulp.task('build', ['react', 'style-build', 'images', 'html', 'libs', 'JS']);
 gulp.task('server', ['webserver', 'watch']);
 gulp.task('default', ['build', 'server']);

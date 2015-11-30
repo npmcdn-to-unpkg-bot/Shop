@@ -1,16 +1,4 @@
-//Make an object model for pages (at least one)
-//* categories
-//* wares
-//* cart
-//
-//Place initial data to js as an array of objects
-//
-//Add js script on page load, which shoud:
-//* take initial data model
-//* find root DOM node to place model data (by ID)
-//* iterate throw data model array and build child DOM nodes
-//* insert builded nodes to root childs
-(function(){
+
 var homePageElement=[
     {name: 'Motherboard'}, {name: 'CPU'},
     {name: 'RAM'},{name: 'VideoAdapter'},
@@ -40,4 +28,3 @@ addCategories(homePageElement);
 addCategories(homePageElement);
 addCategories(homePageElement);
 addCategories(homePageElement);
-})();  
