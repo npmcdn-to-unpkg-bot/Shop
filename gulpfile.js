@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+babel = require('gulp-babel'),
 sass = require('gulp-sass'),
 watch = require('gulp-watch'),
 babel = require('gulp-babel'),
@@ -6,6 +7,7 @@ concat = require('gulp-concat'),
 prefixer = require('gulp-autoprefixer'),
 sourcemaps = require('gulp-sourcemaps'),
 csso = require('gulp-csso'),
+del = require('del'),
 imagemin = require('gulp-imagemin'),
 uglify = require('gulp-uglify'),
 browserSync = require("browser-sync"),
@@ -111,7 +113,7 @@ gulp.task('watch', function(){
         gulp.start('images');
     });
     watch([path.watch.js], function(event, cb) {
-        gulp.start('js');
+        gulp.start('react');
     });
 });
 
