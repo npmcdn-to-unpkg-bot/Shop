@@ -13,6 +13,7 @@ render: function () {
             <Breadcrumb />
             <Slider description={this.props.description} />
             <DescriptionList description={this.props.description} />
+
         </div>
     );
   }

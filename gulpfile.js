@@ -22,8 +22,10 @@ var path = {
         img: 'build/img/'
     },
     libs: [
-      'bower_components/react/react.js',
-      'bower_components/react/react-dom.js',
+        'bower_components/react/react.js',
+        'bower_components/react/react-dom.js',
+        'bower_components/react-router/dist/react-router.min.js',
+        'bower_components/react/JSXTransformer.js',
     ],
     src: {
         html: 'src/*.html',
