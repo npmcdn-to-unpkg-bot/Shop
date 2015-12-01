@@ -51,7 +51,7 @@ var CategoryPage = React.createClass({
 		render: function () {
 				return React.createElement(
 						'div',
-						{ className: 'page' },
+						{ className: 'newv__page' },
 						React.createElement(
 								'div',
 								{ className: 'page__header' },
@@ -64,13 +64,13 @@ var CategoryPage = React.createClass({
 						),
 						React.createElement(
 								'article',
-								{ className: 'elementspage elementspage--style' },
+								{ className: 'newv__elementspage newv__elementspage--style' },
 								React.createElement(
 										'div',
-										{ className: 'viewmode' },
+										{ className: 'newv__viewmode' },
 										React.createElement(
 												'a',
-												{ className: 'elementspagelink', href: 'MotherboardList.html' },
+												{ className: 'newv__elementspagelink', href: 'MotherboardList.html' },
 												'List View'
 										)
 								),
@@ -169,7 +169,7 @@ var Footer = React.createClass({
 	render: function () {
 		return React.createElement(
 			"footer",
-			{ className: "footer" },
+			{ className: "footer__mother" },
 			"© 2015 Powered by Footerist"
 		);
 	}
@@ -180,29 +180,29 @@ var Header = React.createClass({
   render: function () {
     return React.createElement(
       "header",
-      { className: "page__header header" },
-      React.createElement("a", { className: "header__elements header__elements--logo", href: "index.html" }),
+      { className: "page__header all__header" },
+      React.createElement("a", { className: "all__header__elements all__header__elements--logo", href: "index.html" }),
       React.createElement(
         "a",
-        { className: "header__elements header__elements--authorization header-elements__authorization", href: "#openModal" },
-        React.createElement("span", { className: "header-elements__authorization--img" }),
+        { className: "all__header__elements all__header__elements--authorization all__header-elements__authorization", href: "#openModal" },
+        React.createElement("span", { className: "all__header-elements__authorization--img" }),
         React.createElement(
           "span",
-          { className: "header-elements__text--hidden" },
+          { className: "all__header-elements__text--hidden" },
           "Profile"
         )
       ),
       React.createElement(
         "a",
-        { className: "header__elements header__elements--basket header-elements__basket", href: "CartPage.html" },
-        React.createElement("span", { className: "header-elements__basket--img" }),
+        { className: "all__header__elements all__header__elements--basket all__header-elements__basket", href: "CartPage.html" },
+        React.createElement("span", { className: "all__header-elements__basket--img" }),
         React.createElement(
           "span",
-          { className: "header-elements__text--hidden" },
+          { className: "all__header-elements__text--hidden" },
           "Cart"
         )
       ),
-      React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
+      React.createElement("input", { className: "all__header__elements all__header__elements--search", type: "search", placeholder: "Search" })
     );
   }
 });
@@ -213,17 +213,17 @@ var ItemsList = React.createClass({
 		var categories = this.props.categories.map(function (category, key) {
 			return React.createElement(
 				"li",
-				{ className: "tab-content__layoutitems", key: key },
+				{ className: "newv__tab-content__layoutitems", key: key },
 				React.createElement(
 					"a",
-					{ className: "Categories pages__items", href: category.link },
+					{ className: "newv__Categories newv__pages__items", href: category.link },
 					React.createElement(
 						"figure",
-						{ className: "elementspagefigure" },
-						React.createElement("div", { className: "elementspagelink__img " + category.img }),
+						{ className: "newv__elementspagefigure" },
+						React.createElement("div", { className: "newv__elementspagelink__img " + category.img }),
 						React.createElement(
 							"figcaption",
-							{ className: "elementspage__figcaption" },
+							{ className: "newv__elementspage__figcaption" },
 							category.name,
 							React.createElement("br", null),
 							category.price
@@ -235,7 +235,7 @@ var ItemsList = React.createClass({
 
 		return React.createElement(
 			"ul",
-			{ className: "product-section__tab-content tab-content" },
+			{ className: "newv__product-section__tab-content newv__tab-content" },
 			categories
 		);
 	}
@@ -246,47 +246,47 @@ var Navigation = React.createClass({
     render: function () {
         return React.createElement(
             "nav",
-            { className: "navbar navbar--desktop" },
+            { className: "page__navbar page__navbar--desktop" },
             React.createElement(
                 "a",
-                { className: "navbar__link navbar__link--active", href: "Motherboard.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--mother" }),
+                { className: "page__navbar__link page__navbar__link--active", href: "Motherboard.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--mother" }),
                 "Motherboard"
             ),
             React.createElement(
                 "a",
-                { className: "navbar__link", href: "CPU.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--cpu" }),
+                { className: "page__navbar__link", href: "CPU.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--cpu" }),
                 "CPU"
             ),
             React.createElement(
                 "a",
-                { className: "navbar__link", href: "RAM.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--ram" }),
+                { className: "page__navbar__link", href: "RAM.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--ram" }),
                 "RAM"
             ),
             React.createElement(
                 "a",
-                { className: "navbar__link", href: "videoAdapter.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--video" }),
+                { className: "page__navbar__link", href: "videoAdapter.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--video" }),
                 "Video adapter"
             ),
             React.createElement(
                 "a",
-                { className: "navbar__link", href: "HDD.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--hdd" }),
+                { className: "page__navbar__link", href: "HDD.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--hdd" }),
                 "HDD"
             ),
             React.createElement(
                 "a",
-                { className: "navbar__link", href: "powerSource.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--power" }),
+                { className: "page__navbar__link", href: "powerSource.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--power" }),
                 "Power source"
             ),
             React.createElement(
                 "a",
-                { className: "navbar__link", href: "cooling.html" },
-                React.createElement("div", { className: "navbar__img navbar__img--cooling" }),
+                { className: "page__navbar__link", href: "cooling.html" },
+                React.createElement("div", { className: "page__navbar__img page__navbar__img--cooling" }),
                 "Cooling"
             )
         );

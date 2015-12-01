@@ -11,7 +11,7 @@ header:after {
 	z-index: 1;
 }
 
-.header{	
+.all__header{	
 	font-size: 20px;
 	background: -webkit-radial-gradient(center, circle farthest-side, #000, #7a7a7a 80%);
   	color: white;
@@ -44,11 +44,11 @@ header:after {
         height: 22px; }  
 }
 
-.header__elements--logo, .header-elements__authorization--img, .header-elements__basket--img {
+.all__header__elements--logo, .all__header-elements__authorization--img, .all__header-elements__basket--img {
 	float: left;
 }
 
-.header-elements{
+.all__header-elements{
     &__basket--img {
         background-image: url("../img/Symbol/shopping-cart.gif"); }
     &__authorization--img {
@@ -61,3 +61,30 @@ header:after {
 	&__text--hidden {
         display: none; }
 }   
+
+@media screen and (min-width:666px) {
+	.all__header-elements {
+		&__authorization--img, &__basket--img {
+			padding-left: 10px;
+		}
+		&__text--hidden {
+		display: inline-block;
+		}
+	}
+	
+	.all__header {
+		&__elements {
+			margin: 10px 15px;
+		}
+		&__elements--basket, &__elements--authorization {
+			padding: 10px;
+		}
+		&__elements--search {
+			margin-top: 22px;
+			width: 170px;
+			background-position-x: 147px;        
+		}
+	}
+	
+	
+}

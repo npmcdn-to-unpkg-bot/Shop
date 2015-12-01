@@ -12,16 +12,16 @@ var CategoryPage = React.createClass({
 
   render: function () {
     return (
-		<div className="page">	
+		<div className="newv__page">	
 			<div className="page__header">
 				<Header />
 			</div>
 			<div className="page__menu">
 				<Navigation />
 			</div>
-				<article className="elementspage elementspage--style">        
-			  		<div className="viewmode">
-						<a className="elementspagelink" href="MotherboardList.html">
+				<article className="newv__elementspage newv__elementspage--style">        
+			  		<div className="newv__viewmode">
+						<a className="newv__elementspagelink" href="MotherboardList.html">
 						List View
 						</a>
 			  		</div>          
