@@ -6,6 +6,39 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
     ReactDOM.render(React.createElement(CategoryPage), document.getElementById('page'));
 });
+var Breadcrumb = React.createClass({
+    displayName: "Breadcrumb",
+
+    render: function () {
+        return React.createElement(
+            "ol",
+            { className: "product-description__breadcrumb breadcrumb" },
+            React.createElement(
+                "li",
+                { className: "breadcrumb__list" },
+                React.createElement(
+                    "a",
+                    { href: "index.html" },
+                    "Главная"
+                )
+            ),
+            React.createElement(
+                "li",
+                { className: "breadcrumb__list" },
+                React.createElement(
+                    "a",
+                    { href: "Motherboard.html" },
+                    "Категория"
+                )
+            ),
+            React.createElement(
+                "li",
+                { className: "breadcrumb__list" },
+                "Товар"
+            )
+        );
+    }
+});
 var CategoryPage = React.createClass({
 		displayName: 'CategoryPage',
 
@@ -55,111 +88,59 @@ var DescriptionList = React.createClass({
         var description = this.props.description.map(function (category, key) {
             return React.createElement(
                 "div",
-                { className: "product-description", key: key },
+                { className: " layout-description", key: key },
                 React.createElement(
-                    "ol",
-                    { className: "product-description__breadcrumb breadcrumb" },
+                    "h1",
+                    { className: "layout-description__header" },
+                    " Товар "
+                ),
+                React.createElement(
+                    "div",
+                    { className: "layout-description__img-star img-star" },
+                    React.createElement("div", { className: "img-star__raiting" })
+                ),
+                React.createElement(
+                    "p",
+                    null,
+                    category.description
+                ),
+                React.createElement(
+                    "p",
+                    { className: "layout-description__label" },
                     React.createElement(
-                        "li",
-                        { className: "breadcrumb__list" },
-                        React.createElement(
-                            "a",
-                            { href: "index.html" },
-                            "Главная"
-                        )
+                        "label",
+                        { "for": "quantiti" },
+                        "Quantity"
+                    )
+                ),
+                React.createElement("input", { className: "layout-description__quantiti", id: "quantiti", type: "number", min: "1", max: "100", value: "1" }),
+                React.createElement(
+                    "div",
+                    { className: "layout-description__add-cart add-cart" },
+                    React.createElement(
+                        "div",
+                        { className: "add-cart__price" },
+                        "Price: $555"
                     ),
                     React.createElement(
-                        "li",
-                        { className: "breadcrumb__list" },
-                        React.createElement(
-                            "a",
-                            { href: "Motherboard.html" },
-                            "Категория"
-                        )
-                    ),
-                    React.createElement(
-                        "li",
-                        { className: "breadcrumb__list" },
-                        "Товар"
+                        "a",
+                        { className: "add-cart__btn", href: "CartPage.html" },
+                        "Add to cart"
                     )
                 ),
                 React.createElement(
                     "div",
-                    { className: "product-description__slider-img slider-img", id: "slider" },
-                    React.createElement(
-                        "div",
-                        { className: "slider-img__big-img big-img" },
-                        React.createElement("img", { className: "big-img__positioner", src: category.img, id: "slider-big-img" })
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "slider-img__min-img min-img", id: "slider-min-img" },
-                        React.createElement("div", { className: "min-img__arrow min-img__arrow-left", onclick: "sliderObj.leftSlide();" }),
-                        React.createElement("img", { className: "min-img--style", src: category.minImg1 }),
-                        React.createElement("img", { className: "min-img--style", src: category.minImg2 }),
-                        React.createElement("img", { className: "min-img--style", src: category.minImg3 }),
-                        React.createElement("img", { className: "min-img--style", src: category.minImg4 }),
-                        React.createElement("img", { className: "min-img--style", src: category.minImg5 }),
-                        React.createElement("div", { className: "min-img__arrow min-img__arrow-right", onclick: "sliderObj.rightSlide();" })
-                    )
-                ),
-                React.createElement(
-                    "div",
-                    { className: "product-description__layout-description layout-description" },
-                    React.createElement(
-                        "h1",
-                        { className: "layout-description__header" },
-                        " Товар "
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "layout-description__img-star img-star" },
-                        React.createElement("div", { className: "img-star__raiting" })
-                    ),
-                    React.createElement(
-                        "p",
-                        null,
-                        category.description
-                    ),
-                    React.createElement(
-                        "p",
-                        { className: "layout-description__label" },
-                        React.createElement(
-                            "label",
-                            { "for": "quantiti" },
-                            "Quantity"
-                        )
-                    ),
-                    React.createElement("input", { className: "layout-description__quantiti", id: "quantiti", type: "number", min: "1", max: "100", value: "1" }),
-                    React.createElement(
-                        "div",
-                        { className: "layout-description__add-cart add-cart" },
-                        React.createElement(
-                            "div",
-                            { className: "add-cart__price" },
-                            "Price: $555"
-                        ),
-                        React.createElement(
-                            "a",
-                            { className: "add-cart__btn", href: "CartPage.html" },
-                            "Add to cart"
-                        )
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "layout-description__lineSocial lineSocial" },
-                        React.createElement("a", { className: "lineSocial__twitter lineSocial__line-social", href: "" }),
-                        React.createElement("a", { className: "lineSocial__vkontakte lineSocial__line-social", href: "" }),
-                        React.createElement("a", { className: "lineSocial__facebook lineSocial__line-social", href: "" }),
-                        React.createElement("a", { className: "lineSocial__instagram lineSocial__line-social", href: "" })
-                    )
+                    { className: "layout-description__lineSocial lineSocial" },
+                    React.createElement("a", { className: "lineSocial__twitter lineSocial__line-social", href: "" }),
+                    React.createElement("a", { className: "lineSocial__vkontakte lineSocial__line-social", href: "" }),
+                    React.createElement("a", { className: "lineSocial__facebook lineSocial__line-social", href: "" }),
+                    React.createElement("a", { className: "lineSocial__instagram lineSocial__line-social", href: "" })
                 )
             );
         });
-
         return React.createElement(
             "div",
-            { className: "category-list" },
+            { className: "product-description__layout-description" },
             description
         );
     }
@@ -175,7 +156,9 @@ var DescriptionPage = React.createClass({
   render: function () {
     return React.createElement(
       'div',
-      { className: 'product-section__product-description' },
+      { className: 'product-section__product-description product-description' },
+      React.createElement(Breadcrumb, null),
+      React.createElement(Slider, { description: this.props.description }),
       React.createElement(DescriptionList, { description: this.props.description })
     );
   }
@@ -318,5 +301,37 @@ var Navigation = React.createClass({
         for (var i = 0; i < k; i++) {}
     }
 })();
+var Slider = React.createClass({
+    displayName: "Slider",
 
+    render: function () {
+        var description = this.props.description.map(function (category, key) {
+            return React.createElement(
+                "div",
+                { className: "slider-img" },
+                React.createElement(
+                    "div",
+                    { className: "slider-img__big-img big-img" },
+                    React.createElement("img", { className: "big-img__positioner", src: category.img })
+                ),
+                React.createElement(
+                    "div",
+                    { className: "slider-img__min-img min-img" },
+                    React.createElement("div", { className: "min-img__arrow min-img__arrow-left", onclick: "sliderObj.leftSlide();" }),
+                    React.createElement("img", { className: "min-img--style", src: category.minImg1 }),
+                    React.createElement("img", { className: "min-img--style", src: category.minImg2 }),
+                    React.createElement("img", { className: "min-img--style", src: category.minImg3 }),
+                    React.createElement("img", { className: "min-img--style", src: category.minImg4 }),
+                    React.createElement("img", { className: "min-img--style", src: category.minImg5 }),
+                    React.createElement("div", { className: "min-img__arrow min-img__arrow-right", onclick: "sliderObj.rightSlide();" })
+                )
+            );
+        });
+        return React.createElement(
+            "div",
+            { className: "product-description__slider-img" },
+            description
+        );
+    }
+});
 //# sourceMappingURL=build.js.map

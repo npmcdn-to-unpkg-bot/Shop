@@ -3,29 +3,7 @@ var DescriptionList = React.createClass({
   render: function () {    
     var description = this.props.description.map(function(category, key) {
       return (
-          <div className="product-description" key={key}>
-                <ol className="product-description__breadcrumb breadcrumb">
-                    <li className="breadcrumb__list"><a href="index.html">Главная</a></li>
-                    <li className="breadcrumb__list"><a href="Motherboard.html">Категория</a></li>
-                    <li className="breadcrumb__list">Товар</li>
-                </ol>
-                <div className="product-description__slider-img slider-img" id="slider">
-                    <div className="slider-img__big-img big-img">
-                    <img className="big-img__positioner" src={category.img} id="slider-big-img"/>
-                </div>
-                    <div className="slider-img__min-img min-img" id="slider-min-img">
-                        <div className="min-img__arrow min-img__arrow-left" onclick="sliderObj.leftSlide();"></div>
-
-                            <img className="min-img--style" src={category.minImg1}/>
-                            <img className="min-img--style" src={category.minImg2}/>
-                            <img className="min-img--style" src={category.minImg3}/>
-                            <img className="min-img--style" src={category.minImg4}/> 
-                            <img className="min-img--style" src={category.minImg5}/>
-
-                        <div className="min-img__arrow min-img__arrow-right" onclick="sliderObj.rightSlide();"></div>
-                    </div>
-                </div>
-                <div className="product-description__layout-description layout-description"> 
+                <div className=" layout-description" key={key}> 
                     <h1 className="layout-description__header"> Товар </h1>
                     <div className="layout-description__img-star img-star">
                         <div className="img-star__raiting"></div>
@@ -46,12 +24,11 @@ var DescriptionList = React.createClass({
                         <a className="lineSocial__instagram lineSocial__line-social" href=""></a>
                     </div>
                 </div>
-          </div>
+
       );
     });
-
     return (
-      <div className="category-list">
+      <div className="product-description__layout-description">
         {description}
       </div>
     );

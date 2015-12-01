@@ -35,6 +35,5 @@ function addCategories(arr){
     }
 }
 addCategories(homePageElement);
-addCategories(homePageElement);
-addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);addCategories(homePageElement);
+
 })();  
