@@ -228,15 +228,15 @@
         margin: auto;
     }
     .tab-content .Categories {
-        margin: 0px;
+        margin: 0;
     }
     .Categories {
         flex-basis: auto;
     }
     .tab-content{
         &__layoutCategories, &__layoutitems, &__layoutadd{flex-basis: auto;}
-    }
-    
+    }	
+	
     .orderFormLayout{
         width:393px;
         margin:auto;
