@@ -5,7 +5,7 @@ var ItemsList = React.createClass ({
 		  <li className="tab-content__layoutitems" key = {key}>
 		    <a className="Categories pages__items" href={category.link}>
 		      <figure className="elementspagefigure">
-		        <div className="elementspagelink__img elementspagelink__img--img1">
+		        <div className={"elementspagelink__img " + category.img}>
 		        </div>
 		        <figcaption className="elementspage__figcaption">
 		          {category.name}<br />{category.price}
