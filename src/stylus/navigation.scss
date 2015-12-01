@@ -1,0 +1,76 @@
+.page__menu {
+	margin-top: 65px;
+}
+.navbar, .navbar__link {
+      box-sizing: border-box;}
+.navbar {	
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	width: 100%;
+	justify-content: center;	
+	border-radius: 0px;
+	&__link {
+		width: 100%;
+		border-bottom: 1px solid rebeccapurple;
+		padding: 5px;
+		text-decoration: none;
+		padding-left: 5px;
+		border-radius: 8px;		
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin-bottom: -5px;
+		text-align: center;
+	}
+
+	&__link:link {
+		color: black; }
+	&__link:visited {
+		color: blue; }
+
+	&__link:hover {
+		color: white;
+	  	background: rebeccapurple; }
+
+	&__link:active {
+	  	color: red; }
+
+	&__link--active {
+	 	background-color: aqua; }
+	&__img {
+		  display: block;
+		  background-size: contain;
+		  width: 30px;
+		  height: 0;
+		  float: left;
+		  background-repeat: no-repeat;
+		  background-position: left;
+		  padding-right: 8px; }
+
+	&__img--mother {
+	  	background-image: url("../img/Symbol/Motherboard.jpg"); }
+
+	&__img--cpu {
+	  	background-image: url("../img/Symbol/CPU.jpg"); }
+
+	&__img--ram {
+	  	background-image: url("../img/Symbol/RAM.jpg"); }
+
+	&__img--video {
+	  	background-image: url("../img/Symbol/Video%20adapter.jpg"); }
+
+	&__img--hdd {
+	  	background-image: url("../img/Symbol/HDD.jpg"); }
+
+	&__img--power {
+	  	background-image: url("../img/Symbol/Power%20source.jpg"); }
+
+	&__img--cooling {
+	  	background-image: url("../img/Symbol/Cooling.jpg"); }
+}
+.navbar--desktop {
+	position: static;
+	list-style-type: none;
+	border: 5px solid rebeccapurple;	
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px; }

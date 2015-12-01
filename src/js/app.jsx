@@ -5,12 +5,8 @@ window.addEventListener("DOMContentLoaded", function() {
           });
 
 window.addEventListener("DOMContentLoaded", function() {
-    ReactDOM.render(React.createElement(CategoryPage), 
-    document.getElementById('page'));
-          });
-
-window.addEventListener("DOMContentLoaded", function() {
-  ReactDOM.render(
-	React.createElement(Footer), 
-    document.getElementById('downPage'));
+    ReactDOM.render(
+		React.createElement(CategoryPage), 
+    	document.getElementById('page')
+	);
 });

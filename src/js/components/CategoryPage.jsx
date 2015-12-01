@@ -12,19 +12,23 @@ var CategoryPage = React.createClass({
 
   render: function () {
     return (
-      <div className="wrapper">       
-        <Header />  
-		<Navigation />
-		<article className="elementspage elementspage--style">        
-          <div className="viewmode">
-            <a className="elementspagelink" href="MotherboardList.html">
-                List View
-            </a>
-          </div>          
-		  <ItemsList categories={this.props.categories} />          
-        </article>		
-     </div>
-		
+		<div className="page">	
+			<div className="page__header">
+				<Header />
+			</div>
+			<div className="page__menu">
+				<Navigation />
+			</div>
+				<article className="elementspage elementspage--style">        
+			  		<div className="viewmode">
+						<a className="elementspagelink" href="MotherboardList.html">
+						List View
+						</a>
+			  		</div>          
+			  		<ItemsList categories={this.props.categories} />          
+				</article>		
+			<Footer />
+		</div>		
     );
   }
 })

@@ -6,41 +6,46 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
     ReactDOM.render(React.createElement(CategoryPage), document.getElementById('page'));
 });
-
-window.addEventListener("DOMContentLoaded", function () {
-    ReactDOM.render(React.createElement(Footer), document.getElementById('downPage'));
-});
 var CategoryPage = React.createClass({
-  displayName: 'CategoryPage',
+		displayName: 'CategoryPage',
 
-  getDefaultProps: function () {
-    return {
-      categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: 'GIGABYTE-GA-78LMT-S2.html' }]
-    };
-  },
+		getDefaultProps: function () {
+				return {
+						categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: 'GIGABYTE-GA-78LMT-S2.html' }]
+				};
+		},
 
-  render: function () {
-    return React.createElement(
-      'div',
-      { className: 'wrapper' },
-      React.createElement(Header, null),
-      React.createElement(Navigation, null),
-      React.createElement(
-        'article',
-        { className: 'elementspage elementspage--style' },
-        React.createElement(
-          'div',
-          { className: 'viewmode' },
-          React.createElement(
-            'a',
-            { className: 'elementspagelink', href: 'MotherboardList.html' },
-            'List View'
-          )
-        ),
-        React.createElement(ItemsList, { categories: this.props.categories })
-      )
-    );
-  }
+		render: function () {
+				return React.createElement(
+						'div',
+						{ className: 'page' },
+						React.createElement(
+								'div',
+								{ className: 'page__header' },
+								React.createElement(Header, null)
+						),
+						React.createElement(
+								'div',
+								{ className: 'page__menu' },
+								React.createElement(Navigation, null)
+						),
+						React.createElement(
+								'article',
+								{ className: 'elementspage elementspage--style' },
+								React.createElement(
+										'div',
+										{ className: 'viewmode' },
+										React.createElement(
+												'a',
+												{ className: 'elementspagelink', href: 'MotherboardList.html' },
+												'List View'
+										)
+								),
+								React.createElement(ItemsList, { categories: this.props.categories })
+						),
+						React.createElement(Footer, null)
+				);
+		}
 });
 /*Описание товара*/
 var DescriptionList = React.createClass({
@@ -187,36 +192,36 @@ var Footer = React.createClass({
 	}
 });
 var Header = React.createClass({
-    displayName: "Header",
+  displayName: "Header",
 
-    render: function () {
-        return React.createElement(
-            "header",
-            { className: "wrapper__header header" },
-            React.createElement("a", { className: "header__elements header__elements--logo", href: "index.html" }),
-            React.createElement(
-                "a",
-                { className: "header__elements header__elements--authorization header-elements__authorization", href: "#openModal" },
-                React.createElement("span", { className: "header-elements__authorization--img" }),
-                React.createElement(
-                    "span",
-                    { className: "header-elements__text--hidden" },
-                    "Profile"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "header__elements header__elements--basket header-elements__basket", href: "CartPage.html" },
-                React.createElement("span", { className: "header-elements__basket--img" }),
-                React.createElement(
-                    "span",
-                    { className: "header-elements__text--hidden" },
-                    "Cart"
-                )
-            ),
-            React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
-        );
-    }
+  render: function () {
+    return React.createElement(
+      "header",
+      { className: "page__header header" },
+      React.createElement("a", { className: "header__elements header__elements--logo", href: "index.html" }),
+      React.createElement(
+        "a",
+        { className: "header__elements header__elements--authorization header-elements__authorization", href: "#openModal" },
+        React.createElement("span", { className: "header-elements__authorization--img" }),
+        React.createElement(
+          "span",
+          { className: "header-elements__text--hidden" },
+          "Profile"
+        )
+      ),
+      React.createElement(
+        "a",
+        { className: "header__elements header__elements--basket header-elements__basket", href: "CartPage.html" },
+        React.createElement("span", { className: "header-elements__basket--img" }),
+        React.createElement(
+          "span",
+          { className: "header-elements__text--hidden" },
+          "Cart"
+        )
+      ),
+      React.createElement("input", { className: "header__elements header__elements--search", type: "search", placeholder: "Search" })
+    );
+  }
 });
 var ItemsList = React.createClass({
 	displayName: "ItemsList",
@@ -253,56 +258,56 @@ var ItemsList = React.createClass({
 	}
 });
 var Navigation = React.createClass({
-      displayName: "Navigation",
+    displayName: "Navigation",
 
-      render: function () {
-            return React.createElement(
-                  "nav",
-                  { className: "navbar navbar--desktop" },
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link navbar__link--active", href: "Motherboard.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--mother" }),
-                        "Motherboard"
-                  ),
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link", href: "CPU.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--cpu" }),
-                        "CPU"
-                  ),
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link", href: "RAM.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--ram" }),
-                        "RAM"
-                  ),
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link", href: "videoAdapter.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--video" }),
-                        "Video adapter"
-                  ),
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link", href: "HDD.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--hdd" }),
-                        "HDD"
-                  ),
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link", href: "powerSource.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--power" }),
-                        "Power source"
-                  ),
-                  React.createElement(
-                        "a",
-                        { className: "navbar__link", href: "cooling.html" },
-                        React.createElement("div", { className: "navbar__img navbar__img--cooling" }),
-                        "Cooling"
-                  )
-            );
-      }
+    render: function () {
+        return React.createElement(
+            "nav",
+            { className: "navbar navbar--desktop" },
+            React.createElement(
+                "a",
+                { className: "navbar__link navbar__link--active", href: "Motherboard.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--mother" }),
+                "Motherboard"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "CPU.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--cpu" }),
+                "CPU"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "RAM.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--ram" }),
+                "RAM"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "videoAdapter.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--video" }),
+                "Video adapter"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "HDD.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--hdd" }),
+                "HDD"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "powerSource.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--power" }),
+                "Power source"
+            ),
+            React.createElement(
+                "a",
+                { className: "navbar__link", href: "cooling.html" },
+                React.createElement("div", { className: "navbar__img navbar__img--cooling" }),
+                "Cooling"
+            )
+        );
+    }
 });
 (function () {
     var motherboardPageElement = ['Motherboard', 'Motherboard', { href: 'GIGABYTE-GA-78LMT-S2', name: 'GIGABYTE GA-78LMT-S2', price: '$ 555', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.' }, { name: 'GIGABYTE GA-990FXA-UD5', price: '$ 655' }, { name: 'GIGABYTE GA-B85-HD3', price: '$ 700' }, { name: 'GIGABYTE GA-H81M-S2PV', price: '$ 900' }];
