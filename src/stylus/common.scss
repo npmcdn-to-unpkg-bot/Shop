@@ -1,0 +1,112 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+}
+.newv__wrapper {
+	height: 100%;
+	
+}
+.newv__page {
+	display: flex;	
+	flex-flow: row wrap;
+	min-height: 100%;
+}
+
+.all__header, .page__navbar, .footer__mother, .section {
+  	flex: 1 auto;
+}
+
+.newv__elementspage {
+	width: 100%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.newv__viewmode {
+	height: 0;
+	overflow: hidden;
+	text-align: right;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.newv__elementspagelink {
+  	text-decoration: none;
+    width: 80%;    
+}
+
+.newv__elementspagelink:link {
+  	color: black; }
+
+.newv__elementspagelink--style {  
+  	display: inline-block;
+  	clear: both; }
+
+.newv__elementspagelink:visited {
+  	color: blue; }
+
+.newv__elementspagelink:hover {
+  	color: orange; }
+
+.newv__elementspagelink:active {
+  	color: red; }
+
+.newv__product-section {
+	box-sizing: border-box;
+	padding-top: 70px;
+    padding-bottom: 40px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 2% auto; 
+}
+
+.newv__product-section__tab-content {
+    display: flex;
+	padding-left: 0;
+    -webkit-flex-flow: row wrap;
+	list-style-type: none;
+    justify-content: center;
+}
+
+.newv__tab-content__layoutitems {
+    flex-basis: 284px;}
+
+.newv__Categories {
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.newv__pages__items:hover {
+    animation: none;
+    border: 1px solid #000;
+    color: orange;
+    font-size: 14px;
+}
+
+.newv__elementspagelink__img {
+  content: "";
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.elementspagelink__img--img1 {
+  background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-78LMT-S2.jpg"); }
+
+.elementspagelink__img--img2 {
+    background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-990FXA-UD5.jpg");
+}
+.elementspagelink__img--img3 {
+    background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-B85-HD3.jpg");
+}
+.elementspagelink__img--img4 {
+    background-image: url("../img/motherboard/Gigabyte/GIGABYTE%20GA-H81M-S2PV.jpg");
+}
+
+.newv__elementspage__figcaption {
+    font-size: 14px;
+	text-align: center;
+}
