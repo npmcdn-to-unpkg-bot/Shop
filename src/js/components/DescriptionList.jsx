@@ -1,4 +1,4 @@
-/*Описание товара*/
+
 var DescriptionList = React.createClass({
   render: function () {    
     var description = this.props.description.map(function(category, key) {
@@ -9,8 +9,9 @@ var DescriptionList = React.createClass({
                         <div className="img-star__raiting"></div>
                     </div>
                     <p>{category.description}</p>
-                    <p className="layout-description__label"><label for="quantiti">Quantity</label></p>
-                    <input className="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" value="1"/>
+                    <p className="layout-description__label">
+          <label htmlFor="quantiti">Quantity</label></p>
+          <input className="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" defaultValue="1"/>
                     <div className="layout-description__add-cart add-cart">
                         <div className="add-cart__price">Price: {category.price}</div>
                         <a className="add-cart__btn" href="CartPage.html">

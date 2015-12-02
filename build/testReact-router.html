@@ -1,16 +1,28 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Test Router</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"  href="stylus/style.css">
-    <script src="js/libs.js"></script>
-    <script src="js/build.js"></script>
+  <title>Страница</title>
+  <meta charset="utf-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  </script>
+  <script src="js/router-plugin.js"></script>
+  <script src="js/jquery.pjax.js"></script>
 
 </head>
 <body>
-<h1 class="breadcrumbs"><a href="/">React Router Examples</a> / Active Links</h1>
-<div id="example"/>
+<body>
+<div id='main'>
+  <div class='loader' style='display:none'><img src='spin.gif'></div>
+  <div class='tabs'>
+    <a href='/explore'>Explore</a>
+    <a href='/help'>Help</a>
+  </div>
+</div>
+</body>
+</html>
+    <script type="text/javascript">
+$('a').pjax('#main').live('click', function(){
+  $(this).showLoader()
+})
+  </script>
 </body>
 </html>

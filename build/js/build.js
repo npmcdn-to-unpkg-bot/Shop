@@ -17,7 +17,7 @@ var Breadcrumb = React.createClass({
   displayName: "Breadcrumb",
 
   render: function render() {
-    var description = this.props.description.map(function (category, key) {
+    var breadcrumb = this.props.breadcrumb.map(function (category, key) {
       return React.createElement(
         "ol",
         { className: "product-description__breadcrumb breadcrumb", key: key },
@@ -50,7 +50,7 @@ var Breadcrumb = React.createClass({
     return React.createElement(
       "div",
       null,
-      description
+      breadcrumb
     );
   }
 });
@@ -99,7 +99,6 @@ var CategoryPage = React.createClass({
 });
 "use strict";
 
-/*Описание товара*/
 var DescriptionList = React.createClass({
     displayName: "DescriptionList",
 
@@ -128,11 +127,11 @@ var DescriptionList = React.createClass({
                     { className: "layout-description__label" },
                     React.createElement(
                         "label",
-                        { "for": "quantiti" },
+                        { htmlFor: "quantiti" },
                         "Quantity"
                     )
                 ),
-                React.createElement("input", { className: "layout-description__quantiti", id: "quantiti", type: "number", min: "1", max: "100", value: "1" }),
+                React.createElement("input", { className: "layout-description__quantiti", id: "quantiti", type: "number", min: "1", max: "100", defaultValue: "1" }),
                 React.createElement(
                     "div",
                     { className: "layout-description__add-cart add-cart" },
@@ -168,32 +167,49 @@ var DescriptionList = React.createClass({
 'use strict';
 
 var DescriptionPage = React.createClass({
-  displayName: 'DescriptionPage',
+    displayName: 'DescriptionPage',
 
-  getDefaultProps: function getDefaultProps() {
-    return {
-      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', price: '$ 555', category: 'Motherboard' }]
-    };
-  },
-  render: function render() {
-    return React.createElement(
-      'div',
-      { className: 'wrapper' },
-      React.createElement(Header, null),
-      React.createElement(
-        'article',
-        { className: 'wrapper__product-section product-section' },
-        React.createElement(
-          'div',
-          { className: 'product-section__product-description product-description' },
-          React.createElement(Breadcrumb, { description: this.props.description }),
-          React.createElement(Slider, { description: this.props.description }),
-          React.createElement(DescriptionList, { description: this.props.description })
-        )
-      ),
-      React.createElement(Footer, null)
-    );
-  }
+    getDefaultProps: function getDefaultProps() {
+        return {
+            imgSlider: [{
+                img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg',
+                minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg',
+                minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg',
+                minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg',
+                minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',
+                minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg'
+            }],
+            description: [{
+                name: 'GIGABYTE-GA-78LMT-S2',
+                description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
+                price: '$ 555', category: 'Motherboard'
+            }],
+            breadcrumb: [{
+                name: 'GIGABYTE-GA-78LMT-S2',
+                description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
+                price: '$ 555', category: 'Motherboard'
+            }]
+        };
+    },
+    render: function render() {
+        return React.createElement(
+            'div',
+            { className: 'wrapper' },
+            React.createElement(Header, null),
+            React.createElement(
+                'article',
+                { className: 'wrapper__product-section product-section' },
+                React.createElement(
+                    'div',
+                    { className: 'product-section__product-description product-description' },
+                    React.createElement(Breadcrumb, { breadcrumb: this.props.breadcrumb }),
+                    React.createElement(Slider, { imgSlider: this.props.imgSlider }),
+                    React.createElement(DescriptionList, { description: this.props.description })
+                )
+            ),
+            React.createElement(Footer, null)
+        );
+    }
 });
 "use strict";
 
@@ -352,7 +368,7 @@ var Slider = React.createClass({
     displayName: "Slider",
 
     render: function render() {
-        var description = this.props.description.map(function (category, key) {
+        var imgSlider = this.props.imgSlider.map(function (category, key) {
             return React.createElement(
                 "div",
                 { className: "slider-img", key: key },
@@ -377,7 +393,7 @@ var Slider = React.createClass({
         return React.createElement(
             "div",
             { className: "product-description__slider-img" },
-            description
+            imgSlider
         );
     }
 });

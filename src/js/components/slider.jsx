@@ -1,6 +1,6 @@
 var Slider = React.createClass({
   render: function () {  
-       var description = this.props.description.map(function(category, key) {
+       var imgSlider = this.props.imgSlider.map(function(category, key) {
       return (
                 <div className="slider-img" key={key}>
                     <div className="slider-img__big-img big-img">
@@ -20,7 +20,7 @@ var Slider = React.createClass({
               });
         return (
               <div className="product-description__slider-img">
-                {description}
+                {imgSlider}
               </div>
     );
   }

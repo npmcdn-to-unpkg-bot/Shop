@@ -1,6 +1,6 @@
 var Breadcrumb = React.createClass({
   render: function () {  
-      var description = this.props.description.map(function(category, key) {
+      var breadcrumb = this.props.breadcrumb.map(function(category, key) {
       return (
             <ol className="product-description__breadcrumb breadcrumb" key={key}>
                 <li className="breadcrumb__list"><a href="index.html">Главная</a></li>
@@ -12,7 +12,7 @@ var Breadcrumb = React.createClass({
 
         return (
       <div >
-        {description}
+        {breadcrumb}
       </div>
     );
   }
