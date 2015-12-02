@@ -25,7 +25,7 @@ var CategoryPage = React.createClass({
 						List View
 						</a>
 			  		</div>          
-			  		<ItemsList categories={this.props.categories} />          
+			  		<ItemsList categories={this.props.categories} />		
 				</article>		
 			<Footer />
 		</div>		
