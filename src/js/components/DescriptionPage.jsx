@@ -9,14 +9,17 @@ var DescriptionPage = React.createClass({
   },
 render: function () {
     return (
-        <div className="wrapper">       
-            <Header /> 
+        <div className="wrapper">
+        <Header /> 
+        <article className="wrapper__product-section product-section" >       
+            
             <div className="product-section__product-description product-description">
                 <Breadcrumb />
                 <Slider description={this.props.description} />
                 <DescriptionList description={this.props.description} />
-
             </div>
+        </article>
+        <Footer/>
         </div>
     );
   }
