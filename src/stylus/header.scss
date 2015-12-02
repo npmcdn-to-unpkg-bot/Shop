@@ -39,8 +39,8 @@ header:after {
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url("../img/Symbol/search.png");
-        width: 150px;
-        background-position-x: 126px;
+        width: 30%;
+    	background-position-x: 100%;
         height: 22px; }  
 }
 
@@ -62,7 +62,7 @@ header:after {
         display: none; }
 }   
 
-@media screen and (min-width:666px) {
+@media screen and (min-width:480px) {
 	.all__header-elements {
 		&__authorization--img, &__basket--img {
 			padding-left: 10px;
@@ -84,7 +84,12 @@ header:after {
 			width: 170px;
 			background-position-x: 147px;        
 		}
+	}	
+}
+
+@media screen and (min-width:480px) and (max-width:667px) {
+	.all__header__elements--search {
+		width: 23%;
+		background-position-x: 100%;
 	}
-	
-	
 }

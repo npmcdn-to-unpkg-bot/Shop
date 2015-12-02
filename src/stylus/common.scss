@@ -72,9 +72,12 @@ body {
 }
 
 .newv__tab-content__layoutitems {
-    flex-basis: 284px;}
+    flex-basis: 284px;
+	text-align: center;
+}
 
 .newv__Categories {
+	padding: 15px;
 	display: inline-block;
 	box-sizing: border-box;
 }
