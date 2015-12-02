@@ -7,7 +7,7 @@ var motherboardPageElement = [
 
 function addElementPageitem (arr) {    
     var newElement = document.getElementById ('tab-content');    
-    for (var i = 0; i < arr.length ; i++) {        
+    for (var i = 0; i < arr.length; i++) {        
         var img = i + 1; 
 		
         var li = document.createElement('li');

@@ -79,6 +79,10 @@
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px; }
 
+.caption {
+	font-size: 20px;
+}
+
 @media screen and (min-width:480px) and (max-width:1100px) {	
 	.page__navbar {		
 		align-self: flex-start;
@@ -91,5 +95,28 @@
 }
 
 @media screen and (min-width:1100px) {
-	
+	.page__menu {
+		margin-top: 120px;		
+		width: 16%;
+	}
+	.page__navbar--desktop {		
+		list-style-type: none;
+		border: 5px solid rebeccapurple;	
+		border-radius: 15px;}
+	.page__navbar{
+		&__img {
+			display: inline-block;
+			background-size: contain;
+			width: 30px;
+			height: 25px;
+			float: left;
+			background-repeat: no-repeat;
+			background-position: left;
+			padding-right: 8px;
+		}
+		&__link {
+			margin-bottom: 0;
+		}
+	}
+		
 }
