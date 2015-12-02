@@ -28,7 +28,6 @@ var path = {
     libs: [
         'bower_components/react/react.js',
         'bower_components/react/react-dom.js',
-        'bower_components/react-router/dist/react-router.min.js',
         'bower_components/react/JSXTransformer.js',
     ],
     src: {
@@ -73,6 +72,7 @@ gulp.task('react', function () {
             presets: ['es2015' , 'react']
         }))
         .pipe(concat('build.js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.build.js));
 });
 /* CSS-build*/
@@ -119,8 +119,6 @@ gulp.task('JS', function() {
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
-
-
 
 /*webserver*/
 gulp.task('webserver', function () {
