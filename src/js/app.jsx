@@ -14,4 +14,3 @@ window.addEventListener("DOMContentLoaded", function() {
 	React.createElement(Footer), 
     document.getElementById('downPage'));
 });
-

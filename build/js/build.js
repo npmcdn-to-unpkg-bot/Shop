@@ -1,3 +1,4 @@
+"use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
     ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
@@ -10,10 +11,12 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
     ReactDOM.render(React.createElement(Footer), document.getElementById('downPage'));
 });
+"use strict";
+
 var Breadcrumb = React.createClass({
     displayName: "Breadcrumb",
 
-    render: function () {
+    render: function render() {
         return React.createElement(
             "ol",
             { className: "product-description__breadcrumb breadcrumb" },
@@ -43,16 +46,18 @@ var Breadcrumb = React.createClass({
         );
     }
 });
+'use strict';
+
 var CategoryPage = React.createClass({
   displayName: 'CategoryPage',
 
-  getDefaultProps: function () {
+  getDefaultProps: function getDefaultProps() {
     return {
       categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: 'GIGABYTE-GA-78LMT-S2.html' }]
     };
   },
 
-  render: function () {
+  render: function render() {
     return React.createElement(
       'div',
       { className: 'wrapper' },
@@ -75,11 +80,13 @@ var CategoryPage = React.createClass({
     );
   }
 });
+"use strict";
+
 /*Описание товара*/
 var DescriptionList = React.createClass({
     displayName: "DescriptionList",
 
-    render: function () {
+    render: function render() {
         var description = this.props.description.map(function (category, key) {
             return React.createElement(
                 "div",
@@ -140,28 +147,37 @@ var DescriptionList = React.createClass({
         );
     }
 });
+'use strict';
+
 var DescriptionPage = React.createClass({
   displayName: 'DescriptionPage',
 
-  getDefaultProps: function () {
+  getDefaultProps: function getDefaultProps() {
     return {
       description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }]
     };
   },
-  render: function () {
+  render: function render() {
     return React.createElement(
       'div',
-      { className: 'product-section__product-description product-description' },
-      React.createElement(Breadcrumb, null),
-      React.createElement(Slider, { description: this.props.description }),
-      React.createElement(DescriptionList, { description: this.props.description })
+      { className: 'wrapper' },
+      React.createElement(Header, null),
+      React.createElement(
+        'div',
+        { className: 'product-section__product-description product-description' },
+        React.createElement(Breadcrumb, null),
+        React.createElement(Slider, { description: this.props.description }),
+        React.createElement(DescriptionList, { description: this.props.description })
+      )
     );
   }
 });
+"use strict";
+
 var Footer = React.createClass({
 	displayName: "Footer",
 
-	render: function () {
+	render: function render() {
 		return React.createElement(
 			"footer",
 			{ className: "footer" },
@@ -169,10 +185,12 @@ var Footer = React.createClass({
 		);
 	}
 });
+"use strict";
+
 var Header = React.createClass({
     displayName: "Header",
 
-    render: function () {
+    render: function render() {
         return React.createElement(
             "header",
             { className: "wrapper__header header" },
@@ -201,10 +219,13 @@ var Header = React.createClass({
         );
     }
 });
+"use strict";
+"use strict";
+
 var ItemsList = React.createClass({
 	displayName: "ItemsList",
 
-	render: function () {
+	render: function render() {
 		var categories = this.props.categories.map(function (category, key) {
 			return React.createElement(
 				"li",
@@ -235,10 +256,12 @@ var ItemsList = React.createClass({
 		);
 	}
 });
+"use strict";
+
 var Navigation = React.createClass({
       displayName: "Navigation",
 
-      render: function () {
+      render: function render() {
             return React.createElement(
                   "nav",
                   { className: "navbar navbar--desktop" },
@@ -287,6 +310,8 @@ var Navigation = React.createClass({
             );
       }
 });
+'use strict';
+
 (function () {
     var motherboardPageElement = ['Motherboard', 'Motherboard', { href: 'GIGABYTE-GA-78LMT-S2', name: 'GIGABYTE GA-78LMT-S2', price: '$ 555', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.' }, { name: 'GIGABYTE GA-990FXA-UD5', price: '$ 655' }, { name: 'GIGABYTE GA-B85-HD3', price: '$ 700' }, { name: 'GIGABYTE GA-H81M-S2PV', price: '$ 900' }];
 
@@ -296,12 +321,14 @@ var Navigation = React.createClass({
         for (var i = 0; i < k; i++) {}
     }
 })();
-
+"use strict";
+"use strict";
+"use strict";
 
 var Slider = React.createClass({
     displayName: "Slider",
 
-    render: function () {
+    render: function render() {
         var description = this.props.description.map(function (category, key) {
             return React.createElement(
                 "div",
@@ -331,4 +358,3 @@ var Slider = React.createClass({
         );
     }
 });
-//# sourceMappingURL=build.js.map
