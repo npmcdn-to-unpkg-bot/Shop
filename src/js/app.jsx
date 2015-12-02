@@ -10,8 +10,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 window.addEventListener("DOMContentLoaded", function() {
-  ReactDOM.render(
-	React.createElement(Footer), 
+    ReactDOM.render(React.createElement(Footer), 
     document.getElementById('downPage'));
 });
 
