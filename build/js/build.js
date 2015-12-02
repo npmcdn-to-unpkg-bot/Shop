@@ -14,37 +14,45 @@ window.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 var Breadcrumb = React.createClass({
-    displayName: "Breadcrumb",
+  displayName: "Breadcrumb",
 
-    render: function render() {
-        return React.createElement(
-            "ol",
-            { className: "product-description__breadcrumb breadcrumb" },
-            React.createElement(
-                "li",
-                { className: "breadcrumb__list" },
-                React.createElement(
-                    "a",
-                    { href: "index.html" },
-                    "Главная"
-                )
-            ),
-            React.createElement(
-                "li",
-                { className: "breadcrumb__list" },
-                React.createElement(
-                    "a",
-                    { href: "Motherboard.html" },
-                    "Категория"
-                )
-            ),
-            React.createElement(
-                "li",
-                { className: "breadcrumb__list" },
-                "Товар"
-            )
-        );
-    }
+  render: function render() {
+    var description = this.props.description.map(function (category, key) {
+      return React.createElement(
+        "ol",
+        { className: "product-description__breadcrumb breadcrumb", key: key },
+        React.createElement(
+          "li",
+          { className: "breadcrumb__list" },
+          React.createElement(
+            "a",
+            { href: "index.html" },
+            "Главная"
+          )
+        ),
+        React.createElement(
+          "li",
+          { className: "breadcrumb__list" },
+          React.createElement(
+            "a",
+            { href: category.category },
+            category.category
+          )
+        ),
+        React.createElement(
+          "li",
+          { className: "breadcrumb__list" },
+          category.name
+        )
+      );
+    });
+
+    return React.createElement(
+      "div",
+      null,
+      description
+    );
+  }
 });
 'use strict';
 
@@ -103,7 +111,7 @@ var DescriptionList = React.createClass({
                 React.createElement(
                     "h1",
                     { className: "layout-description__header" },
-                    " Товар "
+                    category.name
                 ),
                 React.createElement(
                     "div",
@@ -131,7 +139,8 @@ var DescriptionList = React.createClass({
                     React.createElement(
                         "div",
                         { className: "add-cart__price" },
-                        "Price: $555"
+                        "Price: ",
+                        category.price
                     ),
                     React.createElement(
                         "a",
@@ -163,7 +172,7 @@ var DescriptionPage = React.createClass({
 
   getDefaultProps: function getDefaultProps() {
     return {
-      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }]
+      description: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg', description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.', minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg', minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg', minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg', minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg', price: '$ 555', category: 'Motherboard' }]
     };
   },
   render: function render() {
@@ -177,7 +186,7 @@ var DescriptionPage = React.createClass({
         React.createElement(
           'div',
           { className: 'product-section__product-description product-description' },
-          React.createElement(Breadcrumb, null),
+          React.createElement(Breadcrumb, { description: this.props.description }),
           React.createElement(Slider, { description: this.props.description }),
           React.createElement(DescriptionList, { description: this.props.description })
         )
