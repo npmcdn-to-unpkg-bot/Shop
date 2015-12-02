@@ -8,7 +8,7 @@ var motherboardPageElement = [
 function addElementPageitem (arr) {    
     var newElement = document.getElementById ('tab-content');    
     for (var i = 0; i < arr.length ; i++) {        
-        var img = i % 4 + 1; 
+        var img = i + 1; 
 		
         var li = document.createElement('li');
         li.setAttribute("class", "tab-content__layoutitems");		
@@ -43,7 +43,7 @@ function addElementPageitem (arr) {
     }
 }
 function render(mass){
-    var valueRender = 10;
+    var valueRender = 1;
     for (var k=0; k<valueRender; k++){
         addElementPageitem(mass);
     }
