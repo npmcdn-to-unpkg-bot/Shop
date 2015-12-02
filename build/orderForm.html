@@ -5,6 +5,11 @@
     <title>Order form</title>
 	<link rel="stylesheet"  href="stylus/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+    <script src="js/validatePay.js"></script>
 </head>
 <body class="background">
    
@@ -37,12 +42,12 @@
         </div>
         
     <article class="product-section orderFormLayout">
-                <form class="orderForm">
+                <form class="orderForm" id="payForm">
                 <div class="line1">
-                    <input type="text" autofocus="on" maxlength="4" tabindex="1">
-                    <input type="text" autofocus="off" maxlength="4" tabindex="2">
-                    <input type="text" autofocus="off" maxlength="4" tabindex="3">
-                    <input type="text" autofocus="off" maxlength="4" tabindex="4">
+                    <input type="text" autofocus="on" maxlength="4" tabindex="1" name="card1">
+                    <input type="text" autofocus="off" maxlength="4" tabindex="2" name="card2">
+                    <input type="text" autofocus="off" maxlength="4" tabindex="3" name="card3">
+                    <input type="text" autofocus="off" maxlength="4" tabindex="4" name="card4">
                 </div>    
                 <span class="lineValid">Month</span><span class="lineValid">Year</span>
                 <div class="line2" >
@@ -102,7 +107,8 @@
                         <input type="text" autofocus="off" maxlength="3" placeholder="CVC" tabindex="8">
                 </div>
                 <div class="line5">
-                        <a class="finish-btn" href="finishPage.html">Pay</a>
+              <button class="btn btn-primary pull-right continuePaymentProcess" type="submit">Weiter</button>
+<!--                        <a class="finish-btn" href="finishPage.html">Pay</a>-->
                 </div>
                     </form>
     </article>
