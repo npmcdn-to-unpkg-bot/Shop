@@ -40,10 +40,5 @@ var Navigation = React.createClass ({
     	  </nav>
 		);
 	}
-    		
-	  return (
-		<ul className="newv__product-section__tab-content newv__tab-content">
-		  {categories}
-        </ul>			
-	  );
+
 })
