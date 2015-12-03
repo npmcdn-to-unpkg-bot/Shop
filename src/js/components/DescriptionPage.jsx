@@ -68,7 +68,7 @@ render: function () {
             <div className="product-section__product-description product-description">
                 {this.state.currentPage == '' ? <HomePage homePage={this.props.homePage} /> : null 
         }
-                {this.state.currentPage == '#itemList' ? <ItemsList categories={this.props.categories}  /> : null 
+                {this.state.currentPage == '#itemList' ? <ItemsList categories={this.props.categories} productLinkClickHandler={this.updatePage} /> : null 
         }        
 
                 {this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? <Breadcrumb breadcrumb={this.props.breadcrumb} /> : null 
