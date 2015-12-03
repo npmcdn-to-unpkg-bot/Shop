@@ -94,7 +94,7 @@ var DescriptionList = React.createClass({
         var description = this.props.description.map(function (category, key) {
             return React.createElement(
                 "div",
-                { className: " layout-description", key: key },
+                { className: "layout-description", key: key },
                 React.createElement(
                     "h1",
                     { className: "layout-description__header" },
@@ -147,7 +147,7 @@ var DescriptionList = React.createClass({
         });
         return React.createElement(
             "div",
-            { className: "product-description__layout-description" },
+            { className: "" },
             description
         );
     }

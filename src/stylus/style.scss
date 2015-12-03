@@ -94,7 +94,7 @@ html, body {
     padding-top: 70px;
     padding-bottom: 40px;
     margin-bottom: 10px;
-    width: 80%;
+    width: 87%;
     margin: 2% auto; }
 .tab-content .imgCooling {
   background-image: url("../img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg"); }
@@ -308,7 +308,7 @@ html, body {
 .slider-img__big-img {
     width: 100%;
     min-width: 200px;
-    height: 350px;}
+    height: 280px;}
 .big-img__positioner {
   width: 70%;
   height: 100%;}
@@ -332,6 +332,7 @@ html, body {
   border-left-color: lightskyblue;
   border-right: 0; }
 .product-description__layout-description {
+  width: 100%;
   margin-top: 10px;
 }
  .img-star {
@@ -378,8 +379,9 @@ html, body {
   font-size: 30px; }
         /*Social*/
 .layout-description__lineSocial {
-  width: 100%;
-  clear: both; }
+    width: 16%;
+    clear: both;
+    margin: 0 auto; }
 .lineSocial__line-social {
   background-image: url("../img/Symbol/icosocial.png");
   background-repeat: repeat-x;
