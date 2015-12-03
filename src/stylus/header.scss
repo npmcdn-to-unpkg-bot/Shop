@@ -61,7 +61,9 @@ header:after {
 	&__text--hidden {
         display: none; }
 }   
-
+.all__header__elements--search{
+    color:black;
+}
 @media screen and (min-width:480px) {
 	.all__header-elements {
 		&__authorization--img, &__basket--img {
@@ -91,5 +93,6 @@ header:after {
 	.all__header__elements--search {
 		width: 23%;
 		background-position-x: 100%;
+        
 	}
 }

@@ -389,9 +389,14 @@ var Slider = React.createClass({
 
     render: function render() {
         var imgSlider = this.props.imgSlider.map(function (category, key) {
+            var _this = this;
+
             return React.createElement(
                 "div",
-                { className: "slider-img", key: key },
+                { className: "slider-img", ref: function ref(_ref) {
+                        return _this.myTextInput = _ref;
+                    }, key: key },
+                "kjhkjh",
                 React.createElement(
                     "div",
                     { className: "slider-img__big-img big-img" },
@@ -416,4 +421,5 @@ var Slider = React.createClass({
             imgSlider
         );
     }
+
 });
