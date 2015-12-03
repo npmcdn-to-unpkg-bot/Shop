@@ -79,8 +79,9 @@ render: function () {
         }               
             </div>
         </article>
+		{console.log(this.props.imgSlider[0].img)}
         <Footer/>
-        </div>
+        </div>		
     );
   }
 })
