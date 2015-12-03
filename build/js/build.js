@@ -66,11 +66,7 @@ var CategoryPage = React.createClass({
 								{ className: 'page__header' },
 								React.createElement(Header, null)
 						),
-						React.createElement(
-								'div',
-								{ className: 'page__menu' },
-								React.createElement(Navigation, null)
-						),
+						React.createElement(Navigation, null),
 						React.createElement(
 								'article',
 								{ className: 'newv__elementspage newv__elementspage--style' },
@@ -175,6 +171,7 @@ var DescriptionPage = React.createClass({
                 minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg',
                 minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',
                 minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }],
+            nav: [{ name: 'Motherboard', href: '#itemList', img: 'mother' }, { name: 'CPU', href: '#itemList', img: 'cpu' }, { name: 'RAM', href: '#itemList', img: 'ram' }, { name: 'VideoAdapter', href: '#itemList', img: 'video' }, { name: 'HDD', href: '#itemList', img: 'hdd' }, { name: 'PowerSource', href: '#itemList', img: 'power' }, { name: 'Cooling', href: '#itemList', img: 'cooling' }],
             description: [{ name: 'GIGABYTE-GA-78LMT-S2',
                 description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
                 price: '$ 555', category: 'Motherboard' }],
@@ -196,11 +193,7 @@ var DescriptionPage = React.createClass({
             'div',
             { className: 'wrapper newv__page' },
             React.createElement(Header, null),
-            React.createElement(
-                'div',
-                { className: 'page__menu' },
-                this.state.currentPage == '#itemList' ? React.createElement(Navigation, null) : null
-            ),
+            this.state.currentPage == '#itemList' ? React.createElement(Navigation, { nav: this.props.nav }) : null,
             React.createElement(
                 'article',
                 { className: 'wrapper__product-section product-section' },
@@ -342,85 +335,31 @@ var ItemsList = React.createClass({
 "use strict";
 
 var Navigation = React.createClass({
-    displayName: "Navigation",
+  displayName: "Navigation",
 
-    render: function render() {
-        return React.createElement(
-            "nav",
-            { className: "page__navbar page__navbar--desktop" },
-            React.createElement(
-                "a",
-                { className: "page__navbar__link page__navbar__link--active", href: "#Motherboard" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--mother" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "Motherboard"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "page__navbar__link", href: "CPU.html" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--cpu" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "CPU"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "page__navbar__link", href: "RAM.html" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--ram" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "RAM"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "page__navbar__link", href: "videoAdapter.html" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--video" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "Video adapter"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "page__navbar__link", href: "HDD.html" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--hdd" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "HDD"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "page__navbar__link", href: "powerSource.html" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--power" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "Power source"
-                )
-            ),
-            React.createElement(
-                "a",
-                { className: "page__navbar__link", href: "cooling.html" },
-                React.createElement("div", { className: "page__navbar__img page__navbar__img--cooling" }),
-                React.createElement(
-                    "span",
-                    { className: "caption" },
-                    "Cooling"
-                )
-            )
-        );
-    }
-
+  render: function render() {
+    var nav = this.props.nav.map(function (category, key) {
+      return React.createElement(
+        "a",
+        { className: "page__navbar__link", href: category.href },
+        React.createElement("div", { className: "page__navbar__img page__navbar__img--" + category.img }),
+        React.createElement(
+          "span",
+          { className: "caption" },
+          category.name
+        )
+      );
+    });
+    return React.createElement(
+      "div",
+      { className: "page__menu" },
+      React.createElement(
+        "nav",
+        { className: "page__navbar page__navbar--desktop" },
+        nav
+      )
+    );
+  }
 });
 'use strict';
 

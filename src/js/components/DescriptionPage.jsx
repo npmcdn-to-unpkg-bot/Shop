@@ -20,6 +20,15 @@ var DescriptionPage = React.createClass({
         minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',
         minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',}
         ],
+        nav:[
+            {name: 'Motherboard', href: '#itemList', img: 'mother'},
+            {name: 'CPU', href: '#itemList', img: 'cpu'},
+            {name: 'RAM', href: '#itemList', img: 'ram'},
+            {name: 'VideoAdapter', href: '#itemList', img: 'video'},
+            {name: 'HDD', href: '#itemList', img: 'hdd'},
+            {name: 'PowerSource', href: '#itemList', img: 'power'},
+            {name: 'Cooling', href: '#itemList', img: 'cooling'}
+        ],
         description: [
         {name:'GIGABYTE-GA-78LMT-S2',
         description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
@@ -53,10 +62,8 @@ render: function () {
     return (
         <div className="wrapper newv__page">
         <Header /> 
-        <div className="page__menu">
-                {this.state.currentPage == '#itemList' ? <Navigation /> : null 
+        {this.state.currentPage == '#itemList' ? <Navigation nav={this.props.nav} /> : null 
         }
-        </div>
         <article className="wrapper__product-section product-section" >       
             <div className="product-section__product-description product-description">
                 {this.state.currentPage == '' ? <HomePage homePage={this.props.homePage} /> : null 
