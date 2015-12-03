@@ -164,6 +164,7 @@ var DescriptionPage = React.createClass({
     },
     getDefaultProps: function getDefaultProps() {
         return {
+            path: [{ page1: '', page2: '#itemList', page3: '#GIGABYTE-GA-78LMT-S2' }],
             categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: '#GIGABYTE-GA-78LMT-S2' }],
             imgSlider: [{ img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg',
                 minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg',
@@ -183,6 +184,11 @@ var DescriptionPage = React.createClass({
     },
     updatePage: function updatePage(e) {
         window.location.assign(e.target.getAttribute('href'));
+        this.setState({
+            currentPage: PageName.getPageName()
+        });
+    },
+    componentWillReciveProps: function componentWillReciveProps() {
         this.setState({
             currentPage: PageName.getPageName()
         });
@@ -361,12 +367,12 @@ var Navigation = React.createClass({
     );
   }
 });
-'use strict';
+"use strict";
 
 var PageName = {
     getPageName: function getPageName() {
         var path = window.location.hash;
-        return path.replace(/\?.*/, '');
+        return path;
     }
 };
 'use strict';

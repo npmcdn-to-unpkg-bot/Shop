@@ -1,11 +1,14 @@
 var DescriptionPage = React.createClass({
-    getInitialState: function(){
-        return {
+    getInitialState: function(){				
+        return {			
             currentPage: PageName.getPageName()
         }
     },
     getDefaultProps: function () {
     return {
+		path: [
+			{page1:'', page2: '#itemList', page3: '#GIGABYTE-GA-78LMT-S2'}
+		],
         categories: [
         {name:'GIGABYTE-GA-78LMT-S2', img:'elementspagelink__img--img1', price:'$ 555', link:'#GIGABYTE-GA-78LMT-S2'}, 
 		{name:'GIGABYTE-GA-78LMT-S3', img:'elementspagelink__img--img2', price:'$ 655', link:'#GIGABYTE-GA-78LMT-S2'}, 
@@ -57,6 +60,12 @@ var DescriptionPage = React.createClass({
         });
  
     },
+	componentWillReciveProps: function () {		
+		this.setState({
+			currentPage: PageName.getPageName()
+		})
+	},
+	
       
 render: function () {
     return (
