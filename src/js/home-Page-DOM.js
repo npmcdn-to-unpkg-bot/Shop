@@ -25,7 +25,7 @@ function addCategories(arr){
         var newLi = document.createElement('li');
         newLi.className = ("tab-content__layoutCategories");
         newLi.innerHTML = 
-        '<a class="Categories '+ name +'" href="'+name+'.html">\
+        '<a class="Categories '+ name +'" href="#'+name+'">\
         <figure>\
             <div class="img'+name+'"></div>\
             <figcaption>'+name+'</figcaption>\

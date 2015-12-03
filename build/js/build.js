@@ -1,11 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
-    ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('productDescription'));
-});
-
-window.addEventListener("DOMContentLoaded", function () {
-    ReactDOM.render(React.createElement(CategoryPage), document.getElementById('page'));
+    ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('page'));
 });
 "use strict";
 
@@ -22,7 +18,7 @@ var Breadcrumb = React.createClass({
           { className: "breadcrumb__list" },
           React.createElement(
             "a",
-            { href: "index.html" },
+            { href: "/" },
             "Главная"
           )
         ),
@@ -57,7 +53,7 @@ var CategoryPage = React.createClass({
 
 		getDefaultProps: function getDefaultProps() {
 				return {
-						categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: 'GIGABYTE-GA-78LMT-S2.html' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: 'GIGABYTE-GA-78LMT-S2.html' }]
+						categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: '#GIGABYTE-GA-78LMT-S2' }]
 				};
 		},
 
@@ -165,42 +161,57 @@ var DescriptionList = React.createClass({
 var DescriptionPage = React.createClass({
     displayName: 'DescriptionPage',
 
+    getInitialState: function getInitialState() {
+        return {
+            currentPage: PageName.getPageName()
+        };
+    },
     getDefaultProps: function getDefaultProps() {
         return {
-            imgSlider: [{
-                img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg',
+            categories: [{ name: 'GIGABYTE-GA-78LMT-S2', img: 'elementspagelink__img--img1', price: '$ 555', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S3', img: 'elementspagelink__img--img2', price: '$ 655', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S4', img: 'elementspagelink__img--img3', price: '$ 700', link: '#GIGABYTE-GA-78LMT-S2' }, { name: 'GIGABYTE-GA-78LMT-S5', img: 'elementspagelink__img--img4', price: '$ 900', link: '#GIGABYTE-GA-78LMT-S2' }],
+            imgSlider: [{ img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg',
                 minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg',
                 minImg2: 'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg',
                 minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg',
                 minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',
-                minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg'
-            }],
-            description: [{
-                name: 'GIGABYTE-GA-78LMT-S2',
+                minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg' }],
+            description: [{ name: 'GIGABYTE-GA-78LMT-S2',
                 description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
-                price: '$ 555', category: 'Motherboard'
-            }],
-            breadcrumb: [{
-                name: 'GIGABYTE-GA-78LMT-S2',
+                price: '$ 555', category: 'Motherboard' }],
+            breadcrumb: [{ name: 'GIGABYTE-GA-78LMT-S2',
                 description: 'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
-                price: '$ 555', category: 'Motherboard'
-            }]
+                price: '$ 555', category: 'Motherboard' }],
+            homePage: [{ name: 'Motherboard', href: '#itemList' }, { name: 'CPU', href: '#itemList' }, { name: 'RAM', href: '#itemList' }, { name: 'VideoAdapter', href: '#itemList' }, { name: 'HDD', href: '#itemList' }, { name: 'PowerSource', href: '#itemList' }, { name: 'Cooling', href: '#itemList' }]
         };
     },
+    updatePage: function updatePage(e) {
+        window.location.assign(e.target.getAttribute('href'));
+        this.setState({
+            currentPage: PageName.getPageName()
+        });
+    },
+
     render: function render() {
         return React.createElement(
             'div',
-            { className: 'wrapper' },
+            { className: 'wrapper newv__page' },
             React.createElement(Header, null),
+            React.createElement(
+                'div',
+                { className: 'page__menu' },
+                this.state.currentPage == '#itemList' ? React.createElement(Navigation, null) : null
+            ),
             React.createElement(
                 'article',
                 { className: 'wrapper__product-section product-section' },
                 React.createElement(
                     'div',
                     { className: 'product-section__product-description product-description' },
-                    React.createElement(Breadcrumb, { breadcrumb: this.props.breadcrumb }),
-                    React.createElement(Slider, { imgSlider: this.props.imgSlider }),
-                    React.createElement(DescriptionList, { description: this.props.description })
+                    this.state.currentPage == '' ? React.createElement(HomePage, { homePage: this.props.homePage }) : null,
+                    this.state.currentPage == '#itemList' ? React.createElement(ItemsList, { categories: this.props.categories }) : null,
+                    this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(Breadcrumb, { breadcrumb: this.props.breadcrumb }) : null,
+                    this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(Slider, { imgSlider: this.props.imgSlider }) : null,
+                    this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(DescriptionList, { description: this.props.description }) : null
                 )
             ),
             React.createElement(Footer, null)
@@ -229,7 +240,7 @@ var Header = React.createClass({
     return React.createElement(
       "header",
       { className: "page__header all__header" },
-      React.createElement("a", { className: "all__header__elements all__header__elements--logo", href: "index.html" }),
+      React.createElement("a", { className: "all__header__elements all__header__elements--logo", href: "/" }),
       React.createElement(
         "a",
         { className: "all__header__elements all__header__elements--authorization all__header-elements__authorization", href: "#openModal" },
@@ -253,6 +264,43 @@ var Header = React.createClass({
       React.createElement("input", { className: "all__header__elements all__header__elements--search", type: "search", placeholder: "Search" })
     );
   }
+});
+"use strict";
+
+var HomePage = React.createClass({
+    displayName: "HomePage",
+
+    render: function render() {
+        var homePage = this.props.homePage.map(function (category, key) {
+            return React.createElement(
+                "li",
+                { className: "tab-content__layoutCategories", key: key },
+                React.createElement(
+                    "a",
+                    { className: "Categories Motherboard", href: category.href },
+                    React.createElement(
+                        "figure",
+                        null,
+                        React.createElement("div", { className: 'img' + category.name }),
+                        React.createElement(
+                            "figcaption",
+                            null,
+                            category.name
+                        )
+                    )
+                )
+            );
+        });
+        return React.createElement(
+            "div",
+            { className: "product-description__layout-description" },
+            React.createElement(
+                "ul",
+                { className: "product-section__tab-content tab-content", id: "tab-content" },
+                homePage
+            )
+        );
+    }
 });
 "use strict";
 "use strict";
@@ -302,7 +350,7 @@ var Navigation = React.createClass({
             { className: "page__navbar page__navbar--desktop" },
             React.createElement(
                 "a",
-                { className: "page__navbar__link page__navbar__link--active", href: "Motherboard.html" },
+                { className: "page__navbar__link page__navbar__link--active", href: "#Motherboard" },
                 React.createElement("div", { className: "page__navbar__img page__navbar__img--mother" }),
                 React.createElement(
                     "span",
@@ -372,7 +420,16 @@ var Navigation = React.createClass({
             )
         );
     }
+
 });
+'use strict';
+
+var PageName = {
+    getPageName: function getPageName() {
+        var path = window.location.hash;
+        return path.replace(/\?.*/, '');
+    }
+};
 'use strict';
 
 (function () {

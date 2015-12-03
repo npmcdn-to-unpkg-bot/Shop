@@ -3,7 +3,7 @@ var Navigation = React.createClass ({
 	render: function () {
 		return (
 		  <nav className="page__navbar page__navbar--desktop">
-       	  	<a className="page__navbar__link page__navbar__link--active" href="Motherboard.html">
+       	  	<a className="page__navbar__link page__navbar__link--active" href="#Motherboard">
               <div className="page__navbar__img page__navbar__img--mother"></div>
             <span className="caption">Motherboard</span>
         	</a> 
@@ -40,4 +40,5 @@ var Navigation = React.createClass ({
     	  </nav>
 		);
 	}
+
 })

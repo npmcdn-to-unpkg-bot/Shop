@@ -3,7 +3,7 @@ var Breadcrumb = React.createClass({
       var breadcrumb = this.props.breadcrumb.map(function(category, key) {
       return (
             <ol className="product-description__breadcrumb breadcrumb" key={key}>
-                <li className="breadcrumb__list"><a href="index.html">Главная</a></li>
+                <li className="breadcrumb__list"><a href="/">Главная</a></li>
                 <li className="breadcrumb__list"><a href={category.category}>{category.category}</a></li>
                 <li className="breadcrumb__list">{category.name}</li>
             </ol>  

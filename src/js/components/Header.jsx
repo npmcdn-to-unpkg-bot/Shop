@@ -2,7 +2,7 @@ var Header = React.createClass ({
 	render: function () {
 		return (
 			<header className="page__header all__header">
-        		<a className="all__header__elements all__header__elements--logo" href="index.html">
+        		<a className="all__header__elements all__header__elements--logo" href="/">
         		</a>
         		<a className="all__header__elements all__header__elements--authorization all__header-elements__authorization" href="#openModal">
             		<span className="all__header-elements__authorization--img">
