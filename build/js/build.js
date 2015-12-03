@@ -396,7 +396,6 @@ var Slider = React.createClass({
                 { className: "slider-img", ref: function ref(_ref) {
                         return _this.myTextInput = _ref;
                     }, key: key },
-                "kjhkjh",
                 React.createElement(
                     "div",
                     { className: "slider-img__big-img big-img" },
