@@ -3,7 +3,7 @@ var DescriptionList = React.createClass({
   render: function () {    
     var description = this.props.description.map(function(category, key) {
       return (
-                <div className=" layout-description" key={key}> 
+                <div className="layout-description" key={key}> 
                     <h1 className="layout-description__header">{category.name}</h1>
                     <div className="layout-description__img-star img-star">
                         <div className="img-star__raiting"></div>
@@ -29,7 +29,7 @@ var DescriptionList = React.createClass({
       );
     });
     return (
-      <div className="product-description__layout-description">
+      <div className="">
         {description}
       </div>
     );
