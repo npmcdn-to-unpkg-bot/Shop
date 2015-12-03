@@ -207,7 +207,6 @@ var DescriptionPage = React.createClass({
                     this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(DescriptionList, { description: this.props.description }) : null
                 )
             ),
-            console.log(this.props.imgSlider[0].img),
             React.createElement(Footer, null)
         );
     }

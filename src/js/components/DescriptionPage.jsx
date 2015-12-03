@@ -78,8 +78,7 @@ render: function () {
                 {this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? <DescriptionList description={this.props.description} /> : null 
         }               
             </div>
-        </article>
-		{console.log(this.props.category[name].imgSlider[0].img)}
+        </article>		
         <Footer/>
         </div>		
     );
