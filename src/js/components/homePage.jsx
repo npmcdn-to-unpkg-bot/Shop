@@ -1,11 +1,13 @@
-
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
 var HomePageTemplate = React.createClass({
   render: function () {    
     var homePage = this.props.homePage.map(function(homePage, key) {
       return (
         
             <li className="tab-content__layoutCategories" key={key}>
-                    <Link className="Categories Motherboard" to="/Motherboard">                    
+                    <Link className="Categories Motherboard" to={homePage.href}>                    
                         <figure>       
                             <div className={'img'+homePage.name}></div>
                             <figcaption>{homePage.name}</figcaption>
@@ -33,13 +35,13 @@ var HomePageRender = React.createClass({
     getDefaultProps: function () {
     return {
         homePage: [
-            {name: 'Motherboard', href: ''},
-            {name: 'CPU', href: '#itemList'},
-            {name: 'RAM', href: '#itemList'},
-            {name: 'VideoAdapter', href: '#itemList'},
-            {name: 'HDD', href: '#itemList'},
-            {name: 'PowerSource', href: '#itemList'},
-            {name: 'Cooling', href: '#itemList'}
+            {name: 'Motherboard', href: '/Motherboard'},
+            {name: 'CPU', href: 'CPU'},
+            {name: 'RAM', href: '/RAM'},
+            {name: 'VideoAdapter', href: '/VideoAdapter'},
+            {name: 'HDD', href: '/HDD'},
+            {name: 'PowerSource', href: '/PowerSource'},
+            {name: 'Cooling', href: '/Cooling'}
         ]
     }
   },
