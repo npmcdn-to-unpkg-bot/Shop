@@ -56,29 +56,15 @@ var DescriptionPage = React.createClass({
             {name: 'Cooling', href: '#itemList'}
         ]
     }
-  },
-    updatePage: function(e){
-        window.location.assign(e.target.getAttribute('href'));
-        this.setState({
-            currentPage: PageName.getPageName()
-        });
- 
-    },
-	componentWillReciveProps: function () {		
-		this.setState({
-			currentPage: PageName.getPageName()
-		})
-	},
-	
-      
+  	},
+
 render: function () {
     return (
-  		<Router>    		
-			<Route path="/" component={Header}></Route>			
-		</Router>
-		<Router>    		
-			<Route path="/" component={Footer}></Route>			
-		</Router>
+    <Router>
+        <Route path="/" component={HomePageRender}>
+            <Route path="Motherboard" component={'Header'} />
+       </Route>     
+    </Router>
     );
   }
 })

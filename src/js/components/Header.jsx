@@ -19,6 +19,7 @@ var Header = React.createClass ({
 					</span>
         		</a>
         		<input className="all__header__elements all__header__elements--search" type="search" placeholder="Search"/>
+             {this.props.children}
     		</header>
 		);
 	}
