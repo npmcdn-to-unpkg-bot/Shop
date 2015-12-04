@@ -1,10 +1,9 @@
-
 var HomePage = React.createClass({
   render: function () {    
     var homePage = this.props.homePage.map(function(category, key) {
       return (
             <li className="tab-content__layoutCategories" key={key}>
-                <a className="Categories Motherboard"  href={category.href}>
+                <a className="Categories Motherboard" href={category.href}>
                     <figure>       
                         <div className={'img'+category.name}></div>
                         <figcaption>{category.name}</figcaption>

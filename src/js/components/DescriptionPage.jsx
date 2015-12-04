@@ -1,3 +1,7 @@
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
+
 var DescriptionPage = React.createClass({
     getInitialState: function(){
         return {
@@ -60,28 +64,10 @@ var DescriptionPage = React.createClass({
       
 render: function () {
     return (
-        <div className="wrapper newv__page">
-        <Header /> 
-        {this.state.currentPage == '#itemList' ? <Navigation nav={this.props.nav} /> : null 
-        }
-        <article className="wrapper__product-section product-section" >       
-            <div className="product-section__product-description product-description">
-                {this.state.currentPage == '' ? <HomePage homePage={this.props.homePage} /> : null 
-        }
-                {this.state.currentPage == '#itemList' ? <ItemsList categories={this.props.categories} productLinkClickHandler={this.updatePage} /> : null 
-        }        
-
-                {this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? <Breadcrumb breadcrumb={this.props.breadcrumb} /> : null 
-        }
-                {this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? <Slider imgSlider={this.props.imgSlider} /> : null 
-        }    
-                {this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? <DescriptionList description={this.props.description} /> : null 
-        }               
-            </div>
-        </article>
-		{console.log(this.props.imgSlider[0].img)}
-        <Footer/>
-        </div>		
+  <Router>
+    <Route name="itemDetails" path="/" component={Header}>
+    </Route>
+  </Router>	
     );
   }
 })
