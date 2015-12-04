@@ -43,25 +43,17 @@ var DescriptionPage = React.createClass({
         description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
         price: '$ 555', category: 'Motherboard'}
         ],
-        homePage: [
-            {name: 'Motherboard', href: '#itemList'},
-            {name: 'CPU', href: '#itemList'},
-            {name: 'RAM', href: '#itemList'},
-            {name: 'VideoAdapter', href: '#itemList'},
-            {name: 'HDD', href: '#itemList'},
-            {name: 'PowerSource', href: '#itemList'},
-            {name: 'Cooling', href: '#itemList'}
-        ]
+       
     }
   },
 
 render: function () {
     return (
     <Router>
-        <Route path="/" component={HomePageRender}>
-            <Route path="CPU" component={HomePageRender}> </Route>
-       </Route> 
-        <Route path="Motherboard" component={Footer}> </Route>  
+        <Route path="/" component={HomePageRender}></Route> 
+        <Route path=":id" component={Footer}> </Route>
+        <Route path="CPU" component={Header}> </Route>  
+        <Route path="CPU" component={Header}> </Route>  
     </Router>
     );
   }

@@ -1,5 +1,5 @@
 
-var DescriptionList = React.createClass({
+var productDescriptionTemp = React.createClass({
   render: function () {    
     var description = this.props.description.map(function(category, key) {
       return (
