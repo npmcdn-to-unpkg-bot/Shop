@@ -4,8 +4,8 @@ import { Router, Route, Link } from 'react-router'
 
 var DescriptionPage = React.createClass({
     getInitialState: function(){				
-        return {			
-            currentPage: PageName.getPageName()
+        return {            
+			secondsElapsed: 0
         }
     },
     getDefaultProps: function () {
@@ -57,15 +57,18 @@ var DescriptionPage = React.createClass({
         ]
     }
   	},
+	tick: function () {
+		this.setState({secondsElapsed: this.state.secondsElapsed + 1});
+	},
+	
+	componentDidMount: function () {
+		this.interval = setInterval(this.tick, 1000)	
+	},	
 
-render: function () {
-    return (
-    <Router>
-        <Route path="/" component={HomePageRender}>
-            <Route path="CPU" component={HomePageRender}> </Route>
-       </Route> 
-        <Route path="Motherboard" component={Footer}> </Route>  
-    </Router>
+	render: function () {
+    return (    	
+		<div>Current page: {this.state.secondsElapsed}</div>
     );
   }
 })
+	
