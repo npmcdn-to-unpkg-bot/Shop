@@ -144,9 +144,7 @@ gulp.task('watch', function(){
         watch([path.watch.js], function(event, cb) {
         gulp.start('JS');
     });        
-    watch([path.watch.js], function(event, cb) {
-        gulp.start('JS1');
-    });
+
 });
 
 gulp.task('build', ['libs', 'react', 'style-build', 'images', 'html',  'JS' ]);

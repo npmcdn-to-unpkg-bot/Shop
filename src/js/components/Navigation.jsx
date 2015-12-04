@@ -1,13 +1,29 @@
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
 var Navigation = React.createClass ({
+      getDefaultProps: function () {
+    return {
+        nav:[
+            {name: 'Motherboard', href: '#itemList', img: 'mother'},
+            {name: 'CPU', href: '#itemList', img: 'cpu'},
+            {name: 'RAM', href: '#itemList', img: 'ram'},
+            {name: 'VideoAdapter', href: '#itemList', img: 'video'},
+            {name: 'HDD', href: '#itemList', img: 'hdd'},
+            {name: 'PowerSource', href: '#itemList', img: 'power'},
+            {name: 'Cooling', href: '#itemList', img: 'cooling'}
+        ],
+    }
+  },
 	
 	render: function () {
-        var nav = this.props.nav.map(function(category, key) {
+        var nav = this.props.nav.map(function(nav, key) {
 		return (
 
-       	  	<a className="page__navbar__link" href={category.href}>
-              <div className={"page__navbar__img page__navbar__img--" + category.img}></div>
-            <span className="caption">{category.name}</span>
-        	</a> 
+       	  	<link className="page__navbar__link" to={nav.href}>
+              <div className={"page__navbar__img page__navbar__img--" + nav.img}></div>
+            <span className="caption">{nav.name}</span>
+        	</link> 
     	
      );
     });	

@@ -50,10 +50,10 @@ var DescriptionPage = React.createClass({
 render: function () {
     return (
     <Router>
-        <Route path="/" component={HomePageRender}></Route> 
+        <Route path="/" component={HomePage}></Route> 
+        <Route path="Motherboard" component={CategoryPage}> </Route> 
         <Route path=":id" component={Footer}> </Route>
-        <Route path="CPU" component={Header}> </Route>  
-        <Route path="CPU" component={Header}> </Route>  
+
     </Router>
     );
   }
