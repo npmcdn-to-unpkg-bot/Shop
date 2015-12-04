@@ -54,20 +54,13 @@ var DescriptionPage = React.createClass({
         ]
     }
   },
-    updatePage: function(e){
-        window.location.assign(e.target.getAttribute('href'));
-        this.setState({
-            currentPage: PageName.getPageName()
-        });
- 
-    },
-      
+
 render: function () {
     return (
-  <Router>
-    <Route name="itemDetails" path="/" component={Header}>
-    </Route>
-  </Router>	
+    <Router>
+        <Route path="/" component={HomePageRender}>
+        </Route>
+    </Router>
     );
   }
 })
