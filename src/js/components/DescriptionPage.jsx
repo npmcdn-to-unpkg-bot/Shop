@@ -3,11 +3,6 @@ import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
 var DescriptionPage = React.createClass({
-    getInitialState: function(){
-        return {
-            currentPage: PageName.getPageName()
-        }
-    },
     getDefaultProps: function () {
     return {
         categories: [
