@@ -28,6 +28,7 @@ var path = {
     libs: [
         'bower_components/react/react.js',
         'bower_components/react/react-dom.js',
+        'bower_components/react/react-router.js',
         'bower_components/react/JSXTransformer.js',
     ],
     src: {
@@ -97,7 +98,7 @@ gulp.task('JS1', function () {
 		browserify({
 			entries: 'build/js/build.js',
 			debug: true,
-			paths: ['build/js/', 'node_modules/'],
+			paths: ['build/', 'node_modules/'],
 			insertGlobals: true,
 		})
         .transform(babelify)
@@ -143,12 +144,10 @@ gulp.task('watch', function(){
         watch([path.watch.js], function(event, cb) {
         gulp.start('JS');
     });
-		watch([path.watch.img], function(event, cb) {
-        	gulp.start('JS1');
-    });
 });
 
-gulp.task('build', ['react', 'style-build', 'images', 'html', 'libs', 'JS']);
+gulp.task('build', ['libs', 'react', 'style-build', 'images', 'html',  'JS' ]);
 
 gulp.task('server', ['webserver', 'watch']);
+
 gulp.task('default', ['build', 'server']);

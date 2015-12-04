@@ -46,15 +46,7 @@ var DescriptionPage = React.createClass({
         description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
         price: '$ 555', category: 'Motherboard'}
         ],
-        homePage: [
-            {name: 'Motherboard', href: '#itemList'},
-            {name: 'CPU', href: '#itemList'},
-            {name: 'RAM', href: '#itemList'},
-            {name: 'VideoAdapter', href: '#itemList'},
-            {name: 'HDD', href: '#itemList'},
-            {name: 'PowerSource', href: '#itemList'},
-            {name: 'Cooling', href: '#itemList'}
-        ]
+       
     }
   	},
 	tick: function () {
@@ -63,11 +55,16 @@ var DescriptionPage = React.createClass({
 	
 	componentDidMount: function () {
 		this.interval = setInterval(this.tick, 1000)	
-	},	
-
+	},
+	
 	render: function () {
-    return (    	
-		<div>Current page: {this.state.secondsElapsed}</div>
+    	return (
+    <Router>
+        <Route path="/" component={HomePage}></Route> 
+        <Route path="Motherboard" component={CategoryPage}> 		</Route> 
+        <Route path=":id" component={Footer}> </Route>
+
+    </Router>
     );
   }
 })
