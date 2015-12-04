@@ -59,7 +59,8 @@ render: function () {
     return (
     <Router>
         <Route path="/" component={HomePageRender}>
-        </Route>
+            <Route path="Motherboard" component={'Header'} />
+       </Route>     
     </Router>
     );
   }
