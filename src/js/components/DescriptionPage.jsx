@@ -73,10 +73,12 @@ var DescriptionPage = React.createClass({
       
 render: function () {
     return (
-  		<Router>
-    		<Route name="itemDetails" path="/" component={Header}>
-    		</Route>
-  		</Router>
+  		<Router>    		
+			<Route path="/" component={Header}></Route>			
+		</Router>
+		<Router>    		
+			<Route path="/" component={Footer}></Route>			
+		</Router>
     );
   }
 })

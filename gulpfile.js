@@ -143,6 +143,9 @@ gulp.task('watch', function(){
         watch([path.watch.js], function(event, cb) {
         gulp.start('JS');
     });
+		watch([path.watch.img], function(event, cb) {
+        	gulp.start('JS1');
+    });
 });
 
 gulp.task('build', ['react', 'style-build', 'images', 'html', 'libs', 'JS']);
