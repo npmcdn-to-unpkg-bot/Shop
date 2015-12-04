@@ -1,8 +1,19 @@
-"use strict";
+'use strict';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactRouter = require('react-router');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.addEventListener("DOMContentLoaded", function () {
-    ReactDOM.render(React.createElement(DescriptionPage), document.getElementById('page'));
+    ReactDOM.render(_react2.default.createElement(DescriptionPage), document.getElementById('page'));
 });
+"use strict";
 "use strict";
 
 var Breadcrumb = React.createClass({
@@ -154,7 +165,17 @@ var DescriptionList = React.createClass({
 });
 'use strict';
 
-var DescriptionPage = React.createClass({
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactRouter = require('react-router');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DescriptionPage = _react2.default.createClass({
     displayName: 'DescriptionPage',
 
     getInitialState: function getInitialState() {
@@ -195,25 +216,10 @@ var DescriptionPage = React.createClass({
     },
 
     render: function render() {
-        return React.createElement(
-            'div',
-            { className: 'wrapper newv__page' },
-            React.createElement(Header, null),
-            this.state.currentPage == '#itemList' ? React.createElement(Navigation, { nav: this.props.nav }) : null,
-            React.createElement(
-                'article',
-                { className: 'wrapper__product-section product-section' },
-                React.createElement(
-                    'div',
-                    { className: 'product-section__product-description product-description' },
-                    this.state.currentPage == '' ? React.createElement(HomePage, { homePage: this.props.homePage }) : null,
-                    this.state.currentPage == '#itemList' ? React.createElement(ItemsList, { categories: this.props.categories }) : null,
-                    this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(Breadcrumb, { breadcrumb: this.props.breadcrumb }) : null,
-                    this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(Slider, { imgSlider: this.props.imgSlider }) : null,
-                    this.state.currentPage == '#GIGABYTE-GA-78LMT-S2' ? React.createElement(DescriptionList, { description: this.props.description }) : null
-                )
-            ),
-            React.createElement(Footer, null)
+        return _react2.default.createElement(
+            _reactRouter.Router,
+            null,
+            _react2.default.createElement(_reactRouter.Route, { name: 'itemDetails', path: '/', component: Header })
         );
     }
 });

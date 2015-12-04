@@ -1,4 +1,3 @@
-
 var HomePage = React.createClass({
   render: function () {    
     var homePage = this.props.homePage.map(function(category, key) {
