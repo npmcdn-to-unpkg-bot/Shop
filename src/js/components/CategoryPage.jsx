@@ -33,7 +33,7 @@ var CategoryPage = React.createClass({
 			
 				<article className="newv__elementspage newv__elementspage--style">        
 			  		<div className="newv__viewmode">
-						<Link className="newv__elementspagelink" query={{ foo: 'bar' }}  to="/Motherboard/GIGABYTE-GA-78LMT-S2">
+						<Link className="newv__elementspagelink" >
 						List View
 						</Link>
 			  		</div>          

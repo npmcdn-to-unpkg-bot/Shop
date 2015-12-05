@@ -1,9 +1,12 @@
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
 var ItemsList = React.createClass ({
 	render: function () {
 	  var categories = this.props.categories.map(function(category, key) {
 		return (
 		  <li className="newv__tab-content__layoutitems" key = {key}>
-		    <a className="newv__Categories newv__pages__items" href={category.link}>
+		    <Link className="newv__Categories newv__pages__items" query={{ foo: 'bar' }}  to="/Motherboard/GIGABYTE-GA-78LMT-S2">
 		      <figure className="newv__elementspagefigure">
 		        <div className={"newv__elementspagelink__img " + category.img}>
 		        </div>
@@ -11,7 +14,7 @@ var ItemsList = React.createClass ({
 		          {category.name}<br />{category.price}
 		        </figcaption>
 		      </figure>
-		    </a>
+		    </Link>
 		  </li>
 		);
 		  

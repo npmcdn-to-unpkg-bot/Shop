@@ -3,11 +3,6 @@ import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
 var DescriptionPage = React.createClass({
-    getInitialState: function(){				
-        return {            
-			secondsElapsed: 0
-        }
-    },
     getDefaultProps: function () {
     return {
 		path: [
@@ -48,14 +43,7 @@ var DescriptionPage = React.createClass({
         ],
        
     }
-  	},
-	tick: function () {
-		this.setState({secondsElapsed: this.state.secondsElapsed + 1});
-	},
-	
-	componentDidMount: function () {
-		this.interval = setInterval(this.tick, 1000)	
-	},
+  	},	
 	
 	render: function () {
     	return (
