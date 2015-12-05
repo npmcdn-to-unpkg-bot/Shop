@@ -55,7 +55,7 @@ var CategoryPage = React.createClass({
 						</div>          
 						<ItemsList items={this.props.items} />
 						<div>
-							Seconds Elapsed: {Math.floor(this.state.secondsElapsed/3600) + 'h ' + Math.floor(this.state.secondsElapsed/60) + 'm ' + this.state.secondsElapsed%60 + 'sec'}
+							Seconds Elapsed: {Math.floor((this.state.secondsElapsed/3600)%24) + 'h ' + Math.floor((this.state.secondsElapsed/60)%60) + 'm ' + this.state.secondsElapsed%60 + 'sec'}
 						</div>
 					</article>		
 				<Footer />
