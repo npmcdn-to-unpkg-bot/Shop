@@ -20,9 +20,9 @@ var Navigation = React.createClass ({
         var nav = this.props.nav.map(function(nav, key) {
 		return (
 
-       	  	<link className="page__navbar__link" to={this.props.nav.href}>
-              <div className={"page__navbar__img page__navbar__img--" + this.props.nav.img}></div>
-            <span className="caption">{this.props.nav.name}</span>
+       	  	<link className="page__navbar__link" to={nav.href}>
+              <div className={"page__navbar__img page__navbar__img--" + nav.img}></div>
+            <span className="caption">{nav.name}</span>
         	</link> 
     	
      );
