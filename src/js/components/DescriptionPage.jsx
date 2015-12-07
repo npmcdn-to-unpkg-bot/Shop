@@ -23,5 +23,5 @@ var Description = React.createClass({
             </div>
         </div>
         );
-  }
+  	}
 })
