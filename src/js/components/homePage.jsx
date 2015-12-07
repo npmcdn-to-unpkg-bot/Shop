@@ -23,7 +23,7 @@ var HomePage = React.createClass({
   },
 render: function () {
     return (
-    <div>
+    <div className="page">
         <Header />
         <HomePageTemplate homePage={this.props.homePage} /> 
         <Footer />
