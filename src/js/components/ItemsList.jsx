@@ -8,10 +8,10 @@ var ItemsList = React.createClass ({
 		return (
 		  <li className="goods__unit" key = {key}>
 		    <Link className="unit-value" to="/Motherboard/GIGABYTE-GA-78LMT-S2" >
-		      <figure className="newv__elementspagefigure">
-		        <div className={"newv__elementspagelink__img " + item.img}>
+		      <figure className="unit-value__figure">
+		        <div className={"unit-value__img " + item.img}>
 		        </div>
-		        <figcaption className="newv__elementspage__figcaption">
+		        <figcaption className="unit-value__figcaption">
 		          {item.name}<br />{item.price}
 		        </figcaption>
 		      </figure>
