@@ -7,11 +7,11 @@ body {
 }
  
 .page {
-	height: 100%;
+
     display:flex;
 }
 
-.page, .wrapper {
+.page {
 	display: flex;	
 	flex-flow: row wrap;
 	min-height: 100%;
