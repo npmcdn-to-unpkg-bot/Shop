@@ -144,13 +144,15 @@ gulp.task('watch', function(){
     });
         watch([path.watch.js], function(event, cb) {
         gulp.start('JS');
+    });        
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('JS1');
     });
 });
-
-gulp.task('build', function(callback) {
-  runSequence(['libs', 'react', 'style-build', 'images', 'html',  'JS' ], 'JS1',
-              callback);
-});
 gulp.task('server', ['webserver', 'watch']);
-
-gulp.task('default', ['build', 'server']);
+gulp.task('build', function(callback) {
+  runSequence(['libs', 'react', 'style-build', 'images', 'html',  'JS' ], 'JS1', callback)
+});
+gulp.task('default', function(callback) {
+  runSequence('build', 'server', callback)
+});
