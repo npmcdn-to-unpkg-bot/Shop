@@ -1,2 +1,2 @@
-
+.goods{width:100%;margin-bottom:20px}.goods__view{display:none;overflow:hidden;text-align:right;margin-right:20px;margin-top:0}.viewmode{text-decoration:none;width:80%}.viewmode:link{color:#000}.viewmode:visited{color:#00f}.viewmode:hover{color:orange}.viewmode:active{color:red}@media screen and (min-width:1100px){.goods{width:88%}.goods__view{display:block;height:20px;overflow:hidden;text-align:right;margin-right:20px;margin-top:10px}}
 /*# sourceMappingURL=goods.css.map */

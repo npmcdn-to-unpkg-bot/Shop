@@ -50,7 +50,7 @@ var CategoryMotherboard = React.createClass({
 
 					<article className="goods goods--style">      
 						<div className="goods__view">
-							<Link className="newv__elementspagelink" to="/Motherboard/" >
+							<Link className="viewmode" to="/Motherboard/" >
 							List View
 							</Link>
 						</div>          
