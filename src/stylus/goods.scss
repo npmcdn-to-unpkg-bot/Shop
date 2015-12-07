@@ -1,12 +1,27 @@
 .goods {	
 	width: 100%;    
     margin-bottom: 20px;
+	
 	&__view {
 		display: none;
 		overflow: hidden;
 		text-align: right;
     	margin-right: 20px;
     	margin-top: 0;
+	}
+	
+	&__folder {
+		display: flex;
+		padding-left: 0;
+		-webkit-flex-flow: row wrap;
+		list-style-type: none;
+		justify-content: center;
+	}
+	
+	&__unit {
+		flex-basis: 284px;
+		text-align: center;
+		margin-bottom: 20px;
 	}
 }
 
@@ -24,6 +39,32 @@
 	
 	&:hover {
   		color: orange;
+	}
+	
+	&:active {
+  		color: red;
+	}
+}
+
+.unit-value {
+	text-decoration: none;
+	padding: 15px;
+	display: inline-block;
+	box-sizing: border-box;
+	border: 1px solid black;
+    border-radius: 30px;
+	
+	&:link {
+  		color: black; 
+	}
+	
+	&:visited {
+  		color: blue;
+	}
+	
+	&:hover {		
+		border: 20px solid deepskyblue;
+		color: deepskyblue;		
 	}
 	
 	&:active {
