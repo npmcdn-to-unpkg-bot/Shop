@@ -6,12 +6,12 @@ var ItemsList = React.createClass ({
         
 	  var items = this.props.items.map(function(item, key) {
 		return (
-		  <li className="newv__tab-content__layoutitems" key = {key}>
-		    <Link className="newv__Categories newv__pages__items" to="/Motherboard/GIGABYTE-GA-78LMT-S2" >
-		      <figure className="newv__elementspagefigure">
-		        <div className={"newv__elementspagelink__img " + item.img}>
+		  <li className="goods__unit" key = {key}>
+		    <Link className="unit-value" to="/Motherboard/GIGABYTE-GA-78LMT-S2" >
+		      <figure className="unit-value__figure">
+		        <div className={"unit-value__img " + item.img}>
 		        </div>
-		        <figcaption className="newv__elementspage__figcaption">
+		        <figcaption className="unit-value__figcaption">
 		          {item.name}<br />{item.price}
 		        </figcaption>
 		      </figure>
@@ -20,7 +20,7 @@ var ItemsList = React.createClass ({
 		);
 	  });
 	  return (
-		<ul className="newv__product-section__tab-content newv__tab-content">
+		<ul className="goods__folder">
 		  {items}
         </ul>			
 	  );
