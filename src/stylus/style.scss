@@ -1,13 +1,7 @@
 // base.scss
 
 
-html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+
 html, body {
   height: 100%;
   font-size: 16px; }
@@ -22,64 +16,6 @@ html, body {
 }
 /*Header*/
 
-
-
-
-
-/*Content*/
-.product-section {
-    padding-top: 70px;
-    padding-bottom: 40px;
-    margin-bottom: 10px;
-    width: 87%;
-    margin: 2% auto; }
-.tab-content .imgCooling {
-  background-image: url("../img/Cooling/DEEPCOOL/DEEPCOOL%20Beta%2010.jpg"); }
-.tab-content .imgCooling, .imgCPU, .imgHDD, .imgMotherboard, .imgPowerSource, .imgRAM, .imgVideoAdapter {
-  content: "";
-  background-size: contain;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-position: center; }
-.tab-content .imgCPU {
-  background-image: url("../img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg"); }
-.tab-content .imgHDD {
-  background-image: url("../img/HDD/Hitachi/Hitachi%20Deskstar%20H3IKNAS30003272SE%203%20%D0%A2%D0%B1.jpg"); }
-.tab-content .imgMotherboard {
-  background-image: url("../img/motherboard/Asus/ASUS%20H61M-K.jpg"); }
-.tab-content .imgPowerSource {
-  background-image: url("../img/Power%20source/Aero%20Cool/Aerocool KCAS 500W.jpg"); }
-.tab-content .imgRAM {
-  background-image: url("../img/RAM/A-Data/A-DATA%20XPG%20V1%20%5BAX3U1600W4G11-DD%5D%208%20%D0%93%D0%B1.jpg"); }
-.tab-content .imgVideoAdapter {
-  background-image: url("../img/Video%20adapter/ASUS/Asus AMD Radeon R7 250 [R7250-1GD5].jpg"); }
-.product-section__tab-content {
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: center;
-}
-.tab-content__layoutCategories, .Categories, .tab-content__layoutitems {
-    flex-basis: 284px;
-	margin-top: 20px;
-}
-.tab-content .Categories {
-    width: 200px;
-    height: 250px;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin:20px }
-.header:after, .tab-content:after, footer, .itemsContent:after, .formAdd:after, .product-description:after, .description:after, .square:after, .squareElementsInclude:after, .itemscart__cellview:after, .descriptionitemlink:after, .descriptionitem__count:after, .paytable:after {
-  display: block;
-  content: '';
-  clear: both; }
-.tab-content {
-  text-align: center; }
-.Categories:hover {
-  -webkit-animation: movie 2s infinite;
-    border: none;
-    font-size: 18px;
-    
-}
 /*.pages__items {
     font-size: 14px;
     border: none;
@@ -98,13 +34,9 @@ html, body {
 @-webkit-keyframes movie {
   50% {
     font-size: 25px;
-    -webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0px 50px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0px 50px rgba(0, 0, 0, 0.5); }
   100% {
     font-size: 18px;
-    -webkit-box-shadow: 0 0px 0px transparent;
-    -moz-box-shadow: 0 0px 0px transparent;
     box-shadow: 0 0px 0px transparent; } }
 /*Login*/
 .modal-dialog__login-form {
@@ -116,7 +48,7 @@ html, body {
   border-radius: 4px; }
 .login-form {
   padding: 20px 40px 35px 40px;
-  background: -webkit-gradient(linear, 100% 100%, 100% 0%, color-stop(0.57, #e6e6e6), to(white)); 
+  background: (linear, 100% 100%, 100% 0%, color-stop(0.57, #e6e6e6), to(white)); 
     &__close{
   position: absolute;
   right: -10px;
