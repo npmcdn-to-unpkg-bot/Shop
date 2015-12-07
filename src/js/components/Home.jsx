@@ -17,11 +17,11 @@ var HomePageTemplate = React.createClass({
                 );
     });
       return (
-        <div className="product-description__layout-description">
+        <article className="product-description__layout-description">
           <ul className="product-section__tab-content tab-content" id="tab-content">
             {homePage}
            </ul>
-        </div>
+        </article>
     );
     }
 })
