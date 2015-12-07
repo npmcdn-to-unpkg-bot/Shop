@@ -9,7 +9,7 @@ var CategoryPage = React.createClass({
 	getDefaultProps: function () {
 		return {
 			items: [
-				{name:'GIGABYTE-GA-78LMT-S2', img:'elementspagelink__img--img1', price:'$ 555', link:'Motherboard/GIGABYTE-GA-78LMT-S2'}, 
+				{name:'GIGABYTE-GA-78LMT-S2', img:'elementspagelink__img--img1', price:'$ 555', link:'Motherboard1/GIGABYTE-GA-78LMT-S2'}, 
 				{name:'GIGABYTE-GA-78LMT-S3', img:'elementspagelink__img--img2', price:'$ 655', link:'GIGABYTE-GA-78LMT-S2'}, 
 				{name:'GIGABYTE-GA-78LMT-S4', img:'elementspagelink__img--img3', price:'$ 700', link:'GIGABYTE-GA-78LMT-S2'}, 
 				{name:'GIGABYTE-GA-78LMT-S5', img:'elementspagelink__img--img4', price:'$ 900', link:'GIGABYTE-GA-78LMT-S2'}     

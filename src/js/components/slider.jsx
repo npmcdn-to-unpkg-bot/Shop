@@ -1,31 +1,27 @@
 var Slider = React.createClass({
-  render: function () {  
-       var imgSlider = this.props.imgSlider.map(function(category, key) {
-      return (
-                <div className="slider-img" ref={(ref) => this.myTextInput = ref}  key={key}>
-                    <div className="slider-img__big-img big-img">
-                    <img className="big-img__positioner" src={category.img}/>
-                </div>
-                    <div className="slider-img__min-img min-img">
-                        <div className="min-img__arrow min-img__arrow-left" onclick="sliderObj.leftSlide();"></div>
-                            <img className="min-img--style" src={category.minImg1}/>
-                            <img className="min-img--style" src={category.minImg2}/>
-                            <img className="min-img--style" src={category.minImg3}/>
-                            <img className="min-img--style" src={category.minImg4}/> 
-                            <img className="min-img--style" src={category.minImg5}/>
-                        <div className="min-img__arrow min-img__arrow-right" onclick="sliderObj.rightSlide();"></div>
-                    </div>
-                </div> 
-                );
-              });
-        return (
-              <div className="product-description__slider-img">
-                {imgSlider}
-              </div>
+    getDefaultProps: function () {
+        return {
+            imgSlider: [
+                {
+                img: 'img/CPU/Intel/Intel%20Celeron%20G1620%20OEM.jpg',
+                minImg1: 'img/CPU/Intel/Intel%20Pentium%20G2020%20OEM.jpg',
+                minImg2:'img/CPU/Intel/Intel%20Pentium%20G3220%20BOX.jpg',
+                minImg3: 'img/CPU/Intel/Intel%20Pentium%20G3420%20OEM.jpg',
+                minImg4: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',
+                minImg5: 'img/CPU/Intel/Intel%20Pentium%20G3440%20BOX.jpg',
+                }
+            ],
+        }  
+    },
+    render: function () {
+    	return (
+    	<div>
+            <SliderTemplate imgSlider={this.props.imgSlider} />
+    	</div>
     );
   }
+})         
 
-})
 
 
 
