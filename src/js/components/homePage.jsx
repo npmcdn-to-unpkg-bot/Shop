@@ -24,9 +24,16 @@ var HomePage = React.createClass({
 render: function () {
     return (
     <div className="page">
-        <Header />
-        <HomePageTemplate homePage={this.props.homePage} /> 
-        <Footer />
+        <div className="page__header"> 
+            <Header />
+        </div>
+        <div className="page__content"> 
+            <HomePageTemplate homePage={this.props.homePage} />
+        </div>
+        <div className="page__footer"> 
+            <Footer />
+        </div>
+        {this.props.params.id}
     </div>
     );
   }

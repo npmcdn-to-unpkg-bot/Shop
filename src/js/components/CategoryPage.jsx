@@ -44,12 +44,12 @@ var CategoryPage = React.createClass({
 				<div className="page__header">
 					<Header />
 				</div>
-
+                <div className="page__content">   
 					<Navigation />
 
 					<article className="newv__elementspage newv__elementspage--style">        
 						<div className="newv__viewmode">
-							<Link className="newv__elementspagelink" >
+							<Link className="newv__elementspagelink" to="/Motherboard/" >
 							List View
 							</Link>
 						</div>          
@@ -57,8 +57,11 @@ var CategoryPage = React.createClass({
 						<div>
 							Seconds Elapsed: {Math.floor((this.state.secondsElapsed/3600)%24) + 'h ' + Math.floor((this.state.secondsElapsed/60)%60) + 'm ' + this.state.secondsElapsed%60 + 'sec'}
 						</div>
-					</article>		
-				<Footer />
+					</article>
+                </div>
+                <div className="page__footer">
+				    <Footer />
+                </div>
 			</div>		
 		);
 	}

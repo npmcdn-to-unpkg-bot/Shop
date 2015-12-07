@@ -6,7 +6,7 @@ var ItemsList = React.createClass ({
 	  var items = this.props.items.map(function(item, key) {
 		return (
 		  <li className="newv__tab-content__layoutitems" key = {key}>
-		    <Link className="newv__Categories newv__pages__items" query={{ foo: 'bar' }}  to="/Motherboard/GIGABYTE-GA-78LMT-S2">
+		    <Link className="newv__Categories newv__pages__items" to="/Motherboard/" query={{ foo: 'bar' }}  >
 		      <figure className="newv__elementspagefigure">
 		        <div className={"newv__elementspagelink__img " + item.img}>
 		        </div>

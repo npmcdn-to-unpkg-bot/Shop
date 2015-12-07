@@ -41,8 +41,10 @@ var DescriptionPage = React.createClass({
     	return (
     	<Router>
         	<Route path="/" component={HomePage} /> 
-        	<Route path="Motherboard" component={CategoryPage} />
-        	<Route path=":id" component={Footer} />
+        	<Route path="Motherboard" component={CategoryPage}>
+        	   
+            </Route>
+            <Route path="Motherboard/:id" component={1} />
     	</Router>
     );
   }
