@@ -1,7 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
-var productDescriptionTemp = React.createClass({
+var ProductDescriptionTemplate = React.createClass({
+     
     render: function () {       
     var description = this.props.description.map(function(description, key) {
       return (
@@ -31,9 +32,10 @@ var productDescriptionTemp = React.createClass({
       );
     });
     return (
-      <div className="">
-        {description}
-      </div>
+        <article className="content">
+            <Slider />
+            {description}
+        </article>
     );
-  }
+    }
 })

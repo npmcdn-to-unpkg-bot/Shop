@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 var HomePageTemplate = React.createClass({
+
   render: function () {    
     var homePage = this.props.homePage.map(function(homePage, key) {
         return (
@@ -12,6 +13,7 @@ var HomePageTemplate = React.createClass({
                             <figcaption>{homePage.category}</figcaption>
                         </figure>
                     </Link>
+
             </li>
         );
     });
