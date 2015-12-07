@@ -1,3 +1,12 @@
+.header, .footer, .header__element, .product-section, .tab-content__layoutCategories, .tab-content__layoutitems, tab-content__layoutadd, .Categories, .modal-dialog__login-form, .login-form__input, .navbar, .navbar__link, .product-section__product-description, .elementspage, .cartpage {
+      box-sizing: border-box;}
+.header__element, .tab-content__layoutCategories, .tab-content__layoutitems, tab-content__layoutadd, .Categories, .navbar__link,  .breadcrumb__list, .min-img__arrow, .min-img__arrow, .min-img--style, .layout-description__header, .layout-description__img-star, .add-cart__btn, .lineSocial__line-social, .addressinfo__text,   {
+    display:inline-block;
+}
+.header__element--logo, .header-element__authorization--img, .header-element__basket--img, .product-description__slider-img, .product-description__layout-description, .layout-description__quantiti, {
+      float: left;
+}
+
 @import "header.scss";
 @import "content.scss";
 @import "footer.scss";
