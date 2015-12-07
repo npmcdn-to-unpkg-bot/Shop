@@ -17,21 +17,21 @@ var Navigation = React.createClass ({
   },
 	
 	render: function () {
-        var nav = this.props.nav.map(function(nav, key) {
-		return (
-       	  	<Link className="page__navbar__link" to="/Motherboard" key={key}>
-              <div className={"page__navbar__img page__navbar__img--" + nav.img}></div>
-            <span className="caption">{nav.name}</span>
-        	</Link> 
+    	var nav = this.props.nav.map(function(nav, key) {
+			return (
+       	  		<Link className="navbar__link" to="/Motherboard" key={key}>
+              	<div className={"navbar__img navbar__img--" + nav.img}></div>
+            	<span className="caption">{nav.name}</span>
+        		</Link> 
     	
-     );
-    });	
-	  return (
-		<div className="page__menu">
-            <nav className="page__navbar page__navbar--desktop">
-		      {nav}
-            </nav>
-        </div>		
-	  );
+     		);
+    	});	
+		return (
+			<div className="page__menu">
+            	<nav className="navbar navbar--desktop">
+		      		{nav}
+            	</nav>
+        	</div>		
+	  	);
     }
 })
