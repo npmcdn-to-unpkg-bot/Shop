@@ -154,5 +154,5 @@ gulp.task('build', function(callback) {
   runSequence(['libs', 'react', 'style-build', 'images', 'html',  'JS' ], 'JS1', callback)
 });
 gulp.task('default', function(callback) {
-  runSequence('build', 'server', callback)
+  runSequence(['build'], 'server', callback)
 });
