@@ -5,67 +5,77 @@ header:after {
 }
 
 .page__header {
+    align-self: flex-start;
 	width: 100%;
 	height: 70px;
 	position: fixed;
 	z-index: 1;
 }
 
-.all__header{	
+.header{	
 	font-size: 20px;
 	background: radial-gradient(center, circle farthest-side, #000, #7a7a7a 80%);
   	color: white;
-	&__elements { 
+	&__element { 
 		display: inline-block;
 		border: 1px solid #b8b8b8;
         color: white;
-        margin: 17px 5px 5px; }
-    &__elements--logo {
+        margin: 17px 5px 5px; 
+    }
+    &__element--logo {
 		border: none;
         width: 53px;
         height: 40px;
         background: url("../img/Symbol/4.gif");
         background-repeat: no-repeat;
-        background-size: contain; }
-	&__elements--search, &__elements--basket, &__elements--authorization {
-        float: right; }
-    &__elements--basket, &__elements--authorization {
+        background-size: contain; 
+    }
+	&__element--search, &__element--basket, &__element--authorization {
+        float: right; 
+    }
+    &__element--basket, &__element--authorization {
         border: 1px solid black;
         border-radius: 4px;
         padding: 5px;
-        text-decoration: none; }
-	&__elements--search  {
+        text-decoration: none; 
+    }
+	&__element--search  {
         margin-top: 22px;
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url("../img/Symbol/search.png");
         width: 30%;
     	background-position-x: 100%;
-        height: 22px; }  
+        height: 22px; 
+    }  
 }
 
-.all__header__elements--logo, .all__header-elements__authorization--img, .all__header-elements__basket--img {
+.header__element--logo, .header-element__authorization--img, .header-element__basket--img {
 	float: left;
 }
 
-.all__header-elements{
+.header-element{
     &__basket--img {
-        background-image: url("../img/Symbol/shopping-cart.gif"); }
+        background-image: url("../img/Symbol/shopping-cart.gif"); 
+    }
     &__authorization--img {
-        background-image: url("../img/Symbol/logo-login.png"); }
+        background-image: url("../img/Symbol/logo-login.png"); 
+    }
     &__authorization--img, &__basket--img {
         background-size: contain;
         width: 20px;
         height: 20px;
-        background-repeat: no-repeat;}
+        background-repeat: no-repeat;
+    }
 	&__text--hidden {
-        display: none; }
+        display: none; 
+    }
 }   
-.all__header__elements--search{
+.header__element--search{
     color:black;
 }
 @media screen and (min-width:480px) {
-	.all__header-elements {
+	.header-element {
 		&__authorization--img, &__basket--img {
 			padding-left: 10px;
 		}
@@ -74,14 +84,14 @@ header:after {
 		}
 	}
 	
-	.all__header {
-		&__elements {
+	.header {
+		&__element {
 			margin: 10px 15px;
 		}
-		&__elements--basket, &__elements--authorization {
+		&__element--basket, &__element--authorization {
 			padding: 10px;
 		}
-		&__elements--search {
+		&__element--search {
 			margin-top: 22px;
 			width: 170px;
 			background-position-x: 147px;        
@@ -90,9 +100,8 @@ header:after {
 }
 
 @media screen and (min-width:480px) and (max-width:667px) {
-	.all__header__elements--search {
+	.header__element--search {
 		width: 23%;
 		background-position-x: 100%;
-        
 	}
 }
