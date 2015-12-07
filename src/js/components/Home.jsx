@@ -5,8 +5,8 @@ var HomePageTemplate = React.createClass({
   render: function () {    
     var homePage = this.props.homePage.map(function(homePage, key) {
         return (
-            <li className="tab-content__layoutCategories" key={key}>
-                    <Link className="Categories Motherboard" to={homePage.href} >
+            <li className="categories__layoutCategories" key={key}>
+                    <Link className="category" to={homePage.href} >
                         <figure>       
                             <div className={'img'+homePage.category}></div>
                             <figcaption>{homePage.category}</figcaption>
@@ -16,8 +16,8 @@ var HomePageTemplate = React.createClass({
         );
     });
       return (
-        <article className="product-description__layout-description">
-          <ul className="product-section__tab-content tab-content" id="tab-content">
+        <article className="content">
+          <ul className="content__categories categories" id="tab-content">
             {homePage}
            </ul>
         </article>

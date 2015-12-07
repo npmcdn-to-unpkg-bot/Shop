@@ -1,6 +1,13 @@
-.header, .footer, .header__element, .product-section, .tab-content__layoutCategories, .tab-content__layoutitems, tab-content__layoutadd, .Categories, .modal-dialog__login-form, .login-form__input, .navbar, .navbar__link, .product-section__product-description, .elementspage, .cartpage {
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+.header, .footer, .header__element, .product-section, .categories__layoutCategories, .tab-content__layoutitems, tab-content__layoutadd, .category, .modal-dialog__login-form, .login-form__input, .navbar, .navbar__link, .product-section__product-description, .elementspage, .cartpage {
       box-sizing: border-box;}
-.header__element, .tab-content__layoutCategories, .tab-content__layoutitems, tab-content__layoutadd, .Categories, .navbar__link,  .breadcrumb__list, .min-img__arrow, .min-img__arrow, .min-img--style, .layout-description__header, .layout-description__img-star, .add-cart__btn, .lineSocial__line-social, .addressinfo__text,   {
+.header__element, .categories__layoutCategories, .tab-content__layoutitems, tab-content__layoutadd, .category, .navbar__link,  .breadcrumb__list, .min-img__arrow, .min-img__arrow, .min-img--style, .layout-description__header, .layout-description__img-star, .add-cart__btn, .lineSocial__line-social, .addressinfo__text,   {
     display:inline-block;
 }
 .header__element--logo, .header-element__authorization--img, .header-element__basket--img, .product-description__slider-img, .product-description__layout-description, .layout-description__quantiti, {
@@ -11,3 +18,4 @@
 @import "content.scss";
 @import "footer.scss";
 @import "navigation.scss";
+@import "homePage.scss";
