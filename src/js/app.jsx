@@ -23,7 +23,10 @@ var app = React.createClass({
         description: [
         	{name:'GIGABYTE-GA-78LMT-S2',
         	description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
-        	price: '$ 555', category: 'Motherboard'}
+        	price: '$ 555', category: 'Motherboard'},
+            {name:'GIGABYTE-GA-78LMT-S3',
+        	description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
+        	price: '$ 555', category: 'CPU'}
         ],      
         breadcrumb: [
         	{name:'GIGABYTE-GA-78LMT-S2',
@@ -40,7 +43,7 @@ var app = React.createClass({
     	return (
     	<Router>
         	<Route path="/" component={HomePage} /> 
-            <Route path={category} component={CategoryPage} />
+            <Route path={category} component={CategoryMotherboard} />
             <Route path={path} component={Description} />
     	</Router>
     );
