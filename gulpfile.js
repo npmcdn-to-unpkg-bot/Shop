@@ -3,6 +3,7 @@ babel = require('gulp-babel'),
 sass = require('gulp-sass'),
 watch = require('gulp-watch'),
 babel = require('gulp-babel'),
+runSequence = require('run-sequence'),
 plumber = require('gulp-plumber'),
 concat = require('gulp-concat'),
 prefixer = require('gulp-autoprefixer'),
@@ -146,8 +147,10 @@ gulp.task('watch', function(){
     });
 });
 
-gulp.task('build', ['libs', 'react', 'style-build', 'images', 'html',  'JS' ]);
-
+gulp.task('build', function(callback) {
+  runSequence(['libs', 'react', 'style-build', 'images', 'html',  'JS' ], 'JS1',
+              callback);
+});
 gulp.task('server', ['webserver', 'watch']);
 
 gulp.task('default', ['build', 'server']);
