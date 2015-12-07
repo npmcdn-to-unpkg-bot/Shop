@@ -45,6 +45,7 @@
     "plumber": "^0.4.8",
     "react-dom": "^0.14.3",
     "rimraf": "^2.4.3",
+    "run-sequence": "^1.1.5",
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
