@@ -39,7 +39,7 @@ var Description = React.createClass({
             {name:'GIGABYTE-GA-78LMT-S5',
             description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
              price: '$ 555', category: 'Motherboard'}
-            ],   
+			],   
         }  
     },
     render: function () {

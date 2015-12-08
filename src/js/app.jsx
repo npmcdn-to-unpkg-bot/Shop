@@ -10,7 +10,7 @@ var app = React.createClass({
     	return (
     	<Router>
         	<Route path="/" component={HomePage} /> 
-            <Route path="/:category" component={CategoryMotherboard} />
+            <Route path="/:category" component={Category} />
             <Route path="/:category/:id" component={Description} />
     	</Router>
     );
