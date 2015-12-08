@@ -94,7 +94,7 @@ var Category = React.createClass({
 			
                 <div className="page__content">
 			
-					<Navigation />
+					<Navigation nav={this.getItems(this.state.category)} />
 
 					<article className="goods goods--style">      
 						<div className="goods__view">
