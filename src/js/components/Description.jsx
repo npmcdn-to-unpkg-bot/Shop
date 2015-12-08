@@ -33,6 +33,7 @@ var ProductDescriptionTemplate = React.createClass({
     });
     return (
         <article className="content">
+            
             <Slider />
             {description}
         </article>

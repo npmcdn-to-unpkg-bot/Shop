@@ -1,19 +1,24 @@
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
 var Breadcrumb = React.createClass({
   render: function () {  
-      var breadcrumb = this.props.breadcrumb.map(function(category, key) {
-      return (
+      var breadcrumb = this.props.breadcrumb.map(function(breadcrumb, key) {
+        return (
             <ol className="product-description__breadcrumb breadcrumb" key={key}>
-                <li className="breadcrumb__list"><a href="/">Главная</a></li>
-                <li className="breadcrumb__list"><a href={category.category}>{category.category}</a></li>
-                <li className="breadcrumb__list">{category.name}</li>
+                <li className="breadcrumb__list">
+                    <Link to="/">Главная</Link></li>
+                <li className="breadcrumb__list">
+                    <Link to={breadcrumb.category}>{breadcrumb.category}</Link>
+                </li>
+                <li className="breadcrumb__list">{breadcrumb.name}</li>
             </ol>  
             );
-    });
-
+        });
         return (
-      <div >
-        {breadcrumb}
-      </div>
-    );
+            <div >
+                {breadcrumb}
+            </div>
+        );
   }
 })
