@@ -1,13 +1,13 @@
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 var HomePageTemplate = React.createClass({
   render: function () {    
-    var homePage = this.props.homePage.map(function(homePage, key) {
+    var homePage = this.props.homePage.map(function(category, key) {
         return (
             <li className="categories__layoutCategories" key={key}>
-                    <Link className="category" to={homePage.href} >
+                    <Link className="category" to={category.href} >
                         <figure>       
-                            <div className={'img'+homePage.category}></div>
-                            <figcaption>{homePage.category}</figcaption>
+                            <div className={'img'+category.category}></div>
+                            <figcaption>{category.category}</figcaption>
                         </figure>
                     </Link>
 

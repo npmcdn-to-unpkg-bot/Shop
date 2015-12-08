@@ -1,4 +1,5 @@
 import {Slider} from 'slider.jsx'
+import {Breadcrumb} from 'Breadcrumb.jsx'
 var ProductDescriptionTemplate = React.createClass({
     render: function () {       
     var description = this.props.description.map(function(description, key) {
@@ -30,7 +31,7 @@ var ProductDescriptionTemplate = React.createClass({
     });
     return (
         <article className="content">
-            
+            <Breadcrumb breadcrumb = {this.props.description} />
             <Slider />
             {description}
         </article>

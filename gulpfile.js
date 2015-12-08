@@ -103,15 +103,6 @@ gulp.task('images', function() {
         .pipe(imagemin())
         .pipe(gulp.dest(path.build.img));
 });
-gulp.task('react', function () {
-        return gulp.src(path.src.jsx)
-        .pipe(babel({
-            presets: ['es2015' , 'react']
-        }))
-        .pipe(concat('build.js'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.build.js));
-});
 /*Copy files in src folder*/
 gulp.task('html', function() {
     gulp.src(path.src.html)

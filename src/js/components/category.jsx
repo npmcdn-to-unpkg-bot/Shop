@@ -7,8 +7,7 @@ import {ItemsList} from 'ItemsList.jsx'
 var Category = React.createClass({
   	
 	getInitialState: function () {
-		return {
-			secondsElapsed: 0,
+		return {			
         	category: this.props.params.category,
         };
   	},
@@ -22,6 +21,11 @@ var Category = React.createClass({
 		}
     },
 	
+	componentWillReceiveProps: function (newProps) {
+		this.setState ({
+			category: newProps.params.category
+		})	
+	},
 	getDefaultProps: function () {
 		return {
 			Motherboard: [
@@ -32,7 +36,7 @@ var Category = React.createClass({
 		  	],
 			
             CPU: [
-				{category: 'CPU', name:'AMD A10-7870K OEM', img:'unit-value__img-cpu1', price:'$ 1555', link:'GIGABYTE-GA-78LMT-S2'}, 
+				{category: 'CPU', name:'AMD A10-7870K OEM', img:'unit-value__img-cpu1', price:'$ 1555', link:'AMD-A10-7870K-OEM'}, 
 				{category: 'CPU', name:'AMD FX-8300 OEM', img:'unit-value__img-cpu2', price:'$ 6035', link:'GIGABYTE-GA-78LMT-S3'}, 
 				{category: 'CPU', name:'Intel Pentium G3420 OEM', img:'unit-value__img-cpu3', price:'$ 7504', link:'GIGABYTE-GA-78LMT-S4'}, 
 			],
@@ -70,19 +74,7 @@ var Category = React.createClass({
 			],
 
 		}
-	},
-	
-	tick: function () {
-		this.setState({secondsElapsed: this.state.secondsElapsed + 1});	
-	},
-	
-	componentDidMount: function () {
-		this.interval = setInterval(this.tick, 1000);
-	},
-	
-	componentWillUnmount: function () {
-		clearInterval(this.interval);
-	},
+	},	
 
 	render: function () {
 		return (
@@ -94,7 +86,7 @@ var Category = React.createClass({
 			
                 <div className="page__content">
 			
-					<Navigation nav={this.getItems(this.state.category)} />
+					<Navigation />
 
 					<article className="goods goods--style">      
 						<div className="goods__view">
@@ -102,11 +94,7 @@ var Category = React.createClass({
 								List View
 							</Link>
 						</div>          
-						<ItemsList items={this.getItems(this.state.category)} />
-						<div>
-							Seconds Elapsed: {Math.floor((this.state.secondsElapsed/3600)%24) + 'h ' + Math.floor((this.state.secondsElapsed/60)%60) + 'm ' + this.state.secondsElapsed%60 + 'sec'}
-						</div>
-					
+						<ItemsList items={this.getItems(this.state.category)} />					
 					</article>
                 </div>
 											
