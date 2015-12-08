@@ -32,7 +32,7 @@ var Category = React.createClass({
 		  	],
 			
             CPU: [
-				{category: 'CPU', name:'AMD A10-7870K OEM', img:'unit-value__img-cpu1', price:'$ 1555', link:'GIGABYTE-GA-78LMT-S2'}, 
+				{category: 'CPU', name:'AMD A10-7870K OEM', img:'unit-value__img-cpu1', price:'$ 1555', link:'AMD-A10-7870K-OEM'}, 
 				{category: 'CPU', name:'AMD FX-8300 OEM', img:'unit-value__img-cpu2', price:'$ 6035', link:'GIGABYTE-GA-78LMT-S3'}, 
 				{category: 'CPU', name:'Intel Pentium G3420 OEM', img:'unit-value__img-cpu3', price:'$ 7504', link:'GIGABYTE-GA-78LMT-S4'}, 
 			],

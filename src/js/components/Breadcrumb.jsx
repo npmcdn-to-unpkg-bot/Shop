@@ -16,7 +16,8 @@ var Breadcrumb = React.createClass({
             );
         });
         return (
-            <div >
+            <div>
+            
                 {breadcrumb}
             </div>
         );

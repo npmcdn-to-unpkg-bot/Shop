@@ -5,6 +5,7 @@ import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 var HomePage = React.createClass({
     getDefaultProps: function () {
         return {
+           
             homePage: [
                 {name:'GIGABYTE-GA-78LMT-S2', category: 'Motherboard', href: '/Motherboard'},
                 {name:'GIGABYTE-GA-78LMT-S2', category: 'CPU', href: '/CPU'},

@@ -15,6 +15,7 @@ var Description = React.createClass({
             {id:'GIGABYTE-GA-78LMT-S3', items: 'items2'},
             {id:'GIGABYTE-GA-78LMT-S4', items: 'items3'},
             {id:'GIGABYTE-GA-78LMT-S5', items: 'items4'},
+            {id:'AMD-A10-7870K-OEM', items: 'items5'},
 
         ];
 		for (var i = 0; i <arrid.length; i++) {
@@ -22,6 +23,7 @@ var Description = React.createClass({
 				return this.props[arrid[i].items];
       		}					
 		}
+     
     },
     
     getDefaultProps: function () {
@@ -45,6 +47,11 @@ var Description = React.createClass({
             {name:'GIGABYTE-GA-78LMT-S5',
             description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
              price: '$ 555', category: 'Motherboard'}
+			],  
+            items5: [
+            {name:'AMD-A10-7870K-OEM',
+            description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.',
+             price:'$ 1555', category: 'CPU'}
 			],   
         }  
     },
@@ -55,8 +62,8 @@ var Description = React.createClass({
                 <Header />
             </div>
             <div className="page__content"> 
-                <Breadcrumb breadcrumb = {this.getItemDescription(this.state.id)} />
-                <ProductDescriptionTemplate description={this.getItemDescription(this.state.id)} />
+                <ProductDescriptionTemplate description={this.getItemDescription(this.state.id)} >
+                </ProductDescriptionTemplate>
             </div>
             <div className="page__footer"> 
                 <Footer />
