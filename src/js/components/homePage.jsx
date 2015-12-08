@@ -7,13 +7,13 @@ var HomePage = React.createClass({
         return {
            
             homePage: [
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'Motherboard', href: '/Motherboard'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'CPU', href: '/CPU'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'RAM', href: '/RAM'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'VideoAdapter', href: '/VideoAdapter'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'HDD', href: '/HDD'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'PowerSource', href: '/PowerSource'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'Cooling', href: '/Cooling'}
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'Motherboard', href: '/Categories/Motherboard'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'CPU', href: '/Categories/CPU'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'RAM', href: '/Categories/RAM'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'VideoAdapter', href: '/Categories/VideoAdapter'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'HDD', href: '/Categories/HDD'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'PowerSource', href: '/Categories/PowerSource'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'Cooling', href: '/Categories/Cooling'}
             ]
         }
   },

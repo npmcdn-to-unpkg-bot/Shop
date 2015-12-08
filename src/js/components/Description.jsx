@@ -1,5 +1,7 @@
 import {Slider} from 'slider.jsx'
 import {Breadcrumb} from 'Breadcrumb.jsx'
+import {Cart} from 'cart.jsx'
+	
 var ProductDescriptionTemplate = React.createClass({
     render: function () {       
     var description = this.props.description.map(function(description, key) {
@@ -15,7 +17,7 @@ var ProductDescriptionTemplate = React.createClass({
           <input className="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" defaultValue="1"/>
                     <div className="layout-description__add-cart add-cart">
                         <div className="add-cart__price">Price: {description.price}</div>
-                        <a className="add-cart__btn" href="CartPage.html">
+                        <a className="add-cart__btn" href='CartPage.html'>
                             Add to cart
                         </a>
                     </div>

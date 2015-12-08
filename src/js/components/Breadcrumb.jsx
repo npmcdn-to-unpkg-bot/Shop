@@ -9,15 +9,14 @@ var Breadcrumb = React.createClass({
                 <li className="breadcrumb__list">
                     <Link to="/">Главная</Link></li>
                 <li className="breadcrumb__list">
-                    <Link to={breadcrumb.category}>{breadcrumb.category}</Link>
+                    <Link to={'Categories/' + breadcrumb.category}>{breadcrumb.category}</Link>
                 </li>
                 <li className="breadcrumb__list">{breadcrumb.name}</li>
             </ol>  
             );
         });
         return (
-            <div>
-            
+            <div>            
                 {breadcrumb}
             </div>
         );
