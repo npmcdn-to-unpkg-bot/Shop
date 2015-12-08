@@ -6,8 +6,8 @@ var HomePage = React.createClass({
     getDefaultProps: function () {
         return {
             homePage: [
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'Motherboard', href: '/Motherboard/'},
-                {name:'GIGABYTE-GA-78LMT-S2', category: 'CPU', href: 'CPU'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'Motherboard', href: '/Motherboard'},
+                {name:'GIGABYTE-GA-78LMT-S2', category: 'CPU', href: '/CPU'},
                 {name:'GIGABYTE-GA-78LMT-S2', category: 'RAM', href: '/RAM'},
                 {name:'GIGABYTE-GA-78LMT-S2', category: 'VideoAdapter', href: '/VideoAdapter'},
                 {name:'GIGABYTE-GA-78LMT-S2', category: 'HDD', href: '/HDD'},

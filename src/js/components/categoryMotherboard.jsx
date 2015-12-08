@@ -3,26 +3,33 @@ import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 var CategoryMotherboard = React.createClass({
   	getInitialState: function () {
-		return {secondsElapsed: 0};
+		return {secondsElapsed: 0,
+        category: this.props.params.category,
+               };
   	},
-	
+    getItems: function(category) {
+        if (category =='Motherboard')  {
+          return this.props.motherboard;
+      }      
+        if (category =='CPU')  {
+          return this.props.CPU;
+      }
+    },
 	getDefaultProps: function () {
 		return {
-			items: [
-				{name:'GIGABYTE-GA-78LMT-S2', img:'unit-value__img-img1', price:'$ 555', link:'Motherboard/GIGABYTE-GA-78LMT-S2'}, 
-				{name:'GIGABYTE-GA-78LMT-S3', img:'unit-value__img-img2', price:'$ 655', link:'GIGABYTE-GA-78LMT-S2'}, 
-				{name:'GIGABYTE-GA-78LMT-S4', img:'unit-value__img-img3', price:'$ 700', link:'GIGABYTE-GA-78LMT-S2'}, 
-				{name:'GIGABYTE-GA-78LMT-S5', img:'unit-value__img-img4', price:'$ 900', link:'GIGABYTE-GA-78LMT-S2'}     
+			motherboard: [
+				{category: 'Motherboard', name:'GIGABYTE-GA-78LMT-S2', img:'unit-value__img-img1', price:'$ 555', link:'GIGABYTE-GA-78LMT-S2'}, 
+				{name:'GIGABYTE-GA-78LMT-S3', img:'unit-value__img-img2', price:'$ 655', link:'GIGABYTE-GA-78LMT-S3'}, 
+				{name:'GIGABYTE-GA-78LMT-S4', img:'unit-value__img-img3', price:'$ 700', link:'GIGABYTE-GA-78LMT-S4'}, 
+				{name:'GIGABYTE-GA-78LMT-S5', img:'unit-value__img-img4', price:'$ 900', link:'GIGABYTE-GA-78LMT-S5'}     
 		  	],
-			nav:[
-				{name: 'Motherboard', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'mother'},
-				{name: 'CPU', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'cpu'},
-				{name: 'RAM', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'ram'},
-				{name: 'VideoAdapter', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'video'},
-				{name: 'HDD', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'hdd'},
-				{name: 'PowerSource', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'power'},
-				{name: 'Cooling', href: 'Motherboard/GIGABYTE-GA-78LMT-S2', img: 'cooling'}
-			],
+            CPU: [
+				{name:'CPUCPUCPUCPUCPUCPUCPUCPUCPUCPU', img:'unit-value__img-img1', price:'$ 234234', link:'GIGABYTE-GA-78LMT-S2'}, 
+				{name:'GIGABYTE-GA-78LMT-S3', img:'unit-value__img-img2', price:'$ 6035', link:'GIGABYTE-GA-78LMT-S3'}, 
+				{name:'GIGABYTE-GA-78LMT-S4', img:'unit-value__img-img3', price:'$ 7504', link:'GIGABYTE-GA-78LMT-S4'}, 
+				{name:'GIGABYTE-GA-78LMT-S5', img:'unit-value__img-img4', price:'$ 9540', link:'GIGABYTE-GA-78LMT-S5'}     
+		  	],
+
 		}
 	},
 	
@@ -54,7 +61,7 @@ var CategoryMotherboard = React.createClass({
 							List View
 							</Link>
 						</div>          
-						<ItemsList items={this.props.items} />
+						<ItemsList items={this.getItems(this.state.category)} />
 						<div>
 							Seconds Elapsed: {Math.floor((this.state.secondsElapsed/3600)%24) + 'h ' + Math.floor((this.state.secondsElapsed/60)%60) + 'm ' + this.state.secondsElapsed%60 + 'sec'}
 						</div>

@@ -37,14 +37,11 @@ var app = React.createClass({
     }
   	},	
 	render: function () {
-        var category = this.props.description[0].category;
-        var name = this.props.description[0].name;
-        var path = '/' + category +'/' + name;
     	return (
     	<Router>
         	<Route path="/" component={HomePage} /> 
-            <Route path={category} component={CategoryMotherboard} />
-            <Route path={path} component={Description} />
+            <Route path="/:category" component={CategoryMotherboard} />
+            <Route path="/:category/:id" component={Description} />
     	</Router>
     );
   }
