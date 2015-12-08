@@ -71,9 +71,12 @@ gulp.task('libs', function() {
 /* JSX-build*/
 
 gulp.task('jsBuild', function () {
-    return browserify({entries: 'src/js/app.jsx',
-            paths: ['src/js/components/', 'src/js/', 'node_modules/'],
-                       extensions: ['.jsx'], debug: true})
+    return browserify({
+        entries: 'src/js/app.jsx',
+        paths: ['src/js/components/', 'src/js/', 'node_modules/'],
+        extensions: ['.jsx'],
+        debug: true}
+    )
     .transform(babelify.configure({
         presets: ['es2015','react']
 }))
