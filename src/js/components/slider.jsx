@@ -1,3 +1,4 @@
+import {SliderTemplate} from 'sliderTemplate.jsx'
 var Slider = React.createClass({
     getDefaultProps: function () {
         return {
@@ -21,8 +22,4 @@ var Slider = React.createClass({
     );
   }
 })         
-
-
-
-
- 
+export {Slider} 

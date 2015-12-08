@@ -23,3 +23,4 @@ var Header = React.createClass ({
 		);
 	}
 })
+export {Header}

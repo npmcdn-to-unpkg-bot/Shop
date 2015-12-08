@@ -1,8 +1,5 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+import {Slider} from 'slider.jsx'
 var ProductDescriptionTemplate = React.createClass({
-     
     render: function () {       
     var description = this.props.description.map(function(description, key) {
       return (
@@ -40,3 +37,5 @@ var ProductDescriptionTemplate = React.createClass({
     );
     }
 })
+
+export {ProductDescriptionTemplate}

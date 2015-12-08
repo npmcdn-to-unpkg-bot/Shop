@@ -1,7 +1,7 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
-
+import {HomePageTemplate} from 'Home.jsx'
+import {Header} from 'Header.jsx'
+import {Footer} from 'Footer.jsx'
+import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 var HomePage = React.createClass({
     getDefaultProps: function () {
         return {
@@ -33,4 +33,7 @@ var HomePage = React.createClass({
         );
   }
 })
+
+
+export {HomePage}
 

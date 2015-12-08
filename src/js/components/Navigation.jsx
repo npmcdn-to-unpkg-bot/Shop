@@ -35,3 +35,4 @@ var Navigation = React.createClass ({
 	  	);
     }
 })
+export {Navigation}

@@ -5,3 +5,4 @@ var Footer = React.createClass ({
 		);
 	}
 })
+export {Footer}

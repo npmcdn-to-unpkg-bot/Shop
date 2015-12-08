@@ -26,3 +26,4 @@ var ItemsList = React.createClass ({
 	  );
 	}
 })
+export {ItemsList}

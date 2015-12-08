@@ -29,3 +29,4 @@ var SliderTemplate = React.createClass({
     }
 
 })
+export {SliderTemplate}

@@ -1,3 +1,8 @@
+import {ProductDescriptionTemplate} from 'Description.jsx'
+import {Header} from 'Header.jsx'
+import {Footer} from 'Footer.jsx'
+import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
+import {Breadcrumb} from 'Breadcrumb.jsx'
 var Description = React.createClass({
     getInitialState: function () {
 		return {
@@ -11,7 +16,6 @@ var Description = React.createClass({
         if (id =='GIGABYTE-GA-78LMT-S3')  {
           return this.props.items2;
         }        
-        
     },
     
     getDefaultProps: function () {
@@ -56,3 +60,4 @@ var Description = React.createClass({
   	}
 });
 
+export {Description}

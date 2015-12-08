@@ -22,3 +22,4 @@ var Breadcrumb = React.createClass({
         );
   }
 })
+export {Breadcrumb}

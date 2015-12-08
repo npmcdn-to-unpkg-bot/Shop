@@ -41,7 +41,8 @@ var path = {
     },
     watch: {
         html: 'src/**/*.html',
-        js: 'src/js/**/*.*',
+        js: 'src/js/**/*.js',
+        jsx: 'src/js/**/*.jsx',
         style: 'src/stylus/**/*.scss',
         img: 'src/img/**/*.*'
     },
@@ -68,14 +69,18 @@ gulp.task('libs', function() {
 })
 
 /* JSX-build*/
-gulp.task('react', function () {
-        return gulp.src(path.src.jsx)
-        .pipe(babel({
-            presets: ['es2015' , 'react']
-        }))
-        .pipe(concat('build.js'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.build.js));
+
+gulp.task('jsBuild', function () {
+    return browserify({entries: 'src/js/app.jsx',
+            paths: ['src/js/components/', 'src/js/', 'node_modules/'],
+                       extensions: ['.jsx'], debug: true})
+    .transform(babelify.configure({
+        presets: ['es2015','react']
+}))
+    .bundle()
+    .on("error", function (err) { console.log("Error : " + err.message); })
+    .pipe(source('build.js'))
+    .pipe(gulp.dest(path.build.js));
 });
 /* CSS-build*/
 gulp.task('style-build', function(){
@@ -95,20 +100,15 @@ gulp.task('images', function() {
         .pipe(imagemin())
         .pipe(gulp.dest(path.build.img));
 });
-gulp.task('JS1', function () {
-		browserify({
-			entries: 'build/js/build.js',
-			debug: true,
-			paths: ['build/', 'node_modules/'],
-			insertGlobals: true,
-		})
-        .transform(babelify)
-		.bundle()
-        .on("error", function (err) { console.log("Error : " + err.message); })
-        .pipe(plumber())
-        .pipe(source('build.js'))
-		.pipe(gulp.dest('build/js/'));
-});	
+gulp.task('react', function () {
+        return gulp.src(path.src.jsx)
+        .pipe(babel({
+            presets: ['es2015' , 'react']
+        }))
+        .pipe(concat('build.js'))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(path.build.js));
+});
 /*Copy files in src folder*/
 gulp.task('html', function() {
     gulp.src(path.src.html)
@@ -139,19 +139,13 @@ gulp.task('watch', function(){
     watch([path.watch.img], function(event, cb) {
         gulp.start('images');
     });
-    watch([path.watch.js], function(event, cb) {
-        gulp.start('react');
-    });
-        watch([path.watch.js], function(event, cb) {
-        gulp.start('JS');
-    });        
-    watch([path.watch.js], function(event, cb) {
-        gulp.start('JS1');
+    watch([path.watch.jsx], function(event, cb) {
+        gulp.start('jsBuild');
     });
 });
 gulp.task('server', ['webserver', 'watch']);
 gulp.task('build', function(callback) {
-  runSequence(['libs', 'react', 'style-build', 'images', 'html',  'JS' ], 'JS1', callback)
+  runSequence(['libs', 'jsBuild', 'style-build', 'images', 'html',  'JS' ], callback)
 });
 gulp.task('default', function(callback) {
   runSequence(['build'], 'server', callback)

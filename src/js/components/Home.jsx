@@ -1,8 +1,5 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 var HomePageTemplate = React.createClass({
-
   render: function () {    
     var homePage = this.props.homePage.map(function(homePage, key) {
         return (
@@ -26,3 +23,4 @@ var HomePageTemplate = React.createClass({
     );
     }
 })
+export {HomePageTemplate}
