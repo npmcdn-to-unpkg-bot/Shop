@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 import {HomePage} from 'homePage.jsx'
-import {CategoryMotherboard} from 'categoryMotherboard.jsx'
+import {Category} from 'category.jsx'
 import {Description} from 'DescriptionPage.jsx'
 
 var app = React.createClass({

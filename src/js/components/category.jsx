@@ -1,6 +1,9 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+import {HomePageTemplate} from 'Home.jsx'
+import {Header} from 'Header.jsx'
+import {Footer} from 'Footer.jsx'
+import {Router, Route, IndexRoute, Link, IndexLink} from 'react-router'
+import {Navigation} from 'Navigation.jsx'
+import {ItemsList} from 'ItemsList.jsx'
 var Category = React.createClass({
   	
 	getInitialState: function () {
@@ -115,3 +118,4 @@ var Category = React.createClass({
 		);
 	}
 })
+export {Category}
