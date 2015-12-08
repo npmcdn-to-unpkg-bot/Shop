@@ -10,12 +10,18 @@ var Description = React.createClass({
                };
   	},
     getItemDescription: function(id) {
-        if (id =='GIGABYTE-GA-78LMT-S2')  {
-          return this.props.items1;
-        }      
-        if (id =='GIGABYTE-GA-78LMT-S3')  {
-          return this.props.items2;
-        }        
+        var arrid = [
+            {id:'GIGABYTE-GA-78LMT-S2', items: 'items1'},
+            {id:'GIGABYTE-GA-78LMT-S3', items: 'items2'},
+            {id:'GIGABYTE-GA-78LMT-S4', items: 'items3'},
+            {id:'GIGABYTE-GA-78LMT-S5', items: 'items4'},
+
+        ];
+		for (var i = 0; i <arrid.length; i++) {
+            if (id == arrid[i].id) {				
+				return this.props[arrid[i].items];
+      		}					
+		}
     },
     
     getDefaultProps: function () {
