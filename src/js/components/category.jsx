@@ -11,48 +11,20 @@ var Category = React.createClass({
   	},
     
 	getItems: function(category) {
-		/*var arr = [
-			{name: 'Motherboard', value: this.props.Motherboard},
-			{name: 'CPU', value: this.props.CPU},
-			{name: 'RAM', value: this.props.RAM},
-			{name: 'VideoAdapter', value: this.props.VideoAdapter},
-			{name: 'HDD', value: this.props.HDD}, 
-			{name: 'PowerSource', value: this.props.PowerSource},
-			{name: 'Cooling', value: this.props.Cooling} 
+		var arr = [
+			{name: 'Motherboard'},
+			{name: 'CPU'},
+			{name: 'RAM'},
+			{name: 'VideoAdapter'},
+			{name: 'HDD'}, 
+			{name: 'PowerSource'},
+			{name: 'Cooling'} 
 		];
 		for (var i = 0; i <arr.length; i++) {
-			if (category == arr[i][name]) {				
-				return arr[i][value];
+			if (category == arr[i].name) {				
+				return this.props[arr[i].name];
       		}					
-		}*/
-		
-		if (category == 'Motherboard') {				
-			return this.props.Motherboard;
-      	}
-		
-		if (category == 'CPU') {				
-			return this.props.CPU;
-      	}
-		
-		if (category == 'HDD') {				
-			return this.props.HDD;
-      	}
-		
-		if (category == 'VideoAdapter') {				
-			return this.props.VideoAdapter;
-      	}
-		
-		if (category == 'Cooling') {				
-			return this.props.Cooling;
-      	}
-		
-		if (category == 'RAM') {				
-			return this.props.RAM;
-      	}
-		
-		if (category == 'PowerSource') {				
-			return this.props.PowerSource;
-      	}
+		}
     },
 	
 	getDefaultProps: function () {
