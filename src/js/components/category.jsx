@@ -63,8 +63,8 @@ var CategoryMotherboard = React.createClass({
 
 					<article className="goods goods--style">      
 						<div className="goods__view">
-							<Link className="viewmode" to="/Motherboard/" >
-							List View
+							<Link className="viewmode" to={this.state.category} >
+								List View
 							</Link>
 						</div>          
 						<ItemsList items={this.getItems(this.state.category)} />
