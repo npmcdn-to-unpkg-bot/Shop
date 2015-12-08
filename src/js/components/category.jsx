@@ -11,18 +11,10 @@ var Category = React.createClass({
   	},
     
 	getItems: function(category) {
-		var arr = [
-			{name: 'Motherboard'},
-			{name: 'CPU'},
-			{name: 'RAM'},
-			{name: 'VideoAdapter'},
-			{name: 'HDD'}, 
-			{name: 'PowerSource'},
-			{name: 'Cooling'} 
-		];
-		for (var i = 0; i <arr.length; i++) {
-			if (category == arr[i].name) {				
-				return this.props[arr[i].name];
+		var arrCategories = ['Motherboard', 'CPU', 'RAM', 'VideoAdapter', 'HDD', 'PowerSource', 'Cooling'];
+		for (var i = 0; i <arrCategories.length; i++) {
+			if (category == arrCategories[i]) {				
+				return this.props[arrCategories[i]];
       		}					
 		}
     },
