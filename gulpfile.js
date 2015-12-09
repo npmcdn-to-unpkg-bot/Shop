@@ -135,6 +135,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.jsx], function(event, cb) {
         gulp.start('jsBuild');
+    });    
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('JS');
     });
 });
 gulp.task('server', ['webserver', 'watch']);

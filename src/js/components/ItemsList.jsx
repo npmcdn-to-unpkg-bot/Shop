@@ -7,7 +7,7 @@ var ItemsList = React.createClass ({
 	  var items = this.props.items.map(function(items, key) {
 		return (
 		  <li className="goods__unit" key = {key}>
-		    <Link className="unit-value" to={'/'+items.category+'/'+items.link} >
+		    <Link className="unit-value" to={'/Categories/'+items.category+'/'+items.link} >
 		      <figure className="unit-value__figure">
 		        <div className={"unit-value__img " + items.img}>
 		        </div>

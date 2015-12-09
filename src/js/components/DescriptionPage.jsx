@@ -3,6 +3,7 @@ import {Header} from 'Header.jsx'
 import {Footer} from 'Footer.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 import {Breadcrumb} from 'Breadcrumb.jsx'
+import {cart} from 'cart.jsx'
 var Description = React.createClass({
     getInitialState: function () {
 		return {
