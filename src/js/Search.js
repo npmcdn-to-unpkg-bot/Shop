@@ -67,11 +67,9 @@ var objAll= [{
     $(document).on('keydown', '.header__element--search',  function(){
     var i = objAll.length;
     var inputSearch = $('.header__element--search').val();
-       
     for (var k=0; k<1; k++){
-        $(objAll[0].Motherboard[k].name.toLowerCase().indexOf(inputSearch.toLowerCase())).css("color", "blue");
-   
+ console.log(objAll[0].Motherboard[k].name.toLowerCase().indexOf(inputSearch.toLowerCase()));
+    $('.header__element--search').append("<li class='item'>"+inputSearch+"</li>");
     };
-         console.log(inputSearch);
     });
 });

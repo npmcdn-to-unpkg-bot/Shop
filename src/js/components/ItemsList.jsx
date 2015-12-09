@@ -1,5 +1,3 @@
-import React from 'react'
-import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 var ItemsList = React.createClass ({
 	render: function () {
