@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $(document).on('click', ':input', function(){
+    $(document).on('click', '.remove-item', function(){
 		var self = ':input';		
-		$(this).closest('.cartpage__cart').remove();		
+		$(this).closest('.cart__item').remove();		
     });
 });
 

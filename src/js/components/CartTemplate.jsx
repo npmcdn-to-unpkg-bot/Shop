@@ -8,23 +8,22 @@ var CartTemplate = React.createClass ({
 			)				
 		});*/
 		return (
-			<div className="cartpage__section" id="cartpage__item">
-			<div className="cartpage__cart">
-				<div className="itemscart">
+			<div className="cart__section" id="cartpage__item">
+			<div className="cart__item">				
 					<div className="itemscart__cellview">
 						<div className="itemscart__boximg">
 							<a className="itemscart__imglink itemscart__imglink--style" href="productdescription.html">
-								<div className="imgitemtable img1">
+								<div className="imgitemcart img1">
 								</div>
 							</a>
 						</div>
-						<div className="descriptionitem">
-							<div className="linkproperties__cart linkproperties__cart--style">
+						<div className="itemscart__description">
+							<div className="linkprop__cart linkprop__cart--style">
 								<a className="elementspagelink elementspagelink--style" href="productdescription.html">
 									AMD A8-7600 OEM
 								</a>
 							</div>
-							<div className="descriptionitem__count">
+							<div className="itemscart__description-count">
 								<div className="cartquant">
 									Quantity
 								</div>
@@ -34,27 +33,26 @@ var CartTemplate = React.createClass ({
 								<div className="cartpriceview">
 									$ 500
 								</div>
-								<div className="itemsremove">
-									<input type="button" value="Remove" name="remove" />
+								<div className="itemremove">
+									<input className="remove-item" type="button" value="Remove" name="remove" />
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
+					</div>				
 			</div>
 			<div className="cartpage__carttotal">
 				<div className="totalpricetable">
-					Total: $ 3000
+					Total: $ 500
 				</div>
 				<div className="paytable">
-					<a className="totalbar__link" href="AddressPage.html">
+					<a className="cart-totalbar__link" href="AddressPage.html">
 						<div className="tocheckout">
 							Proceed to Checkout
 						</div>
 					</a>
 				</div>
 				<div className="paytable">
-					<a className="totalbar__link" href="index.html">
+					<a className="cart-totalbar__link" href="index.html">
 						<div className="tocheckout">
 							Continue Shopping
 						</div>

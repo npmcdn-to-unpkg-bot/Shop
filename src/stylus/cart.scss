@@ -1,0 +1,184 @@
+@mixin order-btn{
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 16px;
+    border: 1px solid #70b61f;
+    border-radius: 20px;
+    background: #7dcc23;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;    
+    max-width: 224px;
+}                                /*Cart page*/
+/*Total*/
+.cart { 
+    &__section {
+        display: inline-block;
+        float: left;
+        padding-top: 20px;
+        width: 75%;
+        padding-bottom: 30px;
+    }
+    &__item {        
+        width: 80%;
+        margin: auto;
+    }
+    &-totalbar {
+        align-self: flex-start;
+        width: 25%;
+        padding-top: 30px;
+		
+		&__title, &__price, &__countitems {        
+        	text-align: center;
+    	}
+		
+		&__countitems {        
+			font-size: 16px;
+			color: grey;
+		}
+		
+		&__title {
+		   font-size: 30px; 
+		}
+		
+		&__price {
+			margin-bottom: 10px;
+			font-size: 25px;
+		}
+		
+		&__pay {
+			
+			.tocheckout {
+				margin: auto;
+				text-align: center;
+			}
+		}
+		
+		&__link {
+    		text-decoration: none;
+		}
+    }
+}
+
+.tocheckout {
+@include order-btn;}
+
+/*Table*/
+.itemscart {  
+    &__cellview {
+        border: 2px solid black;        
+        text-align: center;
+    }
+    &__boximg {
+        display: inline-block;
+        text-align: center;
+        width: 15%;
+        float: left;
+    }
+    &__imglink {
+        width: 100%;
+        text-decoration: none;
+		&--style {
+			display: inline-block;
+			clear: both;
+		}
+    }
+	
+	&__description {
+	  	display: inline-block;
+	  	float: right;
+	  	width: 85%;
+	  	margin-top: 10px;
+	  	font-size: 30px;		
+		
+		&-count {
+			width: 30%;
+			float: right;
+			display: inline-block;
+		}
+	}
+	
+}
+
+.imgitemcart {
+  	content: '';
+  	height: 100px;
+  	background-size: contain;
+  	background-repeat: no-repeat;	
+ }
+
+.img1 {
+  	background-image: url("../img/CPU/AMD/AMD%20A8-7600%20OEM.jpg");
+}
+
+.img2 {
+  	background-image: url("../img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX313C9FR4%5D%204%20%D0%93%D0%B1.jpg");
+}
+
+.linkprop__cart {    
+    width: 30%;    
+}
+.linkprop__cart--style {
+    display: inline-block;
+    font-size: 20px;
+    white-space: nowrap;
+    float: left;
+    overflow: hidden;    
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.cartquant {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  font-size: 30px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.cartinput {
+  display: inline-block;
+  float: left;  
+}
+
+.cartinput input {
+  width: 50px;  
+  font-size: 24px;
+  vertical-align: top;
+}
+
+.cartpriceview {
+  font-size: 26px;
+  float: right;
+  margin-right: 20px;
+  margin-left: 10px;
+  display: inline-block;  
+}
+
+.itemremove {  
+  padding-top: 4px;
+  height: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+  text-align: right;
+  clear: both;
+}
+
+/*Total Table*/
+.totalpricetable {
+  width: 80%;
+  margin: auto;
+  text-align: right;  
+  font-size: 30px; }
+
+.paytable {
+    display: inline-block;
+    float: right;
+    margin:0 10px;
+}
+
+.cartpage__carttotal {
+    width: 80%;
+    margin: auto;
+}

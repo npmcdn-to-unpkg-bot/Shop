@@ -14,19 +14,19 @@ var Cart = React.createClass ({
 			
                 <div className="page__content">			
 					<CartTemplate />
-					<div className="cartpage__totalbar totalbar">
-            			<div className="totalbar__title">
+					<div className="cart-totalbar">
+            			<div className="cart-totalbar__title">
                 			Basket Summary
             			</div>
-            			<div className="totalbar__countitems">
-                			(6 items)
+            			<div className="cart-totalbar__countitems">
+                			(1 items)
             			</div>
             			<hr size="4" width="85%" color="black" />
-            			<div className="totalbar__price">
-                			$ 3000
+            			<div className="cart-totalbar__price">
+                			$ 500
             			</div>
-            			<div className="totalbar__pay">
-                			<a className="totalbar__link" href="AddressPage.html">
+            			<div className="cart-totalbar__pay">
+                			<a className="cart-totalbar__link" href="AddressPage.html">
                     			<div className="tocheckout">Proceed to Checkout</div>
                 			</a>
             			</div>
