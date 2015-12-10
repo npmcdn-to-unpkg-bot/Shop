@@ -9,6 +9,16 @@ $(document).ready(function(){
         ]
     var k=0;
     var attr;
+
+    $(document).on('click', '.slider-img__big-img.big-img',  function(){
+        attr = $('.slider-img__big-img.big-img img').attr('src');
+        $('body').append("<div class='wrapper__modal-dialog'><img src="+attr+" class='fancybox' /></div>");
+        $('.wrapper__modal-dialog').click(function(){
+        $('.wrapper__modal-dialog').css("display", "none");
+        });
+        }); 
+
+
     $(document).on('click', 'div.slider-img .min-img--style',  function(){
         $('.slider-img__min-img img').css("border", "none");
         var slider = $('div.slider-img .min-img--style');
@@ -23,7 +33,7 @@ $(document).ready(function(){
             }
         }
     }); 
-    $(document).on('click', '.min-img__arrow-left',  function(){  
+    $(document).on('click', '.min-img__arrow--left',  function(){  
         $('.slider-img__min-img img').css("border", "none");
         k--;
         if (k<0) {
@@ -34,7 +44,7 @@ $(document).ready(function(){
         $(border).css("border", "1px solid blue");
         $('img.big-img__positioner').attr('src', imgSlider[k]);
         });
-    $(document).on('click', '.min-img__arrow-right',  function(){  
+    $(document).on('click', '.min-img__arrow--right',  function(){  
         console.log(k);
         $('.slider-img__min-img img').css("border", "none");
         k++;

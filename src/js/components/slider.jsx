@@ -16,7 +16,7 @@ var Slider = React.createClass({
     },
     render: function () {
     	return (
-    	<div>
+    	<div className="description__slider">
             <SliderTemplate imgSlider={this.props.imgSlider} />
     	</div>
     );

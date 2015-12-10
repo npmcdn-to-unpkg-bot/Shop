@@ -7,22 +7,22 @@ var SliderTemplate = React.createClass({
             return (
                 <div className="slider-img"   key={key}>
                     <div className="slider-img__big-img big-img">
-                    <img className="big-img__positioner" src={imgSlider.img}/>
-                </div>
+                        <img className="big-img__positioner" src={imgSlider.img}/>
+                    </div>
                     <div className="slider-img__min-img min-img">
-                        <div className="min-img__arrow min-img__arrow-left" onclick="sliderObj.leftSlide();"></div>
+                        <div className="min-img__arrow min-img__arrow--left" onclick="sliderObj.leftSlide();"></div>
                             <img className="min-img--style" src={imgSlider.minImg1}/>
                             <img className="min-img--style" src={imgSlider.minImg2}/>
                             <img className="min-img--style" src={imgSlider.minImg3}/>
                             <img className="min-img--style" src={imgSlider.minImg4}/> 
                             <img className="min-img--style" src={imgSlider.minImg5}/>
-                        <div className="min-img__arrow min-img__arrow-right" onclick="sliderObj.rightSlide();"></div>
+                        <div className="min-img__arrow min-img__arrow--right" onclick="sliderObj.rightSlide();"></div>
                     </div>
                 </div> 
             );
         });
             return (
-                <div className="product-description__slider-img">
+                <div className="slider">
                     {imgSlider}
                 </div>
             );

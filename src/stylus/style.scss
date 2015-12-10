@@ -1,4 +1,3 @@
-// base.scss
 
 html, body {
   height: 100%;
@@ -22,7 +21,6 @@ html, body {
     color: orange;
     font-size: 14px;
 }
-
 
 @-webkit-keyframes movie {
   50% {
@@ -70,71 +68,6 @@ html, body {
   padding-bottom: 2px; }    
 }
 
-/*Menu
-.navbar {
-  width: 10%;
-  margin-top: 120px;
-  &__link {
-  width: 100%;
-  border-bottom: 1px solid rebeccapurple;
-  padding: 5px;
-  text-decoration: none;
-  padding-left: 5px;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom: -5px;
-  }
-
-  &__link:link {
-  color: black; }
-
-  &__link:visited {
-  color: blue; }
-
-  &__link:hover {
-  color: white;
-  background: rebeccapurple; }
-
-  &__link:active {
-  color: red; }
-
-  &__link--active {
-  background-color: aqua; }
-  &__img {
-  display: block;
-  background-size: contain;
-  width: 30px;
-  height: 25px;
-  float: left;
-  background-repeat: no-repeat;
-  background-position: left;
-  padding-right: 8px; }
-
-  &__img--mother {
-  background-image: url("../img/Symbol/Motherboard.jpg"); }
-
-  &__img--cpu {
-  background-image: url("../img/Symbol/CPU.jpg"); }
-
-  &__img--ram {
-  background-image: url("../img/Symbol/RAM.jpg"); }
-
-  &__img--video {
-  background-image: url("../img/Symbol/Video%20adapter.jpg"); }
-
-  &__img--hdd {
-  background-image: url("../img/Symbol/HDD.jpg"); }
-
-  &__img--power {
-  background-image: url("../img/Symbol/Power%20source.jpg"); }
-
-  &__img--cooling {
-  background-image: url("../img/Symbol/Cooling.jpg"); }
-}*/
-
 /*Product description*/
 @mixin order-btn{
     text-align: center;
@@ -149,13 +82,34 @@ html, body {
     font-size: 25px;    
     max-width: 224px;
 }
-.product-section__product-description {
-  width: 80%;
-  margin: 0 auto; }
+.description {
+  width: 100%;
+  margin: 10px auto;
+
+}
+.fancybox {
+    width: 826px;
+    height: auto;
+    position: fixed;
+    top: 20px;
+    left: 538px;
+    opacity: 1; 
+    pointer-events: none;
+}
+.wrapper__modal-dialog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+
+  background: rgba(0, 0, 0, 0.8); 
+}
 .breadcrumb li:after {
   padding: 0px 5px;
   content: "/";}
-.product-description__slider-img {
+.slider{
   margin-top: 20px;
   width: 31%;
   height: 25%;
@@ -169,7 +123,8 @@ html, body {
   height: 100%;}
 .min-img--style {
   vertical-align: middle;
-  width: 10%;
+  width: 50px;
+  height: 50px;
   min-width: 28px; }
 .slider-img__min-img {
   width: 100%;
@@ -180,10 +135,13 @@ html, body {
   width: 0;
   height: 0;
   border: 25px solid transparent; }
-.min-img__arrow-left {
+.min-img img:nth-child(2){
+    border: 1px solid blue;
+}
+.min-img__arrow--left {
   border-right-color: lightskyblue;
   border-left: 0; }
-.min-img__arrow-right {
+.min-img__arrow--right {
   border-left-color: lightskyblue;
   border-right: 0; }
 .product-description__layout-description {
@@ -210,22 +168,13 @@ html, body {
     margin-top: -40px;}
 .add-cart__btn {
     @include order-btn; }
-.wrapper__modal-dialog {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  pointer-events: none;
-  background: rgba(0, 0, 0, 0.8); }
+
 .modal-dialog--target:target {
   display: block;
   pointer-events: auto; }
 .breadcrumb {
   list-style-type: none;
-  font-size: 13px; }
+ }
 .big-img {
   text-align: center; }
 .min-img {

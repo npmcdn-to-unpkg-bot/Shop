@@ -7,6 +7,7 @@ var ProductDescriptionTemplate = React.createClass({
     var description = this.props.description.map(function(description, key) {
       return (
                 <div className="layout-description"  key={key}> 
+                
                     <h1 className="layout-description__header">{description.name}</h1>
                     <div className="layout-description__img-star img-star">
                         <div className="img-star__raiting"></div>
@@ -33,9 +34,11 @@ var ProductDescriptionTemplate = React.createClass({
     });
     return (
         <article className="content">
-            <Breadcrumb breadcrumb = {this.props.description} />
-            <Slider />
-            {description}
+            <div className="content-description description">
+                <Breadcrumb breadcrumb = {this.props.description} />
+                <Slider />
+                {description}
+            </div>
         </article>
     );
     }
