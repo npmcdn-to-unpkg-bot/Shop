@@ -1,16 +1,5 @@
-@mixin order-btn{
-    text-align: center;
-    text-decoration: none;
-    margin-top: 20px;
-    padding: 10px 16px;
-    border: 1px solid #70b61f;
-    border-radius: 20px;
-    background: #7dcc23;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;    
-    max-width: 224px;
-}                                /*Cart page*/
+@import "Params.scss";
+									/*Cart page*/
 /*Total*/
 .cart { 
     &__section {
