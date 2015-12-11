@@ -4,7 +4,7 @@ var Header = React.createClass ({
 			<header className="header">   
                 <a className="header__element header__element--logo" href="/">
                 </a>
-                <a className="header__element header__element--authorization " href="#openModal">
+                <a className="header__element header__element--authorization ">
                     <span className="header-element__authorization--img">
                     </span>
                     <span className="header-element__text--hidden">

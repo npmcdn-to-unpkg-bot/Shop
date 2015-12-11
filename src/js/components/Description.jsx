@@ -2,6 +2,7 @@ import {Slider} from 'slider.jsx'
 import {Breadcrumb} from 'Breadcrumb.jsx'
 import {Cart} from 'cart.jsx'
 import { Router, Route, Link } from 'react-router'	
+import {SliderTemplate} from 'sliderTemplate.jsx'
 var ProductDescriptionTemplate = React.createClass({
     render: function () {       
     var description = this.props.description.map(function(description, key) {
@@ -36,7 +37,7 @@ var ProductDescriptionTemplate = React.createClass({
         <article className="content">
             <div className="content-description description">
                 <Breadcrumb breadcrumb = {this.props.description} />
-                <Slider />
+                <SliderTemplate slider = {this.props.description} />
                 {description}
             </div>
         </article>

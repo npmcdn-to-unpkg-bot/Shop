@@ -20,7 +20,6 @@ var Category = React.createClass({
       		}					
 		}
     },
-	
 	componentWillReceiveProps: function (newProps) {
 		this.setState ({
 			category: newProps.params.category
