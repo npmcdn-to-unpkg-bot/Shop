@@ -44,18 +44,18 @@ var CartTemplate = React.createClass ({
 					Total: $ 500
 				</div>
 				<div className="paytable">
-					<a className="cart-totalbar__link" href="AddressPage.html">
+					<Link className="cart-totalbar__link" to="/Cart/Addres">
 						<div className="tocheckout">
 							Proceed to Checkout
 						</div>
-					</a>
+					</Link>
 				</div>
 				<div className="paytable">
-					<a className="cart-totalbar__link" href="index.html">
+					<Link className="cart-totalbar__link" to="/">
 						<div className="tocheckout">
 							Continue Shopping
 						</div>
-					</a>
+					</Link>
 				</div>
 			</div>
 			</div>
