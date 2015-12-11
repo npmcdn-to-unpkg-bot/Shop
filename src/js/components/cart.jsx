@@ -12,25 +12,27 @@ var Cart = React.createClass ({
 					<Header />
 				</div>
 			
-                <div className="page__content">			
-					<CartTemplate />
-					<div className="cart-totalbar">
-            			<div className="cart-totalbar__title">
-                			Basket Summary
-            			</div>
-            			<div className="cart-totalbar__countitems">
-                			(1 items)
-            			</div>
-            			<hr size="4" width="85%" color="black" />
-            			<div className="cart-totalbar__price">
-                			$ 500
-            			</div>
-            			<div className="cart-totalbar__pay">
-                			<Link className="cart-totalbar__link" to="/Cart/Addres">
-                    			<div className="tocheckout">Proceed to Checkout</div>
-                			</Link>
-            			</div>
-        			</div>
+                <div className="page__content">
+					<div className="cart">
+						<CartTemplate />
+						<div className="cart__totalbar">
+							<div className="totalbar__title">
+								Basket Summary
+							</div>
+							<div className="totalbar__countitems">
+								(1 items)
+							</div>
+							<hr size="4" width="85%" color="black" />
+							<div className="totalbar__price">
+								$ 500
+							</div>
+							<div className="totalbar__pay">
+								<Link className="totalbar__link" to="/Cart/Addres">
+									<div className="tocheckout">Proceed to Checkout</div>
+								</Link>
+							</div>
+						</div>
+					</div>
                 </div>
 											
                 <div className="page__footer">

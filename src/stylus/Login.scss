@@ -40,3 +40,14 @@
   text-align: center;
   padding-bottom: 2px; }    
 }
+@media screen and (max-width: 666px) {
+    .login-form {
+        padding: 20px 40px 35px;
+        width: 94%;
+        height: 100%;
+        &__input {
+        padding: 8px;
+        width: 100%;
+        }
+    } 
+}   

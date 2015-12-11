@@ -2,97 +2,146 @@
 									/*Cart page*/
 /*Total*/
 .cart { 
-    &__section {
-        display: inline-block;
-        float: left;
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+    &__section {        
         padding-top: 20px;
-        width: 75%;
+        width: 100%;
         padding-bottom: 30px;
     }
     &__item {        
-        width: 80%;
+        width: 95%;
         margin: auto;
     }
-    &-totalbar {
-        align-self: flex-start;
-        width: 25%;
+    &__totalbar {       
+        width: 100%;
         padding-top: 30px;
-		
-		&__title, &__price, &__countitems {        
-        	text-align: center;
-    	}
-		
-		&__countitems {        
-			font-size: 16px;
-			color: grey;
-		}
-		
-		&__title {
-		   font-size: 30px; 
-		}
-		
-		&__price {
-			margin-bottom: 10px;
-			font-size: 25px;
-		}
-		
-		&__pay {
-			
-			.tocheckout {
-				margin: auto;
-				text-align: center;
-			}
-		}
-		
-		&__link {
-    		text-decoration: none;
-		}
     }
+	&-quant {  
+	  text-align: center;
+	  font-size: 16px;
+	  vertical-align: top;
+	  margin-right: 10px;
+	}
+
+	&-input { 
+		&__value {
+		  width: 35px;  
+		  font-size: 12px;
+		  vertical-align: top;
+		}
+	}
+
+	&-priceview {
+		padding-left: 10px;
+	  	font-size: 16px; 	  
+	}
+}
+
+.totalbar {
+	&__title, &__price, &__countitems {        
+       	text-align: center;
+    }
+		
+	&__countitems {        
+		font-size: 16px;
+		color: grey;
+	}
+		
+	&__title {
+	   font-size: 30px; 
+	}
+		
+	&__price {
+		margin-bottom: 10px;
+		font-size: 25px;
+	}
+		
+	&__pay {		
+		.tocheckout {
+			margin: auto;
+			text-align: center;
+		}
+	}
+		
+	&__link {
+    	text-decoration: none;
+	}
 }
 
 .tocheckout {
-@include order-btn;}
+	@include order-btn;
+	margin: auto;
+	text-align: center;
+}
 
 /*Table*/
 .itemscart {  
     &__cellview {
+		display: flex;
         border: 2px solid black;        
         text-align: center;
     }
-    &__boximg {
-        display: inline-block;
-        text-align: center;
-        width: 15%;
-        float: left;
+    &__boximg { 
+		margin-top: 3%;
+        width: 25%;        
     }
     &__imglink {
-        width: 100%;
-        text-decoration: none;
-		&--style {
-			display: inline-block;
-			clear: both;
-		}
+		width: 100%;
+		display: inline-block;
     }
 	
 	&__description {
-	  	display: inline-block;
-	  	float: right;
-	  	width: 85%;
-	  	margin-top: 10px;
-	  	font-size: 30px;		
+		display: flex;
+	  	width: 75%;
+	  	margin-top: 3%;
+	  	font-size: 30px;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		
 		&-count {
-			width: 30%;
-			float: right;
-			display: inline-block;
+			width: 70%;			
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			padding-right: 5px;
 		}
 	}
 	
+	&__linkprop {
+		width: 25%;
+		&--style {			
+			font-size: 16px;
+			white-space: nowrap;			
+			overflow: hidden;    
+			text-overflow: ellipsis;			
+		}
+	}
+	&__link {
+		display: inline-block;
+		width:100%;
+		&:link {
+			color: black; 
+		}
+		
+		&:visited {
+			color: blue; 
+		}
+		
+		&:hover {
+			color: white;	  		
+		}
+		
+		&:active {
+	  		color: red; 
+		}
+	}
 }
 
 .imgitemcart {
-  	content: '';
-  	height: 100px;
+  	width: 100%;
+  	height: 70px;
   	background-size: contain;
   	background-repeat: no-repeat;	
  }
@@ -105,75 +154,137 @@
   	background-image: url("../img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX313C9FR4%5D%204%20%D0%93%D0%B1.jpg");
 }
 
-.linkprop__cart {    
-    width: 30%;    
-}
-.linkprop__cart--style {
-    display: inline-block;
-    font-size: 20px;
-    white-space: nowrap;
-    float: left;
-    overflow: hidden;    
-    text-overflow: ellipsis;
-    text-align: left;
-}
-.cartquant {
-  display: inline-block;
-  float: left;
-  text-align: center;
-  font-size: 30px;
-  vertical-align: top;
-  margin-right: 10px;
-}
-
-.cartinput {
-  display: inline-block;
-  float: left;  
-}
-
-.cartinput input {
-  width: 50px;  
-  font-size: 24px;
-  vertical-align: top;
-}
-
-.cartpriceview {
-  font-size: 26px;
-  float: right;
-  margin-right: 20px;
-  margin-left: 10px;
-  display: inline-block;  
-}
-
-.itemremove {  
-  padding-top: 4px;
-  height: 30px;
-  margin-right: 20px;
-  font-size: 20px;
-  text-align: right;
-  clear: both;
+.itemremove {	
+	align-self: flex-end;
+	padding-top: 4px;
+	height: 30px;	
+	font-size: 15px;	  
 }
 
 /*Total Table*/
 .totalpricetable {
   width: 80%;
-  margin: auto;
-  text-align: right;  
+  margin: 5px auto;
+  text-align: center;  
   font-size: 30px; }
 
-.paytable {
-    display: inline-block;
-    float: right;
-    margin:0 10px;
+.paytable {       
+    margin: 5px auto;
 }
 
 .cartpage__carttotal {
-    width: 80%;
+    width: 90%;
     margin: auto;
+	margin-top: 20px;
 }
 
-@media screen and (max-width: 480px) {
-	.cart-totalbar {
-		display: none;
+@media screen and (min-width: 480px) and (max-width: 800px) {
+	.cart { 		
+		flex-direction: row;
+		&__section {
+			width: 70%;			
+		}		
+		&__totalbar {
+			padding-top: 20px;
+			width: 30%;
+		}
+		&-quant { 
+			display: inline-block;
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			vertical-align: top;
+			margin-right: 10px;
+		}
+		&-input {
+			display: inline-block;
+			float: left;
+		}
+		&-priceview {
+			display: inline-block;
+			float: left;
+		}
+	}
+
+	.totalbar {
+		&__link {
+			display: inline-block;
+		}
+		
+		&__pay {
+			text-align: center;
+			.tocheckout {				
+				font-size: 18px;
+			}
+		}
+	}
+
+	/*Table*/
+	.itemscart {  
+		&__cellview {
+			display: flex;
+			border: 2px solid black;        
+			text-align: center;
+		}
+		&__boximg { 
+			margin-top: 3%;
+			width: 25%;        
+		}
+		&__imglink {
+			width: 100%;
+			display: inline-block;
+		}
+
+		&__description {
+			display: flex;
+			width: 75%;
+			margin-top: 3%;
+			font-size: 30px;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			&-count {
+				width: 65%;			
+				display: block;				
+				padding-right: 5px;
+				text-align: end;
+			}
+		}
+
+		&__linkprop {
+			width: 30%;
+			&--style {			
+				font-size: 16px;
+				white-space: nowrap;			
+				overflow: hidden;    
+				text-overflow: ellipsis;			
+			}
+		}
+		&__link {
+			display: inline-block;
+			width:100%;
+			&:link {
+				color: black; 
+			}
+
+			&:visited {
+				color: blue; 
+			}
+
+			&:hover {
+				color: white;	  		
+			}
+
+			&:active {
+				color: red; 
+			}
+		}
+	}
+	
+	.itemremove {	
+		display: block;
+		padding-top: 4px;
+		height: 30px;	
+		font-size: 15px;	  
 	}
 }

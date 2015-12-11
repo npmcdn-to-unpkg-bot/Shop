@@ -17,19 +17,19 @@ var CartTemplate = React.createClass ({
 							</a>
 						</div>
 						<div className="itemscart__description">
-							<div className="linkprop__cart linkprop__cart--style">
-								<a className="elementspagelink elementspagelink--style" href="productdescription.html">
+							<div className="itemscart__linkprop itemscart__linkprop--style">
+								<a className="itemscart__link" href="productdescription.html">
 									AMD A8-7600 OEM
 								</a>
 							</div>
 							<div className="itemscart__description-count">
-								<div className="cartquant">
+								<div className="cart-quant">
 									Quantity
 								</div>
-								<div className="cartinput">
-									<input type="number" min="1" max="200" defaultValue="1" name="quality" />
+								<div className="cart-input">
+									<input className="cart-input__value" type="number" min="1" max="200" defaultValue="1" name="quality" />
 								</div>
-								<div className="cartpriceview">
+								<div className="cart-priceview">
 									$ 500
 								</div>
 								<div className="itemremove">
@@ -44,14 +44,14 @@ var CartTemplate = React.createClass ({
 					Total: $ 500
 				</div>
 				<div className="paytable">
-					<Link className="cart-totalbar__link" to="/Cart/Addres">
+					<Link className="totalbar__link" to="/Cart/Addres">
 						<div className="tocheckout">
 							Proceed to Checkout
 						</div>
 					</Link>
 				</div>
 				<div className="paytable">
-					<Link className="cart-totalbar__link" to="/">
+					<Link className="totalbar__link" to="/">
 						<div className="tocheckout">
 							Continue Shopping
 						</div>
