@@ -4,7 +4,6 @@ var CartTemplate = React.createClass ({
 	render: function () {
 		/*var cart = this.props.cart.map(function(cart, key) {
 			return (
-			
 			)				
 		});*/
 		return (
@@ -28,7 +27,7 @@ var CartTemplate = React.createClass ({
 									Quantity
 								</div>
 								<div className="cartinput">
-									<input type="number" min="1" max="200" value="1" name="quality" />
+									<input type="number" min="1" max="200" defaultValue="1" name="quality" />
 								</div>
 								<div className="cartpriceview">
 									$ 500
