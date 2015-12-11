@@ -1,3 +1,4 @@
+import {Link} from 'react-router'
 var Pay = React.createClass ({
 	render: function () {
 		return (
@@ -67,7 +68,7 @@ var Pay = React.createClass ({
                 </div>
                 <div className="line5">
               <button  className="btn btn-primary pull-right continuePaymentProcess finish-btn" type="submit">Pay</button>
-                     <a className="finish-btn" href="finishPage.html">Pay</a>
+                     <Link className="finish-btn" to="finishPage.html">Pay</Link>
                 </div>
                     </form>
         )
