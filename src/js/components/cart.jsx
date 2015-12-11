@@ -26,9 +26,9 @@ var Cart = React.createClass ({
                 			$ 500
             			</div>
             			<div className="cart-totalbar__pay">
-                			<a className="cart-totalbar__link" href="AddressPage.html">
+                			<Link className="cart-totalbar__link" to="/Cart/Addres">
                     			<div className="tocheckout">Proceed to Checkout</div>
-                			</a>
+                			</Link>
             			</div>
         			</div>
                 </div>
