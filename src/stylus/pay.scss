@@ -59,3 +59,34 @@
             @include order-btn;
         }
     }
+@media screen and (max-width: 666px) {
+    .orderForm {
+        &__line1 input,
+        &__line4 input,
+        &__line2 select {
+            width: 45px;
+            height: 22px;}
+        &__line3 input {
+            width: 192px;
+            height:18px;}
+       }
+    .orderForm{
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 315px;
+        height: 168px;
+        margin-bottom: 50px;
+        margin-top: 70px;
+            &__line2 {
+            left: 74px;
+            top: 45px;}
+            &__line3 {
+            top: 52px;
+            left: 26px;}
+            &__line4 {
+            left: 249.5px;}
+            &__lineValid {
+            left: 81px;
+            margin-right: 20px;}
+    } 
+}

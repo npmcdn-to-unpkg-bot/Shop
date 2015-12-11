@@ -143,3 +143,33 @@
   background-position: 38.2%; 
 }
 
+@media screen and (max-width: 666px) {
+    .slider-img {
+        margin: 4px auto;
+        float: none;
+        width: 40%;
+        height: 40%;
+        min-width: 250px; } 
+    .min-img{
+        display: none;
+    }
+    .slider{
+        float: none;  
+    }
+    .layout-description{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .layout-description__header{
+        font-size: 19px;
+    }
+    .add-cart__price,
+    .add-cart__btn {
+        font-size: 20px;}
+    .layout-description__lineSocial {
+        width: 220px;
+        margin: auto;}
+    .slider-img__big-img {
+    height: 100%;
+    }
+}

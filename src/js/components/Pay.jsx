@@ -17,7 +17,7 @@ var Pay = React.createClass ({
                                 <input type="text" autofocus="off" maxLength="4" tabIndex="3" name="card3" />
                                 <input type="text" autofocus="off" maxLength="4" tabIndex="4" name="card4" />
                             </div>    
-                            <span className="orderForm__lineValid">Month</span><span className="lineValid">Year</span>
+                            <span className="orderForm__lineValid">Month</span><span className="orderForm__lineValid">Year</span>
                             <div className="orderForm__line2" >
                                 <select className="month" tabIndex="5">
                                     <option>1</option>
