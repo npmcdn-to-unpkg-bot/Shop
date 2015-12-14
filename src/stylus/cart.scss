@@ -18,14 +18,16 @@
         width: 100%;
         padding-top: 30px;
     }
-	&-quant {  
-	  text-align: center;
-	  font-size: 16px;
-	  vertical-align: top;
-	  margin-right: 10px;
+	&-quant {
+		display: inline-block;
+	  	font-size: 16px;
+	  	vertical-align: top;
+	  	margin-right: 10px;
+		
 	}
 
 	&-input { 
+		display: inline-block;
 		&__value {
 		  width: 35px;  
 		  font-size: 12px;
@@ -34,8 +36,21 @@
 	}
 
 	&-priceview {
+		vertical-align: top;
+		display: inline-block;
 		padding-left: 10px;
 	  	font-size: 16px; 	  
+	}
+	
+	&-options {
+		width: 100%;
+		text-align: right;
+	}
+	
+	&-options:after {
+		display: block;
+		content: '';
+		clear: both;
 	}
 }
 
@@ -115,7 +130,8 @@
 			font-size: 16px;
 			white-space: nowrap;			
 			overflow: hidden;    
-			text-overflow: ellipsis;			
+			text-overflow: ellipsis;
+			text-align: left;
 		}
 	}
 	&__link {
@@ -178,7 +194,7 @@
 	margin-top: 20px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 800px) {
+@media screen and (min-width: 480px) {
 	.cart { 		
 		flex-direction: row;
 		&__section {
@@ -190,7 +206,6 @@
 		}
 		&-quant { 
 			display: inline-block;
-			float: left;
 			text-align: center;
 			font-size: 16px;
 			vertical-align: top;
@@ -198,17 +213,18 @@
 		}
 		&-input {
 			display: inline-block;
-			float: left;
+			
 		}
 		&-priceview {
 			display: inline-block;
-			float: left;
+			vertical-align: top;
 		}
 	}
 
 	.totalbar {
 		&__link {
 			display: inline-block;
+			vertical-align: top;
 		}
 		
 		&__pay {
@@ -227,8 +243,8 @@
 			text-align: center;
 		}
 		&__boximg { 
-			margin-top: 3%;
-			width: 25%;        
+			margin-top: 10px;
+			width: 20%;
 		}
 		&__imglink {
 			width: 100%;
@@ -237,8 +253,8 @@
 
 		&__description {
 			display: flex;
-			width: 75%;
-			margin-top: 3%;
+			width: 80%;
+			margin-top: 10px;
 			font-size: 30px;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -254,10 +270,7 @@
 		&__linkprop {
 			width: 30%;
 			&--style {			
-				font-size: 16px;
-				white-space: nowrap;			
-				overflow: hidden;    
-				text-overflow: ellipsis;			
+				font-size: 16px;			
 			}
 		}
 		&__link {
@@ -286,5 +299,28 @@
 		padding-top: 4px;
 		height: 30px;	
 		font-size: 15px;	  
+	}
+	
+	.totalpricetable {
+		width: 90%;
+		text-align: right;
+	}
+	
+	.paytable {		
+		display: inline-block;
+    	margin: 5px;
+		float: right;
+	}	
+}
+
+@media screen and (min-width: 800px) {
+	.itemscart {
+		&__boximg {			
+			width: 12%;
+		}
+		
+		&__description {
+			width: 85%;
+		}
 	}
 }
