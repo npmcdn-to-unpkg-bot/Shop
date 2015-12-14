@@ -1,8 +1,5 @@
 // media.scss
- 
-
 @media screen and (min-width: 666px) and (max-width: 800px) {
-
     .product-section{
 		padding: 0;
         width:95%;
@@ -39,7 +36,7 @@
     border: 1px solid #000;
     font-size: 16px;
     }
-        .min-img{
+    .min-img{
         display: none;
     }
 }
