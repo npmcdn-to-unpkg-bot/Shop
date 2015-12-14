@@ -10,13 +10,13 @@ var SliderTemplate = React.createClass({
                         <img className="big-img__positioner" src={slider.img}/>
                     </div>
                     <div className="slider-img__min-img min-img">
-                        <div className="min-img__arrow min-img__arrow--left" onclick="sliderObj.leftSlide();"></div>
+                        <div className="min-img__arrow min-img__arrow--left"></div>
                             <img className="min-img--style" src={slider.minImg1}/>
                             <img className="min-img--style" src={slider.minImg2}/>
                             <img className="min-img--style" src={slider.minImg3}/>
                             <img className="min-img--style" src={slider.minImg4}/> 
                             <img className="min-img--style" src={slider.minImg5}/>
-                        <div className="min-img__arrow min-img__arrow--right" onclick="sliderObj.rightSlide();"></div>
+                        <div className="min-img__arrow min-img__arrow--right" ></div>
                     </div>
                 </div> 
             );
