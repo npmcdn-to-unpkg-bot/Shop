@@ -23,15 +23,17 @@ var CartTemplate = React.createClass ({
 								</a>
 							</div>
 							<div className="itemscart__description-count">
-								<div className="cart-quant">
-									Quantity
-								</div>
-								<div className="cart-input">
-									<input className="cart-input__value" type="number" min="1" max="200" defaultValue="1" name="quality" />
-								</div>
-								<div className="cart-priceview">
-									$ 500
-								</div>
+								<div className="cart-options">
+									<div className="cart-quant">
+										Quantity
+									</div>
+									<div className="cart-input">
+										<input className="cart-input__value" type="number" min="1" max="200" defaultValue="1" name="quality" />
+									</div>
+									<div className="cart-priceview">
+										$ 500
+									</div>
+								</div>			
 								<div className="itemremove">
 									<input className="remove-item" type="button" value="Remove" name="remove" />
 								</div>
