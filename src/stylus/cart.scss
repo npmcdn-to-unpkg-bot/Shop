@@ -225,7 +225,13 @@
 		&__link {
 			display: inline-block;
 			vertical-align: top;
+			
+			.tocheckout {
+				font-size: 18px;
+			}
 		}
+		
+		
 		
 		&__pay {
 			text-align: center;
