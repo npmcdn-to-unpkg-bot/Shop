@@ -53,3 +53,7 @@
   margin: auto;
   text-align: center;
   padding-top: 50px; }
+
+.finish-btn {
+	@include order-btn;
+}
