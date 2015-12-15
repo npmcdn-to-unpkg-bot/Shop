@@ -39,11 +39,11 @@ var descriptionWare = {
         description:'ЛАЛАЛАЛАЛАЛАЛАЛАЛЛАЛАЛАЛЛАЛАЛАЛАЛЛАЛАЛА'}], 
     getDescription: function(){
         Dispatcher.emit('update-description',  descriptionWare.items1);
-
+        console.log()
     }
 
 }
-Dispatcher.on('get-description', function(props){
+Dispatcher.on('get-description', descriptionWare.getDescription, function(props){
     console.log(props);
 });
 export {descriptionWare}
