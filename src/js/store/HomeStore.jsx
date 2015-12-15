@@ -1,4 +1,3 @@
-import {HomePageTemplate} from 'Home.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 import { Dispatcher} from 'Dispatcher.jsx'
 var categoriesHome = {
@@ -15,6 +14,5 @@ var categoriesHome = {
         Dispatcher.emit('update-categories',  categoriesHome.category);
     } 
 }
-
 Dispatcher.on('get-categories', categoriesHome.getCategories); 
 export {categoriesHome}

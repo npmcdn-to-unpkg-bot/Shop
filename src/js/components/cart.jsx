@@ -1,7 +1,6 @@
 import {Header} from 'Header.jsx'
 import {Footer} from 'Footer.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
-import {Description} from 'DescriptionPage.jsx'
 import {CartTemplate} from 'CartTemplate.jsx'
 var Cart = React.createClass ({	
 	render: function () {
