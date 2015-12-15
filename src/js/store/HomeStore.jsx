@@ -1,7 +1,7 @@
 import {HomePageTemplate} from 'Home.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 import { Dispatcher} from 'Dispatcher.jsx'
-var categories = {
+var categoriesHome = {
     category: [
         {name:'GIGABYTE-GA-78LMT-S2', category: 'Motherboard', href: '/Categories/Motherboard'},
         {name:'GIGABYTE-GA-78LMT-S2', category: 'CPU', href: '/Categories/CPU'},
@@ -12,9 +12,9 @@ var categories = {
         {name:'GIGABYTE-GA-78LMT-S2', category: 'Cooling', href: '/Categories/Cooling'}
     ],
     getCategories: function(){
-        Dispatcher.emit('update-categories',  categories.category);
+        Dispatcher.emit('update-categories',  categoriesHome.category);
     } 
 }
 
-Dispatcher.on('get-categories', categories.getCategories); 
-export {categories}
+Dispatcher.on('get-categories', categoriesHome.getCategories); 
+export {categoriesHome}
