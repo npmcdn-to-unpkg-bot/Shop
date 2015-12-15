@@ -1,14 +1,34 @@
+import {Header} from 'Header.jsx'
+import {Footer} from 'Footer.jsx'
 import {Slider} from 'slider.jsx'
 import {Breadcrumb} from 'Breadcrumb.jsx'
 import {Cart} from 'cart.jsx'
 import { Router, Route, Link } from 'react-router'	
 import {SliderTemplate} from 'sliderTemplate.jsx'
+import {Dispatcher} from 'Dispatcher.jsx'
+import {descriptionWare} from 'DescriptionStore.jsx'
 var ProductDescriptionTemplate = React.createClass({
+    getInitialState: function () {
+		return {
+        description:[],
+        id: this.props.params.id,
+        };
+  	},
+    componentDidMount: function(){
+        Dispatcher.on('update-description', this.update);
+        Dispatcher.emit('get-description', this.state.id);
+    },
+    componentWillUnMount: function(){
+        Dispatcher.off('update-description', this.update);
+    },
+    update: function(data){
+        this.setState({description: data})
+
+    },
     render: function () {       
-    var description = this.props.description.map(function(description, key) {
+    var description = this.state.description.map(function(description, key) {
       return (
                 <div className="layout-description"  key={key}> 
-                
                     <h1 className="layout-description__header">{description.name}</h1>
                     <div className="layout-description__img-star img-star">
                         <div className="img-star__raiting"></div>
@@ -30,19 +50,25 @@ var ProductDescriptionTemplate = React.createClass({
                         <a className="lineSocial__instagram lineSocial__line-social" href=""></a>
                     </div>
                 </div>
-
       );
     });
     return (
-        <article className="content">
-            <div className="content-description description">
-                <Breadcrumb breadcrumb = {this.props.description} />
-                <SliderTemplate slider = {this.props.description} />
-                {description}
+        <div className="page">
+            <div className="page__header"> 
+                <Header />
             </div>
-        </article>
+            <div className="page__content"> 
+                <article className="content">
+                    <div className="content-description description">
+                        {description}
+                    </div>
+                </article>
+            </div>
+            <div className="page__footer"> 
+                <Footer />
+            </div>
+        </div>
     );
     }
 })
-
 export {ProductDescriptionTemplate}
