@@ -16,10 +16,8 @@ npm.cmd
 .sass-cache/
 public
 routes
-src
 views
 bin
-src/testCanvas.html
 bower_components
 npm-debug.log
 
