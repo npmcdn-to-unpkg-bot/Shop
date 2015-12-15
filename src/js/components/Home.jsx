@@ -15,8 +15,6 @@ var HomePageTemplate = React.createClass({
     componentWillUnMount: function(){
         Dispatcher.off('update-categories', this.update);
     },
-    
-
     update: function(data){
         this.setState({categories: data})
     },
@@ -42,8 +40,6 @@ var HomePageTemplate = React.createClass({
                     <article className="content">
                       <ul className="content__categories categories" id="tab-content">
                         {categories}
-                        
-            
                        </ul>
                     </article>
                 </div>
