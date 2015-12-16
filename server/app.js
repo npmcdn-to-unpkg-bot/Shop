@@ -9,8 +9,8 @@ app.use(function(req, res, next) {
 
 data = {
 	categories: [],
-    goods: {}	
-	descriptionWare: {},
+    goods: {},	
+	descriptionWare: {}
 };
 data.categories = require('./categories.js');
 data.descriptionWare = require('./description.js');
