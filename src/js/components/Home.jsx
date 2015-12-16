@@ -16,7 +16,7 @@ var HomePageTemplate = React.createClass({
         Dispatcher.off('update-categories', this.update);
     },    
     update: function(data){
-        this.setState({categories: data})
+        this.setState({categories: data});
     },
     render: function () {   
     var categories = this.state.categories.map(function(category, key) {

@@ -1,27 +1,33 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+import {Router, Route, IndexRoute, Link, IndexLink} from 'react-router'
+import {Dispatcher} from 'Dispatcher.jsx'
+import {NavCat} from 'NavStore.jsx'
+
 	
 const ACTIVE ={background: 'aqua'}
 
-var Navigation = React.createClass ({	
+var Navigation = React.createClass({
 	
-	getDefaultProps: function () {
-    	return {
-			nav:[
-				{name: 'Motherboard', img: 'mother'},
-				{name: 'CPU', img: 'cpu'},
-				{name: 'RAM', img: 'ram'},
-				{name: 'VideoAdapter', img: 'video'},
-				{name: 'HDD', img: 'hdd'},
-				{name: 'PowerSource', img: 'power'},
-				{name: 'Cooling', img: 'cooling'}
-			],
-    	}
-  	},
+	getInitialState: function () {
+		return {
+			nav: []
+		}
+	},
+	
+	componentDidMount: function () {		
+		Dispatcher.on('update-nav', this.update);
+		Dispatcher.emit('get-nav');
+	},
+	
+	componentWillUnmount: function () {
+		Dispatcher.off('update-nav', this.update);
+	},
+	
+	update: function (data) {
+		this.setState({nav: data});
+	},
 	
 	render: function () {
-    	var nav = this.props.nav.map(function(nav, key) {
+    	var nav = this.state.nav.map(function(nav, key) {
 			return (
        	  		<Link className="navbar__link" activeStyle = {ACTIVE} to={'/Categories/' + nav.name} key={key}>
               		<div className={"navbar__img navbar__img--" + nav.img}></div>
@@ -31,7 +37,7 @@ var Navigation = React.createClass ({
     	});	
 		return (
 			<div className="page__menu">
-            	<nav className="navbar navbar--style">			
+            	<nav className="navbar navbar--style">		
 		      		{nav}
             	</nav>
         	</div>		
