@@ -21,14 +21,15 @@ var ProductDescriptionTemplate = React.createClass({
     componentWillUnMount: function(){
         Dispatcher.off('update-description', this.update);
     },
-    update: function(data, arr){
+    update: function(data){
         var id = this.state.id 
-        var arrid = arr;
-		for (var i = 0; i <arrid.length-1; i++) {
-            if (id == arrid[i].id) {
-				 this.setState({description: data[arrid[i].items]})
-      		}		
-		}
+        for (var key in data){
+            for (var j = 0; j<data[key].length; j++){
+                if (data[key][j].name == id){
+                this.setState({description: data[key]})
+                }
+            }
+        }
     },
     render: function () {       
     var description = this.state.description.map(function(description, key) {
