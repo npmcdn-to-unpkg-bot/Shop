@@ -1,6 +1,6 @@
 import { Dispatcher} from 'Dispatcher.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
-
+var a;
 var descriptionWare = {
     items1: [
         {category: 'Motherboard', name:'GIGABYTE-GA-78LMT-S2', 
@@ -37,13 +37,16 @@ var descriptionWare = {
     items7: [
         {category: 'CPU', name:'Intel Pentium G3420 OEM', img:'unit-value__img-cpu3', price:'$ 7504', link:'AMD-A10-7870K-OEM',
         description:'ЛАЛАЛАЛАЛАЛАЛАЛАЛЛАЛАЛАЛЛАЛАЛАЛАЛЛАЛАЛА'}], 
+    arrid: [
+            {id:'GIGABYTE-GA-78LMT-S2', items: 'items1'},
+            {id:'GIGABYTE-GA-78LMT-S3', items: 'items2'},
+            {id:'GIGABYTE-GA-78LMT-S4', items: 'items3'},
+            {id:'GIGABYTE-GA-78LMT-S5', items: 'items4'},
+            {id:'AMD-A10-7870K-OEM', items: 'items5'}
+        ],
     getDescription: function(){
-        Dispatcher.emit('update-description',  descriptionWare.items1);
-
+        Dispatcher.emit('update-description',  descriptionWare, descriptionWare.arrid);
     }
-
 }
-Dispatcher.on('get-description', function(props){
-    console.log(props);
-});
+Dispatcher.on('get-description', descriptionWare.getDescription)
 export {descriptionWare}

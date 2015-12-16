@@ -41,15 +41,16 @@ var Goods = {
 		{category: 'PowerSource', name:'Thermaltake TR2 600W [TR-600P]', img:'unit-value__img-power3', price:'$ 305', link:'GIGABYTE-GA-78LMT-S4'},
 		{category: 'PowerSource', name:'Zalman GVM 850W [ZM850-GVM]', img:'unit-value__img-power4', price:'$ 255', link:'GIGABYTE-GA-78LMT-S4'}
 	],
+	
 	Cooling: [
 		{category: 'Cooling', name:'DEEPCOOL Ice Blade 100', img:'unit-value__img-cooling1', price:'$ 15', link:'GIGABYTE-GA-78LMT-S2'}, 
 		{category: 'Cooling', name:'Thermaltake NiC L31', img:'unit-value__img-cooling2', price:'$ 10', link:'GIGABYTE-GA-78LMT-S3'}, 
 		{category: 'Cooling', name:'Zalman CNPS5X', img:'unit-value__img-cooling3', price:'$ 25', link:'GIGABYTE-GA-78LMT-S4'}, 
-	],
+	],	
 	
-	getCategories: function() {		
-		Dispatcher.emit('update-goods')
+	getGoods: function() {		
+		Dispatcher.emit('update-goods', Goods);		
 	},	
 }
-
+Dispatcher.on('get-goods', Goods.getGoods)
 export {Goods}

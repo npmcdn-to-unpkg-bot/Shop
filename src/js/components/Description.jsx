@@ -16,14 +16,23 @@ var ProductDescriptionTemplate = React.createClass({
   	},
     componentDidMount: function(){
         Dispatcher.on('update-description', this.update);
-        Dispatcher.emit('get-description', this.state.id);
+        Dispatcher.emit('get-description');
     },
     componentWillUnMount: function(){
         Dispatcher.off('update-description', this.update);
     },
-    update: function(data){
-        this.setState({description: data})
-
+    update: function(data, arr){
+        var id = this.state.id 
+        var arrid = arr;
+		for (var i = 0; i <arrid.length; i++) {
+            if (id == arrid[i].id) {
+                var a = arrid[i].items
+                console.log(a)
+				 this.setState({description: data[arrid[i].items]})
+      		}		
+		}
+       
+        
     },
     render: function () {       
     var description = this.state.description.map(function(description, key) {
@@ -60,6 +69,7 @@ var ProductDescriptionTemplate = React.createClass({
             <div className="page__content"> 
                 <article className="content">
                     <div className="content-description description">
+                 
                         {description}
                     </div>
                 </article>

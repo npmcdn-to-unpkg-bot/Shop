@@ -4,6 +4,7 @@ import {Footer} from 'Footer.jsx'
 import {Router, Route, IndexRoute, Link, IndexLink} from 'react-router'
 import {Navigation} from 'Navigation.jsx'
 import {ItemsList} from 'ItemsList.jsx'
+import {Dispatcher} from 'Dispatcher.jsx'	
 import {Goods} from 'GoodsStore.jsx'
  	
 var Category = React.createClass({
@@ -13,16 +14,7 @@ var Category = React.createClass({
 			items: [],
         	category: this.props.params.category,
         };
-  	},
-    
-	/*getItems: function(category) {
-		var arrCategories = ['Motherboard', 'CPU', 'RAM', 'VideoAdapter', 'HDD', 'PowerSource', 'Cooling'];
-		for (var i = 0; i <arrCategories.length; i++) {
-			if (category == arrCategories[i]) {				
-				return this.props[arrCategories[i]];
-      		}					
-		}
-    },*/
+  	},	
 	
 	componentWillReceiveProps: function (newProps) {
 		this.setState ({
@@ -30,14 +22,22 @@ var Category = React.createClass({
 		})	
 	},
 	
-	/*componentDidMount: function(){
-        Dispatcher.on('update-goods', this.update);
-        Dispatcher.emit('get-goods');
+	componentDidMount: function () { 
+		Dispatcher.on('update-goods', this.update);	
+        Dispatcher.emit('get-goods');			
     },
 	
-    componentWillUnMount: function(){
-        Dispatcher.off('update-goods', this.update);
-    },*/	
+	componentWillUnMount: function () {
+		Dispatcher.off('update-goods', this.update);
+	},
+	
+	update: function (data) {		
+		for (var key in data) {
+			if (key == this.state.category) {
+				this.setState({items: data[key]});
+			}
+		}
+	}, 
 
 	render: function () {
 		var items = this.state.items.map(function(item, key) {
@@ -45,7 +45,7 @@ var Category = React.createClass({
 			  <li className="goods__unit" key = {key}>
 				<Link className="unit-value" to={'/Categories/'+item.category+'/'+item.link} >
 				  <figure className="unit-value__figure">
-					<div className={"unit-value__img " + items.img}>
+					<div className={"unit-value__img " + item.img}>
 					</div>
 					<figcaption className="unit-value__figcaption">
 					  {item.name}<br />{item.price}
