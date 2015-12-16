@@ -24,8 +24,8 @@ var HomePageTemplate = React.createClass({
             <li className="categories__layoutCategories" key={key}>
                 <Link className="category" to={category.href} >
                     <figure>       
-                        <div className={'img'+category.category}></div>
-                        <figcaption>{category.category}</figcaption>
+                        <div className={'img'+category.name}></div>
+                        <figcaption>{category.name}</figcaption>
                     </figure>
                 </Link>
             </li>

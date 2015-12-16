@@ -1,23 +1,22 @@
-function CatalogItem(name, image, href) {
+function CatalogItem(name,  href) {
 	this.name = name
-	this.image = image
 	this.href = href
 };
 
-function CategoryItem(name, image, href, count) {
-	CatalogItem.call(this, name, image, href);
+function CategoryItem(name,  href, count) {
+	CatalogItem.call(this, name, href);
 	this.count = count;
 };
 CategoryItem.prototype = Object.create(CatalogItem.prototype);
 
 var categories = [];
 
-categories.push(new CategoryItem('Motherboard', '/Categories/Motherboard'));
-categories.push(new CategoryItem('CPU', '/Categories/CPU'));
-categories.push(new CategoryItem('RAM', '/Categories/RAM'));
-categories.push(new CategoryItem('VideoAdapter', '/Categories/VideoAdapter'));
-categories.push(new CategoryItem('HDD', '/Categories/HDD'));
-categories.push(new CategoryItem('PowerSource', '/Categories/PowerSource'));
-categories.push(new CategoryItem('Cooling', '/Categories/Cooling'));
+categories.push(new CategoryItem('Motherboard', '/Categories/Motherboard', '10'));
+categories.push(new CategoryItem('CPU', '/Categories/CPU', '10'));
+categories.push(new CategoryItem('RAM', '/Categories/RAM', '10'));
+categories.push(new CategoryItem('VideoAdapter', '/Categories/VideoAdapter', '10'));
+categories.push(new CategoryItem('HDD', '/Categories/HDD', '10'));
+categories.push(new CategoryItem('PowerSource', '/Categories/PowerSource', '10'));
+categories.push(new CategoryItem('Cooling', '/Categories/Cooling', '10'));
 
 module.exports = categories;
