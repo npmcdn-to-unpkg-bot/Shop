@@ -8,7 +8,8 @@ import {Cart} from 'cart.jsx'
 import {Pay} from 'Pay.jsx'
 import {Addres} from 'addres.jsx'
 import {Finish} from 'Finish.jsx'
-
+var apiPath = "http://localhost:1337";
+export {apiPath}
 var app = React.createClass({
 	render: function () {
     	return (

@@ -30,6 +30,7 @@ var path = {
         'bower_components/react/react.js',
         'bower_components/react/react-dom.js',
         'bower_components/eventEmitter/EventEmitter.js',
+        'bower_components/jquery/dist/jquery.js',
         'bower_components/react/react-router.js',
     ],
     src: {

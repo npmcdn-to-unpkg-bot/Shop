@@ -40,6 +40,7 @@ var descriptionWare = {
 
     getDescription: function(){
         Dispatcher.emit('update-description',  descriptionWare);
+        console.log(descriptionWare)
     }
 }
 Dispatcher.on('get-description', descriptionWare.getDescription)
