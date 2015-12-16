@@ -21,7 +21,7 @@ var Category = React.createClass({
         Dispatcher.emit('get-goods');			
     },
 	
-	componentWillUnMount: function () {
+	componentWillUnmount: function () {
 		Dispatcher.off('update-goods', this.update);
 	},
 	

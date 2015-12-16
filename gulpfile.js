@@ -29,8 +29,8 @@ var path = {
     libs: [
         'bower_components/react/react.js',
         'bower_components/react/react-dom.js',
+        'bower_components/eventEmitter/EventEmitter.js',
         'bower_components/react/react-router.js',
-        'bower_components/react/JSXTransformer.js',
     ],
     src: {
         html: 'src/*.html',
@@ -73,7 +73,7 @@ gulp.task('libs', function() {
 gulp.task('jsBuild', function () {
     return browserify({
         entries: 'src/js/app.jsx',
-        paths: ['src/js/components/', 'src/js/', 'src/js/store/','src/js/dispatcher/', 'node_modules/'],
+        paths: ['src/js/components/', 'src/js/', 'src/js/store/','src/js/dispatcher/', 'node_modules/', 'bower_components/'],
         extensions: ['.jsx'],
         debug: true}
     )

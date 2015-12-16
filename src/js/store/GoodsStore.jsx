@@ -1,4 +1,3 @@
-import {HomePageTemplate} from 'Home.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
 import { Dispatcher} from 'Dispatcher.jsx'
 var Goods = {	
@@ -50,7 +49,7 @@ var Goods = {
 	
 	getGoods: function() {		
 		Dispatcher.emit('update-goods', Goods);		
-	},	
+	}	
 }
-Dispatcher.on('get-goods', Goods.getGoods)
+Dispatcher.on('get-goods', Goods.getGoods);
 export {Goods}
