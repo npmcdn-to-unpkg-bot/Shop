@@ -47,9 +47,9 @@ var Goods = {
 		{category: 'Cooling', name:'Zalman CNPS5X', img:'unit-value__img-cooling3', price:'$ 25', link:'GIGABYTE-GA-78LMT-S4'}, 
 	],
 	
-	getCategories: function(data) {		
+	getCategories: function() {		
 		Dispatcher.emit('update-goods')
-	},
+	},	
 }
 
 export {Goods}
