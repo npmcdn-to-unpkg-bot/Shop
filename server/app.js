@@ -10,13 +10,17 @@ app.use(function(req, res, next) {
 data = {
 	categories: [],
 	goods: {},
-	nav: []
+	nav: [],
+	descriptionWare: {}
 };
 data.categories = require('./categories.js');
+data.descriptionWare = require('./description.js');
 data.goods = require('./goods.js');
 data.nav = require('./navigation.js');
-app.use(express.static(path.join(__dirname, "./build"))); // запуск статического файлового сервера, который смотрит на папку build/ (в нашем случае отдает index.html)
-
+app.use(express.static(path.join(__dirname, "../build")));
+app.get('/description', function (req, res, next) {
+    res.send(data.descriptionWare);
+});
 app.get('/wares', function (req, res, next) {
   res.send(data.categories);
 });

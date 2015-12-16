@@ -5,7 +5,7 @@ var $ = require('jquery');
 
 var categoriesHome = {
     getCategories: function() {
-		$.get(api + "/wares", function(result) {
+		$.get(api + "/wares", function(result){
           Dispatcher.emit('update-categories', result);  
     });
 	},
