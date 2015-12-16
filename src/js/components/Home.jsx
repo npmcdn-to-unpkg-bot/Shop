@@ -12,7 +12,7 @@ var HomePageTemplate = React.createClass({
         Dispatcher.on('update-categories', this.update);
         Dispatcher.emit('get-categories');
     },
-    componentWillUnMount: function(){
+    componentWillUnmount: function(){
         Dispatcher.off('update-categories', this.update);
     },    
     update: function(data){

@@ -18,18 +18,17 @@ var ProductDescriptionTemplate = React.createClass({
         Dispatcher.emit('get-description');
         Dispatcher.emit('get-breadcrumb', this.state.id);
     },
-    componentWillUnMount: function(){
+    componentWillUnmount: function(){
         Dispatcher.off('update-description', this.update);
     },
     update: function(data){
         var id = this.state.id 
-
         for (var key in data){
             for (var j = 0; j<data[key].length; j++){
-                if (data[key][j].link != id ){
-                    return;
+                if (data[key][j].link == id ){
+                    this.setState({description: data[key]})
+
                 }
-                this.setState({description: data[key]})
             }
         }
     },
