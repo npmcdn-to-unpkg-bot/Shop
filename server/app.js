@@ -9,11 +9,13 @@ app.use(function(req, res, next) {
 
 data = {
 	categories: [],
+	descriptionWare: {},
 };
 data.categories = require('./categories.js');
+data.descriptionWare = require('./description.js');
 app.use(express.static(path.join(__dirname, "./build"))); // запуск статического файлового сервера, который смотрит на папку build/ (в нашем случае отдает index.html)
-app.get('/categories.js', function (req, res) {
-    res.send('API is running');
+app.get('/description', function (req, res, next) {
+    res.send(data.descriptionWare);
 });
 app.get('/wares', function (req, res, next) {
   res.send(data.categories);

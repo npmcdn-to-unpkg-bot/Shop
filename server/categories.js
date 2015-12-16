@@ -1,22 +1,15 @@
-function CatalogItem(name,  href) {
-	this.name = name
-	this.href = href
-};
 
-function CategoryItem(name,  href, count) {
-	CatalogItem.call(this, name, href);
-	this.count = count;
-};
-CategoryItem.prototype = Object.create(CatalogItem.prototype);
 
-var categories = [];
+var categories = [
+    {name: 'Motherboard', href: '/Categories/Motherboard'},
+    {name: 'CPU', href: '/Categories/CPU'},
+    {name: 'RAM', href: '/Categories/RAM'},
+    {name: 'VideoAdapter', href: '/Categories/VideoAdapter'},
+    {name: 'HDD', href: '/Categories/HDD'},
+    {name: 'PowerSource', href: '/Categories/PowerSource'},
+    {name: 'Cooling', href: '/Categories/Cooling'}
+];
 
-categories.push(new CategoryItem('Motherboard', '/Categories/Motherboard', '10'));
-categories.push(new CategoryItem('CPU', '/Categories/CPU', '10'));
-categories.push(new CategoryItem('RAM', '/Categories/RAM', '10'));
-categories.push(new CategoryItem('VideoAdapter', '/Categories/VideoAdapter', '10'));
-categories.push(new CategoryItem('HDD', '/Categories/HDD', '10'));
-categories.push(new CategoryItem('PowerSource', '/Categories/PowerSource', '10'));
-categories.push(new CategoryItem('Cooling', '/Categories/Cooling', '10'));
+
 
 module.exports = categories;

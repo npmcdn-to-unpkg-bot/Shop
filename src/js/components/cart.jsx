@@ -6,11 +6,9 @@ var Cart = React.createClass ({
 	render: function () {
 		return (
 			<div className="page">
-			
 				<div className="page__header">
 					<Header />
 				</div>
-			
                 <div className="page__content">
 					<div className="cart">
 						<CartTemplate />
