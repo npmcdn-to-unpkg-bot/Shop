@@ -14,13 +14,7 @@ var Category = React.createClass({
 			items: [],
         	category: this.props.params.category,
         };
-  	},	
-	
-	componentWillReceiveProps: function (newProps) {
-		this.setState ({
-			category: newProps.params.category
-		})	
-	},
+  	},
 	
 	componentDidMount: function () { 
 		Dispatcher.on('update-goods', this.update);	
@@ -32,12 +26,20 @@ var Category = React.createClass({
 	},
 	
 	update: function (data) {		
-		for (var key in data) {
+		for (var key in data) {			
 			if (key == this.state.category) {
 				this.setState({items: data[key]});
-			}
+			}			
 		}
-	}, 
+	},
+	
+	componentWillReceiveProps: function (newProps) {
+		this.setState ({
+			category: newProps.params.category
+		}, function() {
+			Dispatcher.emit('get-goods');			
+		});	
+	},
 
 	render: function () {
 		var items = this.state.items.map(function(item, key) {
