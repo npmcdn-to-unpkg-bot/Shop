@@ -32,10 +32,10 @@ var descriptionWare = {
         {category: 'CPU', name:'AMD A10-7870K OEM', img:'unit-value__img-cpu1', price:'$ 1555', link:'AMD-A10-7870K-OEM',
         description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.'}],
     items6: [
-        {category: 'CPU', name:'AMD FX-8300 OEM', img:'unit-value__img-cpu2', price:'$ 6035', link:'AMD-A10-7870K-OEM',
+        {category: 'CPU', name:'AMD FX-8300 OEM', img:'unit-value__img-cpu2', price:'$ 6035', link:'AMD-A10-7870K',
         description:'Технические характеристики Процессор Intel Celeron G1820 OEM Intel Celeron четвертого поколения, тактовая частота 2700 МГц, тепловыделение 53 Ватт, сокет LGA 1150, двухканальный режим памяти.'}],
     items7: [
-        {category: 'CPU', name:'Intel Pentium G3420 OEM', img:'unit-value__img-cpu3', price:'$ 7504', link:'AMD-A10-7870K-OEM',
+        {category: 'CPU', name:'Intel Pentium G3420 OEM', img:'unit-value__img-cpu3', price:'$ 7504', link:'AMD-A10-7870K',
         description:'ЛАЛАЛАЛАЛАЛАЛАЛАЛЛАЛАЛАЛЛАЛАЛАЛАЛЛАЛАЛА'}], 
 
     getDescription: function(){
