@@ -1,6 +1,5 @@
 import { Dispatcher} from 'Dispatcher.jsx'
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
-var a;
 var descriptionWare = {
     items1: [
         {category: 'Motherboard', name:'GIGABYTE-GA-78LMT-S2', 

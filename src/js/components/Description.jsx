@@ -24,15 +24,11 @@ var ProductDescriptionTemplate = React.createClass({
     update: function(data, arr){
         var id = this.state.id 
         var arrid = arr;
-		for (var i = 0; i <arrid.length; i++) {
+		for (var i = 0; i <arrid.length-1; i++) {
             if (id == arrid[i].id) {
-                var a = arrid[i].items
-                console.log(a)
 				 this.setState({description: data[arrid[i].items]})
       		}		
 		}
-       
-        
     },
     render: function () {       
     var description = this.state.description.map(function(description, key) {
@@ -69,7 +65,6 @@ var ProductDescriptionTemplate = React.createClass({
             <div className="page__content"> 
                 <article className="content">
                     <div className="content-description description">
-                 
                         {description}
                     </div>
                 </article>
