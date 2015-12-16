@@ -27,13 +27,14 @@ $(document).ready(function(){
     $(document).on('click', '.min-img__arrow--left',  function(){  
         k--;
         $('.slider-img__min-img img').css("border", "none");
-        
         if (k<1) {
            k = 5;
         } 
         var c = k+1;
-        border = $('.slider-img__min-img img:nth-child('+c+')');
-        $(border).css("border", "1px solid blue").css("border-radius", "10px");
+        slider = $('.slider-img__min-img img:nth-child('+c+')');
+        $(slider).css("border", "1px solid blue").css("border-radius", "10px");
+        attr = $(slider).attr('src');
+        $('img.big-img__positioner').attr('src', attr);
         });
     $(document).on('click', '.min-img__arrow--right',  function(){  
         $('.slider-img__min-img img').css("border", "none");
@@ -42,7 +43,10 @@ $(document).ready(function(){
             k = 1;
         } 
         var c = k+1;
-        border = $('.slider-img__min-img img:nth-child('+c+')');
-        $(border).css("border", "1px solid blue").css("border-radius", "10px");  
+        slider = $('.slider-img__min-img img:nth-child('+c+')');
+        $(slider).css("border", "1px solid blue").css("border-radius", "10px"); 
+        attr = $(slider).attr('src');
+        $('img.big-img__positioner').attr('src', attr);
         });
+
 });
