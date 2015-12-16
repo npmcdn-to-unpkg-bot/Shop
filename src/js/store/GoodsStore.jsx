@@ -6,7 +6,7 @@ var $ = require('jquery');
 var Goods = {	
 	getGoods: function() {
 		$.get(api + "/goods", function(result) {
-			Dispatcher.emit('update-goods', result);
+			Dispatcher.emit('update-goods', result);			
 		});				
 	}	
 }
