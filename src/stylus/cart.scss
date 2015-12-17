@@ -101,7 +101,7 @@
     }
     &__boximg { 
 		margin-top: 3%;
-        width: 25%;        
+        width: 15%;        
     }
     &__imglink {
 		width: 100%;
@@ -162,14 +162,6 @@
   	background-size: contain;
   	background-repeat: no-repeat;	
  }
-
-.img1 {
-  	background-image: url("../img/CPU/AMD/AMD%20A8-7600%20OEM.jpg");
-}
-
-.img2 {
-  	background-image: url("../img/RAM/Kingston/Kingston%20HyperX%20FURY%20Red%20Series%20%5BHX313C9FR4%5D%204%20%D0%93%D0%B1.jpg");
-}
 
 .itemremove {	
 	align-self: flex-end;
@@ -251,7 +243,7 @@
 		}
 		&__boximg { 
 			margin-top: 10px;
-			width: 20%;
+			width: 15%;
 		}
 		&__imglink {
 			width: 100%;
@@ -304,7 +296,7 @@
 @media screen and (min-width: 800px) {
 	.itemscart {
 		&__boximg {			
-			width: 12%;
+			width: 8%;
 		}
 		
 		&__description {

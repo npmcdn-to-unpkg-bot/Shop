@@ -8,7 +8,8 @@ var Cart = React.createClass ({
 	
 	getInitialState: function () {
 		return {
-			cartitem: []        	
+			cartitem: [],
+			price: []
         };
   	},
 	
@@ -23,6 +24,7 @@ var Cart = React.createClass ({
 	
 	update: function (data) {
 		var arr = [];
+		var sum = 0;
 		for	(var i = 0; i < data.length; i++) {
 			if (data[i] != 'undefined') {
 				arr.push (data[i].split(';'));
