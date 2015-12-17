@@ -13,7 +13,6 @@ var Search = React.createClass({
     componentWillUnmount: function(){
         Dispatcher.off('update-search', this.update);
     },
-
     update: function(result){
         this.setState({goods: result})
     },
@@ -21,7 +20,6 @@ var Search = React.createClass({
         SearchAction.searchGoods(value.target.value);
 
 	},
-	
     render: function () {
         return (
             <div className="header-element__search">
