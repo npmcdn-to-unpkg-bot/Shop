@@ -74,7 +74,7 @@ gulp.task('libs', function() {
 gulp.task('jsBuild', function () {
     return browserify({
         entries: 'src/js/app.jsx',
-        paths: ['src/js/components/', 'src/js/', 'src/js/store/','src/js/dispatcher/', 'node_modules/', 'bower_components/'],
+        paths: ['src/js/components/', 'src/js/', 'src/js/store/','src/js/dispatcher/','src/js/actions/', 'node_modules/', 'bower_components/'],
         extensions: ['.jsx'],
         debug: true}
     )

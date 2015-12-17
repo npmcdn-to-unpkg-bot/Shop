@@ -32,6 +32,13 @@ var ProductDescriptionTemplate = React.createClass({
             }
         }
     },
+    componentWillReceiveProps: function (newProps) {
+		this.setState ({
+			id: newProps.params.id
+		}, function() {
+			Dispatcher.emit('get-description');			
+		});	
+	},
     render: function () {       
     var description = this.state.description.map(function(description, key) {
       return (

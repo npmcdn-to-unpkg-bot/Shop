@@ -50,12 +50,37 @@ header:after {
         height: 22px; 
     }  
 }
+.resultSearch{
+    float: right;
+    min-width: 237px;
+    min-height: 20px;
+    
+}
+.searchLink{
+    background: #fff;
+    height: 24px;
+    overflow: hidden;
+    list-style-type: none;
+    border: 2px solid #00f;
+    color: red;
+    border-radius: 10px;
+}
+.searchLink a:hover{
+    color:lightblue;
+}
+.searchLink a{
+    text-decoration: none;
+}
 
 .header__element--logo, .header-element__authorization--img, .header-element__basket--img {
 	float: left;
 }
 
 .header-element{
+    &__search{
+    float: right;
+    width: 180px;
+    }
     &__basket--img {
         background-image: url("../img/Symbol/shopping-cart.gif"); 
     }
