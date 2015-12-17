@@ -1,27 +1,8 @@
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
-import { Dispatcher} from 'Dispatcher.jsx'
+import {Dispatcher} from 'Dispatcher.jsx'
 import {CartItem} from 'locStorage.jsx'
 	
 var CartTemplate = React.createClass ({
-	
-	getInitialState: function () {
-		return {
-			cartitem: []        	
-        };
-  	},
-	
-	componentDidMount: function () {		
-		Dispatcher.on('update-CartItem', this.update);
-		Dispatcher.emit('get-CartItem');        		
-    },
-	
-	componentWillUnmount: function () {
-		Dispatcher.off('update-CartItem', this.update);
-	},
-	
-	update: function (data) {		
-		console.log (data);
-	},
 	
 	render: function () {		
 		return (

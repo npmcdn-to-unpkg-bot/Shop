@@ -1,3 +1,7 @@
+import {Search} from 'Search.jsx';
+import {Router, Route, IndexRoute, Link, IndexLink} from 'react-router';
+import React from 'react';
+import {Dispatcher} from 'Dispatcher.jsx'	;
 var Header = React.createClass ({
 	render: function () {
 		return (
@@ -18,7 +22,7 @@ var Header = React.createClass ({
                         Cart
                     </span>
                 </a>
-                <input className="header__element header__element--search" type="search" placeholder="Search"/>
+                <Search />
     		</header>
 		);
 	}

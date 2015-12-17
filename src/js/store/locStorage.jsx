@@ -18,13 +18,13 @@ $(document).ready( function () {
 });
 
 var CartItem = {
-	getCartItem: function (data) {
-		for (var key in localStorage) {
-			var arr = [];
+	getCartItem: function () {
+		var arr = [];		
+		for (var key in localStorage) {			
 			arr.push(localStorage.getItem(key));			
 		}
-		Dispatcher.emit('update-CartItem', CartItem);		
-	}	
+		Dispatcher.emit('update-CartItem', arr);
+	}
 }
 Dispatcher.on('get-CartItem', CartItem.getCartItem);
 export {CartItem}
