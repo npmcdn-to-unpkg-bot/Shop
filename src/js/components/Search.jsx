@@ -20,13 +20,14 @@ var Search = React.createClass({
         SearchAction.searchGoods(value.target.value);
 
 	},
+
     render: function () {
         return (
             <div className="header-element__search">
-                <input className="header__element header__element--search" type="search" placeholder="Search" value={this.state.value} onChange={this.SearchChange}/>
-                <ul className='resultSearch'>
+                <input className="header__element header__element--search" type="search" placeholder="Search" value={this.state.value} onChange={this.SearchChange} />
+                <ul  className='resultSearch'>
                     { this.state.goods.map(function(goods, key){return <li className='searchLink' key={key}> 
-                        <Link to={goods.link}>{goods.name}</Link>
+                        <Link  to={goods.link}>{goods.name}</Link>
                             </li> 
 			         })}
                 </ul>
