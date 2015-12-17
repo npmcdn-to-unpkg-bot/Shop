@@ -27,7 +27,6 @@ var ProductDescriptionTemplate = React.createClass({
             for (var j = 0; j<data[key].length; j++){
                 if (data[key][j].link == id ){
                     this.setState({description: data[key]})
-
                 }
             }
         }

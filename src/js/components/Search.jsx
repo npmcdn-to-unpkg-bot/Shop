@@ -5,9 +5,7 @@ import {searchStore} from 'searchStore.jsx';
 import {SearchAction} from 'searchAction.jsx';
 var Search = React.createClass({
     getInitialState: function(){
-		return { 
-            goods: []
-        };
+		return {goods: []}
 	},
     componentDidMount: function(){
         Dispatcher.on('update-search', this.update);
@@ -15,33 +13,22 @@ var Search = React.createClass({
     componentWillUnmount: function(){
         Dispatcher.off('update-search', this.update);
     },
-    update: function(ev, result){
-        var i = result.length;
-        for (var k=0; k<i; k++){
-            var search = result[k].name
-           	var	searchString = ev.trim().toLowerCase();
-		if(searchString.length > 0){
-			var goods = result.filter(function(l){
-                return l.name.toLowerCase().match(searchString);
-			})
-		} 
-        else {
-            goods = []}
-            }
-            this.setState({goods: goods})
+
+    update: function(result){
+        this.setState({goods: result})
     },
 	SearchChange: function(value){
         SearchAction.searchGoods(value.target.value);
-		this.setState({goods: value});
+
 	},
+	
     render: function () {
         return (
             <div className="header-element__search">
-                <input id="search" className="header__element header__element--search" type="search" placeholder="Search" value={this.state.value} onChange={this.SearchChange}/>
-                <ul className='resultSearch'>
-                    { this.state.goods.map(function(goods, key){
-					return <li className='searchLink' key={key}> 
-                        <Link to={goods.link} className="item__link">{goods.name}</Link>
+                <input className="header__element header__element--search" type="search" placeholder="Search" value={this.state.value} onChange={this.SearchChange} />
+                <ul  className='resultSearch'>
+                    { this.state.goods.map(function(goods, key){return <li className='searchLink' key={key}> 
+                        <Link  to={goods.link}>{goods.name}</Link>
                             </li> 
 			         })}
                 </ul>
