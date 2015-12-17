@@ -9,7 +9,7 @@ var descriptionWare = {
             Dispatcher.emit('update-description',  result);
         })
         
-    }
+    }	
 }
 Dispatcher.on('get-description', descriptionWare.getDescription)
 export {descriptionWare}

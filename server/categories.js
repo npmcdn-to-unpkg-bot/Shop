@@ -1,5 +1,3 @@
-
-
 var categories = [
     {name: 'Motherboard', href: '/Categories/Motherboard'},
     {name: 'CPU', href: '/Categories/CPU'},
@@ -9,7 +7,4 @@ var categories = [
     {name: 'PowerSource', href: '/Categories/PowerSource'},
     {name: 'Cooling', href: '/Categories/Cooling'}
 ];
-
-
-
 module.exports = categories;

@@ -45,8 +45,10 @@ var ProductDescriptionTemplate = React.createClass({
           <label htmlFor="quantiti">Quantity</label></p>
           <input className="layout-description__quantiti" id="quantiti" type="number" min="1" max="100" defaultValue="1"/>
                     <div className="layout-description__add-cart add-cart">
-                        <div className="add-cart__price">Price: {description.price}</div>
-                        <Link className="add-cart__btn" to='/Cart'>
+                        <div className="add-cart__price">Price:
+		  					<span className="price">{description.price}</span>
+		  				</div>
+                        <Link className="add-cart__btn" id="addCart" to='/Cart'>
                             Add to cart
                         </Link>
                     </div>

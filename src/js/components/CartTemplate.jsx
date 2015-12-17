@@ -1,11 +1,29 @@
 import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
+import { Dispatcher} from 'Dispatcher.jsx'
+import {CartItem} from 'locStorage.jsx'
 	
 var CartTemplate = React.createClass ({
-	render: function () {
-		/*var cart = this.props.cart.map(function(cart, key) {
-			return (
-			)				
-		});*/
+	
+	getInitialState: function () {
+		return {
+			cartitem: []        	
+        };
+  	},
+	
+	componentDidMount: function () {		
+		Dispatcher.on('update-CartItem', this.update);
+		Dispatcher.emit('get-CartItem');        		
+    },
+	
+	componentWillUnmount: function () {
+		Dispatcher.off('update-CartItem', this.update);
+	},
+	
+	update: function (data) {		
+		console.log (data);
+	},
+	
+	render: function () {		
 		return (
 			<div className="cart__section" id="cartpage__item">
 			<div className="cart__item">				
@@ -19,7 +37,7 @@ var CartTemplate = React.createClass ({
 						<div className="itemscart__description">
 							<div className="itemscart__linkprop itemscart__linkprop--style">
 								<a className="itemscart__link" href="productdescription.html">
-									AMD A8-7600 OEM
+									{'Privet'}
 								</a>
 							</div>
 							<div className="itemscart__description-count">

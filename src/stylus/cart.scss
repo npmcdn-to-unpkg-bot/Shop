@@ -146,7 +146,7 @@
 		}
 		
 		&:hover {
-			color: white;	  		
+			color: darkorange;	  		
 		}
 		
 		&:active {
@@ -277,25 +277,6 @@
 			width: 30%;
 			&--style {			
 				font-size: 16px;			
-			}
-		}
-		&__link {
-			display: inline-block;
-			width:100%;
-			&:link {
-				color: black; 
-			}
-
-			&:visited {
-				color: blue; 
-			}
-
-			&:hover {
-				color: white;	  		
-			}
-
-			&:active {
-				color: red; 
 			}
 		}
 	}
